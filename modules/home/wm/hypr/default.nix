@@ -6,11 +6,15 @@
 with lib; let
   cfg = config.wm.hypr;
 in {
-  imports = mkIf cfg.enable [
-    ../components/hyprlock.nix
-    ../components/waybar
-    ../components/swaync.nix
-  ];
+  imports =
+    [
+      # Stuff that can be enabled/disabled
+      ../components/bars.nix
+    ]
+    ++ optionals cfg.enable [
+      # Stuff that's just enabled on import
+      ../components/swaync.nix
+    ];
 
   options.wm.hypr = {
     enable = mkOption {
@@ -26,6 +30,14 @@ in {
         description = ''
           Enables optimizations for the specified type of computer. For example, enables
           mouse accelearation and lid switch functionality for laptops.
+        '';
+      };
+
+      bar = mkOption {
+        type = types.enum ["waybar" "ashell" "hyprpanel"];
+        default = "waybar";
+        description = ''
+          Bar/panel/shell to use.
         '';
       };
     };
@@ -51,6 +63,16 @@ in {
         acpi # Battery status
         upower
       ];
+
+    config.wm.components.waybar = mkIf (cfg.bar == "waybar") {
+      enable = true;
+    };
+    config.wm.components.ashell = mkIf (cfg.bar == "ashell") {
+      enable = true;
+    };
+    config.wm.components.hyprpanel = mkIf (cfg.bar == "hyprpanel") {
+      enable = true;
+    };
 
     wayland.windowManager.hyprland = {
       enable = true;

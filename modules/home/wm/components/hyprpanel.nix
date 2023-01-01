@@ -1,5 +1,22 @@
-{...}: {
-  programs.hyprpanel = {
+{
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.wm.components;
+in {
+  options.wm.components.hyprpanel = {
+    enable = mkOption {
+      type = types.bool;
+      default = false;
+      description = ''
+        Enables customized Hyprpanel.
+      '';
+    };
+  };
+
+  config.programs.hyprpanel = mkIf cfg.hyprpanel {
     # TODO: configure screenshot, avatar
     enable = false;
     systemd.enable = false;
