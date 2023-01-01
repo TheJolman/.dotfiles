@@ -1,4 +1,5 @@
 {...}: {
+  # prob don't import this file unless ur running a NixOS system or bare-bones home-manager config
   imports = [
     ./wm/default.nix
     ./nixvim/default.nix
