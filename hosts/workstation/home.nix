@@ -3,9 +3,13 @@
   home.homeDirectory = "/home/${user}";
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  wm.hypr = {
+    enable = true;
+    computerType = "desktop";
+  };
+
   imports = [
     ../../modules/home/default.nix
-    ../../modules/home/desktop.nix
   ];
 
   home.file = {

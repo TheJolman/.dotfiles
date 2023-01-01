@@ -8,7 +8,6 @@ with lib; let
 in {
   imports = mkIf cfg.enable [
     ./hyprlock.nix
-    ./hyprland.nix
     ./waybar.nix
     ./fuzzel.nix
     ./swaync.nix
