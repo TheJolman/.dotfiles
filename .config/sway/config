@@ -16,9 +16,10 @@ set $screenshot grim ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").pn
 set $screenclip slurp | grim -g - ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 
 # Window Borders
-default_border pixel 1
+default_border none
 default_floating_border normal
 hide_edge_borders smart
+for_window [app_id="ulauncher"] border none
 
 smart_gaps on
 gaps inner 10
@@ -51,20 +52,20 @@ exec swayidle -w \
 input "2362:628:PIXA3854:00_093A:0274_Touchpad" {
   tap enabled
   click_method clickfinger
+  scroll_factor 0.6
+  # accel_profile flat
+  # pointer_accel 1
 }
 ### Key bindings
 #
 # Basics:
 #
-    # Start a terminal
     bindsym $mod+Return exec $term
-
-    # Kill focused window
     bindsym $mod+q kill
-
-    # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+n exec $browser
 
+    # Screenshots
     bindsym Print exec $screenshot
     bindsym --release Shift+Print exec $screenclip
 
