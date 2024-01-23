@@ -16,6 +16,9 @@ TERMINAL="kitty"
 EDITOR="nvim"
 
 alias ll='ls -lah'
+alias vi="nvim"
+alias vim="nvim"
+alias cat="bat -p"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/gruvbox.omp.json)" 
