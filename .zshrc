@@ -20,6 +20,9 @@ alias vi="nvim"
 alias vim="nvim"
 alias cat="bat -p"
 
+alias py="python3"
+alias python="python3"
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/gruvbox.omp.json)" 
 alias dotfiles='/usr/bin/git --git-dir=/home/josh/.dotfiles/ --work-tree=/home/josh'
