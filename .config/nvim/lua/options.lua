@@ -25,3 +25,11 @@ o.wildmenu = true
 o.showmatch = true
 
 
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "/home/josh/School/SoftEng/TheProject/*",
+  callback = function()
+    vim.o.tabstop = 4
+    vim.o.shiftwidth = 4
+    vim.o.expandtab = true
+  end,
+})

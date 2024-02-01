@@ -24,6 +24,10 @@ map('n', '<leader>ff', '<CMD>Telescope find_files<CR>', {silent = true})
 map('n', '<leader>fb', '<CMD>Telescope buffers<CR>', {silent = true})
 map('n', '<leader>fh', '<CMD>Telescope help_tags<CR>', {silent = true})
 
+-- ToggleTerm
+map('n', '<M-t>', '<CMD>ToggleTerm<CR>', {silent = true})
+
+
 -- Copilot
 vim.keymap.set('i', '<C-J>', 'copilot#Accept("<CR>")', {
 expr = true,
