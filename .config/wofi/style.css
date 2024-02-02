@@ -1,0 +1,33 @@
+window {
+  width: 300px;
+  height: 200px;
+  background-color: rgba(50, 50, 50, 0.7);
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#input {
+  font: 20px 'Caskaydia Cove Nerd Font';
+  color: #00000;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#scroll {
+  max-height: 100px;
+}
+
+#inner-box {
+  max-height: 100px;
+}
+
+#entry {
+  font: 20px 'Caskaydia Cove Nerd Font';
+  color: #FFFFFF;
+  padding: 5px;
+}
+
+#entry:selected {
+  background-color: #404040;
+}
