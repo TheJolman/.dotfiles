@@ -8,6 +8,7 @@ global.maplocalleader = " "
 -- use system clipboard
 o.clipboard = 'unnamedplus'
 
+o.resize_amount = 5
 o.termguicolors = true
 
 o.number = true
