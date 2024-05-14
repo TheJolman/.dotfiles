@@ -16,12 +16,9 @@
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/tlp.nix
       ../../modules/nixos/grub/grub.nix
-      #../../modules/nixos/sddm.nix
 
       inputs.home-manager.nixosModules.default
     ];
-
-  # programs.zsh.enable = true;
 
   # Bootloader.
   # boot.loader = {

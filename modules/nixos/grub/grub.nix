@@ -8,7 +8,7 @@
       enable = true;
       efiSupport = true;
       useOSProber = true;
-      theme = ./themes/catppuccin-macchiato-grub-theme/theme.txt;
+      theme = /home/josh/.dotfiles/modules/nixos/grub/themes/catppuccin-macchiato-grub-theme;
 
       devices = [ "nodev" ];
     };
