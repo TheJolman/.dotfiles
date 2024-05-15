@@ -11,12 +11,12 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./environment.nix
-      # ../../modules/nixos/greetd.nix
+      # ../../modules/nixos/greetd.nix # tuigreet
       ../../modules/nixos/sddm.nix
       ../../modules/nixos/sound.nix
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/tlp.nix
-      #../../modules/nixos/nh.nix
+      ../../modules/nixos/nh.nix
       ../../modules/nixos/grub/grub.nix
 
       inputs.home-manager.nixosModules.default
