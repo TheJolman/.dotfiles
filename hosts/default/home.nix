@@ -13,6 +13,14 @@
 
   ];
 
+  catppuccin.flavour = "mocha";
+
+  xdg.enable = true;
+  gtk = {
+    enable = true;
+    catppuccin.enable = true;
+  };
+
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
@@ -22,6 +30,7 @@
     fzf
     fastfetch
     lsd
+
 
     # dev stuff
     gnumake
@@ -38,6 +47,7 @@
     webcord # for discord screen sharing
     libreoffice-qt
     hunspell     # for spellcheck
+    vscode
 
     # Desktop experience stuff
     swaylock
@@ -82,6 +92,7 @@
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "zoom"
     "discord"
+    "vscode"
   ];
 
 

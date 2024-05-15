@@ -34,7 +34,7 @@
   programs.oh-my-posh = {
     enable = true;
     enableZshIntegration = true;
-    useTheme = "stelbent.minimal";
+    useTheme = "catppuccin";
   };
 
 }

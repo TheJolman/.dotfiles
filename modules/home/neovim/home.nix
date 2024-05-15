@@ -8,6 +8,8 @@
   in
   {
     enable = true;
+
+    catppuccin.enable = true;
     
 
     extraLuaConfig = ''
@@ -21,10 +23,10 @@
         plugin = comment-nvim;
         #config = toLua "require(\"Comment\").setup()";
       }
-      {
-        plugin = gruvbox-nvim;
-        config = "colorscheme gruvbox";
-      }
+      # {
+      #   plugin = gruvbox-nvim;
+      #   config = "colorscheme gruvbox";
+      # }
 
       {
         plugin = oil-nvim;

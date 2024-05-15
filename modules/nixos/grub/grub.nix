@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 {
+  boot.plymouth.enable = true; # For silent boot
+
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
@@ -8,7 +10,7 @@
       enable = true;
       efiSupport = true;
       useOSProber = true;
-      theme = /home/josh/.dotfiles/modules/nixos/grub/themes/catppuccin-macchiato-grub-theme;
+      catppuccin.enable = true;
 
       devices = [ "nodev" ];
     };

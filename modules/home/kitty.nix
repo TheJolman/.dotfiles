@@ -2,7 +2,8 @@
 {
   programs.kitty = {
     enable = true;
-    theme = "Gruvbox Dark";
+    # theme = "Gruvbox Dark";
+    catppuccin.enable = true;
     font.name = "FiraCode Nerd Font";
     font.size = 14;
     shellIntegration.enableZshIntegration = true;

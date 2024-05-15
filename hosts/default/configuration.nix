@@ -11,7 +11,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./environment.nix
-      ../../modules/nixos/greetd.nix
+      # ../../modules/nixos/greetd.nix
+      ../../modules/nixos/sddm.nix
       ../../modules/nixos/sound.nix
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/tlp.nix
@@ -20,22 +21,7 @@
       inputs.home-manager.nixosModules.default
     ];
 
-  # Bootloader.
-  # boot.loader = {
-  #   systemd-boot = {
-  #     enable = false;
-  #   };
-  #   efi = {
-  #     canTouchEfiVariables = true;
-  #   };
-  #   grub = {
-  #     enable = true;
-  #     efiSupport = true;
-  #     useOSProber = true;
-
-  #     devices = [ "nodev" ];
-  #   };
-  # };
+  catppuccin.flavour = "mocha";
 
 
   security.pam.services.swaylock = {};

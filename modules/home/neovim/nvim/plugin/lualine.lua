@@ -1,7 +1,7 @@
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "gruvbox-material",
+		theme = "palenight",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
@@ -28,7 +28,7 @@ require("lualine").setup({
 
 				buffers_color = {
 					-- Same values as the general color option can be used here.
-					active = { bg = "#A96B7C", fg = "lualine_c_inactive" }, -- gruvbox dark purple
+					active = { bg = "#f5bde6", fg = "#1e2030" }, -- catppuccin pink and mantle
 					inactive = { bg = "lualine_c_inactive" }, -- Color for inactive buffer.
 				},
 
