@@ -1,6 +1,6 @@
-{ config, pkgs, ... }:
+{ pkgs, config, ... }:
 {
-  programs.waybar = {
+  programs.swaylock = {
     enable = true;
     catppuccin.enable = true;
   };

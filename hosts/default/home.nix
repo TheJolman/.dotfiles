@@ -10,15 +10,20 @@
     ../../modules/home/zsh.nix
     ../../modules/home/fuzzel.nix
     ../../modules/home/kitty.nix
+    ../../modules/home/dunst.nix
+    ../../modules/home/swaylock.nix
 
   ];
-
-  catppuccin.flavour = "mocha";
 
   xdg.enable = true;
   gtk = {
     enable = true;
-    catppuccin.enable = true;
+    catppuccin = {
+      enable = true;
+      accent = "pink";
+      tweaks = [ "normal" ];
+      icon.enable = true;
+    };
   };
 
   fonts.fontconfig.enable = true;
@@ -30,6 +35,7 @@
     fzf
     fastfetch
     lsd
+    browsh
 
 
     # dev stuff
@@ -50,12 +56,11 @@
     vscode
 
     # Desktop experience stuff
-    swaylock
     hyprpaper
     hypridle
     waybar
     eww          # unused
-    catppuccin   # unused
+    catppuccin   # idk if I need this here
 
     # Essential tools for wm
     wl-clipboard
@@ -64,7 +69,7 @@
     networkmanagerapplet
     polkit_gnome # for authentication dialogs
     brightnessctl
-    swaynotificationcenter
+    # swaynotificationcenter
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

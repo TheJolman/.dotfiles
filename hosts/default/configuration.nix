@@ -16,6 +16,7 @@
       ../../modules/nixos/sound.nix
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/tlp.nix
+      #../../modules/nixos/nh.nix
       ../../modules/nixos/grub/grub.nix
 
       inputs.home-manager.nixosModules.default
