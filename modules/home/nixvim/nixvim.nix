@@ -1,4 +1,8 @@
 { ... }: {
+  imports = [
+    ./plugins/default.nix
+    ./maps.nix
+  ];
   programs.nixvim = {
     enable = true;
 
@@ -12,9 +16,6 @@
       relativenumber = true;
       shiftwidth = 2;
     };
-    # plugins = {
-    #   lualine.enable = true;
-    # };
     clipboard.register = "unnamedplus";
   };
 

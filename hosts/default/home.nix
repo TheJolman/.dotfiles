@@ -37,8 +37,8 @@
     fzf
     fastfetch
     lsd
-    browsh # web browser, kinda useless
     neovim
+    git-credential-oauth
 
 
     # dev stuff
