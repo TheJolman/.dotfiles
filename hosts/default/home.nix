@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   home.username = "josh";
@@ -6,12 +6,15 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   imports = [
-    ../../modules/home/neovim/home.nix
     ../../modules/home/zsh.nix
     ../../modules/home/fuzzel.nix
     ../../modules/home/kitty.nix
     ../../modules/home/dunst.nix
     ../../modules/home/swaylock.nix
+    ../../modules/home/git.nix
+    ../../modules/home/nixvim/nixvim.nix
+    inputs.nixvim.homeManagerModules.nixvim
+    inputs.catppuccin.homeManagerModules.catppuccin
 
   ];
 
@@ -30,12 +33,12 @@
 
   home.packages = with pkgs; [
     # cli tools
-    git
     curl
     fzf
     fastfetch
     lsd
-    browsh
+    browsh # web browser, kinda useless
+    neovim
 
 
     # dev stuff

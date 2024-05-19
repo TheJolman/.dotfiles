@@ -10,17 +10,23 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./environment.nix
       # ../../modules/nixos/greetd.nix # tuigreet
       ../../modules/nixos/sddm.nix
       ../../modules/nixos/sound.nix
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/tlp.nix
       ../../modules/nixos/nh.nix
-      ../../modules/nixos/grub/grub.nix
-
+      ../../modules/nixos/grub.nix
+      inputs.catppuccin.nixosModules.catppuccin
       inputs.home-manager.nixosModules.default
     ];
+
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+
+  programs.hyprland.enable = true;
+  programs.hyprland.xwayland.enable = true;
+
 
   catppuccin.flavour = "mocha";
 
