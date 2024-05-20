@@ -12,6 +12,7 @@
     ../../modules/home/dunst.nix
     ../../modules/home/swaylock.nix
     ../../modules/home/git.nix
+    ../../modules/home/hyprland.nix
     ../../modules/home/nixvim/nixvim.nix
     inputs.nixvim.homeManagerModules.nixvim
     inputs.catppuccin.homeManagerModules.catppuccin
