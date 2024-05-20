@@ -5,7 +5,7 @@ let
     hyprpaper &
     hypridle &
     ${pkgs.dunst}/bin/dunst &
-    np-applet --indicator &
+    nm-applet --indicator &
     blueman-applet &
   '';
 in
@@ -145,11 +145,13 @@ in
 	  "$mod, mouse:273, resizewindow"
         ];
 
-	# bindl = [
-	#          ", switch:[Lid Switch], exec, swaylock"
-	#          ", switch:on:[Lid Switch], exec, hyprctl keyword monitor \"eDP-1, 2256x1504, 0x0, 1\""
-	#          ", switch:off:[Lid Switch], exec, hyprctl keyword monitor \"eDP-1, disable\""
-	#        ];
+	bindl = [
+          ", switch:[Lid Switch], exec, swaylock"
+	  # turn screen off when lid is closed
+          ", switch:on:[Lid Switch], exec, hyprctl keyword monitor \"eDP-1, disable\""
+	  # turn back on when lid is opened
+          ", switch:off:[Lid Switch], exec, hyprctl keyword monitor \"eDP-1, auto, 1\""
+        ];
 
     };
   };

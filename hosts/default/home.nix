@@ -12,8 +12,9 @@
     ../../modules/home/dunst.nix
     ../../modules/home/swaylock.nix
     ../../modules/home/git.nix
+    ../../modules/home/yazi.nix
     ../../modules/home/hyprland.nix
-    ../../modules/home/nixvim/nixvim.nix
+    ../../modules/home/nixvim/default.nix
     inputs.nixvim.homeManagerModules.nixvim
     inputs.catppuccin.homeManagerModules.catppuccin
 
@@ -42,6 +43,7 @@
     git-credential-oauth
     parted
     polkit
+    bat
 
     # dev stuff
     gnumake
@@ -74,8 +76,6 @@
     networkmanagerapplet
     polkit_gnome # for authentication dialogs
     brightnessctl
-    # swaynotificationcenter
-
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

@@ -14,6 +14,8 @@
       update = "sudo nixos-rebuild switch --flake /home/josh/.dotfiles#default";
       copy = "wl-copy";
       paste = "wl-paste";
+      lg = "lazygit";
+      cat = "bat -p";
     };
 
     plugins = [
@@ -29,8 +31,10 @@
       }
     ];
 
+  # use initExtra = '' ''; for extra config 
+
   };
-  
+
   programs.oh-my-posh = {
     enable = true;
     enableZshIntegration = true;
