@@ -39,7 +39,8 @@
     lsd
     neovim
     git-credential-oauth
-
+    parted
+    polkit
 
     # dev stuff
     gnumake
@@ -47,7 +48,7 @@
     rstudio
 
     # gui apps
-    parted
+    gparted
     firefox
     gnome.nautilus
     nautilus-open-any-terminal # for nautilus
