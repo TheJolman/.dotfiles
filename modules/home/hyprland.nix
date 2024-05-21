@@ -22,29 +22,53 @@ in
     settings = {
       exec-once = ''${startupScript}/bin/start'';
 
-    monitor = ",preferred,auto,1";
+      monitor = ",preferred,auto,1";
 
-    "$mod" = "SUPER";
+      "$mod" = "SUPER";
 
-    "$terminal" = "kitty";
-    "$fileManager" = "nautilus";
-    "$menu" = "fuzzel";
-    "$browser" = "firefox";
+      "$terminal" = "kitty";
+      "$fileManager" = "nautilus";
+      "$menu" = "fuzzel";
+      "$browser" = "firefox";
 
-    input = {
-      kb_options = "caps:swapescape";
-    };
+      input = {
+        kb_options = "caps:swapescape";
+      };
 
-    general = {
-      gaps_in = 5;
-      gaps_out = 10;
-      border_size = 2;
-      layout = "dwindle";
-    };
+      general = {
+        gaps_in = 5;
+        gaps_out = 10;
+        border_size = 3;
+        layout = "dwindle";
 
-    animations = {
-      enabled = true;
-      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        "col.inactive_border" = "$surface0";
+        "col.active_border" = "$sapphire";
+      };
+
+      group = {
+        "col.border_active" = "$mauve";
+        "col.border_inactive" = "$surface0";
+        groupbar = {
+          "col.active" = "$mauve";
+          "col.inactive" = "$lavender";
+	  text_color = "$surface1";
+	  font_size = 12;
+	  font_family = "FiraCode";
+        };
+      };
+
+
+      decoration = {
+        rounding = 15;
+      };
+
+      misc = {
+        new_window_takes_over_fullscreen = true;
+      };
+
+      animations = {
+        enabled = true;
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
          animation = [
            "windows, 1, 7, myBezier"
@@ -73,6 +97,15 @@ in
 	# See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
 	new_is_master = true;
       };
+
+      windowrule = [
+	"idleinhibit fullscreen, firefox"
+      ];
+
+      windowrulev2 = [
+	"bordercolor $red, fullscreen:1"
+
+      ];
 
       bind = [
       # apps
@@ -146,6 +179,7 @@ in
         ];
 
 	bindl = [
+	  # this doesn't seem to work
           ", switch:[Lid Switch], exec, swaylock"
 	  # turn screen off when lid is closed
           ", switch:on:[Lid Switch], exec, hyprctl keyword monitor \"eDP-1, disable\""
