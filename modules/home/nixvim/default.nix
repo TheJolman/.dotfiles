@@ -7,10 +7,19 @@
     enable = true;
 
   
-    # colorschemes.catppuccin = {
-    #   enable = true;
-    #   settings.flavour = "mocha";
-    # };
+    colorschemes.catppuccin = {
+      enable = true;
+      settings.flavour = "mocha";
+      settings = {
+      transparent_background = true;
+	integrations = {
+	  cmp = true;
+	  gitsigns = true;
+	  treesitter = true;
+	};
+      };
+    };
+
     opts = {
       number = true;
       relativenumber = true;

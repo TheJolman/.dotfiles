@@ -39,7 +39,7 @@
     fzf
     fastfetch
     lsd
-    neovim
+    # neovim
     git-credential-oauth
     parted
     polkit

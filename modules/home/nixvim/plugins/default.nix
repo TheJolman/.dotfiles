@@ -1,9 +1,9 @@
 { ... }: {
   imports = [
-    # lualine.nix
-    # ./lsp.nix
+    ./lualine.nix
+    ./lsp.nix
     # cmp.nix
     # treesitter.nix
-    # ./oil.nix
+    ./oil.nix
   ];
 }
