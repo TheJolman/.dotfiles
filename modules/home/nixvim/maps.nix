@@ -115,17 +115,6 @@
 	mode = "n";
       }
 
-      # Telescope
-      {
-	key = "<leader>ff";
-	action = "require('telescope.builtin').find_files";
-	mode = "n";
-      }
-      {
-	key = "<leader>fb";
-	action = "require('telescope.builtin').buffers";
-	mode = "n";
-      }
     ];
   };
 }

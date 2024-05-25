@@ -1,9 +1,12 @@
 { ... }: {
   imports = [
+    ./autopairs.nix
     ./lualine.nix
     ./lsp.nix
-    # cmp.nix
-    # treesitter.nix
+    ./telescope.nix
+    ./cmp.nix
+    ./treesitter.nix
     ./oil.nix
+    ./surround.nix
   ];
 }

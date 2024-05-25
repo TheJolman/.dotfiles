@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     ${pkgs.waybar}/bin/waybar &
@@ -46,11 +46,11 @@ in
       };
 
       group = {
-        "col.border_active" = "$mauve";
+        "col.border_active" = "$sapphire";
         "col.border_inactive" = "$surface0";
         groupbar = {
-          "col.active" = "$mauve";
-          "col.inactive" = "$lavender";
+          "col.active" = "$sapphire";
+          "col.inactive" = "rgb(7AA4B6)";
 	  text_color = "$surface1";
 	  font_size = 12;
 	  font_family = "FiraCode";
@@ -88,14 +88,14 @@ in
       };
 
       gestures = {
-	workspace_swipe = true;
-	workspace_swipe_fingers = 3;
-	workspace_swipe_distance = 300;
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+        workspace_swipe_distance = 300;
       };
 
       master = {
-	# See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-	new_is_master = true;
+        # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+        new_is_master = true;
       };
 
       windowrule = [
@@ -103,19 +103,23 @@ in
       ];
 
       windowrulev2 = [
-	"bordercolor $red, fullscreen:1"
+	"bordercolor $yellow, fullscreen:1"
 
       ];
 
       bind = [
       # apps
-	"$mod, B,       exec, $browser"
+        "$mod, B,       exec, $browser"
         "$mod, Return,  exec, $terminal"
         "$mod, D,       exec, $menu"
-        "$mod, E, 	exec, $fileManager"
+        "$mod, E, 	    exec, $fileManager"
         "$mod, Q,       killactive"
         "$mod SHIFT, M, exit"
         "$mod SHIFT, L, exec, swaylock"
+
+        # alt tab
+        "ALT, Tab, cyclenext,"
+        "ALT, TAB, bringactivetotop,"
 
         # window navigation
         "$mod, h, movefocus, l"
