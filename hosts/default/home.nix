@@ -39,6 +39,7 @@
     fzf
     fastfetch
     lsd
+
     # neovim
     git-credential-oauth
     parted
@@ -63,16 +64,14 @@
     vscode
 
     # Desktop experience stuff
-    hyprpaper
-    hypridle
+    swww
     waybar
-    eww          # unused
-    catppuccin   # idk if I need this here
 
     # Essential tools for wm
     wl-clipboard
     grim
     slurp
+    hyprshot
     networkmanagerapplet
     polkit_gnome # for authentication dialogs
     brightnessctl

@@ -2,11 +2,13 @@
 let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     ${pkgs.waybar}/bin/waybar &
-    hyprpaper &
-    hypridle &
+    # hyprpaper &
+    swayidle &
     ${pkgs.dunst}/bin/dunst &
     nm-applet --indicator &
     blueman-applet &
+    swww-daemon &
+    swww img ~/Pictures/Wallpapers/evening-sky.png &
   '';
 in
 {
@@ -51,9 +53,9 @@ in
         groupbar = {
           "col.active" = "$sapphire";
           "col.inactive" = "rgb(7AA4B6)";
-	  text_color = "$surface1";
-	  font_size = 12;
-	  font_family = "FiraCode";
+          text_color = "$surface1";
+          font_size = 12;
+          font_family = "FiraCode";
         };
       };
 
@@ -64,6 +66,8 @@ in
 
       misc = {
         new_window_takes_over_fullscreen = true;
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
       };
 
       animations = {
@@ -99,12 +103,11 @@ in
       };
 
       windowrule = [
-	"idleinhibit fullscreen, firefox"
+        "idleinhibit fullscreen, firefox"
       ];
 
       windowrulev2 = [
-	"bordercolor $yellow, fullscreen:1"
-
+        "bordercolor $yellow, fullscreen:1"
       ];
 
       bind = [
@@ -120,6 +123,13 @@ in
         # alt tab
         "ALT, Tab, cyclenext,"
         "ALT, TAB, bringactivetotop,"
+
+        # screenshot a region
+        ", PRINT, exec, hyprshot -m region -o ~/Pictures/Screenshots"
+        # screenshot a window
+        "$mod, PRINT, exec, hyprshot -m window -o ~/Pictures/Screenshots"
+        # screenshot a monitor
+        "$mod SHIFT, PRINT, exec, hyprshot -m output -o ~/Pictures/Screenshots"
 
         # window navigation
         "$mod, h, movefocus, l"
