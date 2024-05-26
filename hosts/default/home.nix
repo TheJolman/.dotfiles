@@ -11,6 +11,7 @@
     ../../modules/home/kitty.nix
     ../../modules/home/dunst.nix
     ../../modules/home/swaylock.nix
+    ../../modules/home/swayidle.nix
     ../../modules/home/git.nix
     ../../modules/home/yazi.nix
     ../../modules/home/hyprland.nix
@@ -68,6 +69,7 @@
     waybar
 
     # Essential tools for wm
+    swayidle
     wl-clipboard
     grim
     slurp
