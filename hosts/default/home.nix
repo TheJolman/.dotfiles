@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
   home.username = "josh";
@@ -63,6 +63,8 @@
     libreoffice-qt
     hunspell     # for spellcheck
     vscode
+    evince
+
 
     # Desktop experience stuff
     swww
