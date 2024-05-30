@@ -110,11 +110,52 @@
 
       # Oil
       {
-	key = "-";
-	action = "<CMD>Oil<CR>";
-	mode = "n";
+        key = "-";
+        action = "<CMD>Oil<CR>";
+        mode = "n";
       }
 
+      # Toggleterm
+      {
+        key = "<A-1>";
+        action = "<cmd>ToggleTerm 1 direction=horizontal<CR>";
+        mode = "n";
+      }
+      {
+        key = "<A-1>";
+        action = "<cmd>ToggleTerm 1 direction=horizontal<CR>";
+        mode = "t";
+      }
+      {
+        key = "<A-2>";
+        action = "<cmd>ToggleTerm 2 direction=horizontal<CR>";
+        mode = "n";
+      }
+      {
+        key = "<A-2>";
+        action = "<cmd>ToggleTerm 2 direction=horizontal<CR>";
+        mode = "t";
+      }
+      {
+        key = "<A-3>";
+        action = "<cmd>ToggleTerm 3 direction=horizontal<CR>";
+        mode = "n";
+      }
+      {
+        key = "<A-3>";
+        action = "<cmd>ToggleTerm 3 direction=horizontal<CR>";
+        mode = "t";
+      }
+      {
+        key = "<A-f>";
+        action = "<cmd>ToggleTerm 10 direction=float<CR>";
+        mode = "n";
+      }
+      {
+        key = "<A-f>";
+        action = "<cmd>ToggleTerm 10 direction=float<CR>";
+        mode = "t";
+      }
     ];
   };
 }

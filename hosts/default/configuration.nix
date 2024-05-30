@@ -21,6 +21,19 @@
       inputs.home-manager.nixosModules.default
     ];
 
+  systemd.coredump = {
+    enable = true;
+    extraConfig = ''
+      Storage=none
+      Compress=yes
+      ProcessSizeMax=2G
+    '';
+  };
+
+  # for usb mounting
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 

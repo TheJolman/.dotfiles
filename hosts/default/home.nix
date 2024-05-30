@@ -40,8 +40,10 @@
     fzf
     fastfetch
     lsd
+    xorg.xhost
 
     # neovim
+
     git-credential-oauth
     parted
     polkit
@@ -53,6 +55,7 @@
     rstudio
 
     # gui apps
+    mediawriter
     gparted
     firefox
     gnome.nautilus
@@ -63,7 +66,8 @@
     libreoffice-qt
     hunspell     # for spellcheck
     vscode
-    evince
+    evince  # gnome document viewer
+    gnome.eog
 
 
     # Desktop experience stuff

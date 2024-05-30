@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./toggleterm.nix
     ./autopairs.nix
     ./lualine.nix
     ./lsp.nix
