@@ -1,10 +1,10 @@
-{ ... }: {
+{...}: {
   programs.nixvim.plugins.cmp_luasnip.enable = true;
   programs.nixvim.plugins.cmp = {
     enable = true;
 
     autoEnableSources = true;
-    settings ={
+    settings = {
       window = {
         completion.border = "rounded";
         documentation = {
@@ -27,11 +27,10 @@
       };
 
       sources = [
-        { name = "nvim_lsp"; }
-        { name = "luasnip"; }
-        { name = "path"; }
-        { name = "buffer"; }
-
+        {name = "nvim_lsp";}
+        {name = "luasnip";}
+        {name = "path";}
+        {name = "buffer";}
       ];
     };
   };

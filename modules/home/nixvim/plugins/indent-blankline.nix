@@ -1,10 +1,8 @@
-{ ... }: {
+{...}: {
   programs.nixvim.plugins.rainbow-delimiters.enable = true;
   programs.nixvim.plugins.indent-blankline = {
     enable = true;
-    settings = {
-      indent.char = "▏";
-    };
+    settings = {indent.char = "▏";};
   };
   programs.nixvim.extraConfigLua = ''
     local highlight = {

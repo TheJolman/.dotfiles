@@ -1,6 +1,9 @@
-{ pkgs, lib, inputs, ... }:
-
 {
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   home.username = "josh";
   home.homeDirectory = "/home/josh";
   home.stateVersion = "23.11"; # Please read the comment before changing.
@@ -19,7 +22,6 @@
     inputs.nixvim.homeManagerModules.nixvim
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
-
   ];
 
   xdg.enable = true;
@@ -28,7 +30,7 @@
     catppuccin = {
       enable = true;
       accent = "pink";
-      tweaks = [ "normal" ];
+      tweaks = ["normal"];
       icon.enable = true;
     };
   };
@@ -58,7 +60,6 @@
 
     sops
 
-
     git-credential-oauth
     parted
     polkit
@@ -79,11 +80,10 @@
     discord # unfree
     webcord # for discord screen sharing
     libreoffice-qt
-    hunspell     # for spellcheck
+    hunspell # for spellcheck
     vscode
-    evince  # gnome document viewer
+    evince # gnome document viewer
     gnome.eog
-
 
     # Desktop experience stuff
     swww
@@ -104,7 +104,9 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DejaVuSansMono" "FantasqueSansMono" ]; })
+    (pkgs.nerdfonts.override {
+      fonts = ["FiraCode" "DejaVuSansMono" "FantasqueSansMono"];
+    })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -122,12 +124,8 @@
     };
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "zoom"
-    "discord"
-    "vscode"
-  ];
-
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) ["zoom" "discord" "vscode"];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -160,11 +158,7 @@
   #
   #  /etc/profiles/per-user/josh/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
-
-
+  home.sessionVariables = {EDITOR = "nvim";};
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

@@ -1,14 +1,12 @@
 {
-
   description = "NixOS config flake";
-  
+
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-
     };
 
     home-manager = {
@@ -25,17 +23,21 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
-  outputs = { self, nixpkgs, catppuccin, home-manager, ... }@inputs:
-  let
+  outputs = {
+    self,
+    nixpkgs,
+    catppuccin,
+    home-manager,
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
-  in
-  {
+  in {
+    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         ./hosts/default/configuration.nix
         inputs.home-manager.nixosModules.default
@@ -43,5 +45,4 @@
       ];
     };
   };
-
 }

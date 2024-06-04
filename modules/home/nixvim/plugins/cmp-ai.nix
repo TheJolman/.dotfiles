@@ -1,10 +1,9 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   # extraPlugins = with pkgs.vimPlugins; [
   #   {
-  #     plugin = 
+  #     plugin =
   #   }
-
-  ];
+  # ];
   programs.nixvim.extraConfigLua = ''
     local cmp_ai = require('cmp_ai.config')
 

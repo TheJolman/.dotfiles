@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   programs.nixvim = {
     globals.mapleader = " ";
 
@@ -76,10 +76,10 @@
       }
 
       # For resizing windows
-	#      {
-	# key = "<C-=>";
-	# action = "<C-W>=";
-	#      }
+      #      {
+      # key = "<C-=>";
+      # action = "<C-W>=";
+      #      }
       {
         key = "<C-Up>";
         action = "5<C-W>+";

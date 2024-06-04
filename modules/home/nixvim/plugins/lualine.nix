@@ -1,10 +1,10 @@
-{ ... }: {
+{...}: {
   programs.nixvim.plugins.lualine = {
     enable = true;
     theme = "catppuccin";
     globalstatus = true;
 
-    extensions = [ "oil" ];
+    extensions = ["oil"];
 
     sections = {
       lualine_a = ["mode"];
@@ -41,7 +41,5 @@
       lualine_y = [""];
       lualine_z = ["filename"];
     };
-    
-
   };
 }

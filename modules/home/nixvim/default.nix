@@ -1,8 +1,5 @@
-{ ... }: {
-  imports = [
-    ./plugins/default.nix
-    ./maps.nix
-  ];
+{...}: {
+  imports = [./plugins/default.nix ./maps.nix];
   programs.nixvim = {
     enable = true;
     vimAlias = true;
@@ -10,36 +7,31 @@
     extraConfigLua = ''
       vim.lsp.inlay_hint.enable()
 
-      '';
+    '';
 
-  
     colorschemes.catppuccin = {
       enable = true;
       settings.flavour = "frappe";
 
       settings = {
-	transparent_background = true;
+        transparent_background = true;
 
-	integrations = {
-	  cmp = true;
-	  gitsigns = true;
-	  treesitter = true;
-	  native_lsp = {
-	    enabled = true;
-	    virtual_text = {
-	      errors = ["italic"];
-	      hints = ["italic"];
-	      warnings = ["underline"];
-	      information = ["underline"];
-	    };
-	    inlay_hints = {
-	      background = true;
-	    };
-	  };
-	};
-
+        integrations = {
+          cmp = true;
+          gitsigns = true;
+          treesitter = true;
+          native_lsp = {
+            enabled = true;
+            virtual_text = {
+              errors = ["italic"];
+              hints = ["italic"];
+              warnings = ["underline"];
+              information = ["underline"];
+            };
+            inlay_hints = {background = true;};
+          };
+        };
       };
-
     };
 
     opts = {
@@ -62,7 +54,5 @@
       register = "unnamedplus";
       providers.wl-copy.enable = true;
     };
-
   };
-
 }

@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     ./toggleterm.nix
     ./autopairs.nix

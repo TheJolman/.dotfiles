@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
@@ -31,8 +30,7 @@
       }
     ];
 
-  # use initExtra = '' ''; for extra config 
-
+    # use initExtra = '' ''; for extra config
   };
 
   programs.oh-my-posh = {
@@ -40,5 +38,4 @@
     enableZshIntegration = true;
     useTheme = "catppuccin";
   };
-
 }

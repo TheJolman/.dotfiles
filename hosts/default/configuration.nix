@@ -1,35 +1,35 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
-
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # ../../modules/nixos/greetd.nix # tuigreet
-      ../../modules/nixos/sddm.nix
-      ../../modules/nixos/sound.nix
-      ../../modules/nixos/bluetooth.nix
-      ../../modules/nixos/tlp.nix
-      ../../modules/nixos/nh.nix
-      ../../modules/nixos/grub.nix
-      inputs.catppuccin.nixosModules.catppuccin
-      inputs.home-manager.nixosModules.default
-      inputs.sops-nix.nixosModules.sops
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # ../../modules/nixos/greetd.nix # tuigreet
+    ../../modules/nixos/sddm.nix
+    ../../modules/nixos/sound.nix
+    ../../modules/nixos/bluetooth.nix
+    ../../modules/nixos/tlp.nix
+    ../../modules/nixos/nh.nix
+    ../../modules/nixos/grub.nix
+    inputs.catppuccin.nixosModules.catppuccin
+    inputs.home-manager.nixosModules.default
+    inputs.sops-nix.nixosModules.sops
+  ];
 
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
 
   # will build even if file is not found
   sops.age.keyFile = "/home/josh/.config/sops/age/keys.txt";
-  sops.secrets.CODESTRAL_API_KEY = {
-    owner = config.users.users.josh.name;
-  };
+  sops.secrets.CODESTRAL_API_KEY = {owner = config.users.users.josh.name;};
 
   systemd.coredump = {
     enable = true;
@@ -48,12 +48,11 @@
   programs.zsh.enable = true;
 
   programs.hyprland.enable = true;
-  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  programs.hyprland.package =
+    inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.hyprland.xwayland.enable = true;
 
-
   catppuccin.flavor = "mocha";
-
 
   security.pam.services.swaylock = {};
 
@@ -97,31 +96,21 @@
   users.users.josh = {
     isNormalUser = true;
     description = "Joshua Holman";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
+    extraGroups = ["networkmanager" "wheel"];
+    packages = with pkgs; [];
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "josh" = import ./home.nix;
-    };
+    extraSpecialArgs = {inherit inputs;};
+    users = {"josh" = import ./home.nix;};
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    wget
-    curl
-    git
-    vim
-    greetd.tuigreet
-  ];
+  environment.systemPackages = with pkgs; [wget curl git vim greetd.tuigreet];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -149,5 +138,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }

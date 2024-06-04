@@ -1,5 +1,8 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   programs.kitty = {
     enable = true;
     # theme = "Gruvbox Dark";
@@ -15,7 +18,5 @@
       window_margin_width = 10;
       background_opacity = "0.8";
     };
-
-
   };
 }
