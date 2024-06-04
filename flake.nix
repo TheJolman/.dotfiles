@@ -5,6 +5,12 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,6 +19,7 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     catppuccin.url = "github:catppuccin/nix";
+    hyprcursor-phinger.url = "github:jappie3/hyprcursor-phinger";
 
     nixvim = {
       url = "github:nix-community/nixvim";

@@ -19,7 +19,17 @@
       ../../modules/nixos/grub.nix
       inputs.catppuccin.nixosModules.catppuccin
       inputs.home-manager.nixosModules.default
+      inputs.sops-nix.nixosModules.sops
     ];
+
+  sops.defaultSopsFile = ../../secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+
+  # will build even if file is not found
+  sops.age.keyFile = "/home/josh/.config/sops/age/keys.txt";
+  sops.secrets.CODESTRAL_API_KEY = {
+    owner = config.users.users.josh.name;
+  };
 
   systemd.coredump = {
     enable = true;
@@ -42,7 +52,7 @@
   programs.hyprland.xwayland.enable = true;
 
 
-  catppuccin.flavour = "mocha";
+  catppuccin.flavor = "mocha";
 
 
   security.pam.services.swaylock = {};

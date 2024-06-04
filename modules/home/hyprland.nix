@@ -14,15 +14,20 @@ in
 {
   wayland.windowManager.hyprland = {
     enable = true;
-
     catppuccin.enable = true;
-
     xwayland.enable = true;
-
     systemd.enable = true;
 
     settings = {
       exec-once = ''${startupScript}/bin/start'';
+
+      cursor.enable_hyprcursor = true;
+
+      env = [
+        "HYPRCURSOR_THEME, phinger-cursors-dark"
+        "HYPRCURSOR_SIZE, 25"
+      ];
+
 
       monitor = ",preferred,auto,1";
 
@@ -37,11 +42,13 @@ in
         kb_options = "caps:swapescape";
       };
 
+
       general = {
         gaps_in = 5;
         gaps_out = 10;
         border_size = 3;
         layout = "dwindle";
+        resize_on_border = true;
 
         "col.inactive_border" = "$surface0";
         "col.active_border" = "$sapphire";
@@ -193,14 +200,15 @@ in
         ];
 
 	bindl = [
-	  # this doesn't seem to work
-          ", switch:[Lid Switch], exec, swaylock"
-	  # turn screen off when lid is closed
-          ", switch:on:[Lid Switch], exec, hyprctl keyword monitor \"eDP-1, disable\""
-	  # turn back on when lid is opened
-          ", switch:off:[Lid Switch], exec, hyprctl keyword monitor \"eDP-1, auto, 1\""
+          # this doesn't seem to work
+          ", switch:Lid Switch, exec, swaylock"
+          # turn screen off when lid is closed
+          ", switch:on:Lid Switch, exec, hyprctl keyword monitor \"eDP-1, disable\""
+          # turn back on when lid is opened
+          ", switch:off:Lid Switch, exec, hyprctl keyword monitor \"eDP-1, auto, 1\""
         ];
 
     };
   };
+  programs.hyprcursor-phinger.enable = true;
 }

@@ -18,6 +18,7 @@
     ../../modules/home/nixvim/default.nix
     inputs.nixvim.homeManagerModules.nixvim
     inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
 
   ];
 
@@ -32,13 +33,18 @@
     };
   };
 
-  home.pointerCursor = {
-    gtk.enable = true;
-    x11.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 25;
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
   };
+
+  # home.pointerCursor = {
+  #   gtk.enable = true;
+  #   x11.enable = true;
+  #   package = pkgs.bibata-cursors;
+  #   name = "Bibta-Modern-Classic";
+  #   size = 25;
+  # };
 
   fonts.fontconfig.enable = true;
 
@@ -50,7 +56,8 @@
     lsd
     xorg.xhost
 
-    # neovim
+    sops
+
 
     git-credential-oauth
     parted
@@ -59,7 +66,7 @@
 
     # dev stuff
     gnumake
-    python3
+    python312
     rstudio
 
     # gui apps
@@ -81,6 +88,7 @@
     # Desktop experience stuff
     swww
     waybar
+    hyprcursor
 
     # Essential tools for wm
     swayidle

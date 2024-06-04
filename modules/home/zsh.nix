@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -15,7 +15,7 @@
       copy = "wl-copy";
       paste = "wl-paste";
       lg = "lazygit";
-      cat = "bat -p";
+      nd = "nix develop -c zsh";
     };
 
     plugins = [

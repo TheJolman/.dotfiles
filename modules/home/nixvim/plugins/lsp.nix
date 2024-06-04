@@ -2,7 +2,7 @@
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
-      nil_ls.enable = true;
+      nil-ls.enable = true;
       # asm-lsp.enable = true;
       bashls.enable = true;
       cmake.enable = true;
