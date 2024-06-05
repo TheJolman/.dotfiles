@@ -1,12 +1,11 @@
 {pkgs, ...}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     ${pkgs.waybar}/bin/waybar &
-    # hyprpaper &
-    swayidle &
+    ${pkgs.swayidle}/bin/swayidle &
     ${pkgs.dunst}/bin/dunst &
     nm-applet --indicator &
     blueman-applet &
-    swww-daemon &
+    swww-daemon &  # wallaper daemon
     swww img ~/Pictures/Wallpapers/evening-sky.png &
   '';
 in {
@@ -21,7 +20,9 @@ in {
 
       env = ["HYPRCURSOR_THEME, phinger-cursors-dark" "HYPRCURSOR_SIZE, 25"];
 
-      monitor = ",preferred,auto,1";
+      # to mirror, add the folowing to monitors list:
+      # "DP-11,preferred,auto,1,mirror,eDP-1"
+      monitor = [",preferred,auto,1"];
 
       "$mod" = "SUPER";
 
