@@ -57,18 +57,18 @@
     fastfetch
     lsd
     xorg.xhost
-
-    sops
-
-    git-credential-oauth
     parted
     polkit
     bat
 
+    # for secrets
+    sops
+
     # dev stuff
     gnumake
     python312
-    rstudio
+    git-credential-oauth
+    gh
 
     # gui apps
     mediawriter
@@ -83,7 +83,7 @@
     hunspell # for spellcheck
     vscode
     evince # gnome document viewer
-    gnome.eog
+    gnome.eog # gnome image viwer
 
     # Desktop experience stuff
     swww

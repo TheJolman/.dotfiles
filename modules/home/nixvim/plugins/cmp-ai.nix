@@ -1,3 +1,4 @@
+# this file is currently unused
 {pkgs, ...}: {
   # extraPlugins = with pkgs.vimPlugins; [
   #   {
