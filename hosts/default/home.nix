@@ -24,6 +24,8 @@
     inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
   ];
 
+  catppuccin.enable = true;
+
   xdg.enable = true;
   gtk = {
     enable = true;
@@ -119,7 +121,6 @@
   programs.btop = {
     enable = true;
     settings = {
-      color_theme = "gruvbox_dark_v2";
       vim_keys = true;
     };
   };

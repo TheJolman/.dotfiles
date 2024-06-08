@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
@@ -10,7 +10,7 @@
       gleam.enable = true;
       jsonls.enable = true;
       lua-ls.enable = true;
-      ruff-lsp.enable = true;
+      # ruff-lsp.enable = true;
       pyright.enable = true;
     };
     onAttach = ''
@@ -38,4 +38,12 @@
 
     '';
   };
+  # programs.nixvim.extraPackages = [pkgs.basedpyright];
+  # programs.nixvim.extraConfigLua = ''
+  #   require'lspconfig'.basedpyright.setup({
+  #     analysis = {
+  #       autoSearchPaths = true;
+  #     }
+  #   })
+  # '';
 }

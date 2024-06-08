@@ -11,7 +11,6 @@
 in {
   wayland.windowManager.hyprland = {
     enable = true;
-    catppuccin.enable = true;
     xwayland.enable = true;
     systemd.enable = true;
 
@@ -110,7 +109,7 @@ in {
           "$mod, E, 	    exec, $fileManager"
           "$mod, Q,       killactive"
           "$mod SHIFT, M, exit"
-          "$mod SHIFT, L, exec, swaylock"
+          "$mod SHIFT, L, exec, swaylock -l"
 
           # alt tab
           "ALT, Tab, cyclenext,"
@@ -180,7 +179,7 @@ in {
 
       bindl = [
         # this doesn't seem to work
-        ", switch:Lid Switch, exec, swaylock"
+        ", switch:Lid Switch, exec, swaylock -l"
         # turn screen off when lid is closed
         ''
           , switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"''
