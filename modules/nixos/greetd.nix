@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";

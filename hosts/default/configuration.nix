@@ -49,12 +49,32 @@
 
   programs.hyprland.enable = true;
   programs.hyprland.package =
-    inputs.hyprland.packages."${pkgs.system}".hyprland;
+  inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.hyprland.xwayland.enable = true;
 
   catppuccin.flavor = "mocha";
 
-  security.pam.services.swaylock = {};
+  # fingerprint reader
+  services.fprintd.enable = true;
+  # this might speed it up by starting driver at system start
+  systemd.services.fprintd = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.Type = "simple";
+  };
+
+  security.pam.services.swaylock = {
+    fprintAuth = true;
+    text = ''
+      auth sufficient pam_unix.so try_first_pass likeauth nullok
+      auth sufficient pam_fprintd.so
+      auth include login
+
+    '';
+  };
+  # security.pam.services.swaylock.fprintAuth = true;
+  security.pam.services.hyprlock = {
+    fprintAuth = true;
+  };
 
   networking.hostName = "framework"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

@@ -19,6 +19,7 @@
     ../../modules/home/yazi.nix
     ../../modules/home/hyprland.nix
     ../../modules/home/nixvim/default.nix
+    ../../modules/home/default.nix
     inputs.nixvim.homeManagerModules.nixvim
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
@@ -84,6 +85,7 @@
     libreoffice-qt
     hunspell # for spellcheck
     vscode
+    zed-editor
     evince # gnome document viewer
     gnome.eog # gnome image viwer
 
@@ -101,6 +103,8 @@
     networkmanagerapplet
     polkit_gnome # for authentication dialogs
     brightnessctl
+    alsa-utils
+    pavucontrol
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -126,7 +130,7 @@
   };
 
   nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) ["zoom" "discord" "vscode"];
+    builtins.elem (lib.getName pkg) ["zoom" "discord" "vscode" "steam-run" "steam-original"];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
