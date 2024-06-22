@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./indent-o-matic.nix
     ./toggleterm.nix
     ./autopairs.nix
     ./lualine.nix

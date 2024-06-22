@@ -63,6 +63,7 @@
     parted
     polkit
     bat
+    zip
 
     # for secrets
     sops
@@ -77,6 +78,7 @@
     mediawriter
     gparted
     firefox
+    chromium
     gnome.nautilus
     nautilus-open-any-terminal # for nautilus
     zoom-us # unfree
