@@ -146,12 +146,6 @@ in {
           "$mod, S, togglespecialworkspace, magic"
           "$mod SHIFT, S, movetoworkspace, special:magic"
 
-          # screenshot
-          ''
-            , Print, exec, grim -g "$(slurp)" - | wl-copy && notify-send "Screenshot copied to clipboard" -a "ss"''
-          ''
-            CTRL, Print, exec, grim -o /home/josh/Pictures/Screenshots/$(date +%s).png && notify-send "Screenshot saved" -a "ss"''
-
           # media keys
           ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
           ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
