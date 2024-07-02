@@ -72,6 +72,8 @@
     # dev stuff
     gnumake
     python312
+    jdk
+    clang
     git-credential-oauth
     gh
 
