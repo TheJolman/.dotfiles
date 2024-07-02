@@ -25,14 +25,22 @@
     inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
   ];
 
-  catppuccin.enable = true;
+  # catppuccin.enable = true;
+  # catppuccin.flavor = "frappe";
+
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    # accent = "pink";
+    pointerCursor.enable = true;
+  };
 
   xdg.enable = true;
   gtk = {
     enable = true;
     catppuccin = {
-      enable = true;
-      accent = "pink";
+      # accent = "pink";
+      flavor = "mocha";
       tweaks = ["normal"];
       icon.enable = true;
     };
@@ -40,7 +48,8 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = "kvantum";
+    style.name = "kvantum";
   };
 
   # home.pointerCursor = {
