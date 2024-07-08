@@ -15,6 +15,7 @@
       paste = "wl-paste";
       lg = "lazygit";
       nd = "nix develop -c zsh";
+      ya = "yazi";
     };
 
     plugins = [

@@ -75,6 +75,10 @@
     zip
     unzip
 
+    # vpn
+    protonvpn-cli_2
+    protonvpn-gui
+
     # for secrets
     sops
 
@@ -90,7 +94,7 @@
     mediawriter
     gparted
     firefox
-    gnome.nautilus
+    nautilus
     nautilus-open-any-terminal # for nautilus
     zoom-us # unfree
     discord # unfree
@@ -100,7 +104,7 @@
     vscode
     zed-editor
     evince # gnome document viewer
-    gnome.eog # gnome image viwer
+    eog # gnome image viwer
 
     # Desktop experience stuff
     swww

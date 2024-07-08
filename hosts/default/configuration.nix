@@ -14,6 +14,7 @@
     ./hardware-configuration.nix
     # ../../modules/nixos/greetd.nix # tuigreet
     ../../modules/nixos/sddm.nix
+    ../../modules/nixos/vpn.nix
     ../../modules/nixos/sound.nix
     ../../modules/nixos/bluetooth.nix
     ../../modules/nixos/tlp.nix

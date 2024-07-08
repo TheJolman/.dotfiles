@@ -1,11 +1,13 @@
 {...}: {
   programs.nixvim.plugins.flash = {
     enable = true;
-    jump = {
-      autojump = true; # try this as true at some point
-      nohlsearch = true; # this clears the hightlight after jump
+    settings = {
+      jump = {
+        autojump = true; # try this as true at some point
+        nohlsearch = true; # this clears the hightlight after jump
+      };
+      label = {rainbow.enabled = false;};
     };
-    label = {rainbow.enabled = false;};
   };
   programs.nixvim.extraConfigLua = ''
     vim.keymap.set({"n", "x", "o"}, "<leader>s", function() require("flash").jump() end, {desc = "Flash"})

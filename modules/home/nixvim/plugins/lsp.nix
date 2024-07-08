@@ -13,7 +13,7 @@
         lua-ls.enable = true;
         # ruff-lsp.enable = true;
         pyright.enable = true;
-        java-language-server.enable = true;
+        # java-language-server.enable = true;
       };
       onAttach = ''
         local bufmap = function(keys, func)
@@ -46,7 +46,6 @@
         (lib.getExe pkgs.jdt-language-server)
         "-data" "/home/josh/"
         "-configuration" "/home/josh/.cache/jdtls/config"
-        # "-foo" "bar"
       ];
     };
   };
