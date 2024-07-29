@@ -12,7 +12,6 @@
     ./nixvim/default.nix
     ./hypridle.nix
     ./hyprlock.nix
-    ./pluginlist.nix
-
+    ./packages.nix
   ];
 }
