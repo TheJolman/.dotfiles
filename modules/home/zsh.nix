@@ -10,7 +10,6 @@
       ll = "lsd -l";
       ls = "lsd";
       tree = "lsd --tree";
-      update = "sudo nixos-rebuild switch --flake /home/josh/.dotfiles#default";
       copy = "wl-copy";
       paste = "wl-paste";
       lg = "lazygit";
@@ -30,6 +29,13 @@
         };
       }
     ];
+
+    initExtra = ''
+      update() {
+        local host=''${1:-$(hostname)}
+        sudo nixos-rebuild switch --flake $$HOME/.dotfiles#$$host
+      }
+    '';
 
     # use initExtra = '' ''; for extra config
   };
