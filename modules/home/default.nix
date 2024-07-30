@@ -1,5 +1,4 @@
-{...}:
-{
+{...}: {
   imports = [
     ./zsh.nix
     ./fuzzel.nix

@@ -1,6 +1,9 @@
-{ pkgs, lib, ... }: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home.packages = with pkgs; [
-
     # cli tools
     xdragon
     curl

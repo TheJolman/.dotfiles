@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
 in {
   services.greetd = {

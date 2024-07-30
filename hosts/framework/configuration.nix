@@ -55,15 +55,14 @@
 
   programs.hyprland.enable = true;
   programs.hyprland.package =
-  inputs.hyprland.packages."${pkgs.system}".hyprland;
+    inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.hyprland.xwayland.enable = true;
-
 
   # fingerprint reader
   services.fprintd.enable = true;
   # this might speed it up by starting driver at system start
   systemd.services.fprintd = {
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = ["multi-user.target"];
     serviceConfig.Type = "simple";
   };
 
