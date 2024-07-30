@@ -12,7 +12,7 @@
       lualine_c = ["diagnostics"];
       lualine_x = ["encoding" "fileformat" "filetype"];
       lualine_y = ["filesize" "progress"];
-      lualine_z = ["location"];
+      lualine_z = ["filename"];
     };
 
     tabline = {
@@ -25,12 +25,13 @@
     };
 
     winbar = {
-      lualine_a = [""];
+      lualine_a = [''
+        require(lspsaga.symbol.winbar).get_bar()''];
       lualine_b = [""];
       lualine_c = [""];
       lualine_x = [""];
       lualine_y = [""];
-      lualine_z = ["filename"];
+      lualine_z = [""];
     };
 
     inactiveWinbar = {

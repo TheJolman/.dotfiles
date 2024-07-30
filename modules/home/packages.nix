@@ -61,7 +61,7 @@
     slurp
     hyprshot
     networkmanagerapplet
-    polkit_gnome # for authentication dialogs
+    polkit_gnome
     brightnessctl
     alsa-utils
     pavucontrol
