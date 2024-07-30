@@ -1,4 +1,4 @@
-{...}: {
+{lib, pkgs, ...}: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
@@ -11,10 +11,9 @@
         # gleam.enable = true; # works just not using gleam atm
         jsonls.enable = true;
         lua-ls.enable = true;
-        # ruff-lsp.enable = true;
         pyright.enable = true;
-        # java-language-server.enable = true;
-        # nothing for java works right now idk why
+
+        jdt-language-server.enable = true;
       };
       onAttach = ''
         local bufmap = function(keys, func)
@@ -45,9 +44,11 @@
     #   enable = true;
     #   cmd = [
     #     (lib.getExe pkgs.jdt-language-server)
-    #     "-data" "/home/josh/"
-    #     "-configuration" "/home/josh/.cache/jdtls/config"
+    #     "-data" ""
+    #     "-configuration" "~/.cache/jdtls/config"
     #   ];
     # };
+    # extraConfigLua = ''
+    # '';
   };
 }

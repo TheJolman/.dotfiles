@@ -31,6 +31,7 @@
     clang
     git-credential-oauth
     gh
+    jetbrains.idea-community
 
     # gui apps
     mediawriter
