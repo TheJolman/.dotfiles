@@ -43,7 +43,7 @@
       formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
       
       nixosConfigurations = {
-        laptop = mkHost "framework";
+        framework = mkHost "framework";
         desktop = mkHost "workstation";
       };
     };
