@@ -1,4 +1,4 @@
-{lib, pkgs, ...}: {
+{...}: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
@@ -40,15 +40,5 @@
 
       '';
     };
-    # nvim-jdtls = {
-    #   enable = true;
-    #   cmd = [
-    #     (lib.getExe pkgs.jdt-language-server)
-    #     "-data" ""
-    #     "-configuration" "~/.cache/jdtls/config"
-    #   ];
-    # };
-    # extraConfigLua = ''
-    # '';
   };
 }

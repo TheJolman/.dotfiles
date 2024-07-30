@@ -13,6 +13,6 @@
     ./luasnip.nix # this needs to actually be configured, something something jsregexp
     ./flash.nix
     ./indent-blankline.nix
-    # conform
+    ./lspsaga.nix
   ];
 }
