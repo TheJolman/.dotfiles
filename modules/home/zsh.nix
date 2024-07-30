@@ -33,7 +33,7 @@
     initExtra = ''
       update() {
         local host=''${1:-$(hostname)}
-        sudo nixos-rebuild switch --flake $$HOME/.dotfiles#$$host
+        sudo nixos-rebuild switch --flake ~/.dotfiles#$host
       }
     '';
 
