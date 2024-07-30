@@ -25,24 +25,26 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    catppuccin,
-    home-manager,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    lib = nixpkgs.lib;
-  in {
-    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./hosts/default/configuration.nix
-        inputs.home-manager.nixosModules.default
-        home-manager.nixosModules.home-manager
-      ];
+  outputs = { self, nixpkgs, catppuccin, home-manager, ... } @ inputs:
+    let
+      system = "x86_64-linux";
+      lib = nixpkgs.lib;
+      
+      mkHost = hostname: nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/${hostname}/configuration.nix
+          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.home-manager
+        ];
+      };
+    in {
+      formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
+      
+      nixosConfigurations = {
+        laptop = mkHost "framework";
+        desktop = mkHost "workstation";
+      };
     };
-  };
 }
