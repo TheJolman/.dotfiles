@@ -15,6 +15,8 @@
       lg = "lazygit";
       nd = "nix develop -c zsh";
       ya = "yazi";
+      vpnon = "sudo protonvpn c -f";
+      vpnoff = "sudo protonvpn d";
     };
 
     plugins = [

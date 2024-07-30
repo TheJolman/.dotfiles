@@ -25,7 +25,6 @@
   gtk = {
     enable = true;
     catppuccin = {
-      # accent = "pink";
       flavor = "mocha";
       tweaks = ["normal"];
       icon.enable = true;
