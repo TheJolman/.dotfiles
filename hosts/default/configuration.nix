@@ -25,6 +25,11 @@
     inputs.sops-nix.nixosModules.sops
   ];
 
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
+
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
 
@@ -53,7 +58,6 @@
   inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.hyprland.xwayland.enable = true;
 
-  catppuccin.flavor = "mocha";
 
   # fingerprint reader
   services.fprintd.enable = true;

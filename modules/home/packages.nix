@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
 
     # cli tools
+    xdragon
     curl
     fzf
     fastfetch

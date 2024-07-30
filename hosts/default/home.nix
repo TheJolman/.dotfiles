@@ -9,16 +9,6 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   imports = [
-    # ../../modules/home/zsh.nix
-    # ../../modules/home/fuzzel.nix
-    # ../../modules/home/kitty.nix
-    # ../../modules/home/dunst.nix
-    # ../../modules/home/swaylock.nix
-    # ../../modules/home/swayidle.nix
-    # ../../modules/home/git.nix
-    # ../../modules/home/yazi.nix
-    # ../../modules/home/hyprland.nix
-    # ../../modules/home/nixvim/default.nix
     ../../modules/home/default.nix
     inputs.nixvim.homeManagerModules.nixvim
     inputs.catppuccin.homeManagerModules.catppuccin
@@ -28,7 +18,6 @@
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    # accent = "pink";
     pointerCursor.enable = true;
   };
 

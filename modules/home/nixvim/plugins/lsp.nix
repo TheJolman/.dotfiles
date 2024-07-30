@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{...}: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
@@ -14,6 +14,7 @@
         # ruff-lsp.enable = true;
         pyright.enable = true;
         # java-language-server.enable = true;
+        # nothing for java works right now idk why
       };
       onAttach = ''
         local bufmap = function(keys, func)
@@ -40,13 +41,13 @@
 
       '';
     };
-    nvim-jdtls = {
-      enable = true;
-      cmd = [
-        (lib.getExe pkgs.jdt-language-server)
-        "-data" "/home/josh/"
-        "-configuration" "/home/josh/.cache/jdtls/config"
-      ];
-    };
+    # nvim-jdtls = {
+    #   enable = true;
+    #   cmd = [
+    #     (lib.getExe pkgs.jdt-language-server)
+    #     "-data" "/home/josh/"
+    #     "-configuration" "/home/josh/.cache/jdtls/config"
+    #   ];
+    # };
   };
 }
