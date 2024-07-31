@@ -34,6 +34,7 @@
     jetbrains.idea-community
 
     # gui apps
+    kitty
     mediawriter
     gparted
     firefox

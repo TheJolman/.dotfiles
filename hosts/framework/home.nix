@@ -47,9 +47,6 @@
 
   fonts.fontconfig.enable = true;
 
-  home.packages = with pkgs; [
-    kitty
-  ];
 
   programs.btop = {
     enable = true;
