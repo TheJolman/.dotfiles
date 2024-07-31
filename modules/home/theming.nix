@@ -2,6 +2,7 @@
   
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
   ];
 
   catppuccin = {
