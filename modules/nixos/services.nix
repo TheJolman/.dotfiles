@@ -8,7 +8,7 @@
     openssh.enable = true;
 
     # keymap in x11
-    services.xserver = {
+    xserver = {
       xkb.layout = "us";
       xkb.variant = "";
     };

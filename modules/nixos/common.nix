@@ -40,10 +40,6 @@
     packages = with pkgs; [];
   };
 
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users = {"josh" = import ./home.nix;};
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

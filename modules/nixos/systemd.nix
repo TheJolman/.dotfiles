@@ -1,4 +1,4 @@
-{...}: {
+{pkgs,...}: {
   
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
