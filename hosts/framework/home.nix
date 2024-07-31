@@ -10,7 +10,7 @@
 
   imports = [
     ../../modules/home/default.nix
-    inputs.nixvim.homeManagerModules.nixvim
+    # inputs.nixvim.homeManagerModules.nixvim
     # inputs.catppuccin.homeManagerModules.catppuccin
     inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
   ];

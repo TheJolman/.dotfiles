@@ -1,5 +1,9 @@
-{...}: {
-  imports = [./plugins/default.nix ./maps.nix];
+{inputs, ...}: {
+  imports = [
+    inputs.nixvim.homeManagerModules.nixvim
+    ./plugins/default.nix 
+    ./maps.nix
+    ];
   programs.nixvim = {
     enable = true;
     vimAlias = true;
