@@ -13,5 +13,7 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./packages.nix
+    ./theming.nix
+    ./btop.nix
   ];
 }
