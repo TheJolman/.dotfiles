@@ -33,4 +33,6 @@
   #   name = "Bibta-Modern-Classic";
   #   size = 25;
   # };
+
+  fonts.fontconfig.enable = true;
 }
