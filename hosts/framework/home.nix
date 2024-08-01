@@ -44,7 +44,7 @@
   #
   #  /etc/profiles/per-user/josh/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {EDITOR = "nvim";};
+  # home.sessionVariables = {EDITOR = "nvim"; NIXPKGS_ALLOW_UNFREE=1;};
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

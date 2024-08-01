@@ -84,6 +84,8 @@
     # '')
   ];
 
+  home.sessionVariables = {EDITOR = "nvim"; NIXPKGS_ALLOW_UNFREE=1;};
+
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) ["zoom" "discord" "vscode" "steam-run" "steam-original" "android-studio-stable"];
 }
