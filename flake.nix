@@ -50,7 +50,7 @@
 
     nixosConfigurations = {
       framework = mkHost "framework";
-      desktop = mkHost "workstation";
+      workstation = mkHost "workstation";
     };
   };
 }
