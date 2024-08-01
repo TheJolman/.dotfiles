@@ -7,14 +7,11 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ../../modules/nixos/default.nix
       ./hardware-configuration.nix
+      ../../modules/nixos/default.nix
     ];
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
