@@ -13,9 +13,6 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/nixos/default.nix
-    inputs.catppuccin.nixosModules.catppuccin
-    inputs.home-manager.nixosModules.default
-    inputs.sops-nix.nixosModules.sops
   ];
 
   home-manager = {
