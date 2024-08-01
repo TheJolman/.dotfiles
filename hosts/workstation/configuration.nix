@@ -19,7 +19,7 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     users = {"josh" = import ./home.nix;};
-  }
+  };
 
   networking.hostName = "workstation"; # Define your hostname.
 
