@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   imports = [ inputs.gBar.homeManagerModules.x86_64-linux.default ];
 
   programs.gBar = {
@@ -14,5 +14,10 @@
 
     };
   };
+  home.packages = with pkgs; [
+    pamixer
+    killall
+
+  ];
 
 }
