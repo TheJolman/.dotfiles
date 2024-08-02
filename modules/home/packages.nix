@@ -56,7 +56,6 @@
     hyprcursor
 
     # Essential tools for wm
-    gbar
     swayidle
     wl-clipboard
     grim
