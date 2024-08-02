@@ -23,6 +23,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    gBar = {
+      url = "github:scorpion-26/gBar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

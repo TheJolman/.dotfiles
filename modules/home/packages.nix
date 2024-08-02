@@ -53,7 +53,7 @@
 
     # Desktop experience stuff
     swww
-    waybar
+    # waybar
     hyprcursor
 
     # Essential tools for wm

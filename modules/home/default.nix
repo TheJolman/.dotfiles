@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./gbar.nix
     ./zsh.nix
     ./fuzzel.nix
     ./kitty.nix
