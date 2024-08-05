@@ -1,1 +1,1 @@
-{...}: {programs.nixvim.plugins.css-color = {enable = true;};}
+{...}: {programs.nixvim.plugins.vim-css-color = {enable = true;};}
