@@ -14,5 +14,6 @@
     ./flash.nix
     ./indent-blankline.nix
     ./lspsaga.nix
+    ./ts-autotag.nix
   ];
 }
