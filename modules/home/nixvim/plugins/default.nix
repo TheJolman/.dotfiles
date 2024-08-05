@@ -15,5 +15,6 @@
     ./indent-blankline.nix
     ./lspsaga.nix
     ./ts-autotag.nix
+    ./css-color.nix
   ];
 }
