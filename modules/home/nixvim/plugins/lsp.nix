@@ -3,6 +3,8 @@
     lsp = {
       enable = true;
       servers = {
+        html.enable = true;
+        cssls.enable = true;
         nil-ls.enable = true;
         # asm-lsp.enable = true;
         bashls.enable = true;
