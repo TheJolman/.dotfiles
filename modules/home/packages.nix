@@ -32,7 +32,7 @@
     # git-credential-oauth
     gh
     jetbrains.idea-community
-    android-studio
+    # android-studio
 
     # gui apps
     kitty
