@@ -1,7 +1,7 @@
 {...}: {
   programs.nixvim.plugins.lspsaga = {
-    enable = true;
-    beacon.enable = true;
+    enable = false;
+    beacon.enable = false;
     symbolInWinbar.enable = false;
     extraOptions = {
 
