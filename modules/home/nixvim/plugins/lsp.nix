@@ -26,7 +26,7 @@
         bufmap("<leader>a", vim.lsp.buf.code_action, "code action")
 
         bufmap("gd", vim.lsp.buf.definition, "go to definition")
-        bufmap("gD", vim.lsp.buf.declaration, "go to declaration"")
+        bufmap("gD", vim.lsp.buf.declaration, "go to declaration")
         bufmap("gi", vim.lsp.buf.implementation, "go to implementation")
         bufmap("gtd", vim.lsp.buf.type_definition, "go to type definition")
 
