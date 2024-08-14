@@ -18,23 +18,23 @@
         jdt-language-server.enable = true;
       };
       onAttach = ''
-        local bufmap = function(keys, func)
-          vim.keymap.set("n", keys, func, { buffer = bufnr })
+        local bufmap = function(keys, func, description)
+          vim.keymap.set("n", keys, func, { buffer = bufnr, desc = description })
         end
 
-        bufmap("<leader>r", vim.lsp.buf.rename)
-        bufmap("<leader>a", vim.lsp.buf.code_action)
+        bufmap("<leader>r", vim.lsp.buf.rename, "symbol rename")
+        bufmap("<leader>a", vim.lsp.buf.code_action, "code action")
 
-        bufmap("gd", vim.lsp.buf.definition)
-        bufmap("gD", vim.lsp.buf.declaration)
-        bufmap("gi", vim.lsp.buf.implementation)
-        bufmap("gtd", vim.lsp.buf.type_definition)
+        bufmap("gd", vim.lsp.buf.definition, "go to definition")
+        bufmap("gD", vim.lsp.buf.declaration, "go to declaration"")
+        bufmap("gi", vim.lsp.buf.implementation, "go to implementation")
+        bufmap("gtd", vim.lsp.buf.type_definition, "go to type definition")
 
-        bufmap("gr", require("telescope.builtin").lsp_references)
-        bufmap("gs", require("telescope.builtin").lsp_document_symbols)
-        bufmap("gS", require("telescope.builtin").lsp_dynamic_workspace_symbols)
+        bufmap("gr", require("telescope.builtin").lsp_references, "go to references")
+        bufmap("gs", require("telescope.builtin").lsp_document_symbols, "document symbols")
+        bufmap("gS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "workspace symbols")
 
-        bufmap("K", vim.lsp.buf.hover)
+        bufmap("K", vim.lsp.buf.hover, "hover info")
 
         vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
           vim.lsp.buf.format()

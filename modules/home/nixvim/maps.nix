@@ -8,28 +8,33 @@
         key = "<leader>q";
         action = "<CMD>q<CR>";
         mode = "n";
+        options.desc = "quit";
       }
       {
         key = "<leader>w";
         action = "<CMD>w<CR>";
         mode = "n";
+        options.desc = "save";
       }
       {
         key = "<leader>wq";
         action = "<CMD>wq<CR>";
         mode = "n";
+        options.desc = "save+quit";
         options.silent = true;
       }
       {
         key = "<leader>v";
         action = "<CMD>vsplit<CR>";
         mode = "n";
+        options.desc = "vertical split";
         options.silent = true;
       }
       {
         key = "<leader>s";
         action = "<CMD>split<CR>";
         mode = "n";
+        options.desc = "horizontal split";
         options.silent = true;
       }
 
@@ -38,18 +43,21 @@
         key = "<leader>p";
         action = "<CMD>bp<CR>";
         mode = "n";
+        options.desc = "prev buffer";
         options.silent = true;
       }
       {
         key = "<leader>n";
         action = "<CMD>bn<CR>";
         mode = "n";
+        options.desc = "next buffer";
         options.silent = true;
       }
       {
         key = "<leader>x";
         action = "<CMD>bd<CR>";
         mode = "n";
+        options.desc = "delete buffer";
         options.silent = true;
       }
 
@@ -58,21 +66,25 @@
         key = "<leader>h";
         action = "<C-W>h";
         mode = "n";
+        options.desc = "move left";
       }
       {
         key = "<leader>l";
         action = "<C-W>l";
         mode = "n";
+        options.desc = "move right";
       }
       {
         key = "<leader>j";
         action = "<C-W>j";
         mode = "n";
+        options.desc = "move down";
       }
       {
         key = "<leader>k";
         action = "<C-W>k";
         mode = "n";
+        options.desc = "move up";
       }
 
       # For resizing windows
@@ -120,6 +132,7 @@
         key = "<A-1>";
         action = "<cmd>ToggleTerm 1 direction=horizontal<CR>";
         mode = "n";
+        options.desc = "toggle term 1";
       }
       {
         key = "<A-1>";
@@ -130,31 +143,37 @@
         key = "<A-2>";
         action = "<cmd>ToggleTerm 2 direction=horizontal<CR>";
         mode = "n";
+        options.desc = "toggle term 2";
       }
       {
         key = "<A-2>";
         action = "<cmd>ToggleTerm 2 direction=horizontal<CR>";
         mode = "t";
+        options.desc = "toggle term 2";
       }
       {
         key = "<A-3>";
         action = "<cmd>ToggleTerm 3 direction=horizontal<CR>";
         mode = "n";
+        options.desc = "toggle term 3";
       }
       {
         key = "<A-3>";
         action = "<cmd>ToggleTerm 3 direction=horizontal<CR>";
         mode = "t";
+        options.desc = "toggle term 3";
       }
       {
         key = "<A-f>";
         action = "<cmd>ToggleTerm 10 direction=float<CR>";
         mode = "n";
+        options.desc = "toggle float term";
       }
       {
         key = "<A-f>";
         action = "<cmd>ToggleTerm 10 direction=float<CR>";
         mode = "t";
+        options.desc = "toggle float term";
       }
     ];
   };
