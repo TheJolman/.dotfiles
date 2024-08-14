@@ -16,5 +16,6 @@
     ./lspsaga.nix
     ./ts-autotag.nix
     ./css-color.nix
+    ./which-key.nix
   ];
 }
