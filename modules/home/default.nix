@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./direnv.nix
     ./gbar.nix
     ./zsh.nix
     ./fuzzel.nix
