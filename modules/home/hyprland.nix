@@ -30,7 +30,10 @@ in {
       "$menu" = "fuzzel";
       "$browser" = "firefox";
 
-      input = {kb_options = "caps:swapescape";};
+      input = {
+        kb_options = "caps:swapescape";
+        accel_profile = "flat";
+      };
 
       general = {
         gaps_in = 5;
