@@ -28,6 +28,8 @@
       url = "github:scorpion-26/gBar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = {
@@ -48,6 +50,9 @@
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
           home-manager.nixosModules.home-manager
+        ];
+        overlays = [
+          inputs.hyprpanel.overlay
         ];
       };
   in {
