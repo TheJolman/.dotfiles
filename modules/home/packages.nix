@@ -53,6 +53,7 @@
 
     # Desktop experience stuff
     # hyprpanel
+    ags
     swww
     # waybar
     hyprcursor
