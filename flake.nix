@@ -51,9 +51,12 @@
           inputs.home-manager.nixosModules.default
           home-manager.nixosModules.home-manager
         ];
-        overlays = [
-          inputs.hyprpanel.overlay
-        ];
+        pkgs = import nixpkgs {
+         inherit system;
+          overlays = [
+            inputs.hyprpanel.overlay
+          ];
+        };
       };
   in {
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
