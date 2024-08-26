@@ -13,6 +13,6 @@
     ./systemd.nix
     ./services.nix
     ./common.nix
-    ./sops.nix
+    # ./sops.nix
   ];
 }
