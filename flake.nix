@@ -37,26 +37,31 @@
     nixpkgs,
     catppuccin,
     home-manager,
+    hyprpanel,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
 
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+      overlays = [
+        hyprpanel.overlay
+      ];
+    };
+
     mkHost = hostname:
       nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs pkgs;};
         modules = [
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
           home-manager.nixosModules.home-manager
         ];
-        pkgs = import nixpkgs {
-         inherit system;
-          overlays = [
-            inputs.hyprpanel.overlay
-          ];
-        };
       };
   in {
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
