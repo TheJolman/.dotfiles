@@ -43,15 +43,22 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
 
+    # overlays = [
+    #   (final: prev: {
+    #     hyprpanel = inputs.hyprpanel.packages.${system}.default;
+    #   })
+    # ];
+
     pkgs = import nixpkgs {
       inherit system;
       config = {
         allowUnfree = true;
       };
       overlays = [
-        hyprpanel.overlay
+        inputs.hyprpanel.overlay
       ];
     };
+
 
     mkHost = hostname:
       nixpkgs.lib.nixosSystem {
@@ -61,6 +68,9 @@
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
           home-manager.nixosModules.home-manager
+          # {
+          #   nixpkgs.overlays = overlays;
+          # }
         ];
       };
   in {
