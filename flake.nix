@@ -30,6 +30,10 @@
     };
 
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+
+    nix-matlab = {
+     url = "gitlab:doronbehar/nix-matlab";
+    };
   };
 
   outputs = {
@@ -38,16 +42,11 @@
     catppuccin,
     home-manager,
     hyprpanel,
+    nix-matlab,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
-
-    # overlays = [
-    #   (final: prev: {
-    #     hyprpanel = inputs.hyprpanel.packages.${system}.default;
-    #   })
-    # ];
 
     pkgs = import nixpkgs {
       inherit system;
@@ -68,9 +67,6 @@
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
           home-manager.nixosModules.home-manager
-          # {
-          #   nixpkgs.overlays = overlays;
-          # }
         ];
       };
   in {
