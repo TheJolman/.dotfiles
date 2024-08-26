@@ -52,6 +52,7 @@
     eog # gnome image viwer
 
     # Desktop experience stuff
+    # hyprpanel
     swww
     # waybar
     hyprcursor

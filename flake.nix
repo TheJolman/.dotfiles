@@ -28,6 +28,8 @@
       url = "github:scorpion-26/gBar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = {
@@ -35,19 +37,40 @@
     nixpkgs,
     catppuccin,
     home-manager,
+    hyprpanel,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
 
+    # overlays = [
+    #   (final: prev: {
+    #     hyprpanel = inputs.hyprpanel.packages.${system}.default;
+    #   })
+    # ];
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+      overlays = [
+        inputs.hyprpanel.overlay
+      ];
+    };
+
+
     mkHost = hostname:
       nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs pkgs;};
         modules = [
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
           home-manager.nixosModules.home-manager
+          # {
+          #   nixpkgs.overlays = overlays;
+          # }
         ];
       };
   in {
