@@ -60,7 +60,7 @@
 
 
     mkHost = hostname:
-      nixpkgs.lib.nixosSystem {
+      lib.nixosSystem {
         inherit system;
         specialArgs = {inherit inputs pkgs;};
         modules = [

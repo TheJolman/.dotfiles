@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-    # hyprpanel &
+    # ${pkgs.hyprpanel}/bin/hyprpanel &
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     gBar bar 0 &
     ${pkgs.swayidle}/bin/swayidle &
