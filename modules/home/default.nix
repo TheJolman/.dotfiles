@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./ags/default.nix
     ./direnv.nix
     ./gbar.nix
     ./zsh.nix
