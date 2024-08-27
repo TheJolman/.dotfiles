@@ -31,6 +31,8 @@
 
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
 
+    ags.url = "github:Aylur/ags";
+
     nix-matlab = {
      url = "gitlab:doronbehar/nix-matlab";
     };
