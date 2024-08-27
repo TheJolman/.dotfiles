@@ -4,10 +4,10 @@
     inputs.home-manager.nixosModules.default
     inputs.sops-nix.nixosModules.sops
     ./bluetooth.nix
-    # ./greetd.nix
     ./grub.nix
     ./nh.nix
-    ./sddm.nix
+    # ./sddm.nix
+    ./greetd.nix
     ./sound.nix
     ./tlp.nix
     ./systemd.nix
