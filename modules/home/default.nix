@@ -2,7 +2,6 @@
   imports = [
     ./wm/default.nix
     ./direnv.nix
-    ./gbar.nix
     ./zsh.nix
     ./fuzzel.nix
     ./kitty.nix
