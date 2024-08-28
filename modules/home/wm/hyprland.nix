@@ -1,8 +1,7 @@
 {pkgs, ...}: let
-    # ${pkgs.hyprpanel}/bin/hyprpanel &
+    # ${pkgs.swayidle}/bin/swayidle &
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     hyprpanel &
-    ${pkgs.swayidle}/bin/swayidle &
     ${pkgs.dunst}/bin/dunst &
     nm-applet --indicator &
     blueman-applet &
@@ -113,7 +112,7 @@ in {
           "$mod, E, 	    exec, $fileManager"
           "$mod, Q,       killactive"
           "$mod SHIFT, M, exit"
-          "$mod SHIFT, L, exec, loginctl lock-session"
+          "$mod SHIFT, L, exec, swaylock -f"
 
           # alt tab
           "ALT, Tab, cyclenext,"
