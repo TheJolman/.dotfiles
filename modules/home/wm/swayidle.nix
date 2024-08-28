@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.swayidle = {
-    enable = false;
+    enable = true;
     timeouts = [
       { 
         timeout = 300;
