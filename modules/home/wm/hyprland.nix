@@ -178,12 +178,14 @@ in {
         # sleep system when switch is closed
         ", switch:on:Lid Switch, exec, systemctl suspend"
 
+        # the below lines seem to make my bar dissapear when the lid is closed and opened
+
         # turn screen off when lid is closed
-        ''
-          , switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"''
+        # ''
+        #   , switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"''
         # turn back on when lid is opened
-        ''
-          , switch:off:Lid Switch, exec, hyprctl keyword monitor "eDP-1, auto, 1"''
+        # ''
+        #   , switch:off:Lid Switch, exec, hyprctl keyword monitor "eDP-1, auto, 1"''
       ];
     };
   };
