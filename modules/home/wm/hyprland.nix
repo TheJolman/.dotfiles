@@ -1,7 +1,7 @@
 {pkgs, ...}: let
     # ${pkgs.hyprpanel}/bin/hyprpanel &
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    gBar bar 0 &
+    hyprpanel &
     ${pkgs.swayidle}/bin/swayidle &
     ${pkgs.dunst}/bin/dunst &
     nm-applet --indicator &
