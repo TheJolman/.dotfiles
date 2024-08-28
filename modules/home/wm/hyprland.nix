@@ -175,6 +175,8 @@ in {
       bindm = ["$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow"];
 
       bindl = [
+        # lock when lid is closed
+        ", switch:on:Lid Switch, exec, swaylock -f"
         # sleep system when switch is closed
         ", switch:on:Lid Switch, exec, systemctl suspend"
 
