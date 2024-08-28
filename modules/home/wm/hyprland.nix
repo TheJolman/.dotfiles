@@ -113,7 +113,7 @@ in {
           "$mod, E, 	    exec, $fileManager"
           "$mod, Q,       killactive"
           "$mod SHIFT, M, exit"
-          "$mod SHIFT, L, exec, swaylock -l"
+          "$mod SHIFT, L, exec, loginctl lock-session"
 
           # alt tab
           "ALT, Tab, cyclenext,"
@@ -176,8 +176,9 @@ in {
       bindm = ["$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow"];
 
       bindl = [
-        # this doesn't seem to work
-        ", switch:Lid Switch, exec, swaylock -l"
+        # sleep system when switch is closed
+        ", switch:on:Lid Switch, exec, systemctl suspend"
+
         # turn screen off when lid is closed
         ''
           , switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"''
