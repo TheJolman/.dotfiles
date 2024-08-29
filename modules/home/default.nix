@@ -1,5 +1,14 @@
-{...}: {
+{ config, lib, ...}: 
+let
+  desktopHostname = "workstation";
+in
+{
+  config = {
+    gaming.enable = config.Networking.hostName == desktopHostname;
+  };
+
   imports = [
+    ./gaming.nix
     ./wm/default.nix
     ./direnv.nix
     ./zsh.nix
@@ -13,4 +22,5 @@
     ./theming.nix
     ./btop.nix
   ];
+
 }
