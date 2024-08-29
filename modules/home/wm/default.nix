@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   imports = [
     ./hypridle.nix
     ./hyprlock.nix
@@ -7,5 +7,7 @@
     ./swaylock.nix
     ./gbar.nix
   ];
+
+  idleBehavior.enable = lib.mkDefault true;
 
 }
