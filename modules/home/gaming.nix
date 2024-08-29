@@ -2,7 +2,7 @@
     
   options = {
     gaming.enable =
-      lib.mkEnableOption "enables Steam and other gaming stuff";
+      lib.mkEnableOption "enables Steam";
 
   };
 

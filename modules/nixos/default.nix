@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{inputs, lib, ...}: {
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.default
@@ -14,5 +14,10 @@
     ./services.nix
     ./common.nix
     # ./sops.nix
+    ./gaming.nix
+
   ];
+
+  gaming.enable =
+    lib.mkDefault false;
 }
