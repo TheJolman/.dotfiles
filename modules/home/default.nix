@@ -1,12 +1,5 @@
 { config, lib, ...}: 
-let
-  desktopHostname = "workstation";
-in
 {
-  config = {
-    gaming.enable = config.Networking.hostName == desktopHostname;
-  };
-
   imports = [
     ./gaming.nix
     ./wm/default.nix
@@ -22,5 +15,8 @@ in
     ./theming.nix
     ./btop.nix
   ];
+
+  gaming.enable = 
+    lib.mkDefault false;
 
 }

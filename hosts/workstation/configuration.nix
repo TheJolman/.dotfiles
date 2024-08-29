@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
       ../../modules/nixos/default.nix
     ];
+
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
 

@@ -7,6 +7,6 @@
   };
 
   config = lib.mkIf config.gaming.enable {
-    home.pkgs = [pkgs.steam];
+    home.packages = [pkgs.steam];
   };
 }
