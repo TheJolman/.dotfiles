@@ -1,7 +1,6 @@
 { config, lib, ...}: 
 {
   imports = [
-    ./gaming.nix
     ./wm/default.nix
     ./direnv.nix
     ./zsh.nix
@@ -16,7 +15,5 @@
     ./btop.nix
   ];
 
-  gaming.enable = 
-    lib.mkDefault false;
 
 }
