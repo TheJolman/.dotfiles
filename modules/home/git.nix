@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs.git = {
     enable = true;
     userEmail = "joshuaholman5@gmail.com";
@@ -12,4 +8,6 @@
   programs.lazygit = {
     enable = true;
   };
+
+  programs.git-credential-oauth.enable = true;
 }
