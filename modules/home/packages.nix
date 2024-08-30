@@ -47,7 +47,6 @@
     libreoffice-qt
     hunspell # for spellcheck
     vscode
-    zed-editor
     evince # gnome document viewer
     eog # gnome image viwer
 

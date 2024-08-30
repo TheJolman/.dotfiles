@@ -8,6 +8,6 @@
     ./gbar.nix
   ];
 
-  idleBehavior.enable = lib.mkDefault true;
+  idleBehavior.enable = lib.mkDefault false;
 
 }

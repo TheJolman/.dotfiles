@@ -13,6 +13,7 @@
     ./packages.nix
     ./theming.nix
     ./btop.nix
+    ./zed.nix
   ];
 
 
