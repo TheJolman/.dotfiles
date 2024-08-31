@@ -10,8 +10,8 @@
       "ui_font_size": 16,
       "buffer_font_size": 16,
       "theme": {
-        "mode": "system",
-        "light": "Ayu Mirage",
+        "mode": "dark",
+        "light": "Ayu Light",
         "dark": "Ayu Mirage"
       }
     }
