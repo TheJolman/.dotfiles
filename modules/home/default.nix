@@ -1,7 +1,6 @@
 { config, lib, ...}: 
 {
   imports = [
-    ./gaming.nix
     ./wm/default.nix
     ./direnv.nix
     ./zsh.nix
@@ -17,7 +16,5 @@
     ./zed.nix
   ];
 
-  gaming.enable = 
-    lib.mkDefault false;
 
 }
