@@ -58,6 +58,7 @@
       config.allowUnfree = true;
       overlays = [
         inputs.hyprpanel.overlay
+        inputs.nix-matlab.overlay
       ];
     };
 

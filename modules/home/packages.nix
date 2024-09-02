@@ -33,6 +33,7 @@
     gh
     jetbrains.idea-community
     # android-studio
+    matlab
 
     # gui apps
     kitty
