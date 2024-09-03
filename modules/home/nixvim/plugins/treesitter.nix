@@ -15,6 +15,7 @@
       "latex"
       "make"
       "json"
+      "matlab"
     ];
   };
 
