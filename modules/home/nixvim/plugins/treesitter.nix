@@ -16,6 +16,7 @@
       "make"
       "json"
       "matlab"
+      "javascript"
     ];
   };
 
