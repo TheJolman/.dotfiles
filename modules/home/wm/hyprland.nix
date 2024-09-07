@@ -1,6 +1,7 @@
 {pkgs, ...}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     gBar bar 0 &
+    ${pkgs.swayidle}/bin/swayidle &
     ${pkgs.dunst}/bin/dunst &
     ${pkgs.swayidle}/bin/swayidle &
     nm-applet --indicator &

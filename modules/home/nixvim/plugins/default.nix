@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./vimtex.nix
     ./indent-o-matic.nix
     ./toggleterm.nix
     ./autopairs.nix
