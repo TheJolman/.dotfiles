@@ -7,7 +7,4 @@
     ./swaylock.nix
     ./gbar.nix
   ];
-
-  idleBehavior.enable = lib.mkDefault false;
-
 }
