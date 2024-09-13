@@ -13,7 +13,8 @@
         "mode": "dark",
         "light": "Ayu Light",
         "dark": "Ayu Mirage"
-      }
+      },
+      "show_completions_on_input": true,
     }
 
   '';
