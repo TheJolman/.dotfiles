@@ -35,6 +35,10 @@
     # android-studio
     matlab
 
+    # game dev
+    libunity
+    unityhub
+
     # gui apps
     kitty
     mediawriter
