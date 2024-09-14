@@ -37,7 +37,6 @@
     matlab
 
     # game dev
-    libunity
     unityhub
 
     # gui apps
