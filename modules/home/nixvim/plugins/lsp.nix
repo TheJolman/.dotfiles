@@ -18,6 +18,7 @@
           pyright.enable = true;
           tsserver.enable = true;
           jdt-language-server.enable = true;
+          csharp_ls.enable = true;
         };
 
 

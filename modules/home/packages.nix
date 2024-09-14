@@ -28,6 +28,7 @@
     gnumake
     python312
     jdk
+    dotnet-sdk
     clang
     # git-credential-oauth
     gh
