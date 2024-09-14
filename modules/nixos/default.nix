@@ -3,6 +3,7 @@
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.default
     inputs.sops-nix.nixosModules.sops
+    ./docker.nix
     ./bluetooth.nix
     ./grub.nix
     ./nh.nix
