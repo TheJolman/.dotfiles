@@ -1,9 +1,8 @@
 {pkgs, ...}: let
+    # ${pkgs.swayidle}/bin/swayidle &
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     gBar bar 0 &
-    ${pkgs.swayidle}/bin/swayidle &
     ${pkgs.dunst}/bin/dunst &
-    ${pkgs.swayidle}/bin/swayidle &
     nm-applet --indicator &
     blueman-applet &
     swww-daemon &  # wallaper daemon
