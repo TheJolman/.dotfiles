@@ -1,5 +1,6 @@
 {...}: {
   # suspend or hybrid-sleep
-  services.logind.handleLidSwitch = "hybrid-sleep";
-  services.logind.handlePowerKey = "hibernate";
+  services.logind.lidSwitch = "hybrid-sleep";
+  services.logind.lidSwitchDocked = "ignore";
+  services.logind.powerKey = "hibernate";
 }
