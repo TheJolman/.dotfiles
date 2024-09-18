@@ -1,5 +1,4 @@
 {pkgs, ...}: let
-    # ${pkgs.swayidle}/bin/swayidle &
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     gBar bar 0 &
     ${pkgs.dunst}/bin/dunst &

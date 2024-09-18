@@ -56,6 +56,9 @@
     evince # gnome document viewer
     eog # gnome image viwer
     inputs.zen-browser.packages.${pkgs.system}.default
+    
+    spotify-player
+    spotify
 
     # Desktop experience stuff
     # hyprpanel
