@@ -1,7 +1,7 @@
 {pkgs, lib, ...}: {
 
   services.swayidle = {
-    enable = true;
+    enable = false;
     events = [
       {
         event = "before-sleep";
