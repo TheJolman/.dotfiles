@@ -43,11 +43,11 @@ in {
         resize_on_border = true;
 
         "col.inactive_border" = "$surface0";
-        "col.active_border" = "$sapphire";
+        "col.active_border" = "$blue";
       };
 
       group = {
-        "col.border_active" = "$sapphire";
+        "col.border_active" = "$blue";
         "col.border_inactive" = "$surface0";
         groupbar = {
           "col.active" = "$sapphire";
@@ -58,7 +58,13 @@ in {
         };
       };
 
-      decoration = {rounding = 15;};
+      decoration = {
+        rounding = 15;
+        drop_shadow = true;
+        shadow_range = 6;
+        "col.shadow" = "$blue";
+        "col.shadow_inactive" = "$surface0";
+      };
 
       misc = {
         new_window_takes_over_fullscreen = true;
