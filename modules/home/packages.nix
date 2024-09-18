@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  inputs,
   ...
 }: {
   home.packages = with pkgs; [
@@ -54,6 +55,7 @@
     vscode
     evince # gnome document viewer
     eog # gnome image viwer
+    inputs.zen-browser.packages.${pkgs.system}.default
 
     # Desktop experience stuff
     # hyprpanel
