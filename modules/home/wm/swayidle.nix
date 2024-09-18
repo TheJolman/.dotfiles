@@ -12,11 +12,11 @@
         command = "${pkgs.swaylock}/bin/swaylock -f";
       }
     ];
-    timeouts = [
-      { 
-        timeout = 300;
-        command = "${pkgs.swaylock}/bin/swaylock -f"; 
-      }
-    ];
+    # timeouts = [
+    #   { 
+    #     timeout = 300;
+    #     command = "${pkgs.swaylock}/bin/swaylock -f"; 
+    #   }
+    # ];
   };
 }
