@@ -48,8 +48,7 @@
     nautilus
     nautilus-open-any-terminal # for nautilus
     zoom-us # unfree
-    discord # unfree
-    webcord # for discord screen sharing
+    vesktop
     libreoffice-qt
     hunspell # for spellcheck
     vscode
