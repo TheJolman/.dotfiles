@@ -17,6 +17,7 @@
     ./common.nix
     # ./sops.nix
     ./gaming.nix
+    ./logind.nix
 
   ];
 

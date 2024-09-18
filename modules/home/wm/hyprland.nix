@@ -178,7 +178,7 @@ in {
         # lock when lid is closed
         ", switch:on:Lid Switch, exec, swaylock -f"
         # sleep system when switch is closed
-        ", switch:on:Lid Switch, exec, systemctl suspend"
+        # ", switch:on:Lid Switch, exec, systemctl suspend"
 
         # the below lines seem to make my bar dissapear when the lid is closed and opened
 
