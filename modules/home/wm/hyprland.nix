@@ -82,9 +82,6 @@ in {
       };
 
       dwindle = {
-        # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-        pseudotile =
-          true; # master switch for pseudotiling. Enabling is bound to mod + P in the keybinds section below
         preserve_split = true; # you probably want this
       };
 
@@ -103,6 +100,22 @@ in {
 
       windowrulev2 = ["bordercolor $yellow, fullscreen:1"];
 
+      # e = repeat, will repeat when held
+      binde = [
+          # move windows
+          "$mod SHIFT, h, moveactive, -30 0"
+          "$mod SHIFT, l, moveactive, 30 0"
+          "$mod SHIFT, k, moveactive, 0 -30"
+          "$mod SHIFT, j, moveactive, 0 30"
+
+          # resize windows
+          "$mod CTRL, h, resizeactive, -20 0"
+          "$mod CTRL, l, resizeactive, 20 0"
+          "$mod CTRL, k, resizeactive, 0 -20"
+          "$mod CTRL, j, resizeactive, 0 20"
+
+      ];
+
       bind =
         [
           # apps
@@ -112,7 +125,7 @@ in {
           "$mod, E, 	    exec, $fileManager"
           "$mod, Q,       killactive"
           "$mod SHIFT, M, exit"
-          "$mod SHIFT, L, exec, swaylock -f"
+          "$mod CTRL, L, exec, swaylock -f"
 
           # alt tab
           "ALT, Tab, cyclenext,"
@@ -131,11 +144,20 @@ in {
           "$mod, k, movefocus, u"
           "$mod, j, movefocus, d"
 
+          "$mod, n, workspace, +1"
+          "$mod, p, workspace, -1"
+
+          # window manipulation
           "$mod, F, fullscreen, 1"
           "$mod SHIFT, F, fullscreen, 0"
 
           "$mod, V, togglefloating"
-          "$mod, SHIFT J, togglesplit"
+          "$mod, i, togglesplit"
+          "$mod, o, swapsplit"
+
+
+
+          # dwindle
 
           # groups
           "$mod, G, togglegroup"
