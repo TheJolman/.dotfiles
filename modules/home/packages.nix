@@ -25,20 +25,27 @@
     # for secrets
     sops
 
-    # dev stuff
-    gnumake
-    python312
-    jdk
-    dotnet-sdk
-    clang
-    # git-credential-oauth
-    gh
-    jetbrains.idea-community
-    # android-studio
-    matlab
+    # ---- Dev ---- #
 
-    # game dev
+    gh
+    # for c/cpp
+    gnumake
+    cmake
+
+    # for python
+    python312
+    python312Packages.pyscaffold
+
+    # for java and cs
+    jdk
+    jetbrains.idea-community
+    dotnet-sdk
+
+    # misc
+    matlab
     unityhub
+
+    # ---- End Dev ---- # 
 
     # gui apps
     kitty
