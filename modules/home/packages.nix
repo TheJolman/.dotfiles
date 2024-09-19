@@ -34,7 +34,6 @@
 
     # for python
     python312
-    python312Packages.pyscaffold
 
     # for java and cs
     jdk
@@ -83,7 +82,7 @@
     pavucontrol
 
     # battery stuff
-    batsignal
+    batsignal # I think this needs to configured or something
     acpi
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
