@@ -65,7 +65,7 @@ in {
 
     environment.shellAliases = {
       kali = ''
-        ${pkgs.docker}/bin/docker run -it --rm \
+        ${pkgs.docker}/bin/docker run --network host -it --rm \
           --name ${cfg.containerName} \
           -v kali-data:/persistence \
           -v ${cfg.dataDir}:/host-data \

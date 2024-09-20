@@ -60,6 +60,7 @@
     evince # gnome document viewer
     eog # gnome image viwer
     inputs.zen-browser.packages.${pkgs.system}.default
+    gnome-boxes
     
     spotify
 

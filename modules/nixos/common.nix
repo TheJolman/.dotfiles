@@ -14,6 +14,8 @@
     flavor = "mocha";
   };
 
+  virtualisation.vmware.host.enable = true;
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
