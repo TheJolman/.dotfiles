@@ -19,5 +19,6 @@
     ./css-color.nix
     ./which-key.nix
     ./yazi-nvim.nix
+    ./magma.nix
   ];
 }
