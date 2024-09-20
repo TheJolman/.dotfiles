@@ -3,5 +3,6 @@
   services.kali-docker = {
     enable = true;
     extraPackages = [ "neovim" ];
+    users = [ "josh" ];
   };
 }

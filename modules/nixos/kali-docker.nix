@@ -32,10 +32,19 @@ in {
       example = [ "nmap" "metasploit-framework" ];
       description = "Additional packages to install in the Kali container";
     };
+
+    users = mkOption {
+      type = types.listOf types.str;
+      default = [];
+      description = "List of users to add to the docker group";
+    };
   };
 
   config = mkIf cfg.enable {
-    virtualisation.docker.enable = true;
+    virtualisation.docker = {
+      enable = true;
+      autoPrune.enable = true;
+    };
 
     systemd.services.kali-docker-setup = {
       description = "Setup Kali Linux Docker Container";
@@ -71,5 +80,22 @@ in {
       mkdir -p ${cfg.dataDir}
       chmod 755 ${cfg.dataDir}
     '';
+
+    users.groups.docker.members = cfg.users;
+
+    security.sudo.extraRules = [
+      {
+        users = cfg.users;
+        commands = [
+          {
+            command = "${pkgs.docker}/bin/docker";
+            options = [ "NOPASSWD" ];
+          }
+
+        ];
+
+      }
+
+    ];
   };
 }
