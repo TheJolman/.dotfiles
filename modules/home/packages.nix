@@ -33,7 +33,6 @@
     cmake
 
     # for python
-    python312
 
     # for java and cs
     jdk
