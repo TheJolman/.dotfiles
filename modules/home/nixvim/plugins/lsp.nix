@@ -19,6 +19,7 @@
           tsserver.enable = true;
           jdt-language-server.enable = true;
           csharp-ls.enable = true;
+          svelte.enable = true;
         };
 
 
