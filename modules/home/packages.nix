@@ -60,11 +60,8 @@
     evince # gnome document viewer
     eog # gnome image viwer
     inputs.zen-browser.packages.${pkgs.system}.default
-<<<<<<< HEAD
     gnome-boxes
-=======
     gnome-font-viewer
->>>>>>> 98f6a0cbbf80427c3d1e7f4a79ace29c342b3d90
     
     spotify
 
