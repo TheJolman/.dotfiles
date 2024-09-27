@@ -36,7 +36,7 @@
 
     # for java and cs
     jdk
-    jetbrains.idea-community
+    jetbrains.rider
     dotnet-sdk
 
     # misc
@@ -60,7 +60,11 @@
     evince # gnome document viewer
     eog # gnome image viwer
     inputs.zen-browser.packages.${pkgs.system}.default
+<<<<<<< HEAD
     gnome-boxes
+=======
+    gnome-font-viewer
+>>>>>>> 98f6a0cbbf80427c3d1e7f4a79ace29c342b3d90
     
     spotify
 
@@ -84,6 +88,11 @@
     # battery stuff
     batsignal # I think this needs to configured or something
     acpi
+
+    # fonts
+    noto-fonts
+    corefonts
+    roboto
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
