@@ -16,7 +16,7 @@
           jsonls.enable = true;
           lua-ls.enable = true;
           pyright.enable = true;
-          tsserver.enable = true;
+          ts-ls.enable = true;
           jdt-language-server.enable = true;
           csharp-ls.enable = true;
           svelte.enable = true;

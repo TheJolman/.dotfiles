@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./web-devicons.nix
     ./vimtex.nix
     ./indent-o-matic.nix
     ./toggleterm.nix
