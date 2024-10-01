@@ -1,4 +1,4 @@
-{ config, lib, ...}: 
+{...}: 
 {
   imports = [
     ./wm/default.nix
@@ -14,6 +14,7 @@
     ./theming.nix
     ./btop.nix
     ./zed.nix
+    ./scripts.nix
   ];
 
 
