@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
@@ -8,7 +8,7 @@
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    pointerCursor.enable = true;
+    pointerCursor.enable = false;
   };
 
   xdg.enable = true;
@@ -28,13 +28,13 @@
     style.name = "kvantum";
   };
 
-  # home.pointerCursor = {
-  #   gtk.enable = true;
-  #   x11.enable = true;
-  #   package = pkgs.bibata-cursors;
-  #   name = "Bibta-Modern-Classic";
-  #   size = 25;
-  # };
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 25;
+  };
 
   fonts.fontconfig.enable = true;
 }

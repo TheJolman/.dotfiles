@@ -16,7 +16,7 @@ in {
     settings = {
       exec-once = "${startupScript}/bin/start";
 
-      env = ["HYPRCURSOR_THEME, phinger-cursors-dark" "HYPRCURSOR_SIZE, 25"];
+      # env = ["HYPRCURSOR_THEME, phinger-cursors-dark" "HYPRCURSOR_SIZE, 25"];
 
       # to mirror, add the folowing to monitors list:
       # "DP-11,preferred,auto,1,mirror,eDP-1"
@@ -224,5 +224,5 @@ in {
       ];
     };
   };
-  programs.hyprcursor-phinger.enable = true;
+  # programs.hyprcursor-phinger.enable = true;
 }
