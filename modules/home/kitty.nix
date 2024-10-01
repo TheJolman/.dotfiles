@@ -17,6 +17,7 @@
       scrollback_lines = 10000;
       window_margin_width = 10;
       background_opacity = "0.8";
+      map = "super+shift+enter new_os_window_with_cwd";
     };
   };
 }
