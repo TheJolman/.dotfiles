@@ -64,6 +64,7 @@
     inputs.zen-browser.packages.${pkgs.system}.default
     gnome-boxes
     gnome-font-viewer
+    thunderbird
     
     spotify
 
