@@ -33,8 +33,8 @@
     cmake
 
     # for python
-    python313
-    pipx
+    # python313
+    # pipx
 
     # for java and cs
     jdk
