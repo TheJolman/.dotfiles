@@ -5,7 +5,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # cli tools
+    # ---- CLI Tools ---- #
     xdragon
     curl
     fzf
@@ -20,7 +20,6 @@
 
     # vpn
     protonvpn-cli_2
-    # protonvpn-gui
 
     # for secrets
     sops
@@ -36,9 +35,9 @@
     matlab
     unityhub
 
-    # ---- End Dev ---- # 
+    # ---- Gui Apps ---- # 
 
-    # gui apps
+    # protonvpn-gui
     kitty
     mediawriter
     gparted
@@ -57,7 +56,9 @@
     # thunderbird # can't get to work with my gmail atm
     spotify
 
-    # Desktop experience stuff
+
+    # ---- WM stuff ---- # 
+
     # hyprpanel
     # swww
     # waybar
