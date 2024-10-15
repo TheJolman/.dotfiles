@@ -20,28 +20,19 @@
 
     # vpn
     protonvpn-cli_2
-    protonvpn-gui
+    # protonvpn-gui
 
     # for secrets
     sops
 
     # ---- Dev ---- #
 
+    # tools
     gh
-    # for c/cpp
-    gnumake
-    cmake
 
-    # for python
-    # python313
-    # pipx
-
-    # for java and cs
-    jdk
+    # editors and ides
     jetbrains.rider
-    dotnet-sdk
-
-    # misc
+    vscode
     matlab
     unityhub
 
@@ -58,19 +49,17 @@
     vesktop
     libreoffice-qt
     hunspell # for spellcheck
-    vscode
     evince # gnome document viewer
     eog # gnome image viwer
-    inputs.zen-browser.packages.${pkgs.system}.default
+    # inputs.zen-browser.packages.${pkgs.system}.default
     gnome-boxes
     gnome-font-viewer
-    thunderbird
-    
+    # thunderbird # can't get to work with my gmail atm
     spotify
 
     # Desktop experience stuff
     # hyprpanel
-    swww
+    # swww
     # waybar
     hyprcursor
 
@@ -86,7 +75,7 @@
     pavucontrol
 
     # battery stuff
-    batsignal # I think this needs to configured or something
+    batsignal # I think this needs to set up or something
     acpi
 
     # fonts
@@ -94,16 +83,11 @@
     corefonts
     roboto
 
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
     (pkgs.nerdfonts.override {
       fonts = ["FiraCode" "DejaVuSansMono" "FantasqueSansMono"];
     })
 
     # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
