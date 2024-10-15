@@ -7,18 +7,18 @@
         servers = {
           html.enable = true;
           cssls.enable = true;
-          nil-ls.enable = true;
+          nil_ls.enable = true;
           # asm-lsp.enable = true;
           bashls.enable = true;
           cmake.enable = true;
           clangd.enable = true;
           # gleam.enable = true; # works just not using gleam atm
           jsonls.enable = true;
-          lua-ls.enable = true;
+          lua_ls.enable = true;
           pyright.enable = true;
-          ts-ls.enable = true;
-          jdt-language-server.enable = true;
-          csharp-ls.enable = true;
+          ts_ls.enable = true;
+          jdtls.enable = true;
+          csharp_ls.enable = true;
           svelte.enable = true;
         };
 
