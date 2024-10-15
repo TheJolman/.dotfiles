@@ -21,5 +21,6 @@
     ./which-key.nix
     ./yazi-nvim.nix
     ./molten.nix
+    ./markdown.nix
   ];
 }

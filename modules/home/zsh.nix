@@ -17,6 +17,7 @@
       ya = "yazi";
       vpnon = "sudo protonvpn c -f";
       vpnoff = "sudo protonvpn d";
+      matlab = "matlab -nodesktop -nosplash";
     };
 
     plugins = [
