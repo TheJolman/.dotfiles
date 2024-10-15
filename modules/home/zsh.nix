@@ -14,6 +14,7 @@
       paste = "wl-paste";
       lg = "lazygit";
       nd = "nix develop -c zsh";
+      ns = "nix-shell";
       ya = "yazi";
       vpnon = "sudo protonvpn c -f";
       vpnoff = "sudo protonvpn d";
