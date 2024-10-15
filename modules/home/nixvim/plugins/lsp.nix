@@ -20,6 +20,7 @@
           jdtls.enable = true;
           csharp_ls.enable = true;
           svelte.enable = true;
+          mesonlsp.enable = true;
         };
 
 
