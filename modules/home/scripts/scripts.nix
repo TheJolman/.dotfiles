@@ -4,7 +4,7 @@ let
   ghRepo = pkgs.fetchFromGitHub {
     owner = "TheJolman";
     repo = "templates";
-    rev = "19c6002464f2f6c9977dda0c60d237e08885b1b6";
+    rev = "f56e1bb353471b89cde13930c570e22e7ca38312";
     sha256 = "sha256-CdvNt9TVPyw9WUyufK6xjWfPhGLD2EQitr+tV6wao78";
   };
 in
