@@ -1,7 +1,7 @@
 {pkgs, ...}:
 
 let
-  cinitScript = pkgs.fetchFromGitHub {
+  ghRepo = pkgs.fetchFromGitHub {
     owner = "TheJolman";
     repo = "templates";
     rev = "19c6002464f2f6c9977dda0c60d237e08885b1b6";
@@ -11,7 +11,11 @@ in
 {
   home.packages = [
     (pkgs.writeScriptBin "cinit" ''
-    . ${cinitScript}/scripts/cinit.sh
+    . ${ghRepo}/scripts/cinit.sh
+    '')
+
+    (pkgs.writeScriptBin "nstemp" ''
+    . ${ghRepo}/scripts/nstemp.sh
     '')
 
     (pkgs.writeScriptBin "calc" ''
