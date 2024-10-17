@@ -55,7 +55,7 @@
     gnome-font-viewer
     # thunderbird # can't get to work with my gmail atm
     spotify
-
+    gnome-system-monitor
 
     # ---- WM stuff ---- # 
 
