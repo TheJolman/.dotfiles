@@ -7,9 +7,10 @@
     ./autopairs.nix
     ./lualine.nix
     ./lsp.nix
-    ./telescope.nix
+    # ./telescope.nix
     ./cmp.nix
     ./treesitter.nix
+    ./fzf.nix
     ./oil.nix
     ./surround.nix
     ./luasnip.nix # this needs to actually be configured, something something jsregexp

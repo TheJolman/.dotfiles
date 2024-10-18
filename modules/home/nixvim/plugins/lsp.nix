@@ -37,9 +37,9 @@
           bufmap("gi", vim.lsp.buf.implementation, "go to implementation")
           bufmap("gtd", vim.lsp.buf.type_definition, "go to type definition")
 
-          bufmap("gr", require("telescope.builtin").lsp_references, "go to references")
-          bufmap("gs", require("telescope.builtin").lsp_document_symbols, "document symbols")
-          bufmap("gS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "workspace symbols")
+          --bufmap("gr", require("telescope.builtin").lsp_references, "go to references")
+          --bufmap("gs", require("telescope.builtin").lsp_document_symbols, "document symbols")
+          --bufmap("gS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "workspace symbols")
 
           bufmap("K", vim.lsp.buf.hover, "hover info")
 
