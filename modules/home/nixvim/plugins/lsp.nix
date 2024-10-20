@@ -18,7 +18,8 @@
           pyright.enable = true;
           ts_ls.enable = true;
           jdtls.enable = true;
-          csharp_ls.enable = true;
+          # csharp_ls.enable = true;
+          omnisharp.enable = true;
           svelte.enable = true;
           mesonlsp.enable = true;
         };
