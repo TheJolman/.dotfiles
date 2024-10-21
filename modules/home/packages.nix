@@ -46,8 +46,10 @@
     nautilus-open-any-terminal # for nautilus
     zoom-us # unfree
     vesktop
-    libreoffice-qt
+    # libreoffice-qt
+    libreoffice-fresh
     hunspell # for spellcheck
+    hunspellDicts.en_US
     evince # gnome document viewer
     eog # gnome image viwer
     # inputs.zen-browser.packages.${pkgs.system}.default
