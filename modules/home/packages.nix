@@ -26,14 +26,15 @@
 
     # ---- Dev ---- #
 
-    # tools
     gh
 
-    # editors and ides
     jetbrains.rider
     vscode
     matlab
+
     unityhub
+    dotnet-sdk
+
 
     # ---- Gui Apps ---- # 
 
