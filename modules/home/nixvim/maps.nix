@@ -181,6 +181,38 @@
         mode = "t";
         options.desc = "toggle float term";
       }
+
+      # fzf-lua
+      {
+        key = "<leader>ff";
+        action = "<cmd>FzfLua files<CR>";
+        mode = "n";
+        options.desc = "fzf files";
+      }
+      {
+        key = "<leader>fb";
+        action = "<cmd>FzfLua buffers<CR>";
+        mode = "n";
+        options.desc = "fzf buffers";
+      }
+      {
+        key = "<leader>fg";
+        action = "<cmd>FzfLua grep<CR>";
+        mode = "n";
+        options.desc = "fzf grep";
+      }
+      {
+        key = "<leader>fv";
+        action = "<cmd>FzfLua grep_visual<CR>";
+        mode = "n";
+        options.desc = "fzf visual selection";
+      }
+      {
+        key = "<leader>fw";
+        action = "<cmd>FzfLua grep_cword<CR>";
+        mode = "n";
+        options.desc = "fzf word under cursor";
+      }
     ];
   };
 }

@@ -17,6 +17,8 @@
       "json"
       "matlab"
       "javascript"
+      "typescript"
+      "meson"
     ];
   };
 
