@@ -1,5 +1,9 @@
 {pkgs, ...}: {
-  home.packages = [ pkgs.matlab-language-server ];
+  home.packages = with pkgs; [ 
+    matlab-language-server
+  ];
+
+
   programs.nixvim = {
     plugins = {
       lsp = {
@@ -7,18 +11,23 @@
         servers = {
           html.enable = true;
           cssls.enable = true;
-          nil_ls.enable = true;
-          # asm-lsp.enable = true;
+          nixd = {
+            enable = true;
+            settings = {
+              formatting.command = ["alejandra"];
+            };
+          };
           bashls.enable = true;
           cmake.enable = true;
           clangd.enable = true;
-          # gleam.enable = true; # works just not using gleam atm
           jsonls.enable = true;
           lua_ls.enable = true;
-          pyright.enable = true;
+          pylsp = {
+            enable = true;
+            settings.plugins.ruff.enabled = true;
+          };
           ts_ls.enable = true;
           jdtls.enable = true;
-          # csharp_ls.enable = true;
           omnisharp.enable = true;
           svelte.enable = true;
           mesonlsp.enable = true;
@@ -52,32 +61,6 @@
       };
     };
 
-    # nixvim doesn't seem to include matlab lsp support
-    extraConfigLua = ''
-      local lspconfig = require('lspconfig')
-      lspconfig.matlab_ls.setup({
-        cmd = { "matlab-language-server", "--stdio" },
-        filetypes = { "matlab" },
-        root_dir = lspconfig.util.find_git_ancestor,
-        settings = {
-          MATLAB = {
-            indexWorkspace = false,
-            installPath = "",
-            matlabConnectionTiming = "onStart",
-            telemetry = true
-          }
-        },
-        single_file_support = true
-      })
-
-      -- Set filetype for .m files to MATLAB
-      vim.filetype.add({
-        extension = {
-          m = "matlab",
-        },
-      })
-
-    '';
-
+    extraConfigLua= builtins.readFile ./lua/lsp-config.lua;
   };
 }
