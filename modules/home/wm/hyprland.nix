@@ -6,6 +6,7 @@
     blueman-applet &
     swww-daemon &  # wallaper daemon
     swww img ~/Pictures/Wallpapers/evening-sky.png &
+    batsignal &
   '';
 in {
   wayland.windowManager.hyprland = {

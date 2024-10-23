@@ -82,7 +82,7 @@
     pavucontrol
 
     # battery stuff
-    batsignal # I think this needs to set up or something
+    batsignal
     acpi
 
     # fonts
