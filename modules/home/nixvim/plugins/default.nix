@@ -23,5 +23,6 @@
     ./yazi-nvim.nix
     ./molten.nix
     ./markdown.nix
+    ./lint.nix
   ];
 }
