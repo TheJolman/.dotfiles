@@ -12,7 +12,7 @@
     ./oil.nix
     ./surround.nix
     ./luasnip.nix
-    ./vim-fugitive.nix
+    ./fugitive.nix
     ./flash.nix
     ./indent-blankline.nix
     ./ts-autotag.nix
