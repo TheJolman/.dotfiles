@@ -25,6 +25,7 @@
           pylsp = {
             enable = true;
             settings.plugins.ruff.enabled = true;
+            settings.plugins.mypy.enabled = true;
           };
           ts_ls.enable = true;
           jdtls.enable = true;
@@ -41,16 +42,16 @@
 
           bufmap("<leader>r", vim.lsp.buf.rename, "symbol rename")
           --bufmap("<leader>a", vim.lsp.buf.code_action, "code action")
-          bufmap("<leader>a", FzfLua lsp_code_actions, "code action")
+          bufmap("<leader>a", "<cmd>FzfLua lsp_code_actions<CR>", "code action")
 
           bufmap("gd", vim.lsp.buf.definition, "go to definition")
           bufmap("gD", vim.lsp.buf.declaration, "go to declaration")
           bufmap("gi", vim.lsp.buf.implementation, "go to implementation")
           bufmap("gtd", vim.lsp.buf.type_definition, "go to type definition")
 
-          bufmap("gr", FzfLua lsp_references, "go to references")
-          bufmap("gs", FzfLua lsp_document_symbols, "document symbols")
-          bufmap("gS", FzfLua lsp_workspace_symbols, "workspace symbols")
+          bufmap("gr", "<cmd>FzfLua lsp_references<CR>", "go to references")
+          bufmap("gs", "<cmd>FzfLua lsp_document_symbols<CR>", "document symbols")
+          bufmap("gS", "<cmd>FzfLua lsp_workspace_symbols<CR>", "workspace symbols")
 
           bufmap("K", vim.lsp.buf.hover, "hover info")
 
