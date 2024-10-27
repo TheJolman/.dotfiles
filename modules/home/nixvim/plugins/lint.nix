@@ -3,7 +3,7 @@
     enable = true;
     lintersByFt = {
       markdown = ["vale"];
-      cpp = ["clang-tidy"];
+      # cpp = ["clang-tidy"];
       htmldjango = ["djlint"];
     };
   };

@@ -3,7 +3,7 @@
   home.packages = [
     (pkgs.writeScriptBin "cinit" (builtins.readFile ./cinit.sh))
 
-    (pkgs.writeScriptBin "nstemp" (builtins.readFile ./nstemp.sh))
+    (pkgs.writeScriptBin "nsinit" (builtins.readFile ./nstemp.sh))
 
     (pkgs.writeScriptBin "calc" ''
       #usr/bin/env/bash
