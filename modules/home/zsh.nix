@@ -13,6 +13,10 @@
       copy = "wl-copy";
       paste = "wl-paste";
       lg = "lazygit";
+      ga = "git add";
+      gc = "git commit";
+      gp = "git push";
+      gm = "git merge";
       nb = "nom build";
       # nd = "nix develop -c zsh";
       nd = "nom develop -c zsh";
@@ -22,6 +26,7 @@
       vpnoff = "sudo protonvpn d";
       matlab = "matlab -nodesktop -nosplash";
       switch = "nh os switch";
+      packages = "nvim ~/.dotfiles/modules/home/packages.nix";
     };
 
     plugins = [
