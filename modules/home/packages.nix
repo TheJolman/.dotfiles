@@ -59,6 +59,9 @@
     # thunderbird # can't get to work with my gmail atm
     spotify
     gnome-system-monitor
+    transmission_4-qt # torrent client
+    # totem
+    vlc
 
     # ---- WM stuff ---- # 
 
