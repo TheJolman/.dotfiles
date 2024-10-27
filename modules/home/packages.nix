@@ -17,6 +17,8 @@
     bat
     zip
     unzip
+    nix-output-monitor
+    nvd
 
     # vpn
     protonvpn-cli_2
@@ -47,7 +49,6 @@
     nautilus-open-any-terminal # for nautilus
     zoom-us # unfree
     vesktop
-    # libreoffice-qt
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
@@ -60,14 +61,11 @@
     spotify
     gnome-system-monitor
     transmission_4-qt # torrent client
-    # totem
     vlc
 
     # ---- WM stuff ---- # 
 
     # hyprpanel
-    # swww
-    # waybar
     hyprcursor
 
     # Essential tools for wm

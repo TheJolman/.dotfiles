@@ -13,12 +13,15 @@
       copy = "wl-copy";
       paste = "wl-paste";
       lg = "lazygit";
-      nd = "nix develop -c zsh";
-      ns = "nix-shell";
+      nb = "nom build";
+      # nd = "nix develop -c zsh";
+      nd = "nom develop -c zsh";
+      ns = "nom build";
       ya = "yazi";
       vpnon = "sudo protonvpn c -f";
       vpnoff = "sudo protonvpn d";
       matlab = "matlab -nodesktop -nosplash";
+      switch = "nh os switch";
     };
 
     plugins = [
