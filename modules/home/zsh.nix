@@ -20,7 +20,7 @@
       nb = "nom build";
       # nd = "nix develop -c zsh";
       nd = "nom develop -c zsh";
-      ns = "nom build";
+      ns = "nom shell";
       ya = "yazi";
       vpnon = "sudo protonvpn c -f";
       vpnoff = "sudo protonvpn d";
