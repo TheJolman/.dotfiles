@@ -9,6 +9,7 @@
     xdragon
     curl
     fzf
+    fd
     fastfetch
     lsd
     xorg.xhost
