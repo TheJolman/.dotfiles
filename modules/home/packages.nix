@@ -53,7 +53,7 @@
     hunspellDicts.en_US
     evince # gnome document viewer
     eog # gnome image viwer
-    inputs.zen-browser.packages.${pkgs.system}.default
+    # inputs.zen-browser.packages.${pkgs.system}.default
     gnome-boxes
     gnome-font-viewer
     # thunderbird # can't get to work with my gmail atm
