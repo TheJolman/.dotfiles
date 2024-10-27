@@ -5,7 +5,7 @@
     nm-applet --indicator &
     blueman-applet &
     swww-daemon &  # wallaper daemon
-    swww img ~/Pictures/Wallpapers/evening-sky.png &
+    swww img ~/Pictures/Wallpapers/cherry-6.png &
     batsignal &
   '';
 in {

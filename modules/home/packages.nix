@@ -79,6 +79,7 @@
     brightnessctl
     alsa-utils
     pavucontrol
+    swww
 
     # battery stuff
     batsignal
