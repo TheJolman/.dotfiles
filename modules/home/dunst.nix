@@ -1,11 +1,9 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  services.dunst = {
+{...}: {
+  services.mako = {
     enable = true;
-    catppuccin.enable = true;
+    font = "Roboto 14";
+    # settings.global = {
+    #   scale = 2;
+    # };
   };
 }

@@ -1,7 +1,8 @@
 {pkgs, ...}: let
+  # TODO do the pkgs.{name}/bin/exe_name to the unconfigured things
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     gBar bar 0 &
-    ${pkgs.dunst}/bin/dunst &
+    mako &
     nm-applet --indicator &
     blueman-applet &
     swww-daemon &  # wallaper daemon
