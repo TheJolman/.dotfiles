@@ -1,5 +1,8 @@
-{pkgs, lib, ...}: {
-
+{
+  pkgs,
+  lib,
+  ...
+}: {
   services.swayidle = {
     enable = false;
     events = [
@@ -13,9 +16,9 @@
       }
     ];
     # timeouts = [
-    #   { 
+    #   {
     #     timeout = 300;
-    #     command = "${pkgs.swaylock}/bin/swaylock -f"; 
+    #     command = "${pkgs.swaylock}/bin/swaylock -f";
     #   }
     # ];
   };

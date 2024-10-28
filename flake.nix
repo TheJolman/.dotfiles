@@ -21,7 +21,6 @@
 
     catppuccin = {
       url = "github:catppuccin/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hyprcursor-phinger = {
@@ -58,7 +57,6 @@
       url = "github:MarceColl/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs = {
@@ -84,7 +82,6 @@
       ];
     };
 
-
     mkHost = hostname:
       lib.nixosSystem {
         inherit system;
@@ -92,9 +89,9 @@
         modules = [
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             home-manager.useGlobalPkgs = true;
-
           }
         ];
       };

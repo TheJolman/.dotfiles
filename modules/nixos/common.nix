@@ -1,10 +1,12 @@
-{inputs, pkgs,...}: {
-
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
   programs.hyprland.enable = true;
-  # programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.hyprland.xwayland.enable = true;
   networking.networkmanager.enable = true;
   xdg.portal.wlr.enable = true; # this allegedly enables screensharing but I can't tell if it does anything
@@ -34,7 +36,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.josh = {
     isNormalUser = true;
@@ -42,7 +43,6 @@
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [];
   };
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -68,5 +68,4 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
 }

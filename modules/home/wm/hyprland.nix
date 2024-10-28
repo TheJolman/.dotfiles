@@ -1,4 +1,8 @@
-{pkgs, inputs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   # TODO do the pkgs.{name}/bin/exe_name to the unconfigured things
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     gBar bar 0 &
@@ -110,24 +114,23 @@ in {
 
       # e = repeat, will repeat when held
       binde = [
-          # move windows (tiled or floating)
-          "$mod SHIFT, h, movewindow, l"
-          "$mod SHIFT, l, movewindow, r"
-          "$mod SHIFT, k, movewindow, u"
-          "$mod SHIFT, j, movewindow, d"
+        # move windows (tiled or floating)
+        "$mod SHIFT, h, movewindow, l"
+        "$mod SHIFT, l, movewindow, r"
+        "$mod SHIFT, k, movewindow, u"
+        "$mod SHIFT, j, movewindow, d"
 
-          # move floating windows
-          "$mod ALT, h, moveactive, -30 0"
-          "$mod ALT, l, moveactive, 30 0"
-          "$mod ALT, k, moveactive, 0 -30"
-          "$mod ALT, j, moveactive, 0 30"
+        # move floating windows
+        "$mod ALT, h, moveactive, -30 0"
+        "$mod ALT, l, moveactive, 30 0"
+        "$mod ALT, k, moveactive, 0 -30"
+        "$mod ALT, j, moveactive, 0 30"
 
-          # resize windows
-          "$mod CTRL, h, resizeactive, -20 0"
-          "$mod CTRL, l, resizeactive, 20 0"
-          "$mod CTRL, k, resizeactive, 0 -20"
-          "$mod CTRL, j, resizeactive, 0 20"
-
+        # resize windows
+        "$mod CTRL, h, resizeactive, -20 0"
+        "$mod CTRL, l, resizeactive, 20 0"
+        "$mod CTRL, k, resizeactive, 0 -20"
+        "$mod CTRL, j, resizeactive, 0 20"
       ];
 
       bind =
@@ -168,8 +171,6 @@ in {
           "$mod, V, togglefloating"
           "$mod, i, togglesplit"
           "$mod, o, swapsplit"
-
-
 
           # dwindle
 

@@ -20,7 +20,6 @@
     users = {"josh" = import ./home.nix;};
   };
 
-
   networking.hostName = "framework"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

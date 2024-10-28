@@ -1,5 +1,4 @@
-{...}: 
-{
+{...}: {
   imports = [
     ./wm/default.nix
     ./nixvim/default.nix
@@ -16,6 +15,4 @@
     ./btop.nix
     ./zed.nix
   ];
-
-
 }

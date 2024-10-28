@@ -1,7 +1,10 @@
-{ pkgs, lib, ... }: {
-
+{
+  pkgs,
+  lib,
+  ...
+}: {
   options = {
-    gaming.enable = 
+    gaming.enable =
       lib.mkEnableOption "enables Steam and gaming optimizations";
   };
 
@@ -16,5 +19,4 @@
     programs.gamemode.enable = true;
     hardware.xone.enable = true;
   };
-
 }

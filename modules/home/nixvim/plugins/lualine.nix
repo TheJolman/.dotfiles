@@ -2,8 +2,6 @@
   programs.nixvim.plugins.lualine = {
     enable = true;
 
-
-
     settings = {
       options = {
         globalstatus = true;
@@ -31,8 +29,10 @@
       };
 
       winbar = {
-        lualine_a = [''
-          require(lspsaga.symbol.winbar).get_bar()''];
+        lualine_a = [
+          ''
+            require(lspsaga.symbol.winbar).get_bar()''
+        ];
         lualine_b = [""];
         lualine_c = [""];
         lualine_x = [""];
@@ -48,8 +48,6 @@
         lualine_y = [""];
         lualine_z = ["filename"];
       };
-
     };
-
   };
 }

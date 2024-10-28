@@ -1,5 +1,8 @@
-{inputs, pkgs, ...}: {
-  
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
@@ -16,7 +19,6 @@
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-
     };
   };
   gtk = {

@@ -1,5 +1,4 @@
-{config,...}: {
-
+{config, ...}: {
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
 

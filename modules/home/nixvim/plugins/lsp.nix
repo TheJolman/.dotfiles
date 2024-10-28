@@ -1,8 +1,7 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
     matlab-language-server
   ];
-
 
   programs.nixvim = {
     plugins = {
@@ -34,7 +33,6 @@
           mesonlsp.enable = true;
         };
 
-
         onAttach = ''
           local bufmap = function(keys, func, description)
             vim.keymap.set("n", keys, func, { buffer = bufnr, desc = description })
@@ -63,6 +61,6 @@
       };
     };
 
-    extraConfigLua= builtins.readFile ./lua/lsp-config.lua;
+    extraConfigLua = builtins.readFile ./lua/lsp-config.lua;
   };
 }

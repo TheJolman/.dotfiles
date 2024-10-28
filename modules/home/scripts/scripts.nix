@@ -1,5 +1,4 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   home.packages = [
     (pkgs.writeScriptBin "cinit" (builtins.readFile ./cinit.sh))
 
@@ -10,5 +9,4 @@
       nix-shell -p python312 python312Packages.numpy python312Packages.ipython --run "ipython --quick --InteractiveShellApp.exec_lines=\"import numpy as np\""
     '')
   ];
-
 }

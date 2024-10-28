@@ -1,8 +1,10 @@
-{ config, lib, pkgs, ... }:
-
-with lib;
-
-let
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; let
   cfg = config.services.kali-docker;
 in {
   options.services.kali-docker = {
@@ -29,7 +31,7 @@ in {
     extraPackages = mkOption {
       type = types.listOf types.str;
       default = [];
-      example = [ "nmap" "metasploit-framework" ];
+      example = ["nmap" "metasploit-framework"];
       description = "Additional packages to install in the Kali container";
     };
 
@@ -48,9 +50,9 @@ in {
 
     systemd.services.kali-docker-setup = {
       description = "Setup Kali Linux Docker Container";
-      wantedBy = [ "multi-user.target" ];
-      requires = [ "docker.service" ];
-      after = [ "docker.service" ];
+      wantedBy = ["multi-user.target"];
+      requires = ["docker.service"];
+      after = ["docker.service"];
       script = ''
         ${pkgs.docker}/bin/docker pull ${cfg.imageName}
         ${pkgs.docker}/bin/docker volume create kali-data
@@ -61,7 +63,7 @@ in {
       };
     };
 
-    environment.systemPackages = [ pkgs.docker ];
+    environment.systemPackages = [pkgs.docker];
 
     environment.shellAliases = {
       kali = ''
@@ -89,13 +91,10 @@ in {
         commands = [
           {
             command = "${pkgs.docker}/bin/docker";
-            options = [ "NOPASSWD" ];
+            options = ["NOPASSWD"];
           }
-
         ];
-
       }
-
     ];
   };
 }

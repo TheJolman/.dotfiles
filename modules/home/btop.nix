@@ -5,5 +5,4 @@
       vim_keys = true;
     };
   };
-
 }
