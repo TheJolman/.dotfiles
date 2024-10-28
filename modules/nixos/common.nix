@@ -4,7 +4,7 @@
   programs.zsh.enable = true;
 
   programs.hyprland.enable = true;
-  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  # programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.hyprland.xwayland.enable = true;
   networking.networkmanager.enable = true;
   xdg.portal.wlr.enable = true; # this allegedly enables screensharing but I can't tell if it does anything

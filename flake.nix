@@ -15,7 +15,7 @@
     };
 
     hyprland = {
-      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+      url = "github:hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -68,6 +68,8 @@
     home-manager,
     hyprpanel,
     nix-matlab,
+    hyprcursor-phinger,
+    hyprland,
     ...
   } @ inputs: let
     system = "x86_64-linux";
