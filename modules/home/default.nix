@@ -8,7 +8,7 @@
     ./zsh.nix
     ./fuzzel.nix
     ./kitty.nix
-    ./dunst.nix
+    ./mako.nix
     ./git.nix
     ./yazi.nix
     ./packages.nix
