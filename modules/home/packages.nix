@@ -63,6 +63,7 @@
     gnome-system-monitor
     transmission_4-qt # torrent client
     vlc
+    freetube
 
     # ---- WM stuff ---- # 
 
