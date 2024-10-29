@@ -911,15 +911,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1727721329,
-        "narHash": "sha256-QYlWZwUSwrM7BuO+dXclZIwoPvBIuJr6GpFKv9XKFPI=",
-        "owner": "MarceColl",
+        "lastModified": 1730096825,
+        "narHash": "sha256-4AA4gXDo8W6+if8KFi7S0D1lNpN5yczfu41EkKP0850=",
+        "owner": "thejolman",
         "repo": "zen-browser-flake",
-        "rev": "e6ab73f405e9a2896cce5956c549a9cc359e5fcc",
+        "rev": "095ac7189bd12d71b9a9b9234d13553f32127728",
         "type": "github"
       },
       "original": {
-        "owner": "MarceColl",
+        "owner": "thejolman",
         "repo": "zen-browser-flake",
         "type": "github"
       }

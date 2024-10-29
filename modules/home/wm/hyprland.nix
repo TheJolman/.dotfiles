@@ -34,7 +34,7 @@ in {
       "$terminal" = "kitty";
       "$fileManager" = "nautilus";
       "$menu" = "fuzzel";
-      "$browser" = "firefox";
+      "$browser" = "zen";
 
       input = {
         kb_options = "caps:swapescape";
