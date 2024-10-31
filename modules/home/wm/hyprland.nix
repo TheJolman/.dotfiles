@@ -6,7 +6,7 @@
 let
   # TODO do the ${pkgs.name}/bin/exe_name to the unconfigured things
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    waybar
+    waybar &
     mako &
     nm-applet --indicator &
     blueman-applet &
