@@ -9,7 +9,10 @@
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
   networking.networkmanager.enable = true;
-  xdg.portal.wlr.enable = true; # this allegedly enables screensharing but I can't tell if it does anything
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
 
   catppuccin = {
     enable = true;

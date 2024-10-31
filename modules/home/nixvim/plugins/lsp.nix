@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{pkgs, ...}: 
+{
   home.packages = with pkgs; [
     matlab-language-server
   ];
@@ -8,29 +9,40 @@
       lsp = {
         enable = true;
         servers = {
-          html.enable = true;
-          cssls.enable = true;
           nixd = {
             enable = true;
             settings = {
               formatting.command = ["alejandra"];
             };
           };
-          bashls.enable = true;
+          clangd = {
+            enable = true;
+            package = pkgs.clang-tools;
+          };
+          mesonlsp.enable = true;
           cmake.enable = true;
-          clangd.enable = true;
           jsonls.enable = true;
+          bashls.enable = true;
           lua_ls.enable = true;
           pylsp = {
             enable = true;
             settings.plugins.ruff.enabled = true;
             settings.plugins.mypy.enabled = true;
           };
-          ts_ls.enable = true;
           jdtls.enable = true;
           omnisharp.enable = true;
+          # --- Web ---
+          intelephense = {
+            enable = true;
+            package = pkgs.intelephense;
+          };
+          html.enable = true;
+          cssls.enable = true;
+          # ts_ls.enable = true;
+          denols = {
+            enable = true;
+          };
           svelte.enable = true;
-          mesonlsp.enable = true;
         };
 
         onAttach = ''
