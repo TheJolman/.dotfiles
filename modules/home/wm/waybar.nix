@@ -9,7 +9,7 @@
         height = 30;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "network" "wireplumber" "cpu" "memory" "battery" ];
+        modules-right = [ "tray" "network" "wireplumber" "cpu" "memory" "temperature" "battery" ];
 
         clock = {
           format = "{:%a, %d. %b  %H:%M:%S}";
@@ -125,7 +125,7 @@ window#waybar.hidden {
     border-radius: 26px;
     transition: none;
     color: @base;
-    background: @green;
+    background: @lavender;
 }
 
 #mpd.disconnected,
@@ -146,7 +146,7 @@ window#waybar.hidden {
     background: @pink;
 }
 
-#pulseaudio {
+#battery {
     margin-top: 8px;
     margin-left: 8px;
     padding-left: 16px;
@@ -155,7 +155,7 @@ window#waybar.hidden {
     border-radius: 26px;
     transition: none;
     color: @base;
-    background: @sky;
+    background: @blue;
 }
 
 #temperature {
@@ -167,7 +167,7 @@ window#waybar.hidden {
     border-radius: 26px;
     transition: none;
     color: @base;
-    background: @green;
+    background: @mauve;
 }
 
 #cpu {
@@ -179,7 +179,7 @@ window#waybar.hidden {
     border-radius: 26px;
     transition: none;
     color: @base;
-    background: @yellow;
+    background: @flamingo;
 }
 
 #memory {
