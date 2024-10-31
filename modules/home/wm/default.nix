@@ -6,5 +6,6 @@
     ./swayidle.nix
     ./swaylock.nix
     ./gbar.nix
+    ./waybar.nix
   ];
 }

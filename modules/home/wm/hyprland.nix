@@ -2,18 +2,44 @@
   pkgs,
   inputs,
   ...
-}: let
-  # TODO do the pkgs.{name}/bin/exe_name to the unconfigured things
+}:
+let
+  # TODO do the ${pkgs.name}/bin/exe_name to the unconfigured things
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    gBar bar 0 &
+    waybar
     mako &
     nm-applet --indicator &
     blueman-applet &
     swww-daemon &  # wallaper daemon
     swww img ~/Pictures/Wallpapers/cherry-6.png &
-    batsignal &
+    ${pkgs.batsignal}/bin/batsignal &
   '';
 in {
+
+  home.packages = with pkgs; [
+    waybar
+    swww
+    mako
+
+    # hyprpanel
+    hyprcursor
+
+    # Essential tools for wm
+    wl-clipboard
+    grim
+    slurp
+    hyprshot
+    networkmanagerapplet
+    polkit_gnome
+    brightnessctl
+    alsa-utils
+    pavucontrol
+
+    # battery stuff
+    batsignal
+    acpi
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;

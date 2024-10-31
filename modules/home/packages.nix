@@ -49,6 +49,7 @@
     nautilus-open-any-terminal # for nautilus
     zoom-us # unfree
     vesktop
+    discord
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
@@ -63,31 +64,6 @@
     transmission_4-qt # torrent client
     vlc
     freetube
-
-    # ---- WM stuff ---- #
-
-    # hyprpanel
-    hyprcursor
-
-    # Essential tools for wm
-    wl-clipboard
-    grim
-    slurp
-    hyprshot
-    networkmanagerapplet
-    polkit_gnome
-    brightnessctl
-    alsa-utils
-    pavucontrol
-    swww
-    xdg-desktop-portal
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-kde # Zoom wants this one
-    xdg-desktop-portal-gtk # Hyprland wiki recommends having this as well
-
-    # battery stuff
-    batsignal
-    acpi
 
     # fonts
     noto-fonts

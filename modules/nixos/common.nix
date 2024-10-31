@@ -5,13 +5,28 @@
 }: {
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+  networking.networkmanager.enable = true;
 
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
-  networking.networkmanager.enable = true;
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+    xdgOpenUsePortal = true;
+    config = {
+      common.default = ["gtk" "hyprland"];
+      hyprland.default = ["hyprland" "gtk"];
+    };
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-kde
+    ];
+  };
+
+  environment.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
   };
 
   catppuccin = {
