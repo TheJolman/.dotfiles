@@ -81,11 +81,9 @@
     pavucontrol
     swww
     xdg-desktop-portal
-    xdg-desktop-portal-kde # For zoom screensharing
-    xdg-desktop-portal-wlr # Idk if I need this one
-    # hyprland & gtk recommended for Hyprland
-    xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    xdg-desktop-portal-kde # Zoom wants this one
+    xdg-desktop-portal-gtk # Hyprland wiki recommends having this as well
 
     # battery stuff
     batsignal
