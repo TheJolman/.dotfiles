@@ -41,10 +41,10 @@
     opts = {
       number = true;
       relativenumber = true;
-      expandtab = true;
-      tabstop = 2;
-      shiftwidth = 2;
-
+      expandtab = true; # convert tabs to spaces
+      tabstop = 2; # tab width
+      shiftwidth = 2; # indent size
+      smartindent = true;
       pumheight = 10;
       pumwidth = 10;
       cursorline = true;
@@ -53,6 +53,22 @@
       showmatch = true;
       autoread = true;
       termguicolors = true;
+      colorcolumn = "100"; # this has to be a string for some reason
+      ignorecase = true;
+      smartcase = true;
+      updatetime = 250;
+      scrolloff = 8;
+      backup = false;
+      writebackup = false;
+      swapfile = false;
+      undofile = true;
+      hidden = true;
+      completeopt = ["menuone" "noselect"];
+      gdefault = true;
+      foldmethod = "indent";
+      foldlevelstart = 99;
+      splitbelow = true;
+      splitright = true;
     };
     clipboard = {
       register = "unnamedplus";
