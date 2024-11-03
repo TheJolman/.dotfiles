@@ -8,9 +8,16 @@
     enable = true;
     vimAlias = true;
 
+# might want to move this into a lua file if it gets bigger
     extraConfigLua = ''
       vim.lsp.inlay_hint.enable()
 
+      vim.api.nvim_create_autocmd({ "FileType" }, {
+        pattern = { "c", "cpp", "javascript", "typescript", "java", "rust", "go" },
+        callback = function()
+          vim.bo.commentstring = "// %s"
+        end,
+      })
     '';
 
     colorschemes.catppuccin = {
