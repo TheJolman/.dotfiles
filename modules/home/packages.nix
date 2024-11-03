@@ -42,7 +42,7 @@
 
     # protonvpn-gui
     kitty
-    mediawriter
+    impression
     gparted
     # firefox
     nautilus
