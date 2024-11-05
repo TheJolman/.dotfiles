@@ -32,7 +32,6 @@
     gh
 
     jetbrains.rider
-    vscode
     matlab
 
     unityhub
