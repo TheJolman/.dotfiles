@@ -67,7 +67,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [wget curl git vim greetd.tuigreet];
+  environment.systemPackages = with pkgs; [wget curl git vim greetd.tuigreet p7zip];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
