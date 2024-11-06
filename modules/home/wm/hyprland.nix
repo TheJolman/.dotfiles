@@ -82,21 +82,27 @@ in {
       group = {
         "col.border_active" = "$blue";
         "col.border_inactive" = "$surface0";
+        auto_group = false;
         groupbar = {
-          "col.active" = "$sapphire";
-          "col.inactive" = "rgb(7AA4B6)";
+          "col.active" = "$blue";
+          "col.inactive" = "$overlay1";
+          stacked = false;
+          height = "20";
           text_color = "$surface1";
-          font_size = 12;
-          font_family = "FiraCode";
+          font_size = 14;
+          font_family = "FiraCode Nerd Font Propo";
+
         };
       };
 
       decoration = {
         rounding = 15;
-        drop_shadow = true;
-        shadow_range = 6;
-        "col.shadow" = "$blue";
-        "col.shadow_inactive" = "$surface0";
+        shadow = {
+          enabled = true;
+          range = 6;
+          color = "$blue";
+          color_inactive = "$surface0";
+        };
       };
 
       misc = {
