@@ -90,7 +90,7 @@ in {
           height = "20";
           text_color = "$surface1";
           font_size = 14;
-          font_family = "FiraCode Nerd Font Propo";
+          font_family = "CaskaydiaCove Nerd Font";
 
         };
       };

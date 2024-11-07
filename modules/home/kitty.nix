@@ -1,13 +1,7 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{...}: {
   programs.kitty = {
     enable = true;
-    # theme = "Gruvbox Dark";
-    # catppuccin.enable = true;
-    font.name = "FiraCode Nerd Font";
+    font.name = "CaskaydiaCove Nerd Font";
     font.size = 14;
     shellIntegration.enableZshIntegration = true;
 
