@@ -71,7 +71,7 @@
     roboto
 
     (pkgs.nerdfonts.override {
-      fonts = ["FiraCode" "DejaVuSansMono" "FantasqueSansMono"];
+      fonts = ["FiraCode" "DejaVuSansMono" "FantasqueSansMono" "CascadiaCode"];
     })
 
     # # You can also create simple shell scripts directly inside your
