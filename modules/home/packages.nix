@@ -20,6 +20,7 @@
     unzip
     nix-output-monitor
     nvd
+    # p7zip
 
     # vpn
     protonvpn-cli_2
@@ -32,7 +33,6 @@
     gh
 
     jetbrains.rider
-    vscode
     matlab
 
     unityhub
@@ -42,7 +42,7 @@
 
     # protonvpn-gui
     kitty
-    mediawriter
+    impression
     gparted
     # firefox
     nautilus
