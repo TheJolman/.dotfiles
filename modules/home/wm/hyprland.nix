@@ -64,7 +64,7 @@ in {
       "$browser" = "zen";
 
       input = {
-        kb_options = "caps:swapescape";
+        #kb_options = "caps:swapescape";
         accel_profile = "flat";
       };
 

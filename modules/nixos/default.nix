@@ -7,6 +7,7 @@
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.default
     inputs.sops-nix.nixosModules.sops
+    ./interception-tools.nix
     ./docker.nix
     ./kali-docker.nix
     ./bluetooth.nix
