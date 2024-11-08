@@ -9,15 +9,15 @@ download_file() {
     }
 }
 
-nsinit() {
-    template_url="https://raw.githubusercontent.com/TheJolman/templates/refs/heads/main/any/shell.nix"
+nfinit() {
+    template_url="https://raw.githubusercontent.com/TheJolman/templates/refs/heads/main/any/flake.nix"
 
-    if ! download_file "$template_url" "shell.nix"; then
+    if ! download_file "$template_url" "flake.nix"; then
         echo "Failed to set up project. Exiting."
         return 1
     fi
 
-    echo "empty shell.nix generated."
+    echo "generic flake.nix generated."
 }
 
-nsinit
+nfinit
