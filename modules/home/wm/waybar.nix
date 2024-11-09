@@ -48,7 +48,6 @@
         };
       };
     };
-    # TODO Style this thang
     style = ''
 
 * {
@@ -104,7 +103,15 @@ window#waybar.hidden {
     color: @pink;
 }
 
-#tray {
+
+#tray,
+#wireplumber,
+#network,
+#battery,
+#temperature,
+#cpu,
+#memory,
+#clock {
     margin-top: 8px;
     margin-left: 8px;
     padding-left: 16px;
@@ -112,20 +119,48 @@ window#waybar.hidden {
     margin-bottom: 0;
     border-radius: 26px;
     transition: none;
+}
+
+#clock {
+    color: @text;
+    background: @base;
+}
+
+#tray {
     color: @base;
     background: @peach;
 }
 
+#network {
+    color: @base;
+    background: @pink;
+}
+
+#temperature {
+    color: @base;
+    background: @mauve;
+}
+
 #wireplumber {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 26px;
-    transition: none;
     color: @base;
     background: @lavender;
+}
+
+#cpu {
+    color: @base;
+    background: @flamingo;
+}
+
+#memory {
+    padding-right: 16px;
+    color: @base;
+    background: @red;
+}
+
+#battery {
+    margin-right: 12px;
+    color: @base;
+    background: @blue;
 }
 
 #mpd.disconnected,
@@ -134,78 +169,6 @@ window#waybar.hidden {
     background: @base;
 }
 
-#network {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 26px;
-    transition: none;
-    color: @base;
-    background: @pink;
-}
-
-#battery {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 26px;
-    transition: none;
-    color: @base;
-    background: @blue;
-}
-
-#temperature {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 26px;
-    transition: none;
-    color: @base;
-    background: @mauve;
-}
-
-#cpu {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 26px;
-    transition: none;
-    color: @base;
-    background: @flamingo;
-}
-
-#memory {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 26px;
-    transition: none;
-    color: @base;
-    background: @red;
-}
-
-#clock {
-    margin-top: 8px;
-    margin-left: 8px;
-    margin-right: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 26px;
-    transition: none;
-    color: @text;
-    background: @base;
-}
     '';
   };
 }

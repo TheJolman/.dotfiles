@@ -87,7 +87,7 @@ in {
           "col.active" = "$blue";
           "col.inactive" = "$overlay1";
           stacked = false;
-          height = "20";
+          height = "30";
           text_color = "$surface1";
           font_size = 14;
           font_family = "CaskaydiaCove Nerd Font";
@@ -96,7 +96,8 @@ in {
       };
 
       decoration = {
-        rounding = 15;
+        # rounding = 15;
+        rounding = 7;
         shadow = {
           enabled = true;
           range = 6;
