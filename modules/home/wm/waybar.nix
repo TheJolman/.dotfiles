@@ -9,10 +9,11 @@
         height = 30;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "network" "wireplumber" "cpu" "memory" "temperature" "battery" ];
+        modules-right = [ "tray" "network" "wireplumber" "cpu" "temperature" "memory" "battery" ];
+
 
         clock = {
-          format = "{:%a, %d. %b  %H:%M:%S}";
+          format = "  {:%a, %d. %b  %H:%M:%S}";
           interval = 1;
         };
 
@@ -23,28 +24,39 @@
         tray = {
           icon-size = 21;
           spacing = 10;
-
         };
 
         wireplumber = {
-          format = "{node_name}: {volume}%";
-
+          format-muted = " ";
+          format-icons = [" " " " " "];
+          format = "{icon} {volume}%";
         };
 
         network = {
-          tooltip = false;
-          format-wifi = "  {essid} {ipaddr}";
-          format-ethernet ="{ipaddr}";
+          tooltip = true;
+          tooltip-format = "󰛶 {bandwidthUpBits} 󰱦 {bandwidthDownBits}";
+          format-disconnected = "󰤮 ";
+          format-icons = ["󰤯 " "󰤟 " "󰤢 " "󰤥 " "󰤨 "];
+          format-wifi = "{icon}{essid}";
+          format-ethernet ="  {ipaddr}";
         };
 
         cpu = {
           tooltip = false;
-          format = "CPU: {}%";
+          format = "  {}%";
         };
 
         memory = {
           tooltip = false;
-          format = "Mem: {}%";
+          format = "  {}%";
+        };
+
+        temperature = {
+          thermal-zone = 0;
+          critical-threshold = 80;
+          format = " {temperatureC}󰔄 ";
+          format-critical = " {temperatureC}󰔄 ";
+          interval = 2;
         };
       };
     };
@@ -53,7 +65,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: FiraCode Nerd Font;
+    font-family: CaskaydiaCove Nerd Font;
     font-size: 14px;
     min-height: 24px;
 }
