@@ -37,26 +37,32 @@
           tooltip-format = "󰛶 {bandwidthUpBits} 󰱦 {bandwidthDownBits}";
           format-disconnected = "󰤮 ";
           format-icons = ["󰤯 " "󰤟 " "󰤢 " "󰤥 " "󰤨 "];
-          format-wifi = "{icon}{essid}";
+          format-wifi = "{icon} {essid}";
           format-ethernet ="  {ipaddr}";
         };
 
         cpu = {
-          tooltip = false;
+          tooltip = "{load}";
           format = "  {}%";
         };
 
         memory = {
-          tooltip = false;
+          tooltip = "{used}";
           format = "  {}%";
         };
 
         temperature = {
+          tooltip = false;
           thermal-zone = 0;
           critical-threshold = 80;
           format = " {temperatureC}󰔄 ";
           format-critical = " {temperatureC}󰔄 ";
           interval = 2;
+        };
+
+        battery = {
+          format-icons = [" " " " " " " " " "];
+          format = "{icon} {capacity}%";
         };
       };
     };

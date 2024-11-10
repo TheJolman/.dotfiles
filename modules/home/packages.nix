@@ -20,7 +20,6 @@
     unzip
     nix-output-monitor
     nvd
-    # p7zip
 
     # vpn
     protonvpn-cli_2
@@ -32,7 +31,6 @@
 
     gh
 
-    jetbrains.rider
     matlab
 
     unityhub
@@ -46,9 +44,9 @@
     gparted
     # firefox
     nautilus
-    nautilus-open-any-terminal # for nautilus
+    nautilus-open-any-terminal
     zoom-us # unfree
-    vesktop
+    # vesktop
     discord
     libreoffice-fresh
     hunspell # for spellcheck
