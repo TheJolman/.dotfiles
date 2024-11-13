@@ -87,7 +87,7 @@ in {
           "col.active" = "$blue";
           "col.inactive" = "$overlay1";
           stacked = false;
-          height = "30";
+          height = "25";
           text_color = "$surface1";
           font_size = 14;
           font_family = "CaskaydiaCove Nerd Font";
@@ -97,7 +97,7 @@ in {
 
       decoration = {
         # rounding = 15;
-        rounding = 7;
+        rounding = 10;
         shadow = {
           enabled = true;
           range = 6;
@@ -142,9 +142,15 @@ in {
         # new_is_master = true;
       };
 
-      windowrule = ["idleinhibit fullscreen, firefox"];
+      windowrule = [
+        "idleinhibit fullscreen, firefox"
+        "idleinhibit fullscreen, zen"
+      ];
 
-      windowrulev2 = ["bordercolor $yellow, fullscreen:1"];
+      windowrulev2 = [
+        "bordercolor $yellow, fullscreen:1"
+        "float, class:(org.gnome.Nautilus)"
+      ];
 
       # e = repeat, will repeat when held
       binde = [
