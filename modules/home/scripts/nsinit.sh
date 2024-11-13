@@ -17,7 +17,10 @@ nsinit() {
         return 1
     fi
 
-    echo "empty shell.nix generated."
+    echo "generic shell.nix generated."
+    echo "use nix" >> .envrc
+    direnv allow
+    echo "direnv set up."
 }
 
 nsinit
