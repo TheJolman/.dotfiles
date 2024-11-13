@@ -18,6 +18,10 @@ nfinit() {
     fi
 
     echo "generic flake.nix generated."
+
+    echo "use flake" > .envrc
+    direnv allow
+    echo "direnv set up."
 }
 
 nfinit

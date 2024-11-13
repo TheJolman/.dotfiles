@@ -49,6 +49,7 @@
       }
 
       eval "$(zoxide init zsh)"
+      eval "$(direnv hook zsh)"
 
       function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
