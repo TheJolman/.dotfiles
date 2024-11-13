@@ -21,7 +21,7 @@
       # nd = "nix develop -c zsh";
       nd = "nom develop -c zsh";
       ns = "nom shell";
-      ya = "yazi";
+      # ya = "yazi";
       vpnon = "sudo protonvpn c -f";
       vpnoff = "sudo protonvpn d";
       matlab = "matlab -nodesktop -nosplash";
@@ -47,9 +47,18 @@
         local host=''${1:-$(hostname)}
         sudo nixos-rebuild switch --flake ~/.dotfiles#$host
       }
-    '';
 
-    # use initExtra = '' ''; for extra config
+      eval "$(zoxide init zsh)"
+
+      function y() {
+        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+        yazi "$@" --cwd-file="$tmp"
+        if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+          builtin cd -- "$cwd"
+        fi
+        rm -f -- "$tmp"
+      }
+    '';
   };
 
   programs.oh-my-posh = {

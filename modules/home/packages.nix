@@ -20,6 +20,7 @@
     unzip
     nix-output-monitor
     nvd
+    zoxide
 
     # vpn
     protonvpn-cli_2
