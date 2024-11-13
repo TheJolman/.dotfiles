@@ -31,11 +31,10 @@
     # ---- Dev ---- #
 
     gh
-
     matlab
-
     unityhub
     dotnet-sdk
+    python313
 
     # ---- Gui Apps ---- #
 
@@ -55,14 +54,14 @@
     evince # gnome document viewer
     eog # gnome image viwer
     inputs.zen-browser.packages.${pkgs.system}.default
-    gnome-boxes
     gnome-font-viewer
-    # thunderbird # can't get to work with my gmail atm
+    thunderbird
     spotify
     gnome-system-monitor
     transmission_4-qt # torrent client
     vlc
     freetube
+    gnome-network-displays # for miracast
 
     # fonts
     noto-fonts
@@ -72,16 +71,12 @@
     (pkgs.nerdfonts.override {
       fonts = ["FiraCode" "DejaVuSansMono" "FantasqueSansMono" "CascadiaCode"];
     })
-
-    # # You can also create simple shell scripts directly inside your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    BROWSER = "zen";
+    TERMINAL = "kitty";
     NIXPKGS_ALLOW_UNFREE = 1;
   };
 
