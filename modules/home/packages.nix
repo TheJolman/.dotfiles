@@ -32,7 +32,7 @@
 
     gh
     matlab
-    unityhub
+    # unityhub
     dotnet-sdk
     python313
 
