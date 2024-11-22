@@ -13,14 +13,15 @@
     ./surround.nix
     ./luasnip.nix
     ./fugitive.nix
+    ./neogit.nix
     ./flash.nix
     ./indent-blankline.nix
     ./ts-autotag.nix
     ./css-color.nix
-    ./which-key.nix
     ./yazi-nvim.nix
     ./molten.nix
     ./markdown.nix
     ./lint.nix
+    ./bufferline.nix
   ];
 }
