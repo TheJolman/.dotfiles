@@ -62,6 +62,7 @@
     vlc
     freetube
     gnome-network-displays # for miracast
+    kooha
 
     # fonts
     noto-fonts

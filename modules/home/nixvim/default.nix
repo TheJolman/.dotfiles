@@ -22,10 +22,10 @@
 
     colorschemes.catppuccin = {
       enable = true;
-      settings.flavour = "frappe";
+      settings.flavour = "mocha";
 
       settings = {
-        transparent_background = true;
+        transparent_background = false;
 
         integrations = {
           cmp = true;

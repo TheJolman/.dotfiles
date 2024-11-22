@@ -5,6 +5,12 @@
     keymaps = [
       # General
       {
+        key = "<leader>g";
+        action = "<CMD>lua require('neogit').open({ kind = 'floating' })<CR>";
+        mode = "n";
+        options.desc = "Open Neogit";
+      }
+      {
         key = "<leader>y";
         action = "<CMD>lua require('yazi').yazi()<CR>";
         mode = "n";

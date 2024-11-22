@@ -9,6 +9,7 @@
 
     # keymap in x11
     xserver = {
+      enable = true;
       xkb.layout = "us";
       xkb.variant = "";
     };
