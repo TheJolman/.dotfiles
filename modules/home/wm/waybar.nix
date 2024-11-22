@@ -145,8 +145,7 @@ window#waybar.hidden {
 }
 
 #tray {
-    color: @base;
-    background: @peach;
+    background: @surface0;
 }
 
 #network {
