@@ -1,3 +1,3 @@
 ## my NixOS config
 
-includes hyprland, nixvim, zsh, waybar, etc.
+includes configuration for hyprland, neovim, zsh, waybar and more with nix + home-manager.
