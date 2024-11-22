@@ -61,7 +61,7 @@ in {
       "$terminal" = "kitty";
       "$fileManager" = "nautilus";
       "$menu" = "fuzzel";
-      "$browser" = "zen";
+      "$browser" = "firefox";
 
       input = {
         #kb_options = "caps:swapescape";
