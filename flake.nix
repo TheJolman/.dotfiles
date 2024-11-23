@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    nixpkgs-stable.url = "nixpkgs/nixos-23.05";
+
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,7 +47,7 @@
 
     nix-matlab = {
       url = "gitlab:doronbehar/nix-matlab";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     hyprpanel = {
@@ -62,6 +64,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-stable,
     catppuccin,
     home-manager,
     hyprpanel,
@@ -73,12 +76,21 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
 
+    # allows stable packages to be reached with pkgs.stable.<pkg>
+    stableOverlay = final: prev: {
+      stable = import nixpkgs-stable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    };
+
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
       overlays = [
         inputs.hyprpanel.overlay
         inputs.nix-matlab.overlay
+        stableOverlay
       ];
     };
 

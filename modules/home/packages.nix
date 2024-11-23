@@ -32,7 +32,7 @@
 
     gh
     matlab
-    unityhub
+    stable.unityhub
     dotnet-sdk
     python313
 
@@ -53,7 +53,8 @@
     hunspellDicts.en_US
     evince # gnome document viewer
     eog # gnome image viwer
-    inputs.zen-browser.packages.${pkgs.system}.default
+    firefox
+    # inputs.zen-browser.packages.${pkgs.system}.default
     gnome-font-viewer
     thunderbird
     spotify
