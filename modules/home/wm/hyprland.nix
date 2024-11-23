@@ -183,6 +183,7 @@ in {
           "$mod, Q,       killactive"
           "$mod SHIFT, M, exit"
           "$mod CTRL, L, exec, swaylock -f"
+          "$mod CTRL, S, exec, systemctl hibernate"
 
           # alt tab
           "ALT, Tab, cyclenext,"
@@ -253,7 +254,7 @@ in {
 
       bindl = [
         # lock when lid is closed
-        ", switch:on:Lid Switch, exec, swaylock -f"
+        # ", switch:on:Lid Switch, exec, swaylock -f"
         # sleep system when switch is closed
         # ", switch:on:Lid Switch, exec, systemctl suspend"
 
