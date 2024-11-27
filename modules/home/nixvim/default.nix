@@ -30,7 +30,16 @@
         integrations = {
           cmp = true;
           gitsigns = true;
-          treesitter = true;
+          indent_blankline = {
+            enabled = true;
+            colored_indent_levels = true;
+          };
+          neogit = true;
+          nvim_surround = true;
+          rainbow_delimiters = true;
+          illuminate = true;
+          diffview = true;
+          fzf = true;
           native_lsp = {
             enabled = true;
             virtual_text = {
@@ -41,6 +50,7 @@
             };
             inlay_hints = {background = true;};
           };
+          mini.enabled = true;
         };
       };
     };
@@ -58,6 +68,7 @@
       autoindent = true;
       wildmenu = true;
       showmatch = true;
+      matchtime = 3;
       autoread = true;
       termguicolors = true;
       colorcolumn = "100"; # this has to be a string for some reason

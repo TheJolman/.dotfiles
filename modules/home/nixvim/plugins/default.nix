@@ -10,9 +10,9 @@
     ./treesitter.nix
     ./fzf.nix
     ./oil.nix
+    ./diffview.nix
     ./surround.nix
     ./luasnip.nix
-    ./fugitive.nix
     ./neogit.nix
     ./flash.nix
     ./indent-blankline.nix
@@ -23,5 +23,7 @@
     ./markdown.nix
     ./lint.nix
     ./bufferline.nix
+    ./mini.nix
+    ./illuminate.nix
   ];
 }

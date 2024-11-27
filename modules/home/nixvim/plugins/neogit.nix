@@ -4,6 +4,7 @@
     settings = {
       integrations = {
         fzf_lua = true;
+        diffview= true;
       };
     };
   };

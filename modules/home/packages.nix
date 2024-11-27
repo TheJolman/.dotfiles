@@ -24,6 +24,7 @@
 
     # vpn
     protonvpn-cli_2
+    protonvpn-gui
 
     # for secrets
     sops
