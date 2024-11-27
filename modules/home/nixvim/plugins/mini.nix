@@ -7,9 +7,9 @@
           only_in_normal_buffers = true;
         };
 
-        indentscope = {
-          delay = 100;
-        };
+        # indentscope = {
+        #   delay = 100;
+        # };
 
         starter = {
             content_hooks = {

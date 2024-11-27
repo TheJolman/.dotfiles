@@ -10,7 +10,10 @@
 
 # might want to move this into a lua file if it gets bigger
     extraConfigLua = ''
-      vim.lsp.inlay_hint.enable()
+      vim.keymap.set('n', '<A-h>', function()
+          local current_state = vim.lsp.inlay_hint.is_enabled(0)
+          vim.lsp.inlay_hint.enable(0, not current_state)
+      end, { desc = "Toggle inlay hints" })
 
       vim.api.nvim_create_autocmd({ "FileType" }, {
         pattern = { "c", "cpp", "javascript", "typescript", "java", "rust", "go" },
