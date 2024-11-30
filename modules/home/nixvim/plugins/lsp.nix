@@ -30,7 +30,7 @@
             settings.plugins.mypy.enabled = true;
           };
           jdtls.enable = true;
-          omnisharp.enable = true;
+          # omnisharp.enable = true;
           # --- Web ---
           intelephense = {
             enable = true;
