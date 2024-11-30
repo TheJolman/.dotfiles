@@ -43,11 +43,9 @@
     kitty
     impression
     gparted
-    # firefox
     nautilus
     nautilus-open-any-terminal
     zoom-us # unfree
-    # vesktop
     discord
     libreoffice-fresh
     hunspell # for spellcheck
