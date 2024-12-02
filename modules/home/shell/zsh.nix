@@ -13,6 +13,7 @@
       copy = "wl-copy";
       paste = "wl-paste";
       lg = "lazygit";
+      ng = "nvim +Neogit";
       ga = "git add";
       gc = "git commit";
       gp = "git push";
