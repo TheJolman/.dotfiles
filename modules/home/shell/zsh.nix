@@ -3,10 +3,12 @@
     enable = true;
     dotDir = ".config/zsh";
     autocd = true;
+    enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      cd = "z";
       ll = "lsd -l";
       ls = "lsd";
       tree = "lsd --tree";
@@ -19,10 +21,8 @@
       gp = "git push";
       gm = "git merge";
       nb = "nom build";
-      # nd = "nix develop -c zsh";
       nd = "nom develop -c zsh";
       ns = "nom shell";
-      # ya = "yazi";
       vpnon = "sudo protonvpn c -f";
       vpnoff = "sudo protonvpn d";
       matlab = "matlab -nodesktop -nosplash";
@@ -30,18 +30,13 @@
       packages = "nvim ~/.dotfiles/modules/home/packages.nix";
     };
 
-    plugins = [
-      {
-        name = "zsh-nix-shell";
-        file = "nix-shell.plugin.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "chisui";
-          repo = "zsh-nix-shell";
-          rev = "v0.8.0";
-          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
-        };
-      }
-    ];
+    zplug = {
+      enable = true;
+      plugins = [
+        {name = "chisui/zsh-nix-shell";}
+        {name = "zsh-users/zsh-completions";}
+      ];
+    };
 
     initExtra = ''
       update() {
