@@ -21,6 +21,8 @@
     nix-output-monitor
     nvd
     zoxide
+    alejandra
+    pre-commit
 
     # vpn
     protonvpn-cli_2
@@ -73,7 +75,6 @@
     nerd-fonts.fira-code
     nerd-fonts.dejavu-sans-mono
     nerd-fonts.fantasque-sans-mono
-
   ];
 
   home.sessionVariables = {

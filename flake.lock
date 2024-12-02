@@ -624,9 +624,7 @@
     "nix-matlab": {
       "inputs": {
         "flake-compat": "flake-compat_2",
-        "nixpkgs": [
-          "nixpkgs-stable"
-        ]
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1732978906,
@@ -690,6 +688,18 @@
       }
     },
     "nixpkgs_2": {
+      "locked": {
+        "lastModified": 0,
+        "narHash": "sha256-RzaI1RO0UXqLjydtz3GAXSTzHkpb/lLD1JD8a0W4Wpo=",
+        "path": "/nix/store/4wjygyks9w9z3548738hpfjnaqvwxmcw-source",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1732758367,
         "narHash": "sha256-RzaI1RO0UXqLjydtz3GAXSTzHkpb/lLD1JD8a0W4Wpo=",
@@ -789,7 +799,7 @@
         "hyprland": "hyprland",
         "hyprpanel": "hyprpanel",
         "nix-matlab": "nix-matlab",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "nixvim": "nixvim",
         "zen-browser": "zen-browser"

@@ -8,7 +8,7 @@
     enable = true;
     vimAlias = true;
 
-# might want to move this into a lua file if it gets bigger
+    # might want to move this into a lua file if it gets bigger
     extraConfigLua = ''
       vim.keymap.set('n', '<A-h>', function()
           local current_state = vim.lsp.inlay_hint.is_enabled(0)

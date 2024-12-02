@@ -1,0 +1,8 @@
+repos:
+- repo: local
+  hooks:
+    - id: alejandra
+      name: Format Nix files with alejandra
+      entry: alejandra
+      language: system
+      files: \.nix$

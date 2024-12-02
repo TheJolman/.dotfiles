@@ -6,11 +6,6 @@
 
     nixpkgs-stable.url = "nixpkgs/nixos-24.11";
 
-    # sops-nix = {
-    #   url = "github:Mic92/sops-nix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,10 +40,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-matlab = {
-      url = "gitlab:doronbehar/nix-matlab";
-      inputs.nixpkgs.follows = "nixpkgs-stable";
-    };
+    nix-matlab.url = "gitlab:doronbehar/nix-matlab";
 
     hyprpanel = {
       url = "github:Jas-SinghFSU/HyprPanel";

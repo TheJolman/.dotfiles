@@ -1,9 +1,4 @@
-{pkgs, ...}:
-{
-  # home.packages = with pkgs; [
-  #   matlab-language-server
-  # ];
-
+{pkgs, ...}: {
   programs.nixvim = {
     extraPackages = with pkgs; [
       matlab-language-server

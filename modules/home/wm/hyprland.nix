@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-let
+}: let
   # TODO do the ${pkgs.name}/bin/exe_name to the unconfigured things
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     waybar &
@@ -15,7 +14,6 @@ let
     ${pkgs.batsignal}/bin/batsignal &
   '';
 in {
-
   home.packages = with pkgs; [
     waybar
     swww
@@ -91,7 +89,6 @@ in {
           text_color = "$surface1";
           font_size = 14;
           font_family = "CaskaydiaCove Nerd Font";
-
         };
       };
 
