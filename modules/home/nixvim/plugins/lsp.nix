@@ -1,10 +1,11 @@
-{pkgs, ...}: 
-{
-  home.packages = with pkgs; [
-    matlab-language-server
-  ];
-
+{pkgs, ...}: {
   programs.nixvim = {
+    extraPackages = with pkgs; [
+      matlab-language-server
+      alejandra
+      dotnet-sdk
+    ];
+
     plugins = {
       lsp = {
         enable = true;
@@ -30,7 +31,7 @@
             settings.plugins.mypy.enabled = true;
           };
           jdtls.enable = true;
-          omnisharp.enable = true;
+          csharp_ls.enable = true;
           # --- Web ---
           intelephense = {
             enable = true;
@@ -39,9 +40,7 @@
           html.enable = true;
           cssls.enable = true;
           # ts_ls.enable = true;
-          denols = {
-            enable = true;
-          };
+          denols.enable = true;
           svelte.enable = true;
         };
 

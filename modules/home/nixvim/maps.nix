@@ -11,12 +11,6 @@
         options.desc = "Open Neogit";
       }
       {
-        key = "<leader>y";
-        action = "<CMD>lua require('yazi').yazi()<CR>";
-        mode = "n";
-        options.desc = "yazi";
-      }
-      {
         key = "<leader>q";
         action = "<CMD>q<CR>";
         mode = "n";

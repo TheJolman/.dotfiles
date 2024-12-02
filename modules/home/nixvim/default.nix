@@ -8,9 +8,12 @@
     enable = true;
     vimAlias = true;
 
-# might want to move this into a lua file if it gets bigger
+    # might want to move this into a lua file if it gets bigger
     extraConfigLua = ''
-      vim.lsp.inlay_hint.enable()
+      vim.keymap.set('n', '<A-h>', function()
+          local current_state = vim.lsp.inlay_hint.is_enabled(0)
+          vim.lsp.inlay_hint.enable(0, not current_state)
+      end, { desc = "Toggle inlay hints" })
 
       vim.api.nvim_create_autocmd({ "FileType" }, {
         pattern = { "c", "cpp", "javascript", "typescript", "java", "rust", "go" },
@@ -30,7 +33,16 @@
         integrations = {
           cmp = true;
           gitsigns = true;
-          treesitter = true;
+          indent_blankline = {
+            enabled = true;
+            colored_indent_levels = true;
+          };
+          neogit = true;
+          nvim_surround = true;
+          rainbow_delimiters = true;
+          illuminate = true;
+          diffview = true;
+          fzf = true;
           native_lsp = {
             enabled = true;
             virtual_text = {
@@ -41,6 +53,7 @@
             };
             inlay_hints = {background = true;};
           };
+          mini.enabled = true;
         };
       };
     };
@@ -58,6 +71,7 @@
       autoindent = true;
       wildmenu = true;
       showmatch = true;
+      matchtime = 3;
       autoread = true;
       termguicolors = true;
       colorcolumn = "100"; # this has to be a string for some reason

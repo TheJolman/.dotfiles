@@ -21,9 +21,12 @@
     nix-output-monitor
     nvd
     zoxide
+    alejandra
+    pre-commit
 
     # vpn
     protonvpn-cli_2
+    protonvpn-gui
 
     # for secrets
     sops
@@ -42,11 +45,9 @@
     kitty
     impression
     gparted
-    # firefox
     nautilus
     nautilus-open-any-terminal
     zoom-us # unfree
-    # vesktop
     discord
     libreoffice-fresh
     hunspell # for spellcheck
@@ -70,14 +71,15 @@
     corefonts
     roboto
 
-    (pkgs.nerdfonts.override {
-      fonts = ["FiraCode" "DejaVuSansMono" "FantasqueSansMono" "CascadiaCode"];
-    })
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.fira-code
+    nerd-fonts.dejavu-sans-mono
+    nerd-fonts.fantasque-sans-mono
   ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    BROWSER = "zen";
+    BROWSER = "firefox";
     TERMINAL = "kitty";
     NIXPKGS_ALLOW_UNFREE = 1;
   };
