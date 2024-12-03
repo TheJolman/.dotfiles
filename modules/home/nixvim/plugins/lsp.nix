@@ -3,7 +3,10 @@
     extraPackages = with pkgs; [
       matlab-language-server
       alejandra
-      dotnet-sdk
+      # dotnet-sdk
+      # dotnet-runtime
+      dotnetCorePackages.dotnet_8.sdk
+      # dotnetCorePackages.dotnet_8.runtime
     ];
 
     plugins = {
@@ -31,7 +34,10 @@
             settings.plugins.mypy.enabled = true;
           };
           jdtls.enable = true;
-          csharp_ls.enable = true;
+          csharp_ls = {
+            enable = true;
+            package = pkgs.csharp-ls;
+          };
           # --- Web ---
           intelephense = {
             enable = true;

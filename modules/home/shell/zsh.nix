@@ -18,8 +18,16 @@
       ng = "nvim +Neogit";
       ga = "git add";
       gc = "git commit";
-      gp = "git push";
+      gP = "git push";
+      gp = "git pull";
       gm = "git merge";
+      gr = "git rebase";
+      gd = "git diff";
+      gl = "git log";
+      gf = "git fetch";
+      gb = "git branch";
+      gsw = "git switch";
+      gch = "git checkout";
       nb = "nom build";
       nd = "nom develop -c zsh";
       ns = "nom shell";

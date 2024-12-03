@@ -20,3 +20,7 @@ vim.filetype.add({
     m = "matlab",
   },
 })
+
+lspconfig.csharp_ls.setup({
+  root_dir = lspconfig.util.find_git_ancestor,
+})
