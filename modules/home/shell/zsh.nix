@@ -35,6 +35,7 @@
       plugins = [
         {name = "chisui/zsh-nix-shell";}
         {name = "zsh-users/zsh-completions";}
+        {name = "mrjohannchang/zsh-interactive-cd";}
       ];
     };
 
@@ -46,6 +47,7 @@
 
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
+      eval "$(thefuck --alias)"
 
       function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -57,6 +59,8 @@
       }
     '';
   };
+
+  programs.thefuck.enable = true;
 
   programs.oh-my-posh = {
     enable = true;
