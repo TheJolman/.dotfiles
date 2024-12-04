@@ -65,10 +65,10 @@
       tabstop = 2; # tab width
       shiftwidth = 2; # indent size
       smartindent = true;
+      autoindent = false;
       pumheight = 10;
       pumwidth = 10;
       cursorline = true;
-      autoindent = true;
       wildmenu = true;
       showmatch = true;
       matchtime = 3;
