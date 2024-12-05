@@ -1,9 +1,10 @@
-{pkgs, ...}: {
+{...}: {
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
     autocd = true;
     enableCompletion = true;
+    defaultKeymap = null;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
