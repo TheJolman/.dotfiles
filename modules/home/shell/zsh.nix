@@ -39,24 +39,25 @@
       packages = "nvim ~/.dotfiles/modules/home/packages.nix";
     };
 
-    zplug = {
-      enable = true;
-      plugins = [
-        {name = "chisui/zsh-nix-shell";}
-        {name = "zsh-users/zsh-completions";}
-        {name = "mrjohannchang/zsh-interactive-cd";}
-      ];
-    };
+    # zplug is slow as shit for some reason
+    # zplug = {
+    #   enable = true;
+    #   plugins = [
+    #     {name = "chisui/zsh-nix-shell";}
+    #     # {name = "zsh-users/zsh-completions";}
+    #     {name = "mrjohannchang/zsh-interactive-cd";}
+    #     # {name = "romkatv/zsh-defer";}
+    #   ];
+    # };
 
+    # Unused function replaced by `nh os switch`
+    # update() {
+    #   local host=''${1:-$(hostname)}
+    #   sudo nixos-rebuild switch --flake ~/.dotfiles#$host
+    # }
     initExtra = ''
-      update() {
-        local host=''${1:-$(hostname)}
-        sudo nixos-rebuild switch --flake ~/.dotfiles#$host
-      }
-
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
-      eval "$(thefuck --alias)"
 
       function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -68,12 +69,14 @@
       }
     '';
   };
-
-  programs.thefuck.enable = true;
-
-  programs.oh-my-posh = {
+  programs.starship = {
     enable = true;
     enableZshIntegration = true;
-    useTheme = "catppuccin";
   };
+
+  # programs.oh-my-posh = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  #   useTheme = "catppuccin";
+  # };
 }

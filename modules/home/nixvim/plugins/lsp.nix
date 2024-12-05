@@ -3,10 +3,7 @@
     extraPackages = with pkgs; [
       matlab-language-server
       alejandra
-      # dotnet-sdk
-      # dotnet-runtime
       dotnetCorePackages.dotnet_8.sdk
-      # dotnetCorePackages.dotnet_8.runtime
     ];
 
     plugins = {
@@ -30,8 +27,14 @@
           lua_ls.enable = true;
           pylsp = {
             enable = true;
-            settings.plugins.ruff.enabled = true;
-            settings.plugins.mypy.enabled = true;
+            settings = {
+              plugins = {
+                ruff.enabled = true;
+                isort.enabled = true;
+                pylsp_mypy.enabled = true;
+                rope.enabled = true;
+              };
+            };
           };
           jdtls.enable = true;
           csharp_ls = {
