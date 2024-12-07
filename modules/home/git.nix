@@ -3,6 +3,7 @@
     enable = true;
     userEmail = "joshuaholman5@gmail.com";
     userName = "josh";
+    delta.enable = true;
   };
 
   programs.lazygit = {

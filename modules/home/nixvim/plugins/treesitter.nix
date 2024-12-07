@@ -5,9 +5,8 @@
       auto_install = true;
       hightlight = {
         enable = true;
-        additional_vim_regex_highlighting = true;
       };
-      indent.enable = false;
+      indent.enable = true;
 
       incremental_selection = {
         enable = true;
@@ -20,6 +19,7 @@
       };
     };
     folding = true;
+    nixvimInjections = true;
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       c

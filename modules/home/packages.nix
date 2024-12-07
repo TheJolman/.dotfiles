@@ -23,6 +23,7 @@
     zoxide
     alejandra
     pre-commit
+    ripgrep
 
     # vpn
     protonvpn-cli_2
