@@ -109,8 +109,8 @@
           font-size: 16px;
       }
 
-      #workspaces button.focused {
-          color: @sky;
+      #workspaces button.active {
+          color: @red;
       }
 
       #workspaces button:hover {
