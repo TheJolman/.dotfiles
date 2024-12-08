@@ -64,8 +64,8 @@
       expandtab = true; # convert tabs to spaces
       tabstop = 2; # tab width
       shiftwidth = 2; # indent size
+      autoindent = true;
       smartindent = true;
-      autoindent = false;
       pumheight = 10;
       pumwidth = 10;
       cursorline = true;
@@ -86,7 +86,8 @@
       hidden = true;
       completeopt = ["menuone" "noselect"];
       gdefault = true;
-      foldmethod = "indent";
+      foldmethod = "expr";
+      foldexpr = "nvim_treesitter#foldexpr()";
       foldlevelstart = 99;
       splitbelow = true;
       splitright = true;

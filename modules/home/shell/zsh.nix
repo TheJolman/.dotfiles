@@ -37,6 +37,7 @@
       matlab = "matlab -nodesktop -nosplash";
       switch = "nh os switch";
       packages = "nvim ~/.dotfiles/modules/home/packages.nix";
+      nmtui = "kitty -o 'include /nix/store/yj4npy93bp4m2qphd96mnxqr17da54sw-kitty-themes-0-unstable-2024-08-14/share/kitty-themes/themes/Pro.conf' nmtui";
     };
 
     # zplug is slow as shit for some reason
