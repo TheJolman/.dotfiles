@@ -37,9 +37,6 @@
     gh
     matlab
     stable.unityhub
-    # dotnetCorePackages.dotnet_8.sdk
-    # python313
-    docker
 
     # ---- Gui Apps ---- #
 

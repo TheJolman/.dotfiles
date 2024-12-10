@@ -3,31 +3,19 @@
   pkgs,
   ...
 }: {
-  users.defaultUserShell = pkgs.zsh;
+  users = {
+    defaultUserShell = pkgs.zsh;
+    users.josh = {
+      isNormalUser = true;
+      group = "josh";
+      description = "Joshua Holman";
+      extraGroups = ["networkmanager" "wheel"];
+    };
+    groups.josh = {};
+  };
+
   programs.zsh.enable = true;
   networking.networkmanager.enable = true;
-
-  programs.hyprland.enable = true;
-  # programs.hyprland.xwayland.enable = true;
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    config = {
-      # common.default = ["hyprland" "gtk"];
-      hyprland.default = ["hyprland" "gtk"];
-    };
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
-    ];
-  };
-
-  environment.sessionVariables = {
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_DESKTOP = "Hyprland";
-    XDG_SESSION_TYPE = "wayland";
-    WLR_NO_HARDWARE_CURSORS = "1";
-  };
 
   catppuccin = {
     enable = true;
@@ -36,54 +24,43 @@
 
   virtualisation.vmware.host.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "America/Los_Angeles";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
+  programs.hyprland.enable = true;
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config = {
+      hyprland.default = ["hyprland" "gtk"];
+    };
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+    ];
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.josh = {
-    isNormalUser = true;
-    description = "Joshua Holman";
-    extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [];
-  };
-
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  environment.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
   environment.systemPackages = with pkgs; [wget curl git vim greetd.tuigreet p7zip];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  time.timeZone = "America/Los_Angeles";
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    extraLocaleSettings = {
+      LC_ADDRESS = "en_US.UTF-8";
+      LC_IDENTIFICATION = "en_US.UTF-8";
+      LC_MEASUREMENT = "en_US.UTF-8";
+      LC_MONETARY = "en_US.UTF-8";
+      LC_NAME = "en_US.UTF-8";
+      LC_NUMERIC = "en_US.UTF-8";
+      LC_PAPER = "en_US.UTF-8";
+      LC_TELEPHONE = "en_US.UTF-8";
+      LC_TIME = "en_US.UTF-8";
+    };
+  };
 }

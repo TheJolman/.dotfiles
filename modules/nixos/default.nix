@@ -9,7 +9,6 @@
     # inputs.sops-nix.nixosModules.sops
     ./interception-tools.nix
     ./docker.nix
-    ./kali-docker.nix
     ./bluetooth.nix
     ./grub.nix
     ./nh.nix
