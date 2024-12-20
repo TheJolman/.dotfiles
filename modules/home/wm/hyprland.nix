@@ -3,7 +3,6 @@
   inputs,
   ...
 }: let
-  # TODO do the ${pkgs.name}/bin/exe_name to the unconfigured things
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     waybar &
     mako &
@@ -83,12 +82,12 @@ in {
         auto_group = false;
         groupbar = {
           "col.active" = "$blue";
-          "col.inactive" = "$overlay1";
+          "col.inactive" = "$overlay2";
           stacked = false;
-          height = "25";
+          height = "19";
           text_color = "$surface1";
           font_size = 14;
-          font_family = "CaskaydiaCove Nerd Font";
+          font_family = "Noto Sans";
         };
       };
 
@@ -132,11 +131,6 @@ in {
         workspace_swipe = true;
         workspace_swipe_fingers = 3;
         workspace_swipe_distance = 300;
-      };
-
-      master = {
-        # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-        # new_is_master = true;
       };
 
       windowrule = [
