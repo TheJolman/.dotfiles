@@ -7,7 +7,7 @@
       denoland.vscode-deno
       ziglang.vscode-zig
       vscjava.vscode-java-pack
-      ms-vscode.cpptools-extension-pack
+      llvm-vs-code-extensions.vscode-clangd
       ms-vscode.makefile-tools
       ms-vscode.cmake-tools
       ms-vscode-remote.remote-containers
