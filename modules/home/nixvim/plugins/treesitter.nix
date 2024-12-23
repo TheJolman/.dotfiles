@@ -63,6 +63,7 @@
       xml
       hyprlang
       yaml
+      norg
     ];
   };
 
