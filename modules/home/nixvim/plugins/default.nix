@@ -26,5 +26,6 @@
     ./bufferline.nix
     ./mini.nix
     ./illuminate.nix
+    ./neorg.nix
   ];
 }
