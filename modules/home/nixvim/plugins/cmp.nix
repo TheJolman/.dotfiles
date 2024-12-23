@@ -1,5 +1,4 @@
 {...}: {
-  programs.nixvim.plugins.cmp_luasnip.enable = true;
   programs.nixvim.plugins.cmp = {
     enable = true;
 

@@ -51,6 +51,16 @@
           # ts_ls.enable = true;
           denols.enable = true;
           svelte.enable = true;
+          htmx.enable = true;
+          jinja_lsp = {
+            enable = true;
+            package = null;
+          };
+          rust_analyzer = {
+            enable = true;
+            installRustc = true;
+            installCargo = true;
+          };
         };
 
         onAttach = ''

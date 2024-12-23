@@ -54,6 +54,7 @@
       cmake
       matlab
       markdown
+      markdown-inline
       nix
       regex
       toml
