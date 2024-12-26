@@ -26,6 +26,6 @@
     ./bufferline.nix
     ./mini.nix
     ./illuminate.nix
-    ./neorg.nix
+    ./lsp-lines.nix
   ];
 }

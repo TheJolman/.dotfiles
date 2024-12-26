@@ -1,13 +1,15 @@
-{pkgs, ...}: {
+{...}: {
   programs.nixvim = {
     plugins = {
-      render-markdown = {
-        enable = false;
-      };
       markdown-preview = {
         enable = true;
       };
+      markview = {
+        enable = true;
+        luaConfig.post = ''
+          filetypes = {"markdown", "quarto", "rmd"},
+        '';
+      };
     };
-    extraPackages = with pkgs; [python312Packages.pylatexenc];
   };
 }
