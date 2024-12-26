@@ -91,6 +91,7 @@
       foldlevelstart = 99;
       splitbelow = true;
       splitright = true;
+      conceallevel = 3;
     };
     clipboard = {
       register = "unnamedplus";

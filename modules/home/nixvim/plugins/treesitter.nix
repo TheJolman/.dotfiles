@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       auto_install = true;
-      hightlight = {
+      highlight = {
         enable = true;
       };
       indent.enable = true;
@@ -28,7 +28,6 @@
       lua
       html
       nasm
-      gleam
       latex
       julia
       kotlin
@@ -39,7 +38,6 @@
       typescript
       gleam
       svelte
-      gitignore
       gdscript
       php
       r
@@ -64,6 +62,12 @@
       hyprlang
       yaml
       norg
+      diff
+      git_config
+      git_rebase
+      gitignore
+      gitcommit
+      gitattributes
     ];
   };
 

@@ -64,6 +64,7 @@
     freetube
     gnome-network-displays # for miracast
     kooha
+    obsidian
 
     # fonts
     noto-fonts

@@ -2,7 +2,7 @@
   programs.nixvim = {
     plugins = {
       render-markdown = {
-        enable = true;
+        enable = false;
       };
       markdown-preview = {
         enable = true;
