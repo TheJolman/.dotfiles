@@ -68,6 +68,7 @@
         fi
         rm -f -- "$tmp"
       }
+      alias ngs='git -C ~/notes add . && git -C ~/notes commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git -C ~/notes pull --rebase && git -C ~/notes push'
     '';
   };
   programs.starship = {
