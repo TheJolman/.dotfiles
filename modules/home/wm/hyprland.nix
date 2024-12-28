@@ -37,7 +37,6 @@ in {
     batsignal
     acpi
   ];
-
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
@@ -60,10 +59,10 @@ in {
       "$menu" = "fuzzel";
       "$browser" = "firefox";
 
-      input = {
-        #kb_options = "caps:swapescape";
-        accel_profile = "flat";
-      };
+      # input = {
+      #   #kb_options = "caps:swapescape";
+      #   accel_profile = "flat";
+      # };
 
       general = {
         gaps_in = 5;
@@ -92,7 +91,6 @@ in {
       };
 
       decoration = {
-        # rounding = 15;
         rounding = 10;
         shadow = {
           enabled = true;
@@ -162,6 +160,17 @@ in {
         "$mod CTRL, l, resizeactive, 20 0"
         "$mod CTRL, k, resizeactive, 0 -20"
         "$mod CTRL, j, resizeactive, 0 20"
+
+        # media keys
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
+        ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+        ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioPrev, exec, playerctl previous"
+        ", XF86AudioNext, exec, playerctl next"
       ];
 
       bind =
@@ -217,17 +226,6 @@ in {
 
           "$mod, S, togglespecialworkspace, magic"
           "$mod SHIFT, S, movetoworkspace, special:magic"
-
-          # media keys
-          ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-          ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-          ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-          ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-          ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
-          ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-          ", XF86AudioPlay, exec, playerctl play-pause"
-          ", XF86AudioPrev, exec, playerctl previous"
-          ", XF86AudioNext, exec, playerctl next"
         ]
         ++ (
           # workspaces
@@ -241,8 +239,10 @@ in {
             10)
         );
 
+      # m -> mouse
       bindm = ["$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow"];
 
+      # l -> locked, will also work when an input inhibitor (like a lockscreen) is active
       bindl = [
         # lock when lid is closed
         # ", switch:on:Lid Switch, exec, swaylock -f"

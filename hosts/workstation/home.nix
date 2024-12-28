@@ -1,15 +1,11 @@
-{
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
+{...}: {
   home.username = "josh";
   home.homeDirectory = "/home/josh";
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   imports = [
     ../../modules/home/default.nix
+    ../../modules/home/desktop.nix
   ];
 
   # gaming.enable = true;
@@ -46,7 +42,6 @@
   #
   #  /etc/profiles/per-user/josh/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {EDITOR = "nvim";};
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

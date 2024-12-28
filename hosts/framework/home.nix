@@ -1,15 +1,11 @@
-{
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
+{...}: {
   home.username = "josh";
   home.homeDirectory = "/home/josh";
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   imports = [
     ../../modules/home/default.nix
+    ../../modules/home/laptop.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
