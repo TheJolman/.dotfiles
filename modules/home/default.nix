@@ -14,5 +14,6 @@
     ./btop.nix
     # ./zed.nix
     ./vscode.nix
+    ./nix-ld.nix
   ];
 }

@@ -22,6 +22,8 @@
     flavor = "mocha";
   };
 
+  programs.nix-ld.enable = true;
+
   virtualisation.vmware.host.enable = true;
 
   programs.hyprland.enable = true;

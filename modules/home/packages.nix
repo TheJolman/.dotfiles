@@ -37,6 +37,8 @@
     gh
     matlab
     stable.unityhub
+    jetbrains.idea-ultimate
+    uv
 
     # ---- Gui Apps ---- #
 
@@ -64,7 +66,7 @@
     freetube
     gnome-network-displays # for miracast
     kooha
-    obsidian
+    prismlauncher
 
     # fonts
     noto-fonts
@@ -85,5 +87,12 @@
   };
 
   nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) ["zoom" "discord" "vscode" "steam-run" "steam-original" "android-studio-stable"];
+    builtins.elem (lib.getName pkg) [
+      "zoom"
+      "discord"
+      "vscode"
+      "steam-run"
+      "steam-original"
+      "android-studio-stable"
+    ];
 }
