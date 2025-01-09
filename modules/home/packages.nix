@@ -62,7 +62,7 @@
     spotify
     gnome-system-monitor
     transmission_4-qt # torrent client
-    vlc
+    celluloid
     freetube
     gnome-network-displays # for miracast
     kooha
