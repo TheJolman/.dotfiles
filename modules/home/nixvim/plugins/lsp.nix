@@ -4,63 +4,203 @@
       matlab-language-server
       alejandra
       dotnetCorePackages.dotnet_8.sdk
+      black
+      isort
+      rustfmt
+      shfmt
+      stylua
+      djlint
+      prettierd
     ];
 
     plugins = {
       lsp = {
         enable = true;
         servers = {
+          # Nix
           nixd = {
             enable = true;
             settings = {
               formatting.command = ["alejandra"];
             };
           };
+
+          # C/C++
           clangd = {
             enable = true;
             package = pkgs.clang-tools;
           };
           mesonlsp.enable = true;
           cmake.enable = true;
-          jsonls.enable = true;
+
+          # Shell
           bashls.enable = true;
-          lua_ls.enable = true;
+          zk.enable = true;
+
+          # Lua
+          lua_ls = {
+            settings = {
+              Lua = {
+                format = {
+                  enable = true;
+                  defaultConfig = {
+                    indent_style = "space";
+                    indent_size = "2";
+                  };
+                };
+              };
+            };
+            enable = true;
+          };
+
+          # Python
           pylsp = {
             enable = true;
             settings = {
               plugins = {
+                black = {
+                  enabled = true;
+                  line_length = 100;
+                };
+                isort = {
+                  enabled = true;
+                  profile = "black";
+                };
                 ruff.enabled = true;
-                isort.enabled = true;
                 pylsp_mypy.enabled = true;
                 rope.enabled = true;
               };
             };
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                "pyproject.toml",
+                "setup.py",
+                "setup.cfg",
+                "requirements.txt",
+                "Pipfile",
+                "poetry.lock",
+                ".git"
+              )
+            '';
           };
-          jdtls.enable = true;
+
+          # Java
+          jdtls = {
+            enable = true;
+            settings = {
+              java = {
+                format = {
+                  enabled = true;
+                };
+              };
+            };
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                -- Maven
+                "pom.xml",
+                -- Gradle
+                "settings.gradle",
+                "settings.gradle.kts",
+                -- Eclipse
+                ".project",
+                ".git"
+              )
+            '';
+          };
+
+          # C#
           csharp_ls = {
             enable = true;
             package = pkgs.csharp-ls;
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                "*.sln",
+                "*.csproj",
+                ".git"
+              )
+            '';
           };
-          # --- Web ---
+
+          # Rust
+          rust_analyzer = {
+            enable = true;
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                "Cargo.toml",
+                "rust-project.json",
+                ".git"
+              )
+            '';
+            installRustc = true;
+            installCargo = true;
+          };
+
+          # Go
+          gopls = {
+            enable = true;
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                "go.mod",
+                "go.work",
+                ".git"
+              )
+            '';
+          };
+
+          # PHP
           intelephense = {
             enable = true;
             package = pkgs.intelephense;
           };
-          html.enable = true;
-          cssls.enable = true;
-          # ts_ls.enable = true;
-          denols.enable = true;
-          svelte.enable = true;
-          htmx.enable = true;
+
+          # JavasScript/TypeScript
+          denols = {
+            enable = true;
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                "deno.json",
+                "deno.jsonc",
+                "package.json",
+                "tsconfig.json",
+                ".git"
+              )
+            '';
+          };
+
+          # Other web dev
           jinja_lsp = {
             enable = true;
             package = null;
+            settings = {
+              jinja = {
+                formatter = "djlint";
+              };
+            };
           };
-          rust_analyzer = {
+          svelte = {
             enable = true;
-            installRustc = true;
-            installCargo = true;
+            settings.svelte.format.enable = true;
           };
+          html = {
+            enable = true;
+            settings = {
+              html = {
+                format = {
+                  enable = true;
+                  wrapLineLength = 100;
+                  wrapAttributes = "auto";
+                  templating = true;
+                  unformatted = null;
+                };
+              };
+            };
+          };
+          htmx.enable = true;
+          cssls.enable = true;
+          jsonls.enable = true;
+
+          # Misc
+          dockerls.enable = true;
         };
 
         onAttach = ''
@@ -87,6 +227,7 @@
             vim.lsp.buf.format()
           end, {})
 
+          bufmap("<leader>fm", "<cmd>Format<CR>", "format buffer")
         '';
       };
     };

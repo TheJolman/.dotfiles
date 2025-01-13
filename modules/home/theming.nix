@@ -32,9 +32,29 @@
 
   qt = {
     enable = true;
-    # kvantum is for catppuccin
     platformTheme.name = "kvantum";
     style.name = "kvantum";
+  };
+
+  home.packages = with pkgs; [
+    libsForQt5.qtstyleplugin-kvantum
+    qt6Packages.qtstyleplugin-kvantum
+  ];
+
+  xdg.configFile = {
+    "Kvantum/kvantum.kvconfig".source = pkgs.writeText "kvantum.kvconfig" ''
+      [General]
+      theme=catppuccin-frappe-yellow
+    '';
+
+    "Kvantum/catppuccin-frappe-yellow".source = "${pkgs.catppuccin-kvantum.override {
+      variant = "frappe";
+      accent = "yellow";
+    }}/share/Kvantum/catppuccin-frappe-yellow";
+  };
+
+  home.sessionVariables = {
+    QT_QPA_PLATFORM = "wayland";
   };
 
   home.pointerCursor = {
