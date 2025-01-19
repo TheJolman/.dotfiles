@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ./rainbow-delimiters.nix
-    ./web-devicons.nix
     ./vimtex.nix
     ./toggleterm.nix
     ./autopairs.nix
@@ -10,22 +9,20 @@
     ./cmp.nix
     ./treesitter.nix
     ./fzf.nix
-    ./oil.nix
+    ./todo-comments.nix
     ./diffview.nix
-    ./surround.nix
     ./luasnip.nix
     ./neogit.nix
     ./flash.nix
     ./indent-blankline.nix
     ./ts-autotag.nix
     ./css-color.nix
-    ./yazi-nvim.nix
     ./molten.nix
     ./markdown.nix
     ./lint.nix
     ./bufferline.nix
     ./mini.nix
-    ./illuminate.nix
     ./lsp-lines.nix
+    ./guess-indent.nix
   ];
 }
