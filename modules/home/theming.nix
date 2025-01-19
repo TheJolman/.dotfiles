@@ -5,13 +5,18 @@
 }: {
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
-    inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
+    # inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
   ];
 
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    pointerCursor.enable = false;
+    cursors.enable = false;
+    gtk = {
+      icon.enable = true;
+      tweaks = ["normal"];
+      flavor = "mocha";
+    };
   };
 
   xdg.enable = true;
@@ -24,9 +29,9 @@
   gtk = {
     enable = true;
     catppuccin = {
-      flavor = "mocha";
-      tweaks = ["normal"];
-      icon.enable = true;
+      # flavor = "mocha";
+      # tweaks = ["normal"];
+      # icon.enable = true;
     };
   };
 
