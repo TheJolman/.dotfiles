@@ -39,7 +39,7 @@
     ];
   };
 
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables = {
     XDG_CURRENT_DESKTOP = "Hyprland";

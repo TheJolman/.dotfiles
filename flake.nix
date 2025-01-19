@@ -89,7 +89,7 @@
     mkHost = hostname:
       lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs pkgs;};
+        specialArgs = {inherit inputs;};
         modules = [
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
@@ -99,6 +99,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
             };
+            nixpkgs.pkgs = pkgs;
           }
         ];
       };
