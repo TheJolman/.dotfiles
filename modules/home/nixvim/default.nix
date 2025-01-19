@@ -97,6 +97,7 @@
       splitbelow = true;
       splitright = true;
       conceallevel = 3;
+      showbreak = "↪ ";
     };
     clipboard = {
       register = "unnamedplus";
