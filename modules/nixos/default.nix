@@ -17,5 +17,6 @@
     # ./sops.nix
     ./gaming.nix
     ./logind.nix
+    ./vmware.nix
   ];
 }

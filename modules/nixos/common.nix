@@ -24,7 +24,7 @@
 
   programs.nix-ld.enable = true;
 
-  virtualisation.vmware.host.enable = true;
+  # virtualisation.vmware.host.enable = true;
 
   programs.hyprland.enable = true;
   xdg.portal = {
