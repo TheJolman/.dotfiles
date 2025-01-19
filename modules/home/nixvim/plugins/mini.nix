@@ -13,6 +13,7 @@
         git = {};
         bufremove = {};
         ai = {};
+        diff = {};
         clue = {
           triggers = [
             # Leader triggers
