@@ -82,6 +82,7 @@
       listchars.tab = "→ ";
       list = true;
       showbreak = "↪ ";
+      laststatus = 3; # avante wants this
     };
     clipboard = {
       register = "unnamedplus";
