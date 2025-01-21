@@ -213,6 +213,24 @@
         mode = "n";
         options.desc = "fzf word under cursor";
       }
+      {
+        key = "<leader>ft";
+        action = "<cmd>FzfLua treesitter<CR>";
+        mode = "n";
+        options.desc = "fzf Treesitter";
+      }
+      {
+        key = "<leader>fs";
+        action = "<cmd>FzfLua lsp_document_symbols<CR>";
+        mode = "n";
+        options.desc = "fzf lsp document symbols";
+      }
+      {
+        key = "<leader>fas";
+        action = "<cmd>FzfLua lsp_workspace_symbols<CR>";
+        mode = "n";
+        options.desc = "fzf lsp workspace symbols";
+      }
     ];
   };
 }
