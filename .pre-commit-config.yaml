@@ -6,3 +6,9 @@ repos:
       entry: alejandra
       language: system
       files: \.nix$
+
+    - id: stylua
+      name: Format Lua files with stylua
+      entry: stylua
+      language: system
+      files: :\.lua$

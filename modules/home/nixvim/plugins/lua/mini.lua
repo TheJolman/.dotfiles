@@ -18,3 +18,6 @@ vim.api.nvim_create_autocmd('User', {
         vim.keymap.set('n', 'gy', yank_path, { buffer = b, desc = 'Yank path' })
     end
 })
+
+local rhs = '<CMD>lua MiniGit.show_at_cursor()<CR>'
+vim.keymap.set({ 'n', 'x' }, '<Leader>gs', rhs, { desc = 'Show at cursor' })

@@ -5,10 +5,63 @@
     keymaps = [
       # General
       {
-        key = "<leader>g";
+        key = "p";
+        action = "\"_dP";
+        mode = "v";
+        options.desc = "Better paste";
+      }
+      {
+        key = "<M-j>";
+        action = ":m '>+1<CR>gv=gv";
+        mode = "v";
+        options.desc = "Move text down";
+      }
+      {
+        key = "<M-k>";
+        action = ":m '<-2<CR>gv=gv";
+        mode = "v";
+        options.desc = "Move text up";
+      }
+      # Stay in indent mode
+      {
+        key = "<";
+        action = "<gv";
+        mode = "v";
+      }
+      {
+        key = ">";
+        action = ">gv";
+        mode = "v";
+      }
+      {
+        key = "<leader>gg";
         action = "<CMD>lua require('neogit').open({ kind = 'floating' })<CR>";
         mode = "n";
         options.desc = "Open Neogit";
+      }
+      {
+        key = "<leader>gd";
+        action = "<CMD>DiffviewOpen<CR>";
+        mode = "n";
+        options.desc = "Open Diffview";
+      }
+      {
+        key = "<leader>gq";
+        action = "<CMD>DiffviewClose<CR>";
+        mode = "n";
+        options.desc = "Close Diffview";
+      }
+      {
+        key = "<leader>gl";
+        action = "<CMD>DiffviewClose<CR>";
+        mode = "n";
+        options.desc = "Close Diffview";
+      }
+      {
+        key = "<leader>gh";
+        action = "<CMD>DiffviewFileHistory<CR>";
+        mode = "n";
+        options.desc = "Git file history";
       }
       {
         key = "<leader>q";
