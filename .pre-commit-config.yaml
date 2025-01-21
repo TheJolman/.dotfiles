@@ -11,4 +11,4 @@ repos:
       name: Format Lua files with stylua
       entry: stylua
       language: system
-      files: :\.lua$
+      files: \.lua$
