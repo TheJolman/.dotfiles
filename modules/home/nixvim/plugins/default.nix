@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./avante.nix
     ./rainbow-delimiters.nix
     ./vimtex.nix
     ./toggleterm.nix

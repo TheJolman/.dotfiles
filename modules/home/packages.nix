@@ -24,6 +24,7 @@
     alejandra
     pre-commit
     ripgrep
+    stylua
 
     # vpn
     protonvpn-cli_2
