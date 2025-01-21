@@ -11,7 +11,7 @@
       enable = true;
       efiSupport = true;
       useOSProber = true;
-      catppuccin.enable = true;
+      # catppuccin.enable = true;
 
       devices = ["nodev"];
     };

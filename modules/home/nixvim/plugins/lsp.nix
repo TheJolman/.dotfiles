@@ -39,6 +39,7 @@
 
           # Lua
           lua_ls = {
+            enable = true;
             settings = {
               Lua = {
                 format = {
@@ -48,9 +49,14 @@
                     indent_size = "2";
                   };
                 };
+                runtime = {
+                  version = "LuaJIT";
+                };
+                workspace = {
+                  checkThirdParty = false;
+                };
               };
             };
-            enable = true;
           };
 
           # Python

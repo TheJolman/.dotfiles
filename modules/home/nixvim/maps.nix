@@ -129,7 +129,7 @@
       # Oil
       {
         key = "-";
-        action = "<CMD>Oil<CR>";
+        action = "<CMD>lua MiniFiles.open()<CR>";
         mode = "n";
       }
 
