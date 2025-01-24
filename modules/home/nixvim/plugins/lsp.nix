@@ -161,7 +161,7 @@
 
           # JavasScript/TypeScript
           denols = {
-            enable = true;
+            enable = false;
             rootDir = ''
               require('lspconfig.util').root_pattern(
                 "deno.json",
@@ -172,6 +172,8 @@
               )
             '';
           };
+
+          ts_ls.enable = true;
 
           # Other web dev
           jinja_lsp = {
@@ -203,6 +205,28 @@
           };
           htmx.enable = true;
           cssls.enable = true;
+          tailwindcss = {
+            enable = true;
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                "tailwind.config.js",
+                "tailwind.config.cjs",
+                "tailwind.config.mjs",
+                "tailwind.config.ts",
+                ".git"
+              )
+            '';
+            filetypes = [
+              "htmldjango"
+              "html"
+              "markdown"
+              "css"
+              "javascript"
+              "typescript"
+              "svelte"
+              "javascriptreact"
+            ];
+          };
           jsonls.enable = true;
 
           # Misc
@@ -223,9 +247,9 @@
           bufmap("gi", vim.lsp.buf.implementation, "go to implementation")
           bufmap("gtd", vim.lsp.buf.type_definition, "go to type definition")
 
-          bufmap("gr", "<cmd>FzfLua lsp_references<CR>", "go to references")
-          bufmap("gs", "<cmd>FzfLua lsp_document_symbols<CR>", "document symbols")
-          bufmap("gS", "<cmd>FzfLua lsp_workspace_symbols<CR>", "workspace symbols")
+          bufmap("glr", "<cmd>FzfLua lsp_references<CR>", "go to references")
+          bufmap("gls", "<cmd>FzfLua lsp_document_symbols<CR>", "document symbols")
+          bufmap("glS", "<cmd>FzfLua lsp_workspace_symbols<CR>", "workspace symbols")
 
           bufmap("K", vim.lsp.buf.hover, "hover info")
 

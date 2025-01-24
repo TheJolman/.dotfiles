@@ -16,6 +16,7 @@
         bufremove = {};
         ai = {};
         diff = {};
+        pairs = {};
         clue = {
           triggers = [
             # Leader triggers
@@ -106,7 +107,7 @@
 
         notify = {
           lsp_progress = {
-            enable = true;
+            enable = false;
             duration_last = 1000;
           };
         };
