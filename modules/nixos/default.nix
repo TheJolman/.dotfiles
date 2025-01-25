@@ -2,7 +2,7 @@
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.default
-    # inputs.sops-nix.nixosModules.sops
+    ./agenix.nix
     ./interception-tools.nix
     ./docker.nix
     ./bluetooth.nix

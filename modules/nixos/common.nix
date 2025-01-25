@@ -47,7 +47,14 @@
     XDG_SESSION_TYPE = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
   };
-  environment.systemPackages = with pkgs; [wget curl git vim greetd.tuigreet p7zip];
+  environment.systemPackages = with pkgs; [
+    wget
+    curl
+    git
+    vim
+    greetd.tuigreet
+    p7zip
+  ];
 
   time.timeZone = "America/Los_Angeles";
 

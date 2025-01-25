@@ -51,6 +51,12 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.darwin.follows = "";
+    };
   };
 
   outputs = {
@@ -63,6 +69,7 @@
     nix-matlab,
     hyprcursor-phinger,
     hyprland,
+    agenix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -100,6 +107,10 @@
               useUserPackages = true;
             };
             nixpkgs.pkgs = pkgs;
+          }
+          agenix.nixosModules.default
+          {
+            environment.systemPackages = [agenix.packages.${system}.default];
           }
         ];
       };
