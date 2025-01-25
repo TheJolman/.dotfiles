@@ -58,6 +58,8 @@
     #   sudo nixos-rebuild switch --flake ~/.dotfiles#$host
     # }
     initExtra = ''
+      source ~/.dotfiles/.env
+
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
 
