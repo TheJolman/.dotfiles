@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./autopairs.nix
     ./avante.nix
     ./rainbow-delimiters.nix
     ./vimtex.nix

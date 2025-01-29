@@ -16,7 +16,6 @@
         bufremove = {};
         ai = {};
         diff = {};
-        pairs = {};
         clue = {
           triggers = [
             # Leader triggers
