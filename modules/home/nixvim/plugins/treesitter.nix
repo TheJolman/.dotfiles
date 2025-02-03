@@ -2,9 +2,14 @@
   programs.nixvim.plugins.treesitter = {
     enable = true;
     settings = {
-      auto_install = true;
+      auto_install = false;
+      parser_isntall_dir = null;
       highlight = {
         enable = true;
+        disable = [
+          "c"
+          "cpp"
+        ];
       };
       indent.enable = true;
 
@@ -20,10 +25,11 @@
     };
     folding = true;
     nixvimInjections = true;
+    nixGrammars = true;
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-      c
-      cpp
+      # c
+      # cpp
       python
       lua
       html
