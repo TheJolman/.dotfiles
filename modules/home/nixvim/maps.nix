@@ -22,7 +22,7 @@
         mode = "v";
         options.desc = "Move text up";
       }
-      # Stay in indent mode
+      # Stay in indent mode while indenting
       {
         key = "<";
         action = "<gv";
@@ -33,6 +33,7 @@
         action = ">gv";
         mode = "v";
       }
+      # Git stuff
       {
         key = "<leader>gg";
         action = "<CMD>lua Snacks.lazygit()<CR>";
@@ -58,6 +59,7 @@
         mode = "n";
         options.desc = "Git file history";
       }
+      # General
       {
         key = "<leader>q";
         action = "<CMD>q<CR>";
@@ -77,8 +79,7 @@
         options.desc = "vertical split";
         options.silent = true;
       }
-
-      # For Buffers
+      # Buffer management
       {
         key = "<leader>p";
         action = "<CMD>bp<CR>";
@@ -100,38 +101,31 @@
         options.desc = "delete buffer";
         options.silent = true;
       }
-
-      # For Windows
+      # Window management
       {
         key = "<leader>h";
         action = "<C-W>h";
         mode = "n";
-        options.desc = "move left";
+        options.desc = "Move left";
       }
       {
         key = "<leader>l";
         action = "<C-W>l";
         mode = "n";
-        options.desc = "move right";
+        options.desc = "Move right";
       }
       {
         key = "<leader>j";
         action = "<C-W>j";
         mode = "n";
-        options.desc = "move down";
+        options.desc = "Move down";
       }
       {
         key = "<leader>k";
         action = "<C-W>k";
         mode = "n";
-        options.desc = "move up";
+        options.desc = "Move up";
       }
-
-      # For resizing windows
-      #      {
-      # key = "<C-=>";
-      # action = "<C-W>=";
-      #      }
       {
         key = "<C-Up>";
         action = "5<C-W>+";
@@ -156,14 +150,12 @@
         mode = "n";
         options.desc = "Decrease window width";
       }
-
       # Files
       {
         key = "-";
         action = "<CMD>lua MiniFiles.open()<CR>";
         mode = "n";
       }
-
       # Terminal
       {
         key = "<A-t>";
@@ -183,7 +175,6 @@
         mode = "n";
         options.desc = "Open new terminal";
       }
-
       # fzf-lua
       {
         key = "<leader>ff";
@@ -221,7 +212,6 @@
         mode = "n";
         options.desc = "fzf Treesitter";
       }
-
       # Lsp stuff
       {
         key = "<leader>fr";
@@ -246,6 +236,12 @@
         action = "<cmd>FzfLua lsp_workspace_symbols<CR>";
         mode = "n";
         options.desc = "LSP workspace symbols";
+      }
+      {
+        key = "<leader>t";
+        action = "<cmd>Trouble diagnostics toggle<cr>";
+        mode = "n";
+        options.desc = "Toggle diagnostics";
       }
     ];
   };
