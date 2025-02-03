@@ -4,6 +4,7 @@
     ./nixvim/default.nix
     ./scripts/default.nix
     ./shell/default.nix
+    ./zed/default.nix
     ./direnv.nix
     ./fuzzel.nix
     ./kitty.nix
@@ -12,7 +13,6 @@
     ./packages.nix
     ./theming.nix
     ./btop.nix
-    # ./zed.nix
     ./vscode.nix
     ./nix-ld.nix
   ];
