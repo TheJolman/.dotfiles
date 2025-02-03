@@ -7,6 +7,7 @@
       highlight = {
         enable = true;
         disable = [
+          # broken for some reason
           "c"
           "cpp"
         ];

@@ -239,25 +239,21 @@
           end
 
           bufmap("<leader>r", vim.lsp.buf.rename, "symbol rename")
-          --bufmap("<leader>a", vim.lsp.buf.code_action, "code action")
-          bufmap("<leader>a", "<cmd>FzfLua lsp_code_actions<CR>", "code action")
+          -- below replaced with FzfLua command
+          -- bufmap("<leader>a", vim.lsp.buf.code_action, "code action")
 
           bufmap("gd", vim.lsp.buf.definition, "go to definition")
           bufmap("gD", vim.lsp.buf.declaration, "go to declaration")
           bufmap("gi", vim.lsp.buf.implementation, "go to implementation")
           bufmap("gtd", vim.lsp.buf.type_definition, "go to type definition")
 
-          bufmap("glr", "<cmd>FzfLua lsp_references<CR>", "go to references")
-          bufmap("gls", "<cmd>FzfLua lsp_document_symbols<CR>", "document symbols")
-          bufmap("glS", "<cmd>FzfLua lsp_workspace_symbols<CR>", "workspace symbols")
-
           bufmap("K", vim.lsp.buf.hover, "hover info")
 
-          vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+          vim.api.nvim_buf_create_user_command(bufnr, "Fmt", function(_)
             vim.lsp.buf.format()
           end, {})
 
-          bufmap("<leader>fm", "<cmd>Format<CR>", "format buffer")
+          bufmap("<leader>fm", "<cmd>Fmt<CR>", "format buffer")
         '';
       };
     };

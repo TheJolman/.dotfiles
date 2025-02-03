@@ -35,30 +35,25 @@
       }
       {
         key = "<leader>gg";
-        action = "<CMD>lua require('neogit').open({ kind = 'floating' })<CR>";
+        action = "<CMD>lua Snacks.lazygit()<CR>";
+        # action = "<CMD>lua require('neogit').open({ kind = 'floating' })<CR>";
         mode = "n";
-        options.desc = "Open Neogit";
+        options.desc = "Git UI";
       }
       {
-        key = "<leader>gd";
+        key = "<leader>do";
         action = "<CMD>DiffviewOpen<CR>";
         mode = "n";
         options.desc = "Open Diffview";
       }
       {
-        key = "<leader>gq";
+        key = "<leader>dq";
         action = "<CMD>DiffviewClose<CR>";
         mode = "n";
         options.desc = "Close Diffview";
       }
       {
-        key = "<leader>gl";
-        action = "<CMD>DiffviewClose<CR>";
-        mode = "n";
-        options.desc = "Close Diffview";
-      }
-      {
-        key = "<leader>gh";
+        key = "<leader>dh";
         action = "<CMD>DiffviewFileHistory<CR>";
         mode = "n";
         options.desc = "Git file history";
@@ -76,24 +71,10 @@
         options.desc = "save";
       }
       {
-        key = "<leader>wq";
-        action = "<CMD>wq<CR>";
-        mode = "n";
-        options.desc = "save+quit";
-        options.silent = true;
-      }
-      {
         key = "<leader>v";
         action = "<CMD>vsplit<CR>";
         mode = "n";
         options.desc = "vertical split";
-        options.silent = true;
-      }
-      {
-        key = "<leader>s";
-        action = "<CMD>split<CR>";
-        mode = "n";
-        options.desc = "horizontal split";
         options.silent = true;
       }
 
@@ -155,84 +136,52 @@
         key = "<C-Up>";
         action = "5<C-W>+";
         mode = "n";
+        options.desc = "Increase window height";
       }
       {
         key = "<C-Down>";
         action = "5<C-W>-";
         mode = "n";
-      }
-      {
-        key = "<C-Left>";
-        action = "10<C-W><";
-        mode = "n";
+        options.desc = "Decrease window height";
       }
       {
         key = "<C-Right>";
         action = "10<C-W>>";
         mode = "n";
+        options.desc = "Increase window width";
       }
-
-      # Better bind for escape in terminal mode (to move around better)
       {
-        key = "<esc>";
-        action = "<C-\\><C-n>";
-        mode = "t";
+        key = "<C-Left>";
+        action = "10<C-W><";
+        mode = "n";
+        options.desc = "Decrease window width";
       }
 
-      # Oil
+      # Files
       {
         key = "-";
         action = "<CMD>lua MiniFiles.open()<CR>";
         mode = "n";
       }
 
-      # Toggleterm
+      # Terminal
       {
-        key = "<A-1>";
-        action = "<cmd>ToggleTerm 1 direction=horizontal<CR>";
-        mode = "n";
-        options.desc = "toggle term 1";
-      }
-      {
-        key = "<A-1>";
-        action = "<cmd>ToggleTerm 1 direction=horizontal<CR>";
-        mode = "t";
-      }
-      {
-        key = "<A-2>";
-        action = "<cmd>ToggleTerm 2 direction=horizontal<CR>";
-        mode = "n";
-        options.desc = "toggle term 2";
-      }
-      {
-        key = "<A-2>";
-        action = "<cmd>ToggleTerm 2 direction=horizontal<CR>";
-        mode = "t";
-        options.desc = "toggle term 2";
-      }
-      {
-        key = "<A-3>";
-        action = "<cmd>ToggleTerm 3 direction=horizontal<CR>";
-        mode = "n";
-        options.desc = "toggle term 3";
-      }
-      {
-        key = "<A-3>";
-        action = "<cmd>ToggleTerm 3 direction=horizontal<CR>";
-        mode = "t";
-        options.desc = "toggle term 3";
+        key = "<A-t>";
+        action = "<cmd>lua Snacks.terminal.toggle()<CR>";
+        mode = ["n" "t"];
+        options.desc = "Toggle terminal";
       }
       {
         key = "<A-f>";
-        action = "<cmd>ToggleTerm 10 direction=float<CR>";
+        action = "<cmd>lua Snacks.terminal.open('zsh')<CR>";
         mode = "n";
-        options.desc = "toggle float term";
+        options.desc = "Open floating terminal";
       }
       {
-        key = "<A-f>";
-        action = "<cmd>ToggleTerm 10 direction=float<CR>";
-        mode = "t";
-        options.desc = "toggle float term";
+        key = "<A-1>";
+        action = "<cmd>lua Snacks.terminal.open()<CR>";
+        mode = "n";
+        options.desc = "Open new terminal";
       }
 
       # fzf-lua
@@ -240,31 +189,31 @@
         key = "<leader>ff";
         action = "<cmd>FzfLua files<CR>";
         mode = "n";
-        options.desc = "fzf files";
+        options.desc = "Pick files";
       }
       {
         key = "<leader>fb";
         action = "<cmd>FzfLua buffers<CR>";
         mode = "n";
-        options.desc = "fzf buffers";
+        options.desc = "Pick buffers";
       }
       {
         key = "<leader>fg";
         action = "<cmd>FzfLua grep<CR>";
         mode = "n";
-        options.desc = "fzf grep";
+        options.desc = "Grep";
       }
       {
         key = "<leader>fv";
         action = "<cmd>FzfLua grep_visual<CR>";
         mode = "n";
-        options.desc = "fzf visual selection";
+        options.desc = "Visual grep";
       }
       {
         key = "<leader>fw";
         action = "<cmd>FzfLua grep_cword<CR>";
         mode = "n";
-        options.desc = "fzf word under cursor";
+        options.desc = "Grep word under cursor";
       }
       {
         key = "<leader>ft";
@@ -272,17 +221,31 @@
         mode = "n";
         options.desc = "fzf Treesitter";
       }
+
+      # Lsp stuff
       {
-        key = "<leader>fs";
-        action = "<cmd>FzfLua lsp_document_symbols<CR>";
+        key = "<leader>fr";
+        action = "<cmd>FzfLua lsp_code_actions<CR>";
         mode = "n";
-        options.desc = "fzf lsp document symbols";
+        options.desc = "Code actions";
       }
       {
-        key = "<leader>fas";
+        key = "<leader>fr";
+        action = "<cmd>FzfLua lsp_references<CR>";
+        mode = "n";
+        options.desc = "LSP references";
+      }
+      {
+        key = "<leader>fds";
+        action = "<cmd>FzfLua lsp_document_symbols<CR>";
+        mode = "n";
+        options.desc = "LSP document symbols";
+      }
+      {
+        key = "<leader>fws";
         action = "<cmd>FzfLua lsp_workspace_symbols<CR>";
         mode = "n";
-        options.desc = "fzf lsp workspace symbols";
+        options.desc = "LSP workspace symbols";
       }
     ];
   };

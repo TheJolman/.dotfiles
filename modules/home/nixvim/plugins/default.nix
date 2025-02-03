@@ -4,8 +4,6 @@
     ./avante.nix
     ./rainbow-delimiters.nix
     ./vimtex.nix
-    ./toggleterm.nix
-    ./lualine.nix
     ./lsp.nix
     ./cmp.nix
     ./treesitter.nix
@@ -23,8 +21,8 @@
     ./lint.nix
     ./bufferline.nix
     ./mini.nix
-    # ./lsp-lines.nix
     ./trouble.nix
     ./guess-indent.nix
+    ./snacks.nix
   ];
 }

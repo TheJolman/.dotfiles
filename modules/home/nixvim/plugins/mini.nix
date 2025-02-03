@@ -16,6 +16,8 @@
         bufremove = {};
         ai = {};
         diff = {};
+        statusline = {};
+        bufremove = {};
         clue = {
           triggers = [
             # Leader triggers
@@ -24,13 +26,8 @@
               keys = "<Leader>";
             }
             {
-              mode = "x";
+              mode = "v";
               keys = "<Leader>";
-            }
-            # Built-in completion
-            {
-              mode = "i";
-              keys = "<C-x>";
             }
             # g key
             {
@@ -38,56 +35,16 @@
               keys = "g";
             }
             {
-              mode = "x";
+              mode = "v";
               keys = "g";
             }
-            # Marks
             {
               mode = "n";
-              keys = "'";
+              keys = "<C>";
             }
             {
               mode = "n";
-              keys = "`";
-            }
-            {
-              mode = "x";
-              keys = "'";
-            }
-            {
-              mode = "x";
-              keys = "`";
-            }
-            # Registers
-            {
-              mode = "n";
-              keys = "\"";
-            }
-            {
-              mode = "x";
-              keys = "\"";
-            }
-            {
-              mode = "i";
-              keys = "<C-r>";
-            }
-            {
-              mode = "c";
-              keys = "<C-r>";
-            }
-            # Window commands
-            {
-              mode = "n";
-              keys = "<C-w>";
-            }
-            # z key
-            {
-              mode = "n";
-              keys = "z";
-            }
-            {
-              mode = "x";
-              keys = "z";
+              keys = "<A>";
             }
           ];
         };
