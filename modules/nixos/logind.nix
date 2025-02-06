@@ -1,8 +1,12 @@
 {...}: {
   services.logind = {
-    lidSwitch = "suspend"; # could also use hybrid-sleep here
+    lidSwitch = "suspend-then-hibernate"; # could also use hybrid-sleep here
     lidSwitchDocked = "ignore";
-    powerKey = "hibernate";
+    powerKey = "poweroff";
     powerKeyLongPress = "reboot";
+    extraConfig = ''
+      IdleAction=suspend-then-hibernate
+      IdleActionSec=1500
+    '';
   };
 }
