@@ -11,32 +11,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland?submodules=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     catppuccin = {
       url = "github:catppuccin/nix";
     };
 
-    hyprcursor-phinger = {
-      url = "github:jappie3/hyprcursor-phinger";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    gBar = {
-      url = "github:scorpion-26/gBar";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    ags = {
-      url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -67,8 +47,6 @@
     home-manager,
     hyprpanel,
     nix-matlab,
-    hyprcursor-phinger,
-    hyprland,
     agenix,
     ...
   } @ inputs: let

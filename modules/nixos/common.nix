@@ -24,22 +24,20 @@
 
   programs.nix-ld.enable = true;
 
-  # virtualisation.vmware.host.enable = true;
-
   programs.hyprland.enable = true;
+
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     config = {
+      common.default = ["hyprland" "gtk"];
       hyprland.default = ["hyprland" "gtk"];
     };
     extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
+      # xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
     ];
   };
-
-  # nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables = {
     XDG_CURRENT_DESKTOP = "Hyprland";

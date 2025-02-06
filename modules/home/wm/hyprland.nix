@@ -17,11 +17,8 @@ in {
     waybar
     swww
     mako
-
     # hyprpanel
     hyprcursor
-
-    # Essential tools for wm
     wl-clipboard
     grim
     slurp
@@ -31,22 +28,16 @@ in {
     brightnessctl
     alsa-utils
     pavucontrol
-    xwaylandvideobridge
-
-    # battery stuff
-    batsignal
+    # xwaylandvideobridge
     acpi
   ];
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
 
     settings = {
       exec-once = "${startupScript}/bin/start";
-
-      # env = ["HYPRCURSOR_THEME, phinger-cursors-dark" "HYPRCURSOR_SIZE, 25"];
 
       # to mirror, add the folowing to monitors list:
       # "DP-11,preferred,auto,1,mirror,eDP-1"
@@ -260,5 +251,4 @@ in {
       ];
     };
   };
-  # programs.hyprcursor-phinger.enable = true;
 }
