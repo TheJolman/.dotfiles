@@ -5,7 +5,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # ---- CLI Tools ---- #
+    # ---- CLI Apps ---- #
     xdragon
     curl
     fzf
@@ -25,25 +25,16 @@
     pre-commit
     ripgrep
     stylua
-
-    # vpn
     protonvpn-cli_2
-    protonvpn-gui
-
-    # for secrets
-    sops
-
-    # ---- Dev ---- #
-
     gh
-    matlab
-    stable.unityhub
-    jetbrains.idea-ultimate
     uv
 
     # ---- Gui Apps ---- #
-
-    # protonvpn-gui
+    wireshark
+    matlab
+    stable.unityhub
+    jetbrains.idea-ultimate
+    protonvpn-gui
     kitty
     impression
     gparted
@@ -70,7 +61,7 @@
     kooha
     prismlauncher
 
-    # fonts
+    # Fonts
     noto-fonts
     corefonts
     roboto
