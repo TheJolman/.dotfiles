@@ -172,8 +172,8 @@ in {
           "$mod, D,       exec, $menu"
           "$mod, E, 	    exec, $fileManager"
           "$mod, Q,       killactive"
-          "$mod SHIFT, M, exit"
-          "$mod CTRL, L, exec, swaylock -f"
+          "$mod CTRL, M, exit"
+          "$mod CTRL, A, exec, swaylock -f"
           "$mod CTRL, S, exec, systemctl hibernate"
 
           # alt tab
