@@ -32,11 +32,11 @@
       openssl.out
       networkmanager
       libsecret
-      webkitgtk
+      webkitgtk_6_0
       curl
       curl.out
       nghttp2
-      libsoup
+      libsoup_3
       krb5
       pulseaudio
 
