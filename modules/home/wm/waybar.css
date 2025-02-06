@@ -1,0 +1,129 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: CaskaydiaCove Nerd Font;
+  font-size: 14px;
+  min-height: 24px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  margin-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 26px;
+  transition: none;
+  color: transparent;
+  background: transparent;
+}
+
+#custom-logo {
+  margin-top: 8px;
+  margin-left: 12px;
+  margin-bottom: 0;
+  padding: 0 16px;
+  border-radius: 26px;
+  background: @blue;
+  color: @base;
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 30px;
+}
+
+#workspaces {
+  margin-top: 8px;
+  margin-left: 12px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  background: @base;
+  transition: none;
+}
+
+#workspaces button {
+  transition: none;
+  color: @text;
+  background: transparent;
+  font-size: 16px;
+}
+
+#workspaces button.active {
+  color: @red;
+}
+
+#workspaces button:hover {
+  transition: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: @pink;
+}
+
+
+#tray,
+#wireplumber,
+#network,
+#battery,
+#temperature,
+#cpu,
+#memory,
+#clock {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+}
+
+#clock {
+  color: @text;
+  background: @base;
+}
+
+#tray {
+  background: @surface0;
+}
+
+#network {
+  color: @base;
+  background: @teal;
+}
+
+#temperature {
+  color: @base;
+  background: @sapphire;
+}
+
+#wireplumber {
+  color: @base;
+  background: @sky;
+}
+
+#cpu {
+  color: @base;
+  background: @blue;
+}
+
+#memory {
+  margin-right: 12px;
+  color: @base;
+  background: @lavender;
+}
+
+#battery {
+  color: @base;
+  background: @mauve;
+}
+
+#mpd.disconnected,
+#mpd.stopped {
+  color: @text;
+  background: @base;
+}

@@ -17,7 +17,6 @@ in {
     waybar
     swww
     mako
-    # hyprpanel
     hyprcursor
     wl-clipboard
     grim
@@ -51,11 +50,6 @@ in {
       "$menu" = "fuzzel";
       "$browser" = "firefox";
 
-      # input = {
-      #   #kb_options = "caps:swapescape";
-      #   accel_profile = "flat";
-      # };
-
       general = {
         gaps_in = 5;
         gaps_out = 10;
@@ -64,35 +58,38 @@ in {
         resize_on_border = true;
 
         "col.inactive_border" = "$surface0";
-        "col.active_border" = "$blue";
+        "col.active_border" = "$pink";
       };
 
       group = {
-        "col.border_active" = "$blue";
+        "col.border_active" = "$yellow";
         "col.border_inactive" = "$surface0";
         auto_group = false;
         groupbar = {
-          "col.active" = "$blue";
-          "col.inactive" = "$overlay2";
-          stacked = false;
-          height = "19";
-          text_color = "$surface1";
-          font_size = 14;
-          font_family = "Noto Sans";
+          # "col.active" = "$red";
+          # "col.inactive" = "$pink";
+          height = "20";
+          text_color = "$text";
+          font_size = 16;
+          font_family = "CaskaydiaCove Nerd Font Propo, Light";
+          # gradients = false;
+          indicator_height = 5;
+          rounding = 3;
         };
       };
 
       decoration = {
         rounding = 10;
         shadow = {
-          enabled = true;
+          enabled = false;
           range = 6;
-          color = "$blue";
+          color = "$flamingo";
           color_inactive = "$surface0";
         };
       };
 
       misc = {
+        font_family = "CaskaydiaCove Nerd Font Propo, Light";
         new_window_takes_over_fullscreen = true;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
@@ -129,7 +126,7 @@ in {
       ];
 
       windowrulev2 = [
-        "bordercolor $yellow, fullscreen:1"
+        "bordercolor $red, fullscreen:1"
         "float, class:(org.gnome.Nautilus)"
       ];
 
@@ -174,7 +171,7 @@ in {
           "$mod, E, 	    exec, $fileManager"
           "$mod, Q,       killactive"
           "$mod CTRL, M, exit"
-          "$mod CTRL, A, exec, swaylock -f"
+          # "$mod CTRL, A, exec, swaylock -f"
           "$mod CTRL, S, exec, systemctl hibernate"
 
           # alt tab
