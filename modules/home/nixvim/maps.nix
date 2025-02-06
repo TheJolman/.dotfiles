@@ -214,7 +214,7 @@
       }
       # Lsp stuff
       {
-        key = "<leader>fr";
+        key = "<leader>a";
         action = "<cmd>FzfLua lsp_code_actions<CR>";
         mode = "n";
         options.desc = "Code actions";
