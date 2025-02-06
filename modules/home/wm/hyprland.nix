@@ -73,8 +73,8 @@ in {
           font_size = 16;
           font_family = "CaskaydiaCove Nerd Font Propo, Light";
           # gradients = false;
-          indicator_height = 5;
-          rounding = 3;
+          # indicator_height = 5;
+          # rounding = 3;
         };
       };
 
