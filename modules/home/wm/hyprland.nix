@@ -35,6 +35,7 @@ in {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
+    systemd.enableXdgAutostart = true;
 
     settings = {
       exec-once = "${startupScript}/bin/start";
