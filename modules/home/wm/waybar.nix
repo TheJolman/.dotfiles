@@ -45,13 +45,15 @@
         };
 
         cpu = {
-          tooltip = "{load}";
-          format = "  {}%";
+          interval = 10;
+          tooltip = "Usage: {usage}%";
+          format = "  {avg_frequency} GHz";
         };
 
         memory = {
-          tooltip = "{used}";
-          format = "  {}%";
+          interval = 30;
+          tooltip = "{avail} GiB available";
+          format = "  {used} GiB";
         };
 
         temperature = {
@@ -65,7 +67,7 @@
 
         battery = {
           format-icons = [" " " " " " " " " "];
-          format = "{icon} {capacity}, {time}%";
+          format = "{icon} {capacity}%";
         };
       };
     };
