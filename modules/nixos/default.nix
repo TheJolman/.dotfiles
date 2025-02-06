@@ -14,9 +14,9 @@
     ./systemd.nix
     ./services.nix
     ./common.nix
-    # ./sops.nix
     ./gaming.nix
     ./logind.nix
     ./vmware.nix
+    ./wireshark.nix
   ];
 }

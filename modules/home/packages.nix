@@ -30,7 +30,6 @@
     uv
 
     # ---- Gui Apps ---- #
-    wireshark
     matlab
     stable.unityhub
     jetbrains.idea-ultimate
