@@ -28,6 +28,8 @@
     protonvpn-cli_2
     gh
     uv
+    xh
+    jq
 
     # ---- Gui Apps ---- #
     matlab
@@ -60,19 +62,18 @@
     kooha
     prismlauncher
 
-    # Fonts
+    # ---- Fonts ---- #
     noto-fonts
     corefonts
     roboto
-    fira-mono
-    fira-sans
+    fira
     overpass
     jetbrains-mono
-
     nerd-fonts.caskaydia-cove
     nerd-fonts.fira-code
     nerd-fonts.dejavu-sans-mono
     nerd-fonts.fantasque-sans-mono
+    nerd-fonts.iosevka
   ];
 
   home.sessionVariables = {
