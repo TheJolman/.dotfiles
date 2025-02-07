@@ -30,7 +30,7 @@ window#waybar.hidden {
   margin-bottom: 0;
   padding: 0 16px;
   border-radius: 26px;
-  background: @blue;
+  background: @teal;
   color: @base;
   font-size: 20px;
   font-weight: bold;
@@ -88,22 +88,22 @@ window#waybar.hidden {
 }
 
 #tray {
-  background: @surface0;
+  background: @base;
 }
 
 #network {
   color: @base;
-  background: @teal;
-}
-
-#temperature {
-  color: @base;
-  background: @sapphire;
+  background: @pink;
 }
 
 #wireplumber {
   color: @base;
-  background: @sky;
+  background: @mauve;
+}
+
+#battery {
+  color: @base;
+  background: @lavender;
 }
 
 #cpu {
@@ -111,15 +111,15 @@ window#waybar.hidden {
   background: @blue;
 }
 
+#temperature {
+  color: @base;
+  background: @sapphire;
+}
+
 #memory {
   margin-right: 12px;
   color: @base;
-  background: @lavender;
-}
-
-#battery {
-  color: @base;
-  background: @mauve;
+  background: @sky;
 }
 
 #mpd.disconnected,
