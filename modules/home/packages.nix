@@ -64,6 +64,10 @@
     noto-fonts
     corefonts
     roboto
+    fira-mono
+    fira-sans
+    overpass
+    jetbrains-mono
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.fira-code

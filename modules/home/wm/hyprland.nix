@@ -16,7 +16,7 @@ in {
   home.packages = with pkgs; [
     waybar
     swww
-    mako
+    libnotify
     hyprcursor
     wl-clipboard
     grim
@@ -62,15 +62,15 @@ in {
       };
 
       group = {
-        "col.border_active" = "$yellow";
+        "col.border_active" = "$pink";
         "col.border_inactive" = "$surface0";
         auto_group = false;
         groupbar = {
-          # "col.active" = "$red";
-          # "col.inactive" = "$pink";
+          "col.active" = "$red";
+          "col.inactive" = "$pink";
           height = "20";
-          text_color = "$text";
-          font_size = 16;
+          text_color = "$surface0";
+          font_size = 19;
           font_family = "CaskaydiaCove Nerd Font Propo, Light";
           # gradients = false;
           # indicator_height = 5;
