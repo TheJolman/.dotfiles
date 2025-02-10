@@ -6,6 +6,7 @@
       lazygit.enable = true;
       quickfile.enable = true;
       bigfile.enable = true;
+      picker.enable = true;
     };
   };
 }

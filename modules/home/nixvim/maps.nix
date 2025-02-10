@@ -158,82 +158,95 @@
       }
       # Terminal
       {
-        key = "<A-t>";
+        key = "<A-tt>";
         action = "<cmd>lua Snacks.terminal.toggle()<CR>";
         mode = ["n" "t"];
         options.desc = "Toggle terminal";
       }
       {
-        key = "<A-f>";
-        action = "<cmd>lua Snacks.terminal.open('zsh')<CR>";
-        mode = "n";
-        options.desc = "Open floating terminal";
-      }
-      {
-        key = "<A-1>";
+        key = "<A-to>";
         action = "<cmd>lua Snacks.terminal.open()<CR>";
         mode = "n";
         options.desc = "Open new terminal";
       }
-      # fzf-lua
+      {
+        key = "<A-tg>";
+        action = "<cmd>lua Snacks.terminal.get()<CR>";
+        mode = "n";
+        options.desc = "Get/create terminal";
+      }
+      {
+        key = "<A-tl>";
+        action = "<cmd>lua Snacks.terminal.list()<CR>";
+        mode = "n";
+        options.desc = "List terminals";
+      }
+
+      # Picker
+      {
+        key = "<leader>e";
+        action = "<cmd>lua Snacks.explorer()<CR>";
+        mode = "n";
+        options.desc = "Pick files";
+      }
       {
         key = "<leader>ff";
-        action = "<cmd>FzfLua files<CR>";
+        action = "<cmd>lua Snacks.picker.files()<CR>";
         mode = "n";
         options.desc = "Pick files";
       }
       {
         key = "<leader>fb";
-        action = "<cmd>FzfLua buffers<CR>";
+        action = "<cmd>lua Snacks.picker.buffers()<CR>";
         mode = "n";
         options.desc = "Pick buffers";
       }
       {
         key = "<leader>fg";
-        action = "<cmd>FzfLua grep<CR>";
+        action = "<cmd>lua Snacks.picker.grep()<CR>";
         mode = "n";
         options.desc = "Grep";
       }
       {
-        key = "<leader>fv";
-        action = "<cmd>FzfLua grep_visual<CR>";
-        mode = "n";
-        options.desc = "Visual grep";
-      }
-      {
         key = "<leader>fw";
-        action = "<cmd>FzfLua grep_cword<CR>";
+        action = "<cmd>lua Snacks.picker.grep_word()<CR>";
         mode = "n";
         options.desc = "Grep word under cursor";
       }
-      {
-        key = "<leader>ft";
-        action = "<cmd>FzfLua treesitter<CR>";
-        mode = "n";
-        options.desc = "fzf Treesitter";
-      }
+      # {
+      #   key = "<leader>ft";
+      #   action = "<cmd>FzfLua treesitter<CR>";
+      #   mode = "n";
+      #   options.desc = "fzf Treesitter";
+      # }
       # Lsp stuff
       {
         key = "<leader>a";
-        action = "<cmd>FzfLua lsp_code_actions<CR>";
+        action = "<cmd>lua Snacks.picker.qflist()<CR>";
         mode = "n";
         options.desc = "Code actions";
       }
+      # {
+      #   key = "<leader>a";
+      #   action = "<cmd>FzfLua lsp_code_actions<CR>";
+      #   mode = "n";
+      #   options.desc = "Code actions";
+      # }
       {
         key = "<leader>fr";
-        action = "<cmd>FzfLua lsp_references<CR>";
+        action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
         mode = "n";
         options.desc = "LSP references";
       }
       {
-        key = "<leader>fds";
-        action = "<cmd>FzfLua lsp_document_symbols<CR>";
+        key = "<leader>fsd";
+        action = "<cmd>lua Snacks.picker.lsp_symbols()<CR>";
         mode = "n";
         options.desc = "LSP document symbols";
       }
       {
-        key = "<leader>fws";
-        action = "<cmd>FzfLua lsp_workspace_symbols<CR>";
+        key = "<leader>fsw";
+        action = "<cmd>lua Snacks.picker.lsp_workspace_symbols()<CR>";
         mode = "n";
         options.desc = "LSP workspace symbols";
       }

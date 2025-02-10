@@ -7,7 +7,7 @@
     ./lsp.nix
     ./cmp.nix
     ./treesitter.nix
-    ./fzf.nix
+    # ./fzf.nix
     ./todo-comments.nix
     ./diffview.nix
     ./luasnip.nix
@@ -19,7 +19,7 @@
     ./molten.nix
     ./markdown.nix
     ./lint.nix
-    ./bufferline.nix
+    # ./bufferline.nix
     ./mini.nix
     ./trouble.nix
     ./guess-indent.nix

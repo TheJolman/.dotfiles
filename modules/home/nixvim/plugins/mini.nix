@@ -5,7 +5,14 @@
       mockDevIcons = true;
       modules = {
         icons = {};
-        files = {};
+        files = {
+          mappings = {
+            go_in_plus = "<CR>";
+          };
+          windows = {
+            preview = true;
+          };
+        };
         clue = {};
         sessions = {
           autowrite = true;
@@ -17,6 +24,8 @@
         ai = {};
         diff = {};
         statusline = {};
+        tabline = {};
+        bracketed = {};
         bufremove = {};
         clue = {
           triggers = [
