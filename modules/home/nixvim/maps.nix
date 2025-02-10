@@ -158,25 +158,25 @@
       }
       # Terminal
       {
-        key = "<A-tt>";
+        key = "<A-t>t";
         action = "<cmd>lua Snacks.terminal.toggle()<CR>";
         mode = ["n" "t"];
         options.desc = "Toggle terminal";
       }
       {
-        key = "<A-to>";
+        key = "<A-t>o";
         action = "<cmd>lua Snacks.terminal.open()<CR>";
         mode = "n";
         options.desc = "Open new terminal";
       }
       {
-        key = "<A-tg>";
+        key = "<A-t>g";
         action = "<cmd>lua Snacks.terminal.get()<CR>";
         mode = "n";
         options.desc = "Get/create terminal";
       }
       {
-        key = "<A-tl>";
+        key = "<A-t>l";
         action = "<cmd>lua Snacks.terminal.list()<CR>";
         mode = "n";
         options.desc = "List terminals";
@@ -213,12 +213,6 @@
         mode = "n";
         options.desc = "Grep word under cursor";
       }
-      # {
-      #   key = "<leader>ft";
-      #   action = "<cmd>FzfLua treesitter<CR>";
-      #   mode = "n";
-      #   options.desc = "fzf Treesitter";
-      # }
       # Lsp stuff
       {
         key = "<leader>a";
@@ -226,12 +220,6 @@
         mode = "n";
         options.desc = "Code actions";
       }
-      # {
-      #   key = "<leader>a";
-      #   action = "<cmd>FzfLua lsp_code_actions<CR>";
-      #   mode = "n";
-      #   options.desc = "Code actions";
-      # }
       {
         key = "<leader>fr";
         action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";

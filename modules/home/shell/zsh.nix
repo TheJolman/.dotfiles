@@ -1,7 +1,7 @@
 {...}: {
   programs.zsh = {
     enable = true;
-    dotDir = ".config/zsh";
+    dotDir = ".config/zsh_hm";
     autocd = true;
     enableCompletion = true;
     defaultKeymap = null;
@@ -12,11 +12,11 @@
       cd = "z";
       ll = "lsd -l";
       ls = "lsd";
+      ya = "yazi";
       tree = "lsd --tree";
       copy = "wl-copy";
       paste = "wl-paste";
       lg = "lazygit";
-      ng = "nvim +Neogit";
       ga = "git add";
       gc = "git commit";
       gP = "git push";
@@ -25,13 +25,16 @@
       gr = "git rebase";
       gd = "git diff";
       gl = "git log";
+      glo = "git log --oneline";
       gf = "git fetch";
       gb = "git branch";
-      gsw = "git switch";
+      gs = "git switch";
+      gst = "git stash";
       gch = "git checkout";
       nb = "nom build";
-      nd = "nom develop -c zsh";
+      nd = "nom develop";
       ns = "nom shell";
+      nr = "nix run";
       vpnon = "sudo protonvpn c -f";
       vpnoff = "sudo protonvpn d";
       matlab = "matlab -nodesktop -nosplash";
@@ -41,24 +44,14 @@
       ssh = "kitten ssh";
     };
 
-    # zplug is slow as shit for some reason
-    # zplug = {
-    #   enable = true;
-    #   plugins = [
-    #     {name = "chisui/zsh-nix-shell";}
-    #     # {name = "zsh-users/zsh-completions";}
-    #     {name = "mrjohannchang/zsh-interactive-cd";}
-    #     # {name = "romkatv/zsh-defer";}
-    #   ];
-    # };
-
     # Unused function replaced by `nh os switch`
     # update() {
     #   local host=''${1:-$(hostname)}
     #   sudo nixos-rebuild switch --flake ~/.dotfiles#$host
     # }
+
     initExtra = ''
-      source ~/.dotfiles/.env
+      # source ~/.dotfiles/.env
 
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
@@ -71,17 +64,22 @@
         fi
         rm -f -- "$tmp"
       }
-      alias ngs='git -C ~/notes add . && git -C ~/notes commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git -C ~/notes pull --rebase && git -C ~/notes push'
     '';
   };
-  programs.starship = {
+
+  # programs.starship = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  # };
+
+  programs.carapace = {
     enable = true;
     enableZshIntegration = true;
   };
 
-  # programs.oh-my-posh = {
-  #   enable = true;
-  #   enableZshIntegration = true;
-  #   useTheme = "catppuccin";
-  # };
+  programs.oh-my-posh = {
+    enable = true;
+    enableZshIntegration = true;
+    useTheme = "catppuccin";
+  };
 }
