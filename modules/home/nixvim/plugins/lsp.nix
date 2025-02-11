@@ -26,10 +26,8 @@
           };
 
           # C/C++
-          clangd = {
-            enable = true;
-            package = pkgs.clang-tools;
-          };
+          clangd.enable = true;
+
           mesonlsp.enable = true;
           cmake.enable = true;
 
@@ -77,17 +75,6 @@
                 rope.enabled = true;
               };
             };
-            rootDir = ''
-              require('lspconfig.util').root_pattern(
-                "pyproject.toml",
-                "setup.py",
-                "setup.cfg",
-                "requirements.txt",
-                "Pipfile",
-                "poetry.lock",
-                ".git"
-              )
-            '';
           };
 
           # Java
@@ -100,58 +87,23 @@
                 };
               };
             };
-            rootDir = ''
-              require('lspconfig.util').root_pattern(
-                -- Maven
-                "pom.xml",
-                -- Gradle
-                "settings.gradle",
-                "settings.gradle.kts",
-                -- Eclipse
-                ".project",
-                ".git"
-              )
-            '';
           };
 
           # C#
           csharp_ls = {
             enable = true;
             package = pkgs.csharp-ls;
-            rootDir = ''
-              require('lspconfig.util').root_pattern(
-                "*.sln",
-                "*.csproj",
-                ".git"
-              )
-            '';
           };
 
           # Rust
           rust_analyzer = {
             enable = true;
-            rootDir = ''
-              require('lspconfig.util').root_pattern(
-                "Cargo.toml",
-                "rust-project.json",
-                ".git"
-              )
-            '';
             installRustc = true;
             installCargo = true;
           };
 
           # Go
-          gopls = {
-            enable = true;
-            rootDir = ''
-              require('lspconfig.util').root_pattern(
-                "go.mod",
-                "go.work",
-                ".git"
-              )
-            '';
-          };
+          gopls.enable = true;
 
           # PHP
           intelephense = {
@@ -160,19 +112,7 @@
           };
 
           # JavasScript/TypeScript
-          denols = {
-            enable = false;
-            rootDir = ''
-              require('lspconfig.util').root_pattern(
-                "deno.json",
-                "deno.jsonc",
-                "package.json",
-                "tsconfig.json",
-                ".git"
-              )
-            '';
-          };
-
+          denols.enable = false;
           ts_ls.enable = true;
 
           # Other web dev
@@ -207,25 +147,6 @@
           cssls.enable = true;
           tailwindcss = {
             enable = true;
-            rootDir = ''
-              require('lspconfig.util').root_pattern(
-                "tailwind.config.js",
-                "tailwind.config.cjs",
-                "tailwind.config.mjs",
-                "tailwind.config.ts",
-                ".git"
-              )
-            '';
-            filetypes = [
-              "htmldjango"
-              "html"
-              "markdown"
-              "css"
-              "javascript"
-              "typescript"
-              "svelte"
-              "javascriptreact"
-            ];
           };
           jsonls.enable = true;
 
