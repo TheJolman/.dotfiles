@@ -51,7 +51,7 @@
     # }
 
     initExtra = ''
-      # source ~/.dotfiles/.env
+      source ~/.dotfiles/.env
 
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"

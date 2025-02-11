@@ -34,6 +34,7 @@
     # ---- Gui Apps ---- #
     matlab
     stable.unityhub
+    libresprite
     jetbrains.idea-ultimate
     protonvpn-gui
     kitty
