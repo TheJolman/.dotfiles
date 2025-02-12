@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font.name = "CaskaydiaCove Nerd Font, Light";
-    font.size = 14;
+    font.size = 13;
     shellIntegration.enableZshIntegration = true;
 
     settings = {
