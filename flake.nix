@@ -22,15 +22,15 @@
 
     nix-matlab.url = "gitlab:doronbehar/nix-matlab";
 
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hyprpanel = {
+    #   url = "github:Jas-SinghFSU/HyprPanel";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # zen-browser = {
+    #   url = "github:0xc000022070/zen-browser-flake";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     agenix = {
       url = "github:ryantm/agenix";
@@ -45,7 +45,7 @@
     nixpkgs-stable,
     catppuccin,
     home-manager,
-    hyprpanel,
+    # hyprpanel,
     nix-matlab,
     agenix,
     ...
@@ -65,7 +65,7 @@
       inherit system;
       config.allowUnfree = true;
       overlays = [
-        inputs.hyprpanel.overlay
+        # inputs.hyprpanel.overlay
         inputs.nix-matlab.overlay
         stableOverlay
       ];

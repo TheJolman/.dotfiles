@@ -35,7 +35,7 @@
     matlab
     stable.unityhub
     libresprite
-    jetbrains.idea-ultimate
+    stable.jetbrains.idea-ultimate
     protonvpn-gui
     kitty
     impression
