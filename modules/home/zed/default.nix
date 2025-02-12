@@ -111,10 +111,5 @@
     };
 
     userKeymaps = builtins.fromJSON (builtins.readFile ./keymap.json);
-    # userKeymaps = builtins.fromJSON ''
-    #   [
-    #   ]
-    #
-    # '';
   };
 }
