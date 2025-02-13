@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh_hm";
@@ -51,8 +51,6 @@
     # }
 
     initExtra = ''
-      source ~/.dotfiles/.env
-
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
 

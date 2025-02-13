@@ -1,7 +1,11 @@
 {config, ...}: {
-  age.secrets.secret1.file = ../../secrets/secret1.age;
+  age.secrets.anthropic-api-key = {
+    file = ../../secrets/anthropic-api-key.age;
+    owner = "josh";
+  };
 
-  users.users.josh = {
-    hashedPasswordFile = config.age.secrets.secret1.path;
+  environment.variables = {
+    ANTHROPIC_API_KEY = "$(cat ${config.age.secrets.anthropic-api-key.path})";
+    TEST = "hi there";
   };
 }

@@ -27,7 +27,6 @@
 
           # C/C++
           clangd.enable = true;
-
           mesonlsp.enable = true;
           cmake.enable = true;
 
@@ -60,6 +59,8 @@
           # Python
           pylsp = {
             enable = true;
+            pythonPackage = pkgs.python313;
+            package = pkgs.python313Packages.python-lsp-server;
             settings = {
               plugins = {
                 black = {

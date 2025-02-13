@@ -78,6 +78,7 @@
         modules = [
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
+          agenix.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -85,10 +86,6 @@
               useUserPackages = true;
             };
             nixpkgs.pkgs = pkgs;
-          }
-          agenix.nixosModules.default
-          {
-            environment.systemPackages = [agenix.packages.${system}.default];
           }
         ];
       };

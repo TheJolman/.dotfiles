@@ -51,6 +51,7 @@
     eog # gnome image viwer
     firefox
     # inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.agenix.packages.${pkgs.system}.default
     gnome-font-viewer
     thunderbird
     spotify
