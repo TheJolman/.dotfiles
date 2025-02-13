@@ -5,6 +5,12 @@
     keymaps = [
       # General
       {
+        key = "<leader>m";
+        action = "<CMD>make<CR>";
+        mode = "n";
+        options.desc = "make";
+      }
+      {
         key = "p";
         action = "\"_dP";
         mode = "v";
