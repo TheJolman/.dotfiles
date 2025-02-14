@@ -11,6 +11,7 @@
     swww-daemon &  # wallaper daemon
     swww img ~/Pictures/Wallpapers/cherry-6.png &
     ${pkgs.batsignal}/bin/batsignal &
+    hypridle &
   '';
 in {
   home.packages = with pkgs; [
