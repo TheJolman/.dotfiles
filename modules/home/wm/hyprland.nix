@@ -71,7 +71,7 @@ in {
           height = "20";
           text_color = "$surface0";
           font_size = 19;
-          font_family = "CaskaydiaCove Nerd Font Propo, Light";
+          font_family = "CaskaydiaCove Nerd Font Propo";
           # gradients = false;
           # indicator_height = 5;
           # rounding = 3;
@@ -171,7 +171,7 @@ in {
           "$mod, E, 	    exec, $fileManager"
           "$mod, Q,       killactive"
           "$mod CTRL, M, exit"
-          # "$mod CTRL, A, exec, swaylock -f"
+          "$mod CTRL, A, exec, hyprlock"
           "$mod CTRL, S, exec, systemctl hibernate"
 
           # alt tab
@@ -234,7 +234,7 @@ in {
       # l -> locked, will also work when an input inhibitor (like a lockscreen) is active
       bindl = [
         # lock when lid is closed
-        # ", switch:on:Lid Switch, exec, swaylock -f"
+        ", switch:on:Lid Switch, exec, hyprlock"
         # sleep system when switch is closed
         # ", switch:on:Lid Switch, exec, systemctl suspend"
 

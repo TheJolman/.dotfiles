@@ -12,10 +12,10 @@ vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter' }, {
   command = 'checktime',
 })
 
-vim.api.nvim_create_autocmd({ 'BufEnter' }, {
-  pattern = '*',
-  command = 'GuessIndent',
-})
+-- vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+--   pattern = '*',
+--   command = 'GuessIndent',
+-- })
 
 -- Spellcheck in markdown files
 vim.api.nvim_create_autocmd('FileType', {

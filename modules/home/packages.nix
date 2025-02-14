@@ -26,12 +26,13 @@
     ripgrep
     stylua
     protonvpn-cli_2
-    gh
     uv
     xh
     jq
+    gh-dash
 
     # ---- Gui Apps ---- #
+    drawing
     matlab
     stable.unityhub
     libresprite
