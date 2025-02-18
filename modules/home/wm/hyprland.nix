@@ -41,7 +41,8 @@ in {
 
       # to mirror, add the folowing to monitors list:
       # "DP-11,preferred,auto,1,mirror,eDP-1"
-      monitor = [",preferred,auto,1"];
+      # monitor = [",preferred,auto,1"];
+      monitor = [",highres@highrr,auto,1"];
 
       "$mod" = "SUPER";
 
