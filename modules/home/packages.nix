@@ -30,6 +30,7 @@
     xh
     jq
     gh-dash
+    awscli2
 
     # ---- Gui Apps ---- #
     drawing
