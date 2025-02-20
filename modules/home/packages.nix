@@ -31,6 +31,7 @@
     jq
     gh-dash
     awscli2
+    traceroute
 
     # ---- Gui Apps ---- #
     drawing
