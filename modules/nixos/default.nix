@@ -2,6 +2,7 @@
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.default
+    ./printing.nix
     ./agenix.nix
     ./interception-tools.nix
     ./docker.nix
