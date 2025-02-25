@@ -5,7 +5,7 @@ let
 
   # systems
   framework = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN4x/Z5KJNonztSMxAKIakOmowXcyZ5o+ij4MmaLCPYC";
-  workstation = "";
+  workstation = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMj+QUIzL1UnI/5cHFzVrrmF9stKFFRl3lkeXgGD4mJr";
   systems = [framework workstation];
 in {
   "secret1.age".publicKeys = users ++ systems;

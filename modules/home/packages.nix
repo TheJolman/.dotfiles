@@ -31,6 +31,7 @@
     jq
     gh-dash
     awscli2
+    terraform
     traceroute
 
     # ---- Gui Apps ---- #
@@ -38,6 +39,7 @@
     matlab
     stable.unityhub
     libresprite
+    tiled
     stable.jetbrains.idea-ultimate
     protonvpn-gui
     kitty
@@ -96,5 +98,6 @@
       "steam-run"
       "steam-original"
       "android-studio-stable"
+      "terraform"
     ];
 }

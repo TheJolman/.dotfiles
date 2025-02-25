@@ -1,7 +1,7 @@
 {...}: {
   programs.kitty = {
     enable = true;
-    font.name = "CaskaydiaCove Nerd Font, Light";
+    font.name = "CaskaydiaCove Nerd Font";
     font.size = 13;
     shellIntegration.enableZshIntegration = true;
 

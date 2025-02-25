@@ -35,14 +35,17 @@
       lua
       html
       nasm
+      asm
       latex
       julia
       kotlin
       java
+      groovy
       c_sharp
       htmldjango
       javascript
       typescript
+      tsx
       gleam
       svelte
       gdscript
@@ -51,10 +54,12 @@
       zig
       rust
       meson
+      ninja
       go
+      gomod
+      gosum
       bash
       json
-      lua
       make
       cmake
       matlab
@@ -62,13 +67,20 @@
       markdown-inline
       nix
       regex
+      sql
       toml
+      sql
       vim
       vimdoc
+      csv
+      desktop
       xml
       hyprlang
       yaml
+      powershell
       norg
+      terraform
+      http
       diff
       git_config
       git_rebase
