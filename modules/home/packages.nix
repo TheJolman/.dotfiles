@@ -68,6 +68,7 @@
     gnome-network-displays # for miracast
     kooha
     prismlauncher
+    gnome-calculator
 
     # ---- Fonts ---- #
     noto-fonts
