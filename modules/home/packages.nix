@@ -62,13 +62,12 @@
     spotify
     gnome-system-monitor
     transmission_4-qt # torrent client
-    celluloid
-    kdenlive
-    freetube
+    celluloid # video player
+    kdePackages.kdenlive
     gnome-network-displays # for miracast
-    kooha
-    prismlauncher
     gnome-calculator
+    kooha # screen recorder
+    prismlauncher # minecraft
 
     # ---- Fonts ---- #
     noto-fonts
@@ -91,14 +90,14 @@
     NIXPKGS_ALLOW_UNFREE = 1;
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "zoom"
-      "discord"
-      "vscode"
-      "steam-run"
-      "steam-original"
-      "android-studio-stable"
-      "terraform"
-    ];
+  # nixpkgs.config.allowUnfreePredicate = pkg:
+  #   builtins.elem (lib.getName pkg) [
+  #     "zoom"
+  #     "discord"
+  #     "vscode"
+  #     "steam-run"
+  #     "steam-original"
+  #     "android-studio-stable"
+  #     "terraform"
+  #   ];
 }
