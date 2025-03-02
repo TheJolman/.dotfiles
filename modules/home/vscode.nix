@@ -7,10 +7,12 @@
       denoland.vscode-deno
       ziglang.vscode-zig
       vscjava.vscode-java-pack
-      llvm-vs-code-extensions.vscode-clangd
+      vscjava.vscode-gradle
+      ms-vscode.cpptools
       ms-vscode.makefile-tools
       ms-vscode.cmake-tools
-      ms-vscode-remote.remote-containers
+      mesonbuild.mesonbuild
+      ms-vscode-remote.vscode-remote-extensionpack
       ms-azuretools.vscode-docker
       ms-dotnettools.vscode-dotnet-runtime
       ms-dotnettools.csharp
@@ -22,7 +24,6 @@
       ms-toolsai.jupyter
       zainchen.json
       bbenoist.nix
-      mesonbuild.mesonbuild
       golang.go
       rust-lang.rust-analyzer
     ];
