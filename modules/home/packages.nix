@@ -58,7 +58,7 @@
     # inputs.zen-browser.packages.${pkgs.system}.default
     inputs.agenix.packages.${pkgs.system}.default
     gnome-font-viewer
-    thunderbird
+    thunderbird-latest
     spotify
     gnome-system-monitor
     transmission_4-qt # torrent client
