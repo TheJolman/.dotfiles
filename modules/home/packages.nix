@@ -27,6 +27,7 @@
     stylua
     protonvpn-cli_2
     uv
+    pixi
     xh
     jq
     gh-dash

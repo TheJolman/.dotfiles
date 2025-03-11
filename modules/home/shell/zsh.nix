@@ -53,6 +53,8 @@
     initExtra = ''
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
+      autoload -Uz compinit && compinit
+      eval "$(pixi completion --shell zsh)"
 
       function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
