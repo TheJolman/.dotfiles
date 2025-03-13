@@ -4,7 +4,7 @@
     dotDir = ".config/zsh_hm";
     autocd = true;
     enableCompletion = true;
-    defaultKeymap = null;
+    defaultKeymap = "emacs";
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
