@@ -68,6 +68,14 @@
                 rope.enabled = true;
               };
             };
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                "pyproject.toml",
+                "pixi.toml",
+                "requirements.txt",
+                ".git"
+              )
+            '';
           };
 
           # Java
@@ -145,6 +153,7 @@
 
           # Misc
           dockerls.enable = true;
+          terraformls.enable = true;
         };
 
         onAttach = ''

@@ -30,7 +30,7 @@
         ### copilot_chat models { gpt-4o gpt-4 gpt-3.5-turbo o1-preview } requires github connected
         default_model = {
           provider = "zed.dev";
-          model = "claude-3-5-sonnet-latest";
+          model = "claude-3-7-sonnet-latest";
         };
 
         #                inline_alternatives = [
