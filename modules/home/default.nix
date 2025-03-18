@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./rider.nix
     ./jupyter.nix
     ./wm/default.nix
     ./nixvim/default.nix
