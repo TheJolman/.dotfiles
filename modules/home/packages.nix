@@ -36,7 +36,7 @@
     traceroute
 
     # ---- Gui Apps ---- #
-    drawing
+    gimp
     matlab
     stable.unityhub
     libresprite
@@ -56,7 +56,6 @@
     evince # gnome document viewer
     eog # gnome image viwer
     firefox
-    # inputs.zen-browser.packages.${pkgs.system}.default
     inputs.agenix.packages.${pkgs.system}.default
     gnome-font-viewer
     thunderbird-latest
@@ -69,6 +68,7 @@
     gnome-calculator
     kooha # screen recorder
     prismlauncher # minecraft
+    seahorse # for GnomeKeyring
 
     # ---- Fonts ---- #
     noto-fonts

@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -12,50 +13,29 @@
     enable = true;
     flavor = "mocha";
     cursors.enable = false;
-    gtk = {
-      icon.enable = true;
-      tweaks = ["normal"];
-      flavor = "mocha";
-    };
+    gtk.enable = false; # depreciated
+    gtk.icon.enable = true;
+    kvantum.enable = true;
   };
 
   xdg.enable = true;
 
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
     };
   };
   gtk = {
     enable = true;
-    catppuccin = {
-      # flavor = "mocha";
-      # tweaks = ["normal"];
-      # icon.enable = true;
-    };
   };
 
   qt = {
     enable = true;
     platformTheme.name = "kvantum";
     style.name = "kvantum";
-  };
-
-  home.packages = with pkgs; [
-    libsForQt5.qtstyleplugin-kvantum
-    qt6Packages.qtstyleplugin-kvantum
-  ];
-
-  xdg.configFile = {
-    "Kvantum/kvantum.kvconfig".source = pkgs.writeText "kvantum.kvconfig" ''
-      [General]
-      theme=catppuccin-frappe-yellow
-    '';
-
-    "Kvantum/catppuccin-frappe-yellow".source = "${pkgs.catppuccin-kvantum.override {
-      variant = "frappe";
-      accent = "yellow";
-    }}/share/Kvantum/catppuccin-frappe-yellow";
   };
 
   home.sessionVariables = {

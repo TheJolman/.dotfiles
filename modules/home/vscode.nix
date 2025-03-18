@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.vscode = {
-    enable = true;
+    enable = false;
     package = pkgs.vscode.fhs;
     profiles.default.extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
