@@ -17,6 +17,7 @@
       copy = "wl-copy";
       paste = "wl-paste";
       lg = "lazygit";
+      g = "git";
       ga = "git add";
       gc = "git commit";
       gP = "git push";
@@ -35,13 +36,10 @@
       nd = "nom develop";
       ns = "nom shell";
       nr = "nix run";
-      vpnon = "sudo protonvpn c -f";
-      vpnoff = "sudo protonvpn d";
       matlab = "matlab -nodesktop -nosplash";
       switch = "nh os switch";
       packages = "nvim ~/.dotfiles/modules/home/packages.nix";
-      run = "hyprctl dispatch exec";
-      ssh = "kitten ssh";
+      kssh = "kitten ssh";
     };
 
     # Unused function replaced by `nh os switch`
