@@ -78,9 +78,9 @@
       }
       {
         key = "<leader>gs";
-        action = "<CMD>Git switch<space>";
+        action = "<CMD>Git stash<CR>";
         mode = "n";
-        options.desc = "Git switch";
+        options.desc = "Git stash";
       }
       {
         key = "<leader>gn";
