@@ -11,6 +11,12 @@
         python-lsp-server
         jedi
         nbdime
+        ipython
+        numpy
       ]))
+    (writeScriptBin "calc" ''
+      #usr/bin/env/bash
+      ipython --quick --InteractiveShellApp.exec_lines="import numpy as np"
+    '')
   ];
 }
