@@ -71,6 +71,42 @@
         options.desc = "Git push";
       }
       {
+        key = "<leader>gb";
+        action = "<CMD>Git branch<CR>";
+        mode = "n";
+        options.desc = "Git branch";
+      }
+      {
+        key = "<leader>gs";
+        action = "<CMD>Git switch<space>";
+        mode = "n";
+        options.desc = "Git switch";
+      }
+      {
+        key = "<leader>gn";
+        action = "<CMD>Git commit --ammend --no-edit<CR>";
+        mode = "n";
+        options.desc = "Ammend commmit with staged changes";
+      }
+      {
+        key = "<leader>gr";
+        action = "<CMD>Git reset --hard origin/HEAD<CR>";
+        mode = "n";
+        options.desc = "Git reset to remote";
+      }
+      {
+        key = "<leader>gl";
+        action = "<CMD>vert Git log<CR>";
+        mode = "n";
+        options.desc = "Git log";
+      }
+      {
+        key = "<leader>gf";
+        action = "<CMD>Git fetch<CR>";
+        mode = "n";
+        options.desc = "Git fetch";
+      }
+      {
         key = "<leader>do";
         action = "<CMD>DiffviewOpen<CR>";
         mode = "n";
