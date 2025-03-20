@@ -90,7 +90,7 @@
               {
                   "before": ["<leader>", "g", "g"],
                   "commands": [
-                      "workbench.action.toggleSidebarVisibility"
+                      "workbench.view.scm"
                   ]
               },
               {
