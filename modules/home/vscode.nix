@@ -57,6 +57,7 @@
           "editor.scrollbar.horizontal": "hidden",
           "editor.wordWrap": "on",
           "editor.tabSize": 2,
+          "editor.lineHeight": 1.3,
           "editor.insertSpaces": true,
           "editor.formatOnSave": true,
           "editor.foldingStrategy": "indentation",
@@ -81,7 +82,13 @@
                   ]
               },
               {
-                  "before": ["A-b"],
+                  "before": ["C-b"],
+                  "commands": [
+                      "workbench.action.toggleSidebarVisibility"
+                  ]
+              },
+              {
+                  "before": ["<leader>", "g", "g"],
                   "commands": [
                       "workbench.action.toggleSidebarVisibility"
                   ]

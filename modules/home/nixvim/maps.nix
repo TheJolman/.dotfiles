@@ -43,9 +43,32 @@
       {
         key = "<leader>gg";
         action = "<CMD>lua Snacks.lazygit()<CR>";
-        # action = "<CMD>lua require('neogit').open({ kind = 'floating' })<CR>";
         mode = "n";
         options.desc = "Git UI";
+      }
+      {
+        key = "<leader>ga";
+        action = "<CMD>Git add .<CR>";
+        mode = "n";
+        options.desc = "Stage all modified files";
+      }
+      {
+        key = "<leader>gc";
+        action = "<CMD>Git commit<CR>";
+        mode = "n";
+        options.desc = "Git commit";
+      }
+      {
+        key = "<leader>gp";
+        action = "<CMD>Git pull<CR><CMD>checktime<CR>";
+        mode = "n";
+        options.desc = "Git pull";
+      }
+      {
+        key = "<leader>gP";
+        action = "<CMD>Git push<CR>";
+        mode = "n";
+        options.desc = "Git push";
       }
       {
         key = "<leader>do";
@@ -101,10 +124,10 @@
         options.silent = true;
       }
       {
-        key = "<leader>x";
+        key = "<leader>b";
         action = "<CMD>bd<CR>";
         mode = "n";
-        options.desc = "delete buffer";
+        options.desc = "Delete buffer";
         options.silent = true;
       }
       # Window management
@@ -164,28 +187,10 @@
       }
       # Terminal
       {
-        key = "<A-t>t";
-        action = "<cmd>lua Snacks.terminal.toggle()<CR>";
-        mode = ["n" "t"];
-        options.desc = "Toggle terminal";
-      }
-      {
-        key = "<A-t>o";
+        key = "<A-t>";
         action = "<cmd>lua Snacks.terminal.open()<CR>";
-        mode = "n";
+        mode = ["n" "t"];
         options.desc = "Open new terminal";
-      }
-      {
-        key = "<A-t>g";
-        action = "<cmd>lua Snacks.terminal.get()<CR>";
-        mode = "n";
-        options.desc = "Get/create terminal";
-      }
-      {
-        key = "<A-t>l";
-        action = "<cmd>lua Snacks.terminal.list()<CR>";
-        mode = "n";
-        options.desc = "List terminals";
       }
 
       # Picker
@@ -245,7 +250,7 @@
         options.desc = "LSP workspace symbols";
       }
       {
-        key = "<leader>t";
+        key = "<A-d>";
         action = "<cmd>Trouble diagnostics toggle<cr>";
         mode = "n";
         options.desc = "Toggle diagnostics";
