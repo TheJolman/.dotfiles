@@ -90,9 +90,9 @@
       }
       {
         key = "<leader>gr";
-        action = "<CMD>Git reset --hard origin/HEAD<CR>";
+        action = "<CMD>Git reset --hard HEAD<CR>";
         mode = "n";
-        options.desc = "Git reset to remote";
+        options.desc = "Git reset to last commit";
       }
       {
         key = "<leader>gl";
