@@ -13,5 +13,7 @@
       xkb.layout = "us";
       xkb.variant = "";
     };
+
+    gnome.gnome-keyring.enable = true;
   };
 }
