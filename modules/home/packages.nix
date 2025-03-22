@@ -34,6 +34,8 @@
     awscli2
     terraform
     traceroute
+    claude-code
+    gpt-cli
 
     # ---- Gui Apps ---- #
     gimp
