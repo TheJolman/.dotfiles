@@ -36,7 +36,6 @@
       nd = "nom develop";
       ns = "nom shell";
       nr = "nix run";
-      matlab = "matlab -nodesktop -nosplash";
       switch = "nh os switch";
       packages = "nvim ~/.dotfiles/modules/home/packages.nix";
       kssh = "kitten ssh";

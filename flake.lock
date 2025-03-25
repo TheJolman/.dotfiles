@@ -41,22 +41,6 @@
         "type": "github"
       }
     },
-    "flake-compat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1733328505,
-        "narHash": "sha256-NeCCThCEP3eCl2l/+27kNNK7QrwZB1IJCrXfrbv5oqU=",
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "rev": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
-        "type": "github"
-      },
-      "original": {
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "type": "github"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -165,25 +149,6 @@
         "type": "github"
       }
     },
-    "nix-matlab": {
-      "inputs": {
-        "flake-compat": "flake-compat",
-        "nixpkgs": "nixpkgs_2"
-      },
-      "locked": {
-        "lastModified": 1742310123,
-        "narHash": "sha256-ZwgZP/YIYOAwEpejhZt133Qww20Ty7y+PabMICarLAU=",
-        "owner": "doronbehar",
-        "repo": "nix-matlab",
-        "rev": "aca95f7275d78c7dd6e3acab610cd7afc10296da",
-        "type": "gitlab"
-      },
-      "original": {
-        "owner": "doronbehar",
-        "repo": "nix-matlab",
-        "type": "gitlab"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1741851582,
@@ -216,20 +181,6 @@
       }
     },
     "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1742206328,
-        "narHash": "sha256-q+AQ///oMnyyFzzF4H9ShSRENt3Zsx37jTiRkLkXXE0=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "096478927c360bc18ea80c8274f013709cf7bdcd",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_3": {
       "locked": {
         "lastModified": 1742069588,
         "narHash": "sha256-C7jVfohcGzdZRF6DO+ybyG/sqpo1h6bZi9T56sxLy+k=",
@@ -294,8 +245,7 @@
         "agenix": "agenix",
         "catppuccin": "catppuccin",
         "home-manager": "home-manager_2",
-        "nix-matlab": "nix-matlab",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim"
       }

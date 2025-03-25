@@ -39,7 +39,6 @@
 
     # ---- Gui Apps ---- #
     gimp
-    matlab
     stable.unityhub
     libresprite
     tiled
@@ -71,6 +70,7 @@
     kooha # screen recorder
     prismlauncher # minecraft
     seahorse # for GnomeKeyring
+    insomnia
 
     # ---- Fonts ---- #
     noto-fonts
