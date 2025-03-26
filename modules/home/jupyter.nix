@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    texliveFull
     (python3.withPackages (p:
       with p; [
         jupyterlab
