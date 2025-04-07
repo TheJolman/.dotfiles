@@ -9,12 +9,13 @@
     blueman-applet &
     swww-daemon &  # wallaper daemon
     swww img ~/Pictures/Wallpapers/cherry-6.png &
-    ${pkgs.batsignal}/bin/batsignal &
+    upower-notify &
     hypridle &
   '';
 in {
   home.packages = with pkgs; [
     hyprpanel
+    upower
     waybar
     swww
     libnotify

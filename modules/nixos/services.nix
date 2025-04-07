@@ -4,6 +4,8 @@
     gvfs.enable = true;
     udisks2.enable = true;
 
+    upower.enable = true;
+
     printing.enable = true;
     openssh.enable = true;
 

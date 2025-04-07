@@ -1,6 +1,6 @@
 {...}: {
   services.mako = {
-    enable = true;
+    enable = false;
     font = "Caskaydia Cove Nerd Font Propo Light 15";
     defaultTimeout = 5000;
     icons = true;
