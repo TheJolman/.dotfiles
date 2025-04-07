@@ -4,8 +4,7 @@
   ...
 }: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    waybar &
-    mako &
+    hyprpanel &
     nm-applet --indicator &
     blueman-applet &
     swww-daemon &  # wallaper daemon
@@ -15,6 +14,7 @@
   '';
 in {
   home.packages = with pkgs; [
+    hyprpanel
     waybar
     swww
     libnotify

@@ -2,6 +2,7 @@
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.default
+    ./networking.nix
     ./mysql.nix
     ./printing.nix
     ./agenix.nix

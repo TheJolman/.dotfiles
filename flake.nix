@@ -25,6 +25,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.darwin.follows = "";
     };
+
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -34,6 +39,7 @@
     catppuccin,
     home-manager,
     agenix,
+    hyprpanel,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -52,13 +58,14 @@
       config.allowUnfree = true;
       overlays = [
         stableOverlay
+        hyprpanel.overlay
       ];
     };
 
     mkHost = hostname:
       lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs;}; # makes inputs available in rest of config
         modules = [
           ./hosts/${hostname}/configuration.nix
           inputs.home-manager.nixosModules.default
@@ -68,6 +75,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              extraSpecialArgs = {inherit system inputs hyprpanel;};
             };
             nixpkgs.pkgs = pkgs;
           }

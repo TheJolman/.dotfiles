@@ -2,6 +2,7 @@
   pkgs,
   lib,
   inputs,
+  system,
   ...
 }: {
   home.packages = with pkgs; [
@@ -37,6 +38,12 @@
     claude-code
     gpt-cli
 
+    # ---- Networking ---- #
+    dhcpm
+    nmap
+    arp-scan
+    netdiscover
+
     # ---- Gui Apps ---- #
     gimp
     stable.unityhub
@@ -57,7 +64,7 @@
     evince # gnome document viewer
     eog # gnome image viwer
     firefox
-    inputs.agenix.packages.${pkgs.system}.default
+    inputs.agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
     spotify
