@@ -49,25 +49,26 @@
           };
 
           # Python
+          ruff = {
+            enable = true;
+            settings = {
+              line-length = 100;
+              indent-width = 4;
+            };
+            rootDir = ''
+              require('lspconfig.util').root_pattern(
+                "pyproject.toml",
+                "pixi.toml",
+                "requirements.txt",
+                ".git"
+              )
+            '';
+          };
+
           pylsp = {
             enable = true;
             pythonPackage = pkgs.python313;
             package = pkgs.python313Packages.python-lsp-server;
-            settings = {
-              plugins = {
-                black = {
-                  enabled = true;
-                  line_length = 100;
-                };
-                isort = {
-                  enabled = true;
-                  profile = "black";
-                };
-                ruff.enabled = true;
-                pylsp_mypy.enabled = true;
-                rope.enabled = true;
-              };
-            };
             rootDir = ''
               require('lspconfig.util').root_pattern(
                 "pyproject.toml",
@@ -112,11 +113,11 @@
             package = pkgs.intelephense;
           };
 
-          # JavasScript/TypeScript
+          # Web dev
           denols.enable = false;
           ts_ls.enable = true;
+          eslint.enable = true;
 
-          # Other web dev
           jinja_lsp = {
             enable = true;
             package = null;
@@ -126,30 +127,17 @@
               };
             };
           };
+
           svelte = {
             enable = true;
             settings.svelte.format.enable = true;
           };
-          html = {
-            enable = true;
-            settings = {
-              html = {
-                format = {
-                  enable = true;
-                  wrapLineLength = 100;
-                  wrapAttributes = "auto";
-                  templating = true;
-                  unformatted = null;
-                };
-              };
-            };
-          };
-          htmx.enable = true;
+
+          html.enable = true;
           cssls.enable = true;
-          tailwindcss = {
-            enable = true;
-          };
           jsonls.enable = true;
+          htmx.enable = true;
+          tailwindcss.enable = true;
 
           # Misc
           dockerls.enable = true;

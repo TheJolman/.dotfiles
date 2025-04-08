@@ -33,7 +33,11 @@
       # cpp
       python
       lua
+      luadoc
       html
+      css
+      jinja
+      jinja-inline
       nasm
       asm
       latex
@@ -44,12 +48,15 @@
       c_sharp
       htmldjango
       javascript
+      jsdoc
       typescript
       tsx
       gleam
       svelte
+      vue
       gdscript
       php
+      phpdoc
       r
       zig
       rust
@@ -60,6 +67,8 @@
       gosum
       bash
       json
+      json5
+      jsonc
       make
       cmake
       matlab
@@ -67,7 +76,6 @@
       markdown-inline
       nix
       regex
-      sql
       toml
       sql
       vim
@@ -80,6 +88,7 @@
       powershell
       norg
       terraform
+      llvm
       http
       diff
       git_config
