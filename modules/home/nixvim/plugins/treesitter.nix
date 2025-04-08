@@ -6,11 +6,11 @@
       parser_isntall_dir = null;
       highlight = {
         enable = true;
-        disable = [
-          # broken for some reason
-          "c"
-          "cpp"
-        ];
+        # disable = [
+        #   # broken for some reason
+        #   "c"
+        #   "cpp"
+        # ];
       };
       indent.enable = true;
 
@@ -29,8 +29,8 @@
     nixGrammars = true;
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-      # c
-      # cpp
+      c
+      cpp
       python
       lua
       luadoc
@@ -99,5 +99,5 @@
     ];
   };
 
-  programs.nixvim.extraPackages = [pkgs.clang];
+  # programs.nixvim.extraPackages = [pkgs.clang];
 }

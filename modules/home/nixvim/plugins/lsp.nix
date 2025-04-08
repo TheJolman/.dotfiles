@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   programs.nixvim = {
     extraPackages = with pkgs; [
-      matlab-language-server
       alejandra
       dotnetCorePackages.dotnet_8.sdk
       black
