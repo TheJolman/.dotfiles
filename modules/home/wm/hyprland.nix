@@ -136,10 +136,10 @@ in {
       # e = repeat, will repeat when held
       binde = [
         # move windows (tiled or floating)
-        "$mod SHIFT, h, movewindow, l"
-        "$mod SHIFT, l, movewindow, r"
-        "$mod SHIFT, k, movewindow, u"
-        "$mod SHIFT, j, movewindow, d"
+        # "$mod SHIFT, h, movewindow, l"
+        # "$mod SHIFT, l, movewindow, r"
+        # "$mod SHIFT, k, movewindow, u"
+        # "$mod SHIFT, j, movewindow, d"
 
         # move floating windows
         "$mod ALT, h, moveactive, -30 0"
