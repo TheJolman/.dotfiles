@@ -7,7 +7,7 @@
     ./printing.nix
     ./agenix.nix
     ./interception-tools.nix
-    ./docker.nix
+    ./containers.nix
     ./bluetooth.nix
     ./grub.nix
     ./nh.nix
