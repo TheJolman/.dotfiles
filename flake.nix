@@ -30,6 +30,11 @@
       url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    terminder = {
+      url = "github:thejolman/terminder";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

@@ -37,6 +37,7 @@
     traceroute
     claude-code
     gpt-cli
+    inputs.terminder.packages.${system}.default
 
     # ---- Networking ---- #
     dhcpm
