@@ -4,9 +4,21 @@
     userEmail = "joshuaholman5@gmail.com";
     userName = "josh";
     delta.enable = true;
-    attributes = [
-      "init.defaultBranch main"
-      "pull.rebase true"
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+      pull = {
+        rebase = true;
+      };
+      push = {
+        default = "current";
+        autoSetupRemote = true;
+      };
+    };
+    ignores = [
+      ".nvim/"
+      ".direnv/"
     ];
   };
 
