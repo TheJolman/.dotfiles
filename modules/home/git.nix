@@ -16,7 +16,7 @@
         autoSetupRemote = true;
       };
       gpg.format = "ssh";
-      user.signingkey = "~/.ssh/id_ed25519";
+      user.signingkey = "~/.ssh/id_ed25519.pub";
       commit.gpgsign = true;
     };
     ignores = [
