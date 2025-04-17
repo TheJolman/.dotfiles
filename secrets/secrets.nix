@@ -9,6 +9,5 @@ let
   workstation = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMj+QUIzL1UnI/5cHFzVrrmF9stKFFRl3lkeXgGD4mJr";
   systems = [framework workstation];
 in {
-  "secret1.age".publicKeys = users ++ systems;
   "anthropic-api-key.age".publicKeys = users ++ systems;
 }
