@@ -16,8 +16,8 @@
         autoSetupRemote = true;
       };
       gpg.format = "ssh";
-      user.signingKey = "~/.ssh/id_ed25519.pub";
-      commit.gpgSign = true;
+      user.signingkey = "~/.ssh/id_ed25519.pub";
+      commit.gpgsign = true;
     };
     ignores = [
       ".nvim/"
