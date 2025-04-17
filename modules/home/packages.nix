@@ -37,6 +37,7 @@
     traceroute
     claude-code
     gpt-cli
+    inputs.terminder.packages.${system}.default
 
     # ---- Networking ---- #
     dhcpm
@@ -77,7 +78,7 @@
     kooha # screen recorder
     prismlauncher # minecraft
     seahorse # for GnomeKeyring
-    insomnia
+    rnote
 
     # ---- Fonts ---- #
     noto-fonts

@@ -113,8 +113,8 @@
           };
 
           # Web dev
-          denols.enable = false;
-          ts_ls.enable = true;
+          denols.enable = true;
+          # ts_ls.enable = true;
           eslint.enable = true;
 
           jinja_lsp = {
