@@ -1,4 +1,17 @@
-{config, ...}: {
+{
+  config,
+  inputs,
+  ...
+}: {
+  imports = [
+    inputs.agenix.homeManagerModules.default
+  ];
+
+  age.secrets = {
+    anthropic-api-key.file = ../../../secrets/anthropic-api-key.age;
+    groq-api-key.file = ../../../secrets/groq-api-key.age;
+  };
+
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh_hm";
@@ -41,11 +54,10 @@
       kssh = "kitten ssh";
     };
 
-    # Unused function replaced by `nh os switch`
-    # update() {
-    #   local host=''${1:-$(hostname)}
-    #   sudo nixos-rebuild switch --flake ~/.dotfiles#$host
-    # }
+    sessionVariables = {
+      ANTHROPIC_API_KEY = "$(cat ${config.age.secrets.anthropic-api-key.path})";
+      GROQ_API_KEY = "$(cat ${config.age.secrets.groq-api-key.path})";
+    };
 
     initExtra = ''
       eval "$(zoxide init zsh)"
