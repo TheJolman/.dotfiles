@@ -10,4 +10,5 @@ let
   systems = [framework workstation];
 in {
   "anthropic-api-key.age".publicKeys = users ++ systems;
+  "groq-api-key.age".publicKeys = users ++ systems;
 }
