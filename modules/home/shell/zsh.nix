@@ -10,6 +10,7 @@
   age.secrets = {
     anthropic-api-key.file = ../../../secrets/anthropic-api-key.age;
     groq-api-key.file = ../../../secrets/groq-api-key.age;
+    openai-api-key.file = ../../../secrets/openai-api-key.age;
   };
 
   programs.zsh = {
@@ -57,6 +58,7 @@
     sessionVariables = {
       ANTHROPIC_API_KEY = "$(cat ${config.age.secrets.anthropic-api-key.path})";
       GROQ_API_KEY = "$(cat ${config.age.secrets.groq-api-key.path})";
+      OPENAI_API_KEY = "$(cat ${config.age.secrets.openai-api-key.path})";
     };
 
     initExtra = ''

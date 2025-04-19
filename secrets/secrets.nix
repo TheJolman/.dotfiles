@@ -11,4 +11,5 @@ let
 in {
   "anthropic-api-key.age".publicKeys = users ++ systems;
   "groq-api-key.age".publicKeys = users ++ systems;
+  "openai-api-key.age".publicKeys = users ++ systems;
 }
