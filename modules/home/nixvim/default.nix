@@ -7,6 +7,7 @@
   programs.nixvim = {
     enable = true;
     vimAlias = true;
+    nixpkgs.config.allowUnfree = true;
 
     extraConfigLua = builtins.readFile ./autocmds.lua;
 

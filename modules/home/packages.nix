@@ -38,6 +38,7 @@
     claude-code
     gpt-cli
     inputs.terminder.packages.${system}.default
+    codex
 
     # ---- Networking ---- #
     dhcpm

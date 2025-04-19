@@ -1,5 +1,5 @@
 {...}: {
-  programs.nixvim.plugins.copilot-lua = {
+  programs.nixvim.plugins.copilot-vim = {
     enable = true;
   };
 }
