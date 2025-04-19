@@ -4,12 +4,21 @@
       enable = true;
       settings = {
         filetypes = {
-          txt = false;
-          markdown = false;
+          "*" = false;
+          python = true;
+          c = true;
+          cpp = true;
+          javascript = true;
+          typescript = true;
+          go = true;
+          html = true;
+          css = true;
+          java = true;
+          cs = true;
         };
       };
     };
-    extraConfigLua = ''
+    extraConfigLuaPost = ''
       vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
         expr = true,
         replace_keycodes = false
