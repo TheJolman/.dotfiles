@@ -2,7 +2,6 @@
   "editor.semanticHighlighting.enabled": true,
   "terminal.integrated.minimumContrastRatio": 1,
   "workbench.colorTheme": "Catppuccin Mocha",
-  "catppuccin.accentColor": "pink",
   "catppuccin.customUIColors": {
     "mocha": {
       "statusBar.foreground": "accent"

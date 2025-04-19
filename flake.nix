@@ -80,6 +80,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              backupFileExtension = "backup";
               extraSpecialArgs = {inherit system inputs hyprpanel;};
             };
             nixpkgs.pkgs = pkgs;

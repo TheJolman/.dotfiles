@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
     # inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
   ];
 
