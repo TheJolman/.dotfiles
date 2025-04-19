@@ -123,10 +123,10 @@ in {
         workspace_swipe_distance = 300;
       };
 
-      windowrule = [
-        "idleinhibit fullscreen, firefox"
-        "idleinhibit fullscreen, zen"
-      ];
+      # windowrule = [
+      #   "idleinhibit fullscreen, firefox"
+      #   "idleinhibit fullscreen, zen"
+      # ];
 
       windowrulev2 = [
         "bordercolor $red, fullscreen:1"
