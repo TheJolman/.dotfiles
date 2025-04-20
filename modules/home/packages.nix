@@ -39,6 +39,7 @@
     gpt-cli
     inputs.terminder.packages.${system}.default
     codex
+    lsof
 
     # ---- Networking ---- #
     dhcpm

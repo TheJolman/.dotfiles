@@ -107,6 +107,13 @@
         options.desc = "Git fetch";
       }
       {
+        key = "<leader>go";
+        action = "<CMD>lua Snacks.gitbrowse()<CR>";
+        mode = "n";
+        options.desc = "Git fetch";
+      }
+
+      {
         key = "<leader>do";
         action = "<CMD>DiffviewOpen<CR>";
         mode = "n";
@@ -224,18 +231,12 @@
       # Terminal
       {
         key = "<A-t>";
-        action = "<cmd>lua Snacks.terminal.open()<CR>";
+        action = "<cmd>lua Snacks.terminal.toggle()<CR>";
         mode = ["n" "t"];
-        options.desc = "Open new terminal";
+        options.desc = "Toggle terminal";
       }
 
       # Picker
-      {
-        key = "<leader>e";
-        action = "<cmd>lua Snacks.explorer()<CR>";
-        mode = "n";
-        options.desc = "Pick files";
-      }
       {
         key = "<leader>ff";
         action = "<cmd>lua Snacks.picker.files()<CR>";
@@ -262,7 +263,7 @@
       }
       # Lsp stuff
       {
-        key = "<leader>a";
+        key = "<leader>c";
         action = "<cmd>lua Snacks.picker.qflist()<CR>";
         mode = "n";
         options.desc = "Code actions";
@@ -271,7 +272,7 @@
         key = "<leader>fr";
         action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
         mode = "n";
-        options.desc = "LSP references";
+        options.desc = "LSP definitions";
       }
       {
         key = "<leader>fsd";
