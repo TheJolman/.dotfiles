@@ -107,10 +107,10 @@
         options.desc = "Git fetch";
       }
       {
-        key = "<leader>go";
+        key = "<leader>gO";
         action = "<CMD>lua Snacks.gitbrowse()<CR>";
         mode = "n";
-        options.desc = "Git fetch";
+        options.desc = "Open repo in browswer";
       }
 
       {
@@ -266,32 +266,38 @@
         key = "<leader>c";
         action = "<cmd>lua Snacks.picker.qflist()<CR>";
         mode = "n";
-        options.desc = "Code actions";
+        options.desc = "Open qflist";
       }
-      {
-        key = "<leader>fr";
-        action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
-        mode = "n";
-        options.desc = "LSP definitions";
-      }
-      {
-        key = "<leader>fsd";
-        action = "<cmd>lua Snacks.picker.lsp_symbols()<CR>";
-        mode = "n";
-        options.desc = "LSP document symbols";
-      }
-      {
-        key = "<leader>fsw";
-        action = "<cmd>lua Snacks.picker.lsp_workspace_symbols()<CR>";
-        mode = "n";
-        options.desc = "LSP workspace symbols";
-      }
-      {
-        key = "<A-d>";
-        action = "<cmd>Trouble diagnostics toggle<cr>";
-        mode = "n";
-        options.desc = "Toggle diagnostics";
-      }
+      # {
+      #   key = "<leader>i";
+      #   action = "<cmd>vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>";
+      #   mode = "n";
+      #   options.desc = "Toggle inlay hints";
+      # }
+      # {
+      #   key = "<leader>fr";
+      #   action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
+      #   mode = "n";
+      #   options.desc = "LSP definitions";
+      # }
+      # {
+      #   key = "<leader>fsd";
+      #   action = "<cmd>lua Snacks.picker.lsp_symbols()<CR>";
+      #   mode = "n";
+      #   options.desc = "LSP document symbols";
+      # }
+      # {
+      #   key = "<leader>fsw";
+      #   action = "<cmd>lua Snacks.picker.lsp_workspace_symbols()<CR>";
+      #   mode = "n";
+      #   options.desc = "LSP workspace symbols";
+      # }
+      # {
+      #   key = "<A-d>";
+      #   action = "<cmd>Trouble diagnostics toggle<cr>";
+      #   mode = "n";
+      #   options.desc = "Toggle diagnostics";
+      # }
     ];
   };
 }

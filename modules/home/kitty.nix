@@ -21,7 +21,7 @@
 
       map super+shift+l next_tab
       map super+shift+h previous_tab
-      map super+shift+n new_tab
+      map super+' new_tab
       map super+shift+' new_tab_with_cwd
       map super+shift+q close_tab
       map super+shift+1 goto_tab 1

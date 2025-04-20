@@ -15,6 +15,61 @@
     plugins = {
       lsp = {
         enable = true;
+        keymaps = {
+          lspBuf = {
+            K = "hover";
+            # gD = "references";
+            # gd = "definition";
+            # gi = "implementation";
+            # gt = "type_definition";
+            "<leader>fm" = "format";
+          };
+          extra = [
+            {
+              key = "gD";
+              action = "<cmd>lua Snacks.picker.lsp_references()<CR>";
+              mode = "n";
+              options.desc = "LSP references";
+            }
+            {
+              key = "gd";
+              action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
+              mode = "n";
+              options.desc = "LSP definitions";
+            }
+            {
+              key = "gt";
+              action = "<cmd>lua Snacks.picker.lsp_type_definitions()<CR>";
+              mode = "n";
+              options.desc = "LSP type definitions";
+            }
+            {
+              key = "<leader>i";
+              action = "<cmd>vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>";
+              mode = "n";
+              options.desc = "Toggle inlay hints";
+            }
+            {
+              key = "<leader>fsd";
+              action = "<cmd>lua Snacks.picker.lsp_symbols()<CR>";
+              mode = "n";
+              options.desc = "LSP document symbols";
+            }
+            {
+              key = "<leader>fsw";
+              action = "<cmd>lua Snacks.picker.lsp_workspace_symbols()<CR>";
+              mode = "n";
+              options.desc = "LSP workspace symbols";
+            }
+            {
+              key = "<A-d>";
+              action = "<cmd>Trouble diagnostics toggle<cr>";
+              mode = "n";
+              options.desc = "Toggle diagnostics";
+            }
+          ];
+        };
+
         servers = {
           # Nix
           nixd = {
@@ -142,29 +197,6 @@
           dockerls.enable = true;
           terraformls.enable = true;
         };
-
-        onAttach = ''
-          local bufmap = function(keys, func, description)
-            vim.keymap.set("n", keys, func, { buffer = bufnr, desc = description })
-          end
-
-          bufmap("<leader>r", vim.lsp.buf.rename, "symbol rename")
-          -- below replaced with FzfLua command
-          -- bufmap("<leader>a", vim.lsp.buf.code_action, "code action")
-
-          bufmap("gd", vim.lsp.buf.definition, "go to definition")
-          bufmap("gD", vim.lsp.buf.declaration, "go to declaration")
-          bufmap("gi", vim.lsp.buf.implementation, "go to implementation")
-          bufmap("gtd", vim.lsp.buf.type_definition, "go to type definition")
-
-          bufmap("K", vim.lsp.buf.hover, "hover info")
-
-          vim.api.nvim_buf_create_user_command(bufnr, "Fmt", function(_)
-            vim.lsp.buf.format()
-          end, {})
-
-          bufmap("<leader>fm", "<cmd>Fmt<CR>", "format buffer")
-        '';
       };
     };
 
