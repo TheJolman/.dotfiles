@@ -128,9 +128,13 @@
           vim.notify("Session '" .. name .. "' written, vim.log.levels.INFO")
         end
 
-        vim.api.nvim_create_user_command("Save", function(opts)
+        vim.api.nvim_create_user_command("SSave", function(opts)
           save_session(opts.args ~= "" and opts.args or nil)
         end, { nargs = "?", complete = "file"})
+
+        vim.api.nvim_create_user_command("SPick", function()
+          sessions.select()
+        end, {})
       '';
     };
   };
