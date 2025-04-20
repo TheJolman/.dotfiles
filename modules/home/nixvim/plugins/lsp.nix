@@ -18,10 +18,6 @@
         keymaps = {
           lspBuf = {
             K = "hover";
-            # gD = "references";
-            # gd = "definition";
-            # gi = "implementation";
-            # gt = "type_definition";
             "<leader>fm" = "format";
           };
           extra = [
@@ -45,7 +41,7 @@
             }
             {
               key = "<leader>i";
-              action = "<cmd>vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>";
+              action = "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>";
               mode = "n";
               options.desc = "Toggle inlay hints";
             }

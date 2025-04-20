@@ -26,7 +26,6 @@
         statusline = {};
         tabline = {};
         bracketed = {};
-        bufremove = {};
         clue = {
           triggers = [
             # Leader triggers
@@ -120,6 +119,19 @@
           };
         };
       }; # modules
+      luaConfig.post = ''
+        local sessions = require("mini.sessions")
+
+        local function save_session(name)
+          name = name or vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+          sessions.write(name)
+          vim.notify("Session '" .. name .. "' written, vim.log.levels.INFO")
+        end
+
+        vim.api.nvim_create_user_command("Save", function(opts)
+          save_session(opts.args ~= "" and opts.args or nil)
+        end, { nargs = "?", complete = "file"})
+      '';
     };
   };
 }
