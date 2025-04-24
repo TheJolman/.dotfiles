@@ -46,6 +46,8 @@
     nmap
     arp-scan
     netdiscover
+    nload
+    iftop
 
     # ---- Gui Apps ---- #
     gimp

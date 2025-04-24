@@ -19,7 +19,7 @@
     ./common.nix
     ./gaming.nix
     ./logind.nix
-    ./virtualization.nix
+    ./virtualisation.nix
     ./wireshark.nix
   ];
 }
