@@ -10,6 +10,7 @@
     swww-daemon &  # wallaper daemon
     swww img ~/Pictures/Wallpapers/cherry-6.png &
     upower-notify &
+    ${pkgs.batsignal}/bin/batsignal &
     hypridle &
   '';
 in {
