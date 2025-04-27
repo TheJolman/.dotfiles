@@ -10,7 +10,10 @@
   # Arion works with Docker, but for NixOS-based containers, you need Podman
   # since NixOS 21.05.
   virtualisation = {
-    docker.enable = true;
+    docker = {
+      enable = true;
+      enableOnBoot = false;
+    };
     podman = {
       enable = true;
       defaultNetwork.settings.dns_enabled = true;
