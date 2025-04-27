@@ -40,6 +40,7 @@
     inputs.terminder.packages.${system}.default
     codex
     lsof
+    nfs-utils
 
     # ---- Networking ---- #
     dhcpm
@@ -62,7 +63,8 @@
     nautilus
     nautilus-open-any-terminal
     zoom-us # unfree
-    vesktop
+    # vesktop
+    legcord
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
@@ -83,6 +85,7 @@
     prismlauncher # minecraft
     seahorse # for GnomeKeyring
     rnote
+    bruno
 
     # ---- Fonts ---- #
     noto-fonts
