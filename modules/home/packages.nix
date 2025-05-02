@@ -41,6 +41,7 @@
     codex
     lsof
     nfs-utils
+    lftp
 
     # ---- Networking ---- #
     dhcpm
@@ -63,8 +64,8 @@
     nautilus
     nautilus-open-any-terminal
     zoom-us # unfree
-    # vesktop
-    legcord
+    vesktop
+    # legcord
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
@@ -86,6 +87,7 @@
     seahorse # for GnomeKeyring
     rnote
     bruno
+    filezilla
 
     # ---- Fonts ---- #
     noto-fonts

@@ -14,4 +14,9 @@
       openFirewall = true;
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    cups-filters
+    cups-bjnp
+  ];
 }
