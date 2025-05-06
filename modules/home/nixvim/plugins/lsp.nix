@@ -154,7 +154,8 @@
                 local util = require("lspconfig.util")
                 return util.root_pattern("*.sln")(fname) or
                        util.root_pattern("*.csproj")(fname) or
-                       util.root_pattern("*.git")(fname) or
+                       util.root_pattern("*.git")(fname)
+               end
             '';
           };
 
