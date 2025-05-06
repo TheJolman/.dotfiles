@@ -145,6 +145,17 @@
           csharp_ls = {
             enable = true;
             package = pkgs.csharp-ls;
+            /*
+            this is allegedly more robust - it searches the entire strucure before looking for
+            the next. Otherwise it will search for each before moving to the next dir.
+            */
+            rootDir = ''
+              function(fname)
+                local util = require("lspconfig.util")
+                return util.root_pattern("*.sln")(fname) or
+                       util.root_pattern("*.csproj")(fname) or
+                       util.root_pattern("*.git")(fname) or
+            '';
           };
 
           # Rust
