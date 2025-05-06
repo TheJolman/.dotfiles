@@ -54,11 +54,16 @@
       }
       {
         key = "<leader>gb";
+        action = "<CMD>lua Snacks.git.blame_line()<CR>";
+        mode = "n";
+        options.desc = "Git log for current line";
+      }
+      {
+        key = "<leader>go";
         action = "<CMD>lua Snacks.gitbrowse()<CR>";
         mode = "n";
         options.desc = "Open repo in browswer";
       }
-
       {
         key = "<leader>do";
         action = "<CMD>DiffviewOpen<CR>";

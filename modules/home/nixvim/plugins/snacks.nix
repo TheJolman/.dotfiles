@@ -12,6 +12,7 @@
       bufdelete.enable = true;
       words.enable = true;
       gitbrowse.enable = true;
+      git.enable = true;
     };
     luaConfig.post = ''
       vim.api.nvim_create_autocmd("User", {
