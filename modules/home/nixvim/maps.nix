@@ -47,64 +47,10 @@
         options.desc = "Git UI";
       }
       {
-        key = "<leader>ga";
-        action = "<CMD>Git add .<CR>";
-        mode = "n";
-        options.desc = "Stage all modified files";
-      }
-      {
-        key = "<leader>gc";
-        action = "<CMD>Git commit<CR>";
-        mode = "n";
-        options.desc = "Git commit";
-      }
-      {
-        key = "<leader>gp";
-        action = "<CMD>Git pull<CR><CMD>checktime<CR>";
-        mode = "n";
-        options.desc = "Git pull";
-      }
-      {
-        key = "<leader>gP";
-        action = "<CMD>Git push<CR>";
-        mode = "n";
-        options.desc = "Git push";
-      }
-      {
-        key = "<leader>gb";
-        action = "<CMD>Git branch<CR>";
-        mode = "n";
-        options.desc = "Git branch";
-      }
-      {
-        key = "<leader>gs";
-        action = "<CMD>Git stash<CR>";
-        mode = "n";
-        options.desc = "Git stash";
-      }
-      {
-        key = "<leader>gn";
-        action = "<CMD>Git commit --ammend --no-edit<CR>";
-        mode = "n";
-        options.desc = "Ammend commmit with staged changes";
-      }
-      {
-        key = "<leader>gr";
-        action = "<CMD>Git reset --hard HEAD<CR>";
-        mode = "n";
-        options.desc = "Git reset to last commit";
-      }
-      {
         key = "<leader>gl";
         action = "<CMD>lua Snacks.picker.git_log()<CR>";
         mode = "n";
         options.desc = "Git log";
-      }
-      {
-        key = "<leader>gf";
-        action = "<CMD>Git fetch<CR>";
-        mode = "n";
-        options.desc = "Git fetch";
       }
       {
         key = "<leader>gB";
