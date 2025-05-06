@@ -114,7 +114,7 @@
       }
       {
         key = "<leader>b";
-        action = "<CMD>bd<CR>";
+        action = "<CMD>lua Snacks.bufdelete()<CR>";
         mode = "n";
         options.desc = "Delete buffer";
         options.silent = true;
