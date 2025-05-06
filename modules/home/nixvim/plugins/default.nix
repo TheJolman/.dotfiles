@@ -16,7 +16,7 @@
     ./indent-blankline.nix
     ./ts-autotag.nix
     ./css-color.nix
-    ./molten.nix
+    # ./molten.nix
     ./markdown.nix
     ./lint.nix
     ./mini.nix
