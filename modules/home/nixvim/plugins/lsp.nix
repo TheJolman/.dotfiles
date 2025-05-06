@@ -206,7 +206,5 @@
         };
       };
     };
-
-    extraConfigLua = builtins.readFile ./lua/lsp-config.lua;
   };
 }
