@@ -2,7 +2,7 @@
   imports = [
     ./autopairs.nix
     ./avante.nix
-    ./copilot.nix
+    # ./copilot.nix
     ./rainbow-delimiters.nix
     ./vimtex.nix
     ./lsp.nix
