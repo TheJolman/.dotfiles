@@ -53,7 +53,7 @@
         options.desc = "Git log";
       }
       {
-        key = "<leader>gB";
+        key = "<leader>gb";
         action = "<CMD>lua Snacks.gitbrowse()<CR>";
         mode = "n";
         options.desc = "Open repo in browswer";
