@@ -83,6 +83,7 @@
     gnome-network-displays # for miracast
     gnome-calculator
     kooha # screen recorder
+    obs-studio
     prismlauncher # minecraft
     seahorse # for GnomeKeyring
     rnote
