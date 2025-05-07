@@ -65,20 +65,19 @@ in {
         "col.active_border" = "$pink";
       };
 
+      # pink with increased opacity -> rgba(f5c2e7A0)
       group = {
         "col.border_active" = "$pink";
         "col.border_inactive" = "$surface0";
         auto_group = false;
         groupbar = {
           "col.active" = "$pink";
-          "col.inactive" = "rgba(f5c2e7A0)";
+          "col.inactive" = "$surface0";
+          # font_weight_inactive = "thin";
           height = "18";
-          text_color = "$surface0";
+          text_color = "$text";
           font_size = 17;
           font_family = "CaskaydiaCove Nerd Font Propo";
-          # gradients = false;
-          # indicator_height = 5;
-          # rounding = 3;
         };
       };
 
