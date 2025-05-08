@@ -171,7 +171,7 @@ in {
           "$mod, B,       exec, $browser"
           "$mod, Return,  exec, $terminal"
           "$mod, D,       exec, $menu"
-          "$mod, E, 	    exec, $fileManager"
+          "$mod, E,       exec, $fileManager"
           "$mod, Q,       killactive"
           "$mod CTRL, M, exit"
           "$mod CTRL, A, exec, hyprlock"
@@ -238,6 +238,8 @@ in {
       bindl = [
         # lock when lid is closed
         ", switch:on:Lid Switch, exec, hyprlock"
+        ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
+        ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
         # sleep system when switch is closed
         # ", switch:on:Lid Switch, exec, systemctl suspend"
 
