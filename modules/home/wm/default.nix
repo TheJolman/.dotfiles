@@ -5,7 +5,6 @@
     ./hyprland.nix
     ./waybar.nix
     ./fuzzel.nix
-    ./mako.nix
     ./hyprpanel.nix
   ];
 }

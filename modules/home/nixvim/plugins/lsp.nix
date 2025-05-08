@@ -141,6 +141,78 @@
               };
             };
           };
+
+          # Python
+          ruff = {
+            enable = true;
+            settings = {
+              line-length = 100;
+              indent-width = 4;
+            };
+            rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
+          };
+
+          pylsp = {
+            enable = true;
+            pythonPackage = pkgs.python313;
+            package = pkgs.python313Packages.python-lsp-server;
+            rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
+          };
+
+          # Java
+          jdtls = {
+            enable = true;
+            settings.java.format.enabled = true;
+          };
+
+          # C#
+          csharp_ls = {
+            enable = true;
+            package = pkgs.csharp-ls;
+            rootMarkers = ["*.sln" "*.csproj" "*.git"];
+          };
+
+          # Rust
+          rust_analyzer = {
+            enable = true;
+            installRustc = true;
+            installCargo = true;
+          };
+
+          # Go
+          gopls.enable = true;
+
+          # PHP
+          intelephense = {
+            enable = true;
+            package = pkgs.intelephense;
+          };
+
+          # Web dev
+          denols.enable = true;
+          # ts_ls.enable = true;
+          eslint.enable = true;
+
+          jinja_lsp = {
+            enable = true;
+            package = null;
+            settings.jinja.formatter = "djlint";
+          };
+
+          svelte = {
+            enable = true;
+            settings.svelte.format.enable = true;
+          };
+
+          html.enable = true;
+          cssls.enable = true;
+          jsonls.enable = true;
+          htmx.enable = true;
+          tailwindcss.enable = true;
+
+          # Misc
+          dockerls.enable = true;
+          terraformls.enable = true;
         };
 
         # Python
