@@ -84,7 +84,7 @@
     gnome-calculator
     kooha # screen recorder
     obs-studio
-    prismlauncher # minecraft
+    atlauncher # minecraft
     seahorse # for GnomeKeyring
     rnote
     bruno

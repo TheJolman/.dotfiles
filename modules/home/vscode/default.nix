@@ -16,7 +16,9 @@
         ms-vscode.makefile-tools
         ms-vscode.cmake-tools
         mesonbuild.mesonbuild
-        ms-vscode-remote.vscode-remote-extensionpack
+        ms-vscode-remote.remote-ssh
+        ms-vscode-remote.remote-ssh-edit
+        ms-vscode-remote.remote-containers
         ms-azuretools.vscode-docker
         ms-dotnettools.vscode-dotnet-runtime
         ms-dotnettools.csharp
