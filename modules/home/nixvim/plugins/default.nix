@@ -7,7 +7,6 @@
     ./vimtex.nix
     ./lsp.nix
     ./lsp-lines.nix
-    ./lsp-signature.nix
     ./cmp.nix
     ./treesitter.nix
     ./todo-comments.nix

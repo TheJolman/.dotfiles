@@ -14,6 +14,40 @@
 
     plugins.lsp = {
       enable = true;
+
+      luaConfig.post = ''
+        vim.diagnostic.config({ virtual_text = true })
+
+        vim.api.nvim_create_autocmd(
+          {"BufEnter", "CursorHold", "InsertLeave"},
+          {
+            buffer = 0,
+            desc = "Refresh codelens on buffer events",
+            callback = function()
+              vim.lsp.codelens.refresh({ bufnr = 0 })
+            end,
+          }
+        )
+      '';
+      luaConfig.pre = ''
+        show_codelens = function()
+          local current_bufnr = vim.api.nvim_get_current_buf()
+          local clients = vim.lsp.get_clients({ bufnr = current_bufnr })
+          if #clients > 0 then
+            local client_id = clients[1].id
+            local all_lenses = vim.lsp.codelens.get({ bufnr = current_bufnr })
+            if all_lenses and #all_lenses > 0 then
+              vim.lsp.codelens.display(all_lenses, current_bufnr, client_id)
+              print("Displayed " .. #all_lenses .. " lenses for client " .. client_id)
+            else
+              print("No codelens found for buffer " .. current_bufnr)
+            end
+          else
+            print("No active LSP client found for buffer " .. current_bufnr)
+          end
+        end
+      '';
+
       keymaps = {
         lspBuf = {
           K = "hover";
@@ -21,7 +55,13 @@
         };
         extra = [
           {
-            key = "gD";
+            key = "grl";
+            action = "<cmd>lua show_codelens()<CR>";
+            mode = "n";
+            options.desc = "Show codelens";
+          }
+          {
+            key = "grr";
             action = "<cmd>lua Snacks.picker.lsp_references()<CR>";
             mode = "n";
             options.desc = "LSP references";
@@ -30,28 +70,34 @@
             key = "gd";
             action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
             mode = "n";
-            options.desc = "LSP definitions";
+            options.desc = "LSP definition";
+          }
+          {
+            key = "gD";
+            action = "<cmd>lua Snacks.picker.lsp_declarations()<CR>";
+            mode = "n";
+            options.desc = "LSP declaration";
           }
           {
             key = "gt";
             action = "<cmd>lua Snacks.picker.lsp_type_definitions()<CR>";
             mode = "n";
-            options.desc = "LSP type definitions";
+            options.desc = "LSP type definition";
           }
           {
-            key = "<leader>i";
+            key = "gi";
             action = "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>";
             mode = "n";
             options.desc = "Toggle inlay hints";
           }
           {
-            key = "<leader>fsd";
+            key = "gO";
             action = "<cmd>lua Snacks.picker.lsp_symbols()<CR>";
             mode = "n";
             options.desc = "LSP document symbols";
           }
           {
-            key = "<leader>fsw";
+            key = "grs";
             action = "<cmd>lua Snacks.picker.lsp_workspace_symbols()<CR>";
             mode = "n";
             options.desc = "LSP workspace symbols";
