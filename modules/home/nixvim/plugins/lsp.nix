@@ -16,7 +16,7 @@
       enable = true;
 
       luaConfig.post = ''
-        vim.diagnostic.config({ virtual_text = true })
+        -- vim.diagnostic.config({ virtual_text = true })
 
         vim.api.nvim_create_autocmd(
           {"BufEnter", "CursorHold", "InsertLeave"},

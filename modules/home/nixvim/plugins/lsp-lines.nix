@@ -1,6 +1,15 @@
 {...}: {
   programs.nixvim.plugins.lsp-lines = {
     enable = true;
+
+    luaConfig.pre = ''
+      vim.diagnostic.config({
+        virtual_text = false,
+        virtual_lines = true,
+        only_current_line = true,
+      })
+
+    '';
   };
 
   programs.nixvim.keymaps = [
