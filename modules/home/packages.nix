@@ -50,6 +50,7 @@
     netdiscover
     nload
     iftop
+    dnslookup
 
     # ---- Gui Apps ---- #
     gimp
