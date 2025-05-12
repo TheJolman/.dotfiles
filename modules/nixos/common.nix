@@ -14,10 +14,18 @@
     groups.josh = {};
   };
 
-  nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
-    substituters = ["https://cache.flox.dev"];
-    trusted-public-keys = ["flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="];
+  nix = {
+    optimise.automatic = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+    settings = {
+      experimental-features = ["nix-command" "flakes"];
+      keep-outputs = true;
+      keep-derivations = true;
+    };
   };
 
   programs.zsh.enable = true;
