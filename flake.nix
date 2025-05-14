@@ -48,6 +48,7 @@
   } @ inputs: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
+    user = "josh";
 
     # allows stable packages to be reached with pkgs.stable.<pkg>
     stableOverlay = final: prev: {
@@ -69,19 +70,17 @@
     mkHost = hostname:
       lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs catppuccin;}; # makes inputs available in rest of config
+        specialArgs = {inherit inputs user home-manager catppuccin;}; # makes available in rest of config
         modules = [
           ./hosts/${hostname}/configuration.nix
-          agenix.nixosModules.default
-          home-manager.nixosModules.default
-          home-manager.nixosModules.home-manager
+          agenix.nixosModules.default # maybe move to ./modules/nixos/default.nix
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = {inherit inputs system catppuccin hyprpanel terminder agenix;};
-              users = {"josh" = import ./hosts/${hostname}/home.nix;};
+              extraSpecialArgs = {inherit inputs user system catppuccin hyprpanel terminder agenix;};
+              users = {${user} = import ./hosts/${hostname}/home.nix;};
             };
 
             networking.hostName = hostname;

@@ -1,6 +1,10 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   programs.virt-manager.enable = true;
-  users.groups.libvirtd.members = ["josh"];
+  users.groups.libvirtd.members = ["${user}"];
 
   virtualisation = {
     libvirtd = {
@@ -14,11 +18,4 @@
     };
     spiceUSBRedirection.enable = true;
   };
-
-  #   virtualbox.host = {
-  #     enable = true;
-  #     enableExtensionPack = true;
-  #   };
-  # };
-  # users.extraGroups.vboxusers.members = ["josh"];
 }

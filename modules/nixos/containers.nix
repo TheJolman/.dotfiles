@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     # arion
     podman-tui
@@ -23,5 +27,5 @@
   # Below option conflicts with virtualisation.docker.enable
   # virtualisation.podman.dockerSocket.enable = true;
 
-  users.users.josh.extraGroups = ["podman" "docker"];
+  users.users.${user}.extraGroups = ["podman" "docker"];
 }

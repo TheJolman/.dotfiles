@@ -1,10 +1,14 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   programs.wireshark = {
     enable = true;
     package = pkgs.wireshark;
   };
 
-  users.users.josh = {
+  users.users.${user} = {
     extraGroups = ["wireshark"];
   };
 }

@@ -1,7 +1,12 @@
-{inputs, ...}: {
+{
+  catppuccin,
+  home-manager,
+  ...
+}: {
   imports = [
-    inputs.catppuccin.nixosModules.catppuccin
-    inputs.home-manager.nixosModules.default
+    catppuccin.nixosModules.catppuccin
+    home-manager.nixosModules.default
+    home-manager.nixosModules.home-manager
     ./networking.nix
     ./mysql.nix
     ./printing.nix

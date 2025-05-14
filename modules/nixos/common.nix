@@ -1,13 +1,17 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   users = {
     defaultUserShell = pkgs.zsh;
-    users.josh = {
+    users.${user} = {
       isNormalUser = true;
-      group = "josh";
-      description = "Joshua Holman";
+      group = "${user}";
+      description = "Josh Holman"; # TODO: Make this an option as well (for this and git)
       extraGroups = ["networkmanager" "wheel"];
     };
-    groups.josh = {};
+    groups.${user} = {};
   };
 
   programs.zsh.enable = true;
