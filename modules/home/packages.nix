@@ -90,6 +90,7 @@
     rnote
     bruno
     filezilla
+    neovide
 
     # ---- Fonts ---- #
     noto-fonts

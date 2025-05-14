@@ -13,6 +13,13 @@
       words.enable = true;
       gitbrowse.enable = true;
       git.enable = true;
+      scroll = {
+        enable = true;
+        animate_repeat = {
+          delay = 100;
+        };
+      };
+      animate.enable = true;
     };
     luaConfig.post = ''
       vim.api.nvim_create_autocmd("User", {

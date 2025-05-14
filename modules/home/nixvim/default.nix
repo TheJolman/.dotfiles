@@ -17,6 +17,8 @@
 
       settings = {
         transparent_background = false;
+        show_end_of_buffer = true;
+        dim_inactive.enabled = true;
 
         integrations = {
           cmp = true;
@@ -25,12 +27,9 @@
             enabled = true;
             colored_indent_levels = true;
           };
-          neogit = true;
-          nvim_surround = true;
+          flash = true;
           rainbow_delimiters = true;
-          illuminate = true;
           diffview = true;
-          fzf = true;
           native_lsp = {
             enabled = true;
             virtual_text = {
@@ -40,6 +39,9 @@
               information = ["underline"];
             };
             inlay_hints = {background = true;};
+          };
+          snacks = {
+            enabled = true;
           };
           mini.enabled = true;
         };
@@ -80,10 +82,17 @@
       splitbelow = true;
       splitright = true;
       conceallevel = 3;
+      concealcursor = "";
       listchars.tab = "→ ";
       list = true;
       showbreak = "↪ ";
       laststatus = 3; # avante wants this
+      breakindent = true;
+      wrap = false;
+      sidescroll = 5;
+      listchars.precedes = "<";
+      listchars.extends = ">";
+      confirm = true;
     };
     clipboard = {
       register = "unnamedplus";
