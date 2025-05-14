@@ -80,7 +80,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = {inherit inputs system catppuccin hyprpanel terminder;};
+              extraSpecialArgs = {inherit inputs system catppuccin hyprpanel terminder agenix;};
               users = {"josh" = import ./hosts/${hostname}/home.nix;};
             };
 

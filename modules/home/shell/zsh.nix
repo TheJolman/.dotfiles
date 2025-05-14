@@ -1,11 +1,10 @@
 {
   config,
-  inputs,
-  # agenix,
+  agenix,
   ...
 }: {
   imports = [
-    inputs.agenix.homeManagerModules.default
+    agenix.homeManagerModules.default
   ];
 
   age.secrets = {

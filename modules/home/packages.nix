@@ -1,8 +1,8 @@
 {
   pkgs,
-  inputs,
-  terminder,
   system,
+  terminder,
+  agenix,
   ...
 }: {
   home.packages = with pkgs; [
@@ -73,7 +73,7 @@
     evince # gnome document viewer
     eog # gnome image viwer
     firefox
-    inputs.agenix.packages.${system}.default
+    agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
     spotify
