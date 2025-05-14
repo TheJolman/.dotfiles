@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   users = {
     defaultUserShell = pkgs.zsh;
     users.josh = {
@@ -14,6 +10,8 @@
     groups.josh = {};
   };
 
+  programs.zsh.enable = true;
+
   nix = {
     optimise.automatic = true;
     settings = {
@@ -23,7 +21,6 @@
     };
   };
 
-  programs.zsh.enable = true;
   networking.networkmanager.enable = true;
 
   catppuccin = {
@@ -37,13 +34,11 @@
 
   xdg.portal = {
     enable = true;
-    # xdgOpenUsePortal = true;
     config = {
       common.default = ["hyprland" "gtk"];
       hyprland.default = ["hyprland" "gtk"];
     };
     extraPortals = with pkgs; [
-      # xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
     ];
   };

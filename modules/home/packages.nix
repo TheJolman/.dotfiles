@@ -1,7 +1,7 @@
 {
   pkgs,
-  lib,
   inputs,
+  terminder,
   system,
   ...
 }: {
@@ -37,7 +37,7 @@
     traceroute
     claude-code
     gpt-cli
-    inputs.terminder.packages.${system}.default
+    terminder.packages.${system}.default
     codex
     lsof
     nfs-utils

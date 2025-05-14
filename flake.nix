@@ -11,9 +11,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin = {
-      url = "github:catppuccin/nix";
-    };
+    catppuccin.url = "github:catppuccin/nix";
 
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -45,6 +43,7 @@
     home-manager,
     agenix,
     hyprpanel,
+    terminder,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -70,19 +69,22 @@
     mkHost = hostname:
       lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;}; # makes inputs available in rest of config
+        specialArgs = {inherit inputs catppuccin;}; # makes inputs available in rest of config
         modules = [
           ./hosts/${hostname}/configuration.nix
-          inputs.home-manager.nixosModules.default
           agenix.nixosModules.default
+          home-manager.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = {inherit system inputs hyprpanel;};
+              extraSpecialArgs = {inherit inputs system catppuccin hyprpanel terminder;};
+              users = {"josh" = import ./hosts/${hostname}/home.nix;};
             };
+
+            networking.hostName = hostname;
             nixpkgs.pkgs = pkgs;
           }
         ];

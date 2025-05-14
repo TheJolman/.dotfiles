@@ -1,12 +1,10 @@
 {
-  inputs,
   pkgs,
-  lib,
+  catppuccin,
   ...
 }: {
   imports = [
-    inputs.catppuccin.homeModules.catppuccin
-    # inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
+    catppuccin.homeModules.catppuccin
   ];
 
   catppuccin = {
