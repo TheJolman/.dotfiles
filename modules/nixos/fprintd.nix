@@ -1,7 +1,7 @@
 {...}: {
   # fingerprint reader
   services.fprintd = {
-    enable = true;
+    enable = false;
     # tod.enable = true;
   };
   # this might speed it up by starting driver at system start
