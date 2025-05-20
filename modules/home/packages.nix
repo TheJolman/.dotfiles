@@ -66,6 +66,7 @@
     nautilus-open-any-terminal
     zoom-us # unfree
     vesktop
+    discord
     # legcord
     libreoffice-fresh
     hunspell # for spellcheck
