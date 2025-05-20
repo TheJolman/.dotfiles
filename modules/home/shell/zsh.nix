@@ -23,7 +23,6 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      cd = "z";
       ll = "lsd -l";
       ls = "lsd";
       ya = "yazi";

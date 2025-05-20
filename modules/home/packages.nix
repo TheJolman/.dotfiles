@@ -36,7 +36,6 @@
     terraform
     traceroute
     claude-code
-    gpt-cli
     terminder.packages.${system}.default
     codex
     lsof
