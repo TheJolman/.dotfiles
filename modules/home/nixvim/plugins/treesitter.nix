@@ -86,7 +86,6 @@
       hyprlang
       yaml
       powershell
-      norg
       terraform
       llvm
       http
