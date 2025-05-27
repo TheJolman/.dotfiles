@@ -60,7 +60,7 @@
       OPENAI_API_KEY = "$(cat ${config.age.secrets.openai-api-key.path})";
     };
 
-    initExtra = ''
+    initContent = ''
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
       autoload -Uz compinit && compinit

@@ -136,9 +136,7 @@
             Lua = {
               format.enable = true;
               runtime.version = "LuaJIT";
-              workspace = {
-                checkThirdParty = false;
-              };
+              workspace. checkThirdParty = false;
             };
           };
         };
@@ -150,58 +148,27 @@
             line-length = 100;
             indent-width = 4;
           };
-          rootDir = ''
-            require('lspconfig.util').root_pattern(
-              "pyproject.toml",
-              "pixi.toml",
-              "requirements.txt",
-              ".git"
-            )
-          '';
+          rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
         };
 
         pylsp = {
           enable = true;
           pythonPackage = pkgs.python313;
           package = pkgs.python313Packages.python-lsp-server;
-          rootDir = ''
-            require('lspconfig.util').root_pattern(
-              "pyproject.toml",
-              "pixi.toml",
-              "requirements.txt",
-              ".git"
-            )
-          '';
+          rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
         };
 
         # Java
         jdtls = {
           enable = true;
-          settings = {
-            java = {
-              format = {
-                enabled = true;
-              };
-            };
-          };
+          settings.java.format.enabled = true;
         };
 
         # C#
         csharp_ls = {
           enable = true;
           package = pkgs.csharp-ls;
-          /*
-          this is allegedly more robust - it searches the entire strucure before looking for
-          the next. Otherwise it will search for each before moving to the next dir.
-          */
-          rootDir = ''
-            function(fname)
-              local util = require("lspconfig.util")
-              return util.root_pattern("*.sln")(fname) or
-                     util.root_pattern("*.csproj")(fname) or
-                     util.root_pattern("*.git")(fname)
-             end
-          '';
+          rootMarkers = ["*.sln" "*.csproj" "*.git"];
         };
 
         # Rust
@@ -228,11 +195,7 @@
         jinja_lsp = {
           enable = true;
           package = null;
-          settings = {
-            jinja = {
-              formatter = "djlint";
-            };
-          };
+          settings.jinja.formatter = "djlint";
         };
 
         svelte = {
