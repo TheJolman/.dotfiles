@@ -41,6 +41,7 @@
     lsof
     nfs-utils
     lftp
+    killall
 
     # ---- Networking ---- #
     dhcpm
