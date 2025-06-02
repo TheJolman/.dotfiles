@@ -47,3 +47,12 @@ vim.api.nvim_create_autocmd('FileType', {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'java', 'kotlin' },
+  callback = function()
+    if vim.fn.filereadable('gradlew') == 1 then
+      vim.opt.makeprg = './gradlew build'
+    end
+  end,
+})
