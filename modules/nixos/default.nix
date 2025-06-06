@@ -14,7 +14,7 @@
     ./interception-tools.nix
     ./containers.nix
     ./bluetooth.nix
-    ./grub.nix
+    ./boot.nix
     ./nh.nix
     # ./sddm.nix
     ./greetd.nix
