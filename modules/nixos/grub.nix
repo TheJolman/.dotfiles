@@ -1,9 +1,5 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
-  boot.plymouth.enable = true; # For silent boot
+{...}: {
+  boot.plymouth.enable = false; # For silent boot
 
   boot.loader = {
     efi = {canTouchEfiVariables = true;};
@@ -11,7 +7,6 @@
       enable = true;
       efiSupport = true;
       useOSProber = true;
-      # catppuccin.enable = true;
 
       devices = ["nodev"];
     };
