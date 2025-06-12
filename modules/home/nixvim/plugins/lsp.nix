@@ -188,9 +188,21 @@
         };
 
         # Web dev
-        denols.enable = true;
-        # ts_ls.enable = true;
-        eslint.enable = true;
+        denols = {
+          enable = true;
+          rootMarkers = ["deno.json" "deno.jsonc"];
+        };
+
+        ts_ls = {
+          enable = false;
+          rootMarkers = ["package.json"];
+        };
+
+        eslint = {
+          enable = true;
+          cmd = ["vscode-eslint-language-server --stdio"];
+          rootMarkers = ["package.json" "deno.json" "deno.jsonc"];
+        };
 
         jinja_lsp = {
           enable = true;
@@ -203,7 +215,8 @@
           settings.svelte.format.enable = true;
         };
 
-        html.enable = true;
+        # html.enable = true;
+        superhtml.enable = true;
         cssls.enable = true;
         jsonls.enable = true;
         htmx.enable = true;

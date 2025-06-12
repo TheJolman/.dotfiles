@@ -31,6 +31,7 @@
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       c
       cpp
+      doxygen
       python
       lua
       luadoc
@@ -72,6 +73,7 @@
       make
       cmake
       matlab
+      ocaml
       markdown
       markdown-inline
       nix
@@ -95,6 +97,11 @@
       gitignore
       gitcommit
       gitattributes
+      ebnf
+      dockerfile
+      editorconfig
+      csv
+      hcl
     ];
   };
 
