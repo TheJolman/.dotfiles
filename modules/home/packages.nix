@@ -42,6 +42,7 @@
     nfs-utils
     lftp
     killall
+    deno
 
     # ---- Networking ---- #
     dhcpm

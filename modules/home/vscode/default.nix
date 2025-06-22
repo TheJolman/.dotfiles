@@ -12,7 +12,7 @@
         vscjava.vscode-java-pack
         vscjava.vscode-gradle
         ms-vscode.cpptools
-        llvm-vs-code-extensions.vscode-clangd
+        # llvm-vs-code-extensions.vscode-clangd
         ms-vscode.makefile-tools
         ms-vscode.cmake-tools
         mesonbuild.mesonbuild
@@ -30,6 +30,7 @@
         ms-toolsai.jupyter
         zainchen.json
         bbenoist.nix
+        mkhl.direnv
         golang.go
         rust-lang.rust-analyzer
       ];

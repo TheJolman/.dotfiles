@@ -30,7 +30,6 @@ in {
     brightnessctl
     alsa-utils
     pavucontrol
-    # xwaylandvideobridge
     acpi
   ];
   wayland.windowManager.hyprland = {
@@ -44,7 +43,6 @@ in {
 
       # to mirror, add the folowing to monitors list:
       # "DP-11,preferred,auto,1,mirror,eDP-1"
-      # monitor = [",preferred,auto,1"];
       monitor = [",highres@highrr,auto,1"];
 
       "$mod" = "SUPER";
@@ -73,7 +71,6 @@ in {
         groupbar = {
           "col.active" = "$pink";
           "col.inactive" = "$surface0";
-          # font_weight_inactive = "thin";
           height = "18";
           text_color = "$text";
           font_size = 17;
@@ -123,17 +120,14 @@ in {
         workspace_swipe_distance = 300;
       };
 
-      # windowrule = [
-      #   "idleinhibit fullscreen, firefox"
-      #   "idleinhibit fullscreen, zen"
-      # ];
-
-      windowrulev2 = [
-        "bordercolor $red, fullscreen:1"
-        "float, class:(org.gnome.Nautilus)"
+      windowrule = [
+        "idleinhibit fullscreen,class:(firefox)"
+        "idleinhibit focus,title:(.*)(- Youtube)$"
+        "bordercolor $red,fullscreen:1"
+        "float,class:(org.gnome.Nautilus)"
       ];
 
-      # e = repeat, will repeat when held
+      # e -> repeat, will repeat when held
       binde = [
         # move windows (tiled or floating)
         # "$mod SHIFT, h, movewindow, l"
@@ -142,16 +136,16 @@ in {
         # "$mod SHIFT, j, movewindow, d"
 
         # move floating windows
-        "$mod ALT, h, moveactive, -30 0"
-        "$mod ALT, l, moveactive, 30 0"
-        "$mod ALT, k, moveactive, 0 -30"
-        "$mod ALT, j, moveactive, 0 30"
+        "$mod ALT, h, moveactive, -50 0"
+        "$mod ALT, l, moveactive, 50 0"
+        "$mod ALT, k, moveactive, 0 -50"
+        "$mod ALT, j, moveactive, 0 50"
 
         # resize windows
-        "$mod CTRL, h, resizeactive, -20 0"
-        "$mod CTRL, l, resizeactive, 20 0"
-        "$mod CTRL, k, resizeactive, 0 -20"
-        "$mod CTRL, j, resizeactive, 0 20"
+        "$mod CTRL, h, resizeactive, -30 0"
+        "$mod CTRL, l, resizeactive, 30 0"
+        "$mod CTRL, k, resizeactive, 0 -30"
+        "$mod CTRL, j, resizeactive, 0 30"
 
         # media keys
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
@@ -236,21 +230,14 @@ in {
 
       # l -> locked, will also work when an input inhibitor (like a lockscreen) is active
       bindl = [
-        # lock when lid is closed
-        ", switch:on:Lid Switch, exec, hyprlock"
+        # turn laptop display off when lid is closed
+        ", switch:on:Lid Switch, exec, hyprctl keyword monitor eDP-1, disable"
+        # turn laptop display on when lid is opened
+        ", switch:off:Lid Switch, exec, hyprctl keyword monitor eDP-1, enable"
         ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
         ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-        # sleep system when switch is closed
-        # ", switch:on:Lid Switch, exec, systemctl suspend"
-
-        # the below lines seem to make my bar dissapear when the lid is closed and opened
-
-        # turn screen off when lid is closed
-        # ''
-        #   , switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"''
-        # turn back on when lid is opened
-        # ''
-        #   , switch:off:Lid Switch, exec, hyprctl keyword monitor "eDP-1, auto, 1"''
+        "$mod CTRL, M, exit"
+        "$mod CTRL, S, exec, systemctl hibernate"
       ];
     };
   };

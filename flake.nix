@@ -6,6 +6,8 @@
 
     nixpkgs-stable.url = "nixpkgs/nixos-25.05";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,6 +41,7 @@
     self,
     nixpkgs,
     nixpkgs-stable,
+    nixos-hardware,
     catppuccin,
     home-manager,
     agenix,
@@ -70,7 +73,7 @@
     mkHost = hostname:
       lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs user home-manager catppuccin;}; # makes available in rest of config
+        specialArgs = {inherit inputs user home-manager catppuccin nixos-hardware;}; # makes available in rest of config
         modules = [
           ./hosts/${hostname}/configuration.nix
           agenix.nixosModules.default # maybe move to ./modules/nixos/default.nix
