@@ -230,6 +230,10 @@ in {
 
       # l -> locked, will also work when an input inhibitor (like a lockscreen) is active
       bindl = [
+        # turn laptop display off when lid is closed
+        ", switch:on:Lid Switch, exec, hyprctl keyword monitor eDP-1, disable"
+        # turn laptop display on when lid is opened
+        ", switch:off:Lid Switch, exec, hyprctl keyword monitor eDP-1, enable"
         ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
         ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
         "$mod CTRL, M, exit"
