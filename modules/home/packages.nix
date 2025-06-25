@@ -43,6 +43,8 @@
     lftp
     killall
     deno
+    dmidecode
+    powertop
 
     # ---- Networking ---- #
     dhcpm
