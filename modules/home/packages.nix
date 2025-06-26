@@ -45,6 +45,7 @@
     deno
     dmidecode
     powertop
+    lazygit
 
     # ---- Networking ---- #
     dhcpm

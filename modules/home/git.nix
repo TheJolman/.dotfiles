@@ -25,10 +25,6 @@
     ];
   };
 
-  programs.lazygit = {
-    enable = true;
-  };
-
   programs.gh = {
     enable = true;
     gitCredentialHelper.enable = true;
