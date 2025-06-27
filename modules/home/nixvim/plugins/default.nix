@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./autopairs.nix
-    ./avante.nix
+    # ./avante.nix
     # ./copilot.nix
     ./rainbow-delimiters.nix
     ./vimtex.nix
