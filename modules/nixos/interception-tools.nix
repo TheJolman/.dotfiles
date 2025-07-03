@@ -3,13 +3,15 @@
   services.interception-tools = {
     enable = true;
     plugins = with pkgs.interception-tools-plugins; [
+      # https://gitlab.com/interception/linux/plugins/dual-function-keys
       dual-function-keys
+      # https://gitlab.com/interception/linux/plugins/caps2esc
       caps2esc
     ];
     udevmonConfig = ''
       - JOB: >
           ${pkgs.interception-tools}/bin/intercept -g $DEVNODE |
-          ${pkgs.interception-tools-plugins.caps2esc}/bin/caps2esc -m 2 |
+          ${pkgs.interception-tools-plugins.caps2esc}/bin/caps2esc |
           ${pkgs.interception-tools-plugins.dual-function-keys}/bin/dual-function-keys -c /etc/dual-function-keys.yaml |
           ${pkgs.interception-tools}/bin/uinput -d $DEVNODE
         DEVICE:
@@ -33,5 +35,9 @@
       - KEY: KEY_RIGHTSHIFT
         TAP: KEY_BACKSPACE
         HOLD: KEY_RIGHTSHIFT
+
+      - KEY: KEY_RIGHTALT
+        TAP: KEY_GRAVE
+        HOLD: KEY_RIGHTALT
   '';
 }
