@@ -2,12 +2,21 @@
   # Enable interception tools
   services.interception-tools = {
     enable = true;
-    plugins = [pkgs.interception-tools-plugins.dual-function-keys];
+    plugins = with pkgs.interception-tools-plugins; [
+      dual-function-keys
+      caps2esc
+      ralt2hyper
+    ];
     udevmonConfig = ''
-      - JOB: "${pkgs.interception-tools}/bin/intercept -g $DEVNODE | ${pkgs.interception-tools-plugins.dual-function-keys}/bin/dual-function-keys -c /etc/dual-function-keys.yaml | ${pkgs.interception-tools}/bin/uinput -d $DEVNODE"
+      - JOB: >
+          "${pkgs.interception-tools}/bin/intercept -g $DEVNODE
+          | ${pkgs.interception-tools-plugins.dual-function-keys}/bin/dual-function-keys -c /etc/dual-function-keys.yaml
+          | ${pkgs.interception-tools-plugins.caps2esc}/bin/caps2esc
+          | ${pkgs.interception-tools-plugins.ralt2hyper}/bin/ralt2hyper
+          | ${pkgs.interception-tools}/bin/uinput -d $DEVNODE"
         DEVICE:
           EVENTS:
-            EV_KEY: [KEY_CAPSLOCK, KEY_RIGHTSHIFT]
+            EV_KEY: [KEY_CAPSLOCK, KEY_ESC, KEY_RIGHTSHIFT, KEY_RIGHTALT]
     '';
   };
 
@@ -19,11 +28,11 @@
       DOUBLE_TAP_MILLISEC: 150
 
     MAPPINGS:
-      - KEY: KEY_CAPSLOCK
-        TAP: KEY_ESC
-        HOLD: KEY_LEFTCTRL
+      # - KEY: KEY_CAPSLOCK
+      #   TAP: KEY_ESC
+      #   HOLD: KEY_LEFTCTRL
       - KEY: KEY_RIGHTSHIFT
         TAP: KEY_BACKSPACE
-        HOLD: KEY_BACKSPACE
+        # HOLD: KEY_BACKSPACE
   '';
 }
