@@ -9,7 +9,7 @@
     udevmonConfig = ''
       - JOB: >
           ${pkgs.interception-tools}/bin/intercept -g $DEVNODE |
-          ${pkgs.interception-tools-plugins.caps2esc}/bin/caps2esc |
+          ${pkgs.interception-tools-plugins.caps2esc}/bin/caps2esc -m 2 |
           ${pkgs.interception-tools-plugins.dual-function-keys}/bin/dual-function-keys -c /etc/dual-function-keys.yaml |
           ${pkgs.interception-tools}/bin/uinput -d $DEVNODE
         DEVICE:
@@ -33,9 +33,5 @@
       - KEY: KEY_RIGHTSHIFT
         TAP: KEY_BACKSPACE
         HOLD: KEY_RIGHTSHIFT
-
-      - KEY: KEY_RIGHTALT
-        TAP: KEY_RIGHTALT
-        HOLD: [ KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, ]
   '';
 }
