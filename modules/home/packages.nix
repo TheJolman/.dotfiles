@@ -96,6 +96,7 @@
     bruno
     filezilla
     neovide
+    warpinator
 
     # ---- Fonts ---- #
     noto-fonts
