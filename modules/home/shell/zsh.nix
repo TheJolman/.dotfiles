@@ -61,24 +61,9 @@
     };
 
     initContent = ''
-      autoload -Uz compinit && compinit
       eval "$(pixi completion --shell zsh)"
-
-      # function y() {
-      #   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-      #   yazi "$@" --cwd-file="$tmp"
-      #   if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-      #     builtin cd -- "$cwd"
-      #   fi
-      #   rm -f -- "$tmp"
-      # }
     '';
   };
-
-  # programs.starship = {
-  #   enable = true;
-  #   enableZshIntegration = true;
-  # };
 
   programs.carapace = {
     enable = true;
