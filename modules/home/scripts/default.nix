@@ -2,9 +2,9 @@
   home.packages = [
     (pkgs.writeScriptBin "cinit" (builtins.readFile ./cinit.sh))
 
-    (pkgs.writeScriptBin "nsinit" (builtins.readFile ./nsinit.sh))
+    (pkgs.writeScriptBin "nixify" (builtins.readFile ./nixify.sh))
 
-    (pkgs.writeScriptBin "nfinit" (builtins.readFile ./nfinit.sh))
+    (pkgs.writeScriptBin "flakify" (builtins.readFile ./flakify.sh))
 
     (pkgs.writeScriptBin "n" (builtins.readFile ./n.sh))
 
