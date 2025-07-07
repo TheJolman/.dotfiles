@@ -21,7 +21,6 @@
     unzip
     nix-output-monitor
     nvd
-    zoxide
     alejandra
     pre-commit
     ripgrep

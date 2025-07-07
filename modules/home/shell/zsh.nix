@@ -61,8 +61,6 @@
     };
 
     initContent = ''
-      eval "$(zoxide init zsh)"
-      eval "$(direnv hook zsh)"
       autoload -Uz compinit && compinit
       eval "$(pixi completion --shell zsh)"
 
