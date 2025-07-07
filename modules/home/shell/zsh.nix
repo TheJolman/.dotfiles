@@ -50,7 +50,6 @@
       ns = "nom shell";
       nr = "nix run";
       switch = "nh os switch";
-      packages = "\${EDITOR:-nvim} ~/.dotfiles/modules/home/packages.nix";
       kssh = "kitten ssh";
     };
 
