@@ -20,7 +20,7 @@
         }
         {
           timeout = 1800; # 30 mins
-          one-timout = "systemctl suspend";
+          on-timeout = "systemctl suspend";
         }
       ];
     };
