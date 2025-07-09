@@ -26,11 +26,6 @@
       inputs.darwin.follows = "";
     };
 
-    # hyprpanel = {
-    #   url = "github:Jas-SinghFSU/HyprPanel";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     terminder = {
       url = "github:thejolman/terminder";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,7 +40,6 @@
     catppuccin,
     home-manager,
     agenix,
-    # hyprpanel,
     terminder,
     ...
   } @ inputs: let
@@ -66,7 +60,6 @@
       config.allowUnfree = true;
       overlays = [
         stableOverlay
-        # hyprpanel.overlay
       ];
     };
 
