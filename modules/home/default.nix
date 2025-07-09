@@ -5,7 +5,7 @@
     ./scripts/default.nix
     ./shell/default.nix
     ./zed/default.nix
-    ./vscode/default.nix
+    # ./vscode/default.nix
     ./rider.nix
     ./jupyter.nix
     ./direnv.nix
