@@ -1,10 +1,10 @@
-{hyprpanel, ...}: {
-  imports = [hyprpanel.homeManagerModules.hyprpanel];
+{...}: {
+  # imports = [hyprpanel.homeManagerModules.hyprpanel];
 
   programs.hyprpanel = {
     # TODO: configure screenshot, avatar
     enable = true;
-    overwrite.enable = true;
+    # overwrite.enable = true;
 
     settings = {
       bar = {

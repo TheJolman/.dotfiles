@@ -26,10 +26,10 @@
       inputs.darwin.follows = "";
     };
 
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hyprpanel = {
+    #   url = "github:Jas-SinghFSU/HyprPanel";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     terminder = {
       url = "github:thejolman/terminder";
@@ -45,7 +45,7 @@
     catppuccin,
     home-manager,
     agenix,
-    hyprpanel,
+    # hyprpanel,
     terminder,
     ...
   } @ inputs: let
@@ -66,7 +66,7 @@
       config.allowUnfree = true;
       overlays = [
         stableOverlay
-        hyprpanel.overlay
+        # hyprpanel.overlay
       ];
     };
 
@@ -82,7 +82,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = {inherit inputs user system catppuccin hyprpanel terminder agenix;};
+              extraSpecialArgs = {inherit inputs user system catppuccin terminder agenix;};
               users = {${user} = import ./hosts/${hostname}/home.nix;};
             };
 
