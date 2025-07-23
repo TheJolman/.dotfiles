@@ -46,7 +46,7 @@
     dmidecode
     powertop
     lazygit
-    tetrigo
+    tetrigo.packages.${system}.default
 
     # ---- Networking ---- #
     dhcpm

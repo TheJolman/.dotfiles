@@ -205,6 +205,21 @@
         "type": "github"
       }
     },
+    "nix-systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1753122741,
@@ -357,7 +372,8 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim",
-        "terminder": "terminder"
+        "terminder": "terminder",
+        "tetrigo": "tetrigo"
       }
     },
     "systems": {
@@ -439,6 +455,49 @@
       "original": {
         "owner": "thejolman",
         "repo": "terminder",
+        "type": "github"
+      }
+    },
+    "tetrigo": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1746137043,
+        "narHash": "sha256-GMsxAuT6deFrhngKps9KYm01EWqJ0v/z4cr6YR3STeE=",
+        "owner": "Broderick-Westrope",
+        "repo": "tetrigo",
+        "rev": "d564eb4e98b8cb864aca5e52422ed32c3a9154f3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Broderick-Westrope",
+        "repo": "tetrigo",
+        "type": "github"
+      }
+    },
+    "utils": {
+      "inputs": {
+        "nix-systems": "nix-systems",
+        "nixpkgs": [
+          "tetrigo",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1745390014,
+        "narHash": "sha256-fRr/v396NBj140H80PdZGdObGP7SLcDw5OKY1BgLSW0=",
+        "owner": "NewDawn0",
+        "repo": "nixUtils",
+        "rev": "a8d08dbc5f64aaecd937e7f434330618f663c779",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NewDawn0",
+        "repo": "nixUtils",
         "type": "github"
       }
     }
