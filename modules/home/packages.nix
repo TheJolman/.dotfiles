@@ -114,6 +114,8 @@
     EDITOR = "nvim";
     BROWSER = "firefox";
     TERMINAL = "kitty";
+    PAGER = "bat";
+    MANPAGER = "nvim +Man!";
     NIXPKGS_ALLOW_UNFREE = 1;
   };
 }
