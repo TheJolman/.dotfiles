@@ -1,10 +1,6 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
+{pkgs, ...}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    hyprpanel &
+    pidof hyprpanel && hyprpanel &
     nm-applet --indicator &
     blueman-applet &
     swww-daemon &  # wallaper daemon
