@@ -54,9 +54,9 @@
     };
 
     sessionVariables = {
-      ANTHROPIC_API_KEY = "$(cat ${config.age.secrets.anthropic-api-key.path})";
-      GROQ_API_KEY = "$(cat ${config.age.secrets.groq-api-key.path})";
-      OPENAI_API_KEY = "$(cat ${config.age.secrets.openai-api-key.path})";
+      # ANTHROPIC_API_KEY = "$(cat ${config.age.secrets.anthropic-api-key.path})";
+      # GROQ_API_KEY = "$(cat ${config.age.secrets.groq-api-key.path})";
+      # OPENAI_API_KEY = "$(cat ${config.age.secrets.openai-api-key.path})";
     };
 
     initContent = ''
