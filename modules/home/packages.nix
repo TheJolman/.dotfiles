@@ -61,6 +61,7 @@
     libresprite
     tiled
     stable.jetbrains.idea-ultimate
+    stable.jetbrains.rider
     protonvpn-gui
     kitty
     impression
@@ -69,8 +70,6 @@
     nautilus-open-any-terminal
     zoom-us # unfree
     vesktop
-    discord
-    # legcord
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
