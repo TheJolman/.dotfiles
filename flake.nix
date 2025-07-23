@@ -30,6 +30,11 @@
       url = "github:thejolman/terminder";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tetrigo = {
+      url = "github:Broderick-Westrope/tetrigo";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -41,6 +46,7 @@
     home-manager,
     agenix,
     terminder,
+    tetrigo,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -66,7 +72,8 @@
     mkHost = hostname:
       lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs user home-manager catppuccin nixos-hardware;}; # makes available in rest of config
+        # makes available in rest of config
+        specialArgs = {inherit inputs user home-manager catppuccin nixos-hardware;};
         modules = [
           ./hosts/${hostname}/configuration.nix
           agenix.nixosModules.default # maybe move to ./modules/nixos/default.nix
@@ -75,7 +82,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = {inherit inputs user system catppuccin terminder agenix;};
+              extraSpecialArgs = {inherit inputs user system catppuccin terminder agenix tetrigo;};
               users = {${user} = import ./hosts/${hostname}/home.nix;};
             };
 

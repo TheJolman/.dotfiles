@@ -3,6 +3,7 @@
   system,
   terminder,
   agenix,
+  tetrigo,
   ...
 }: {
   home.packages = with pkgs; [
@@ -45,6 +46,7 @@
     dmidecode
     powertop
     lazygit
+    tetrigo
 
     # ---- Networking ---- #
     dhcpm
