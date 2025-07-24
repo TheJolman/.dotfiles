@@ -1,6 +1,6 @@
 {pkgs, ...}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    pidof hyprpanel && hyprpanel &
+    hyprpanel &
     nm-applet --indicator &
     blueman-applet &
     swww-daemon &  # wallaper daemon
@@ -11,7 +11,6 @@
   '';
 in {
   home.packages = with pkgs; [
-    hyprpanel
     upower
     waybar
     swww
