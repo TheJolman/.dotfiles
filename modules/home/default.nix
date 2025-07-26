@@ -4,9 +4,8 @@
     ./nixvim/default.nix
     ./scripts/default.nix
     ./shell/default.nix
-    ./zed/default.nix
-    ./vscode/default.nix
-    ./rider.nix
+    # ./zed/default.nix
+    # ./vscode/default.nix
     ./jupyter.nix
     ./direnv.nix
     ./kitty.nix

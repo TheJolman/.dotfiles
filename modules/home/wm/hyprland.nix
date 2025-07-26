@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
+{pkgs, ...}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     hyprpanel &
     nm-applet --indicator &
@@ -15,7 +11,6 @@
   '';
 in {
   home.packages = with pkgs; [
-    hyprpanel
     upower
     waybar
     swww

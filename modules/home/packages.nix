@@ -3,6 +3,7 @@
   system,
   terminder,
   agenix,
+  tetrigo,
   ...
 }: {
   home.packages = with pkgs; [
@@ -45,6 +46,7 @@
     dmidecode
     powertop
     lazygit
+    tetrigo.packages.${system}.default
 
     # ---- Networking ---- #
     dhcpm
@@ -61,6 +63,7 @@
     libresprite
     tiled
     stable.jetbrains.idea-ultimate
+    stable.jetbrains.rider
     protonvpn-gui
     kitty
     impression
@@ -69,8 +72,6 @@
     nautilus-open-any-terminal
     zoom-us # unfree
     vesktop
-    discord
-    # legcord
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
@@ -115,6 +116,8 @@
     EDITOR = "nvim";
     BROWSER = "firefox";
     TERMINAL = "kitty";
+    PAGER = "bat";
+    MANPAGER = "nvim +Man!";
     NIXPKGS_ALLOW_UNFREE = 1;
   };
 }
