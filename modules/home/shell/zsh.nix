@@ -39,7 +39,7 @@
       gr = "git rebase";
       gd = "git diff";
       gl = "git log";
-      glo = "git log --oneline";
+      glo = "git log --oneline --graph -20";
       gf = "git fetch";
       gb = "git branch";
       gs = "git switch";
