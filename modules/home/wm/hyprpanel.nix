@@ -2,7 +2,7 @@
   programs.hyprpanel = {
     # TODO: configure screenshot, avatar
     enable = true;
-    systemd.enable = false;
+    systemd.enable = true;
 
     settings = {
       bar = {

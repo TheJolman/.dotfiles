@@ -1,6 +1,5 @@
 {pkgs, ...}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    hyprpanel &
     nm-applet --indicator &
     blueman-applet &
     swww-daemon &  # wallaper daemon
