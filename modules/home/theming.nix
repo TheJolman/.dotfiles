@@ -11,7 +11,6 @@
     enable = true;
     flavor = "mocha";
     cursors.enable = false;
-    gtk.enable = false; # depreciated
     gtk.icon.enable = true;
     kvantum.enable = true;
   };
