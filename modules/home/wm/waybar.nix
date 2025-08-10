@@ -81,7 +81,7 @@
 
         "custom/notification" = {
           tooltip = false;
-          format = "{icon}";
+          format = "{} {icon}";
           "format-icons" = {
             "notification" = "<span foreground='red'><sup></sup></span>";
             "none" = "";
@@ -95,8 +95,8 @@
           return-type = "json";
           exec-if = "which swaync-client";
           exec = "swaync-client -swb";
-          on-click = "swaync-client -t -sw";
-          on-click-right = "swaync-client -t -sw";
+          on-click = "swaync-client -t";
+          on-click-right = "swaync-client -t";
           escape = true;
         };
       };

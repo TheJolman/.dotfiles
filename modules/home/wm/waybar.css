@@ -72,6 +72,7 @@ window#waybar.hidden {
 #temperature,
 #cpu,
 #memory,
+#custom-notification,
 #clock {
   margin-top: 8px;
   margin-left: 8px;
@@ -79,6 +80,7 @@ window#waybar.hidden {
   padding-right: 16px;
   margin-bottom: 0;
   border-radius: 26px;
+  border: 2px solid shade(@base, 0.9);
   transition: none;
 }
 
@@ -117,9 +119,14 @@ window#waybar.hidden {
 }
 
 #memory {
-  margin-right: 12px;
   color: @base;
   background: @sky;
+}
+
+#custom-notification {
+  margin-right: 12px;
+  color: @base;
+  background: @teal;
 }
 
 #mpd.disconnected,
