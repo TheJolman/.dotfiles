@@ -26,7 +26,6 @@
     pre-commit
     ripgrep
     stylua
-    protonvpn-cli_2
     uv
     pixi
     xh
@@ -64,7 +63,7 @@
     tiled
     stable.jetbrains.idea-ultimate
     stable.jetbrains.rider
-    protonvpn-gui
+    mozillavpn
     kitty
     impression
     gparted
