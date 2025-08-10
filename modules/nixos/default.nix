@@ -8,7 +8,7 @@
     home-manager.nixosModules.default
     home-manager.nixosModules.home-manager
     ./networking.nix
-    ./mysql.nix
+    # ./mysql.nix
     ./printing.nix
     ./agenix.nix
     ./interception-tools.nix
