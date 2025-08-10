@@ -1,6 +1,6 @@
 {pkgs, ...}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    waybar &
+    pgrep -x waybar >/dev/null || waybar &
     swaync &
     nm-applet --indicator &
     blueman-applet &
