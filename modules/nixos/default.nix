@@ -26,5 +26,6 @@
     ./logind.nix
     ./virtualisation.nix
     ./wireshark.nix
+    ./mozillavpn.nix
   ];
 }
