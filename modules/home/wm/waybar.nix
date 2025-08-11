@@ -42,6 +42,9 @@
           format-muted = " ";
           format-icons = [" " " " " "];
           format = "{icon} {volume}%";
+          on-click = "pavucontrol";
+          on-click-right = "pavucontrol";
+          escape = true;
         };
 
         network = {
