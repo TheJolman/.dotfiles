@@ -1,20 +1,8 @@
 #!/usr/bin/env bash
 
-n_shell() {
-  nix shell "$@"
-}
-
-n_run() {
-  nix run "$@"
-}
-
-n_edit() {
-  nix edit "$@"
-}
-
 n() {
   if (($# < 1)); then
-    echo "Error: expected an argument"
+    echo "Error: expected an argument" >&2
     exit 1
   fi
 
@@ -24,27 +12,37 @@ n() {
     packages[i]="nixpkgs#${packages[i]}"
   done
 
-  echo "${packages[@]}"
+  # Use nom if it's available, fall back to nix
+  nix_cmd=$(command -v nom >/dev/null 2>&1 && echo nom || echo nix)
 
   case $1 in
-  s)
-    n_shell "${packages[@]}"
+  s) # shell
+    echo "Running '$nix_cmd shell ${packages[*]}'..."
+    $nix_cmd shell "${packages[@]}"
     ;;
-  r)
+  r) # run
     if ((${#packages[@]} > 1)); then
-      echo "Error: nix run expects only one package"
+      echo "Error: nom run expects only one package" >&2
       exit 1
     fi
-    n_run "${packages[@]}"
+    echo "Running 'nom run ${packages[*]}'..."
+    $nix_cmd run "${packages[@]}"
     ;;
-  e)
-    n_edit "${packages[@]}"
+
+  d) # develop
+    echo "Running '$nix_cmd develop ${packages[*]}'..."
+    $nix_cmd develop "${packages[@]}"
+    ;;
+  e) # edit
+    echo "Running 'nix edit ${packages[*]}'..."
+    nix edit "${packages[@]}"
     ;;
   *)
-    printf "Error: unkown argument: %s" "$1"
+    printf "Error: unkown argument: %s" "$1" >&2
     exit 1
     ;;
   esac
 }
 
 n "$@"
+
