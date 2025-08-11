@@ -4,6 +4,7 @@
     ./hyprland.nix
     ./waybar.nix
     ./fuzzel.nix
-    ./hyprpanel.nix
+    # ./hyprpanel.nix
+    ./swaync.nix
   ];
 }

@@ -6,6 +6,7 @@
     "n"
     "run"
     "packages"
+    "fvim"
   ];
 
   addScript = script: (pkgs.writeScriptBin "${script}"

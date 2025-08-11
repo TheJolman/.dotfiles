@@ -9,7 +9,16 @@
         height = 30;
         modules-left = ["custom/logo" "hyprland/workspaces"];
         modules-center = ["clock"];
-        modules-right = ["tray" "network" "wireplumber" "battery" "cpu" "temperature" "memory"];
+        modules-right = [
+          "tray"
+          "network"
+          "wireplumber"
+          "battery"
+          "cpu"
+          "temperature"
+          "memory"
+          "custom/notification"
+        ];
 
         "custom/logo" = {
           format = "";
@@ -33,6 +42,9 @@
           format-muted = " ";
           format-icons = [" " " " " "];
           format = "{icon} {volume}%";
+          on-click = "pavucontrol";
+          on-click-right = "pavucontrol";
+          escape = true;
         };
 
         network = {
@@ -68,6 +80,27 @@
         battery = {
           format-icons = [" " " " " " " " " "];
           format = "{icon} {capacity}%";
+        };
+
+        "custom/notification" = {
+          tooltip = false;
+          format = "{} {icon}";
+          "format-icons" = {
+            "notification" = "<span foreground='red'><sup></sup></span>";
+            "none" = "";
+            "dnd-notification" = "<span foreground='red'><sup></sup></span>";
+            "dnd-none" = "";
+            "inhibited-notification" = "<span foreground='red'><sup></sup></span>";
+            "inhibited-none" = "";
+            "dnd-inhibited-notification" = "<span foreground='red'><sup></sup></span>";
+            "dnd-inhibited-none" = "";
+          };
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "swaync-client -t";
+          on-click-right = "swaync-client -t";
+          escape = true;
         };
       };
     };
