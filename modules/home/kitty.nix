@@ -4,13 +4,14 @@
     font.name = "CaskaydiaCove Nerd Font";
     font.size = 13;
     shellIntegration.enableZshIntegration = true;
+    themeFile = "cherry-midnight";
 
     settings = {
       enable_audio_bell = false;
       copy_on_select = "clipboard";
       scrollback_lines = 10000;
       window_margin_width = 10;
-      background_opacity = "0.8";
+      background_opacity = "0.9";
       adjust_line_height = "125%";
     };
     extraConfig = ''

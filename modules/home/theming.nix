@@ -13,6 +13,7 @@
     cursors.enable = false;
     gtk.icon.enable = true;
     kvantum.enable = true;
+    kitty.enable = false;
   };
 
   xdg.enable = true;

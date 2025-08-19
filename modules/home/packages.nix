@@ -46,6 +46,7 @@
     powertop
     lazygit
     tetrigo.packages.${system}.default
+    aerc # email tui client
 
     # ---- Networking ---- #
     dhcpm
