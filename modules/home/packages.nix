@@ -81,7 +81,6 @@
     agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
-    spotify
     gnome-system-monitor
     transmission_4-qt # torrent client
     celluloid # video player
