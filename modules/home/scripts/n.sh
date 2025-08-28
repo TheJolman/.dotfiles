@@ -21,12 +21,13 @@ n() {
     $nix_cmd shell "${packages[@]}"
     ;;
   r) # run
+    # TODO: adjust to enable hanlding of passed through args?
     if ((${#packages[@]} > 1)); then
-      echo "Error: nom run expects only one package" >&2
+      echo "Error: nix run expects only one package" >&2
       exit 1
     fi
-    echo "Running 'nom run ${packages[*]}'..."
-    $nix_cmd run "${packages[@]}"
+    echo "Running 'nix run ${packages[*]} --impure'..."
+    nix run "${packages[@]}" --impure
     ;;
 
   d) # develop
