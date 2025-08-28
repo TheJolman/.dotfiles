@@ -1,6 +1,7 @@
 {
   config,
   agenix,
+  lib,
   ...
 }: {
   imports = [
@@ -70,9 +71,40 @@
     enableZshIntegration = true;
   };
 
-  programs.oh-my-posh = {
+  # programs.oh-my-posh = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  #   useTheme = "catppuccin";
+  # };
+
+  programs.starship = {
     enable = true;
     enableZshIntegration = true;
-    useTheme = "catppuccin";
+    settings = {
+      format = lib.concatStrings [
+        "$directory"
+        "$git_branch"
+        "$git_status"
+        "$docker_context"
+        "$golang"
+        "$java"
+        "$lua"
+        "$cmake"
+        "$meson"
+        "$deno"
+        "$nodejs"
+        "$ocaml"
+        "$gleam"
+        "$c"
+        "$dotnet"
+        "$nix_shell"
+        "$line_break"
+        "$character"
+      ];
+      character = {
+        success_symbol = "[❯](bold green)";
+        error_symbol = "[❯](bold red)";
+      };
+    };
   };
 }
