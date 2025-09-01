@@ -4,14 +4,7 @@
     settings = {
       auto_install = false;
       parser_isntall_dir = null;
-      highlight = {
-        enable = true;
-        # disable = [
-        #   # broken for some reason
-        #   "c"
-        #   "cpp"
-        # ];
-      };
+      highlight.enable = true;
       indent.enable = true;
 
       incremental_selection = {
@@ -104,6 +97,4 @@
       hcl
     ];
   };
-
-  # programs.nixvim.extraPackages = [pkgs.clang];
 }
