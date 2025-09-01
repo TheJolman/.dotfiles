@@ -47,6 +47,7 @@
     lazygit
     tetrigo.packages.${system}.default
     aerc # email tui client
+    tt # typing test
 
     # ---- Networking ---- #
     dhcpm
