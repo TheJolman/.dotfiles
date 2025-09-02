@@ -1,8 +1,8 @@
 {...}: {
   programs.hyprpanel = {
     # TODO: configure screenshot, avatar
-    enable = true;
-    systemd.enable = true;
+    enable = false;
+    systemd.enable = false;
 
     settings = {
       bar = {
