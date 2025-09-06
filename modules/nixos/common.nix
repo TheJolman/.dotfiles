@@ -58,7 +58,6 @@
     curl
     git
     vim
-    greetd.tuigreet
     p7zip
   ];
 
