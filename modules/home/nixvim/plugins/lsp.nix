@@ -194,7 +194,7 @@
         };
 
         ts_ls = {
-          enable = false;
+          enable = true;
           rootMarkers = ["package.json"];
         };
 

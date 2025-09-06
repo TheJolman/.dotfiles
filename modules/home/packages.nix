@@ -43,6 +43,7 @@
     lftp
     killall
     deno
+    nodejs
     dmidecode
     powertop
     lazygit
