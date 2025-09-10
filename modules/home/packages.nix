@@ -23,33 +23,35 @@
     nix-output-monitor
     nvd
     alejandra
-    pre-commit
     ripgrep
-    stylua
-    uv
-    pixi
     xh
     jq
-    gh-dash
-    awscli2
-    terraform
     traceroute
-    claude-code
     terminder.packages.${system}.default
-    codex
     lsof
     nfs-utils
     lftp
     killall
+    dmidecode
+    powertop
+    tetrigo.packages.${system}.default
+    tt # typing test
+
+    # ---- Dev Tools ---- #
     deno
     nodejs
     pnpm
-    dmidecode
-    powertop
+    gh-dash
+    awscli2
+    terraform
+    stylua
+    uv
+    pixi
+    pre-commit
     lazygit
-    tetrigo.packages.${system}.default
-    aerc # email tui client
-    tt # typing test
+    stable.unityhub
+    stable.jetbrains.idea-ultimate
+    stable.jetbrains.rider
 
     # ---- Networking ---- #
     dhcpm
@@ -60,13 +62,10 @@
     iftop
     dnslookup
 
-    # ---- Gui Apps ---- #
+    # ---- GUI Apps ---- #
     gimp
-    stable.unityhub
     libresprite
     tiled
-    stable.jetbrains.idea-ultimate
-    stable.jetbrains.rider
     mozillavpn
     kitty
     impression
@@ -95,7 +94,6 @@
     atlauncher # minecraft
     seahorse # for GnomeKeyring
     rnote
-    bruno
     filezilla
     neovide
     warpinator
