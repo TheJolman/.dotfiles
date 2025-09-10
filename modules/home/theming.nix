@@ -24,6 +24,9 @@
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
       };
+      "org/gnome/desktop/default-applications" = {
+        terminal = "kitty";
+      };
     };
   };
 
@@ -55,6 +58,15 @@
 
   home.sessionVariables = {
     QT_QPA_PLATFORM = "wayland";
+  };
+
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [
+        "kitty.desktop"
+      ];
+    };
   };
 
   home.pointerCursor = {
