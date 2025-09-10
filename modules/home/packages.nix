@@ -84,7 +84,7 @@
     gnome-font-viewer
     thunderbird-latest
     gnome-system-monitor
-    transmission_4-qt # torrent client
+    transmission_4-gtk # torrent client
     celluloid # video player
     kdePackages.kdenlive
     gnome-network-displays # for miracast
