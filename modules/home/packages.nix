@@ -35,7 +35,6 @@
     terraform
     traceroute
     claude-code
-    gemini-cli
     terminder.packages.${system}.default
     codex
     lsof
