@@ -63,6 +63,7 @@
 
     initContent = ''
       eval "$(pixi completion --shell zsh)"
+      export PATH="/home/josh/.deno/bin:$PATH"
     '';
   };
 
