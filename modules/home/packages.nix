@@ -43,6 +43,7 @@
     killall
     deno
     nodejs
+    pnpm
     dmidecode
     powertop
     lazygit
