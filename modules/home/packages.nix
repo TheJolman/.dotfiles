@@ -87,9 +87,7 @@
     transmission_4-gtk # torrent client
     celluloid # video player
     kdePackages.kdenlive
-    gnome-network-displays # for miracast
     gnome-calculator
-    kooha # screen recorder
     obs-studio
     atlauncher # minecraft
     seahorse # for GnomeKeyring
@@ -107,6 +105,7 @@
     jetbrains-mono
     nerd-fonts.caskaydia-cove
     nerd-fonts.fira-code
+    nerd-fonts.zed-mono
     nerd-fonts.dejavu-sans-mono
     nerd-fonts.fantasque-sans-mono
     nerd-fonts.iosevka
