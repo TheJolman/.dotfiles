@@ -4,7 +4,7 @@
     # ./avante.nix
     # ./copilot.nix
     ./rainbow-delimiters.nix
-    ./vimtex.nix
+    # ./vimtex.nix
     ./lsp.nix
     ./lsp-lines.nix
     ./cmp.nix
@@ -12,7 +12,7 @@
     ./todo-comments.nix
     ./diffview.nix
     ./luasnip.nix
-    ./neogit.nix
+    # ./neogit.nix
     ./flash.nix
     ./indent-blankline.nix
     ./ts-autotag.nix
