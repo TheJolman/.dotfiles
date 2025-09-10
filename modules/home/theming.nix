@@ -12,7 +12,7 @@
     flavor = "mocha";
     cursors.enable = false;
     gtk.icon.enable = true;
-    kvantum.enable = true;
+    kvantum.enable = false;
     kitty.enable = false;
   };
 
@@ -26,14 +26,19 @@
       };
     };
   };
+
   gtk = {
     enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
   };
 
   qt = {
     enable = true;
-    platformTheme.name = "kvantum";
-    style.name = "kvantum";
+    platformTheme = "gnome";
+    style.name = "adwaita-dark";
   };
 
   home.sessionVariables = {
