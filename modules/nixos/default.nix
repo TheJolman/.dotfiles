@@ -8,6 +8,7 @@
     home-manager.nixosModules.default
     home-manager.nixosModules.home-manager
     ./networking.nix
+    ./amdgpu.nix
     # ./mysql.nix
     ./printing.nix
     ./agenix.nix
