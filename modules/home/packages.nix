@@ -93,7 +93,6 @@
     seahorse # for GnomeKeyring
     rnote
     filezilla
-    neovide
     warpinator
 
     # ---- Fonts ---- #
