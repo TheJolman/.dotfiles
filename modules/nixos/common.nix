@@ -14,6 +14,10 @@
     groups.${user} = {};
   };
 
+  hardware.graphics = {
+    enable = true;
+  };
+
   programs.zsh.enable = true;
 
   nix = {
