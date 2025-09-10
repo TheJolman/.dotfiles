@@ -14,5 +14,6 @@
     ./theming.nix
     ./btop.nix
     ./nix-ld.nix
+    ./deno.nix
   ];
 }
