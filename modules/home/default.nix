@@ -13,7 +13,6 @@
     ./packages.nix
     ./theming.nix
     ./btop.nix
-    ./nix-ld.nix
-    ./deno.nix
+    # ./nix-ld.nix
   ];
 }
