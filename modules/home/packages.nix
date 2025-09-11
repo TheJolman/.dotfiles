@@ -117,5 +117,13 @@
     PAGER = "bat";
     MANPAGER = "nvim +Man!";
     NIXPKGS_ALLOW_UNFREE = 1;
+    PNPM_HOME = "$HOME/.pnpm";
   };
+
+  home.sessionPath = [
+    "$HOME/.deno/bin"
+    "$HOME/.pnpm"
+    "$HOME/go/bin"
+    "$HOME/.cargo/bin"
+  ];
 }
