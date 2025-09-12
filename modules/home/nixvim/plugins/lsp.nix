@@ -189,7 +189,8 @@
 
         # Web dev
         denols = {
-          enable = true;
+          enable = false;
+          autostart = false;
           rootMarkers = ["deno.json" "deno.jsonc"];
         };
 
@@ -200,8 +201,7 @@
 
         eslint = {
           enable = true;
-          cmd = ["vscode-eslint-language-server --stdio"];
-          rootMarkers = ["package.json" "deno.json" "deno.jsonc"];
+          # rootMarkers = ["package.json" "deno.json" "deno.jsonc"];
         };
 
         jinja_lsp = {
@@ -219,7 +219,10 @@
         superhtml.enable = true;
         cssls.enable = true;
         jsonls.enable = true;
-        htmx.enable = true;
+        htmx = {
+          enable = true;
+          autostart = false;
+        };
         tailwindcss.enable = true;
 
         # Misc
