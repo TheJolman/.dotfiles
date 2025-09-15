@@ -64,7 +64,7 @@
 
     # ---- GUI Apps ---- #
     gimp
-    libresprite
+    aseprite
     tiled
     mozillavpn
     kitty
