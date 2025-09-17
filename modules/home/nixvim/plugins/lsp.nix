@@ -228,6 +228,7 @@
         # Misc
         dockerls.enable = true;
         terraformls.enable = true;
+        verible.enable = true;
       };
     };
   };

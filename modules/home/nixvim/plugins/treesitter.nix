@@ -95,6 +95,7 @@
       editorconfig
       csv
       hcl
+      verilog
     ];
   };
 }
