@@ -3,6 +3,10 @@
     enable = true;
     settings = {
       auto_install = false;
+      ensure_installed = [
+        # for grammars not found in nixpkgs
+        "verilog"
+      ];
       parser_isntall_dir = null;
       highlight.enable = true;
       indent.enable = true;
@@ -19,8 +23,8 @@
     };
     folding = true;
     nixvimInjections = true;
-    nixGrammars = true;
 
+    nixGrammars = true; # this installs the below grammars
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       c
       cpp
@@ -95,7 +99,6 @@
       editorconfig
       csv
       hcl
-      verilog
     ];
   };
 }
