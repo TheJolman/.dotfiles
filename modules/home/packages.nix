@@ -68,7 +68,7 @@
     tiled
     mozillavpn
     kitty
-    impression
+    impression # creates bootable drives
     gparted
     nautilus
     nautilus-open-any-terminal
@@ -77,7 +77,7 @@
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
-    evince # gnome document viewer
+    papers # gnome document viewer
     eog # gnome image viwer
     firefox
     agenix.packages.${system}.default
@@ -85,7 +85,7 @@
     thunderbird-latest
     gnome-system-monitor
     transmission_4-gtk # torrent client
-    celluloid # video player
+    showtime # video player
     kdePackages.kdenlive
     gnome-calculator
     obs-studio
@@ -94,6 +94,7 @@
     rnote
     filezilla
     warpinator
+    newsflash # rss reader
 
     # ---- Fonts ---- #
     noto-fonts
