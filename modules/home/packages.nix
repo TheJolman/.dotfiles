@@ -85,7 +85,7 @@
     thunderbird-latest
     gnome-system-monitor
     transmission_4-gtk # torrent client
-    showtime # video player
+    celluloid # video player (showtime is another gnome option)
     kdePackages.kdenlive
     gnome-calculator
     obs-studio
