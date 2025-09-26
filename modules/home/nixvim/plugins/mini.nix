@@ -20,7 +20,6 @@
         trailspace = {};
         cursorword = {};
         git = {};
-        bufremove = {};
         ai = {};
         diff = {};
         statusline = {};
@@ -28,7 +27,6 @@
         bracketed = {};
         clue = {
           triggers = [
-            # Leader triggers
             {
               mode = "n";
               keys = "<Leader>";
@@ -37,7 +35,6 @@
               mode = "v";
               keys = "<Leader>";
             }
-            # g key
             {
               mode = "n";
               keys = "g";
@@ -48,11 +45,11 @@
             }
             {
               mode = "n";
-              keys = "<C>";
+              keys = "[";
             }
             {
               mode = "n";
-              keys = "<A>";
+              keys = "]";
             }
           ];
         };
@@ -66,13 +63,6 @@
             highlight = "gsh";
             replace = "gsr";
             update_n_lines = "gsn";
-          };
-        };
-
-        notify = {
-          lsp_progress = {
-            enable = false;
-            duration_last = 1000;
           };
         };
 

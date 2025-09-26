@@ -1,10 +1,10 @@
 {
   pkgs,
-  catppuccin,
+  inputs,
   ...
 }: {
   imports = [
-    catppuccin.homeModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
   ];
 
   catppuccin = {

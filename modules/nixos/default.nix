@@ -1,17 +1,13 @@
-{
-  catppuccin,
-  home-manager,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
-    catppuccin.nixosModules.catppuccin
-    home-manager.nixosModules.default
-    home-manager.nixosModules.home-manager
+    inputs.catppuccin.nixosModules.catppuccin
+    inputs.home-manager.nixosModules.default
+    inputs.home-manager.nixosModules.home-manager
     ./networking.nix
     ./amdgpu.nix
     # ./mysql.nix
     ./printing.nix
-    ./agenix.nix
+    # ./agenix.nix
     ./interception-tools.nix
     ./containers.nix
     ./bluetooth.nix

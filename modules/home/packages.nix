@@ -1,9 +1,7 @@
 {
   pkgs,
   system,
-  terminder,
-  agenix,
-  tetrigo,
+  inputs,
   ...
 }: {
   home.packages = with pkgs; [
@@ -27,14 +25,14 @@
     xh
     jq
     traceroute
-    terminder.packages.${system}.default
+    inputs.terminder.packages.${system}.default
     lsof
     nfs-utils
     lftp
     killall
     dmidecode
     powertop
-    tetrigo.packages.${system}.default
+    inputs.tetrigo.packages.${system}.default
     tt # typing test
 
     # ---- Dev Tools ---- #
@@ -80,7 +78,7 @@
     papers # gnome document viewer
     eog # gnome image viwer
     firefox
-    agenix.packages.${system}.default
+    # inputs.agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
     gnome-system-monitor

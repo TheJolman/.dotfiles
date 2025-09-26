@@ -1,5 +1,6 @@
+local minifiles = require('mini.files')
 local set_cwd = function()
-  local path = (MiniFiles.get_fs_entry() or {}).path
+  local path = (minifiles.get_fs_entry() or {}).path
   if path == nil then
     return vim.notify('Cursor is not on valid entry')
   end
@@ -7,7 +8,7 @@ local set_cwd = function()
 end
 
 local yank_path = function()
-  local path = (MiniFiles.get_fs_entry() or {}).path
+  local path = (minifiles.get_fs_entry() or {}).path
   if path == nil then
     return vim.notify('Cursor is not on valid entry')
   end
@@ -25,3 +26,15 @@ vim.api.nvim_create_autocmd('User', {
 
 local rhs = '<CMD>lua MiniGit.show_at_cursor()<CR>'
 vim.keymap.set({ 'n', 'x' }, '<Leader>gs', rhs, { desc = 'Show at cursor' })
+
+local miniclue = require('mini.clue')
+require('mini.clue').setup({
+  clues = {
+    miniclue.gen_clues.builtin_completion(),
+    miniclue.gen_clues.g(),
+    miniclue.gen_clues.marks(),
+    miniclue.gen_clues.registers(),
+    miniclue.gen_clues.windows(),
+    miniclue.gen_clues.z(),
+  },
+})

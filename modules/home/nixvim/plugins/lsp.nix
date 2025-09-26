@@ -2,7 +2,7 @@
   programs.nixvim = {
     extraPackages = with pkgs; [
       alejandra
-      dotnetCorePackages.dotnet_8.sdk
+      dotnetCorePackages.dotnet_9.sdk
       black
       isort
       rustfmt
@@ -104,9 +104,15 @@
           }
           {
             key = "<A-d>";
-            action = "<cmd>Trouble diagnostics toggle<cr>";
+            action = "<cmd>lua Snacks.picker.diagnostics()<cr>";
             mode = "n";
             options.desc = "Toggle diagnostics";
+          }
+          {
+            key = "<leader>ca";
+            action = "<cmd>vim.lsp.buf.code_action<cr>";
+            mode = ["n" "v"];
+            options.desc = "LSP code action";
           }
         ];
       };

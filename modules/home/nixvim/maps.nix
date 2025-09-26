@@ -3,7 +3,13 @@
     globals.mapleader = " ";
 
     keymaps = [
-      # General
+      # =================== General ===================
+      {
+        key = "<leader>w";
+        action = "<CMD>w<CR>";
+        mode = "n";
+        options.desc = "save";
+      }
       {
         key = "<leader>m";
         action = "<CMD>make<CR>";
@@ -28,18 +34,20 @@
         mode = "v";
         options.desc = "Move text up";
       }
-      # Stay in indent mode while indenting
       {
         key = "<";
         action = "<gv";
         mode = "v";
+        options.desc = "Visual mode continuous indenting";
       }
       {
         key = ">";
         action = ">gv";
         mode = "v";
+        options.desc = "Visual mode continuous indenting";
       }
-      # Git stuff
+
+      # =================== Git related ===================
       {
         key = "<leader>gg";
         action = "<CMD>lua Snacks.lazygit()<CR>";
@@ -56,7 +64,7 @@
         key = "<leader>gb";
         action = "<CMD>lua Snacks.git.blame_line()<CR>";
         mode = "n";
-        options.desc = "Git log for current line";
+        options.desc = "Git blame current line";
       }
       {
         key = "<leader>go";
@@ -82,36 +90,17 @@
         mode = "n";
         options.desc = "Git file history";
       }
-      # General
+
+      # =================== Buffer management ===================
       {
-        key = "<leader>q";
-        action = "<CMD>q<CR>";
-        mode = "n";
-        options.desc = "quit";
-      }
-      {
-        key = "<leader>w";
-        action = "<CMD>w<CR>";
-        mode = "n";
-        options.desc = "save";
-      }
-      {
-        key = "<leader>v";
-        action = "<CMD>vsplit<CR>";
-        mode = "n";
-        options.desc = "vertical split";
-        options.silent = true;
-      }
-      # Buffer management
-      {
-        key = "<leader>p";
+        key = "[b";
         action = "<CMD>bp<CR>";
         mode = "n";
         options.desc = "prev buffer";
         options.silent = true;
       }
       {
-        key = "<leader>n";
+        key = "]b";
         action = "<CMD>bn<CR>";
         mode = "n";
         options.desc = "next buffer";
@@ -124,7 +113,43 @@
         options.desc = "Delete buffer";
         options.silent = true;
       }
-      # Window management
+
+      # =================== Tab management ===================
+      {
+        key = "[t";
+        action = "<CMD>tabprevious<CR>";
+        mode = "n";
+        options.desc = "prev tab";
+        options.silent = true;
+      }
+      {
+        key = "]t";
+        action = "<CMD>tabnext<CR>";
+        mode = "n";
+        options.desc = "next tab";
+        options.silent = true;
+      }
+      {
+        key = "<leader>to";
+        action = "<CMD>tabnew<CR>";
+        mode = "n";
+        options.desc = "New tab";
+      }
+      {
+        key = "<leader>tc";
+        action = "<CMD>tabclose<CR>";
+        mode = "n";
+        options.desc = "close tab";
+      }
+
+      # =================== Window management ===================
+      {
+        key = "<leader>v";
+        action = "<CMD>vsplit<CR>";
+        mode = "n";
+        options.desc = "vertical split";
+        options.silent = true;
+      }
       {
         key = "<leader>h";
         action = "<C-W>h";
@@ -173,13 +198,15 @@
         mode = "n";
         options.desc = "Decrease window width";
       }
-      # Files
+
+      # =================== File explorer (Mini) ===================
       {
         key = "-";
         action = "<CMD>lua MiniFiles.open()<CR>";
         mode = "n";
       }
-      # Terminal
+
+      # =================== Terminal (Snacks) ===================
       {
         key = "<A-t>";
         action = "<cmd>lua Snacks.terminal.toggle()<CR>";
@@ -187,7 +214,7 @@
         options.desc = "Toggle terminal";
       }
 
-      # Picker
+      # =================== Picker (Snacks) ===================
       {
         key = "<leader>ff";
         action = "<cmd>lua Snacks.picker.files()<CR>";
@@ -212,11 +239,29 @@
         mode = "n";
         options.desc = "Grep word under cursor";
       }
+
+      # =================== Quickfix list ===================
       {
-        key = "<leader>c";
-        action = "<cmd>lua Snacks.picker.qflist()<CR>";
+        key = "<leader>qo";
+        action = "<cmd>copen<CR>";
         mode = "n";
         options.desc = "Open qflist";
+      }
+      {
+        key = "<leader>qc";
+        action = "<cmd>cclose<CR>";
+        mode = "n";
+        options.desc = "Open qflist";
+      }
+      {
+        key = "]q";
+        action = "<cmd>cnext<CR>";
+        mode = "n";
+      }
+      {
+        key = "[q";
+        action = "<cmd>cprev<CR>";
+        mode = "n";
       }
     ];
   };
