@@ -1,22 +1,20 @@
 {
   config,
-  agenix,
   lib,
   ...
 }: {
   imports = [
-    agenix.homeManagerModules.default
+    # agenix.homeManagerModules.default
   ];
 
-  age.secrets = {
-    # anthropic-api-key.file = ../../../secrets/anthropic-api-key.age;
-    # groq-api-key.file = ../../../secrets/groq-api-key.age;
-    # openai-api-key.file = ../../../secrets/openai-api-key.age;
-  };
+  # age.secrets = {
+  # anthropic-api-key.file = ../../../secrets/anthropic-api-key.age;
+  # groq-api-key.file = ../../../secrets/groq-api-key.age;
+  # openai-api-key.file = ../../../secrets/openai-api-key.age;
+  # };
 
   programs.zsh = {
     enable = true;
-    # dotDir = ".config/zsh_hm";
     dotDir = config.xdg.configHome + "/zsh_hm";
     autocd = true;
     enableCompletion = true;

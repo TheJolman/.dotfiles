@@ -1,9 +1,7 @@
 {
   pkgs,
   system,
-  terminder,
-  agenix,
-  tetrigo,
+  inputs,
   ...
 }: {
   home.packages = with pkgs; [
@@ -23,32 +21,35 @@
     nix-output-monitor
     nvd
     alejandra
-    pre-commit
     ripgrep
-    stylua
-    uv
-    pixi
     xh
     jq
-    gh-dash
-    awscli2
-    terraform
     traceroute
-    claude-code
-    gemini-cli
-    terminder.packages.${system}.default
-    codex
+    inputs.terminder.packages.${system}.default
     lsof
     nfs-utils
     lftp
     killall
-    deno
     dmidecode
     powertop
-    lazygit
-    tetrigo.packages.${system}.default
-    aerc # email tui client
+    inputs.tetrigo.packages.${system}.default
     tt # typing test
+
+    # ---- Dev Tools ---- #
+    deno
+    nodejs
+    pnpm
+    gh-dash
+    awscli2
+    terraform
+    stylua
+    uv
+    pixi
+    pre-commit
+    lazygit
+    stable.unityhub
+    stable.jetbrains.idea-ultimate
+    stable.jetbrains.rider
 
     # ---- Networking ---- #
     dhcpm
@@ -59,16 +60,13 @@
     iftop
     dnslookup
 
-    # ---- Gui Apps ---- #
+    # ---- GUI Apps ---- #
     gimp
-    stable.unityhub
-    libresprite
+    aseprite
     tiled
-    stable.jetbrains.idea-ultimate
-    stable.jetbrains.rider
     mozillavpn
     kitty
-    impression
+    impression # creates bootable drives
     gparted
     nautilus
     nautilus-open-any-terminal
@@ -77,27 +75,24 @@
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
-    evince # gnome document viewer
+    papers # gnome document viewer
     eog # gnome image viwer
     firefox
-    agenix.packages.${system}.default
+    # inputs.agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
     gnome-system-monitor
-    transmission_4-qt # torrent client
-    celluloid # video player
+    transmission_4-gtk # torrent client
+    celluloid # video player (showtime is another gnome option)
     kdePackages.kdenlive
-    gnome-network-displays # for miracast
     gnome-calculator
-    kooha # screen recorder
     obs-studio
     atlauncher # minecraft
     seahorse # for GnomeKeyring
     rnote
-    bruno
     filezilla
-    neovide
     warpinator
+    newsflash # rss reader
 
     # ---- Fonts ---- #
     noto-fonts
@@ -108,6 +103,7 @@
     jetbrains-mono
     nerd-fonts.caskaydia-cove
     nerd-fonts.fira-code
+    nerd-fonts.zed-mono
     nerd-fonts.dejavu-sans-mono
     nerd-fonts.fantasque-sans-mono
     nerd-fonts.iosevka
@@ -120,5 +116,13 @@
     PAGER = "bat";
     MANPAGER = "nvim +Man!";
     NIXPKGS_ALLOW_UNFREE = 1;
+    PNPM_HOME = "$HOME/.pnpm";
   };
+
+  home.sessionPath = [
+    "$HOME/.deno/bin"
+    "$HOME/.pnpm"
+    "$HOME/go/bin"
+    "$HOME/.cargo/bin"
+  ];
 }

@@ -20,11 +20,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.darwin.follows = "";
-    };
+    # agenix = {
+    #   url = "github:ryantm/agenix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.darwin.follows = "";
+    # };
 
     terminder = {
       url = "github:thejolman/terminder";
@@ -41,12 +41,6 @@
     self,
     nixpkgs,
     nixpkgs-stable,
-    nixos-hardware,
-    catppuccin,
-    home-manager,
-    agenix,
-    terminder,
-    tetrigo,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -73,16 +67,15 @@
       lib.nixosSystem {
         inherit system;
         # makes available in rest of config
-        specialArgs = {inherit inputs user home-manager catppuccin nixos-hardware;};
+        specialArgs = {inherit inputs user;};
         modules = [
           ./hosts/${hostname}/configuration.nix
-          agenix.nixosModules.default # maybe move to ./modules/nixos/default.nix
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = {inherit inputs user system catppuccin terminder agenix tetrigo;};
+              extraSpecialArgs = {inherit inputs user system;};
               users = {${user} = import ./hosts/${hostname}/home.nix;};
             };
 
@@ -98,5 +91,19 @@
       framework = mkHost "framework";
       workstation = mkHost "workstation";
     };
+
+    # Example usage: home-manager switch --flake .#josh@framework
+    # homeConfigurations = {
+    #   "${user}@framework" = home-manager.lib.homeManagerConfiguration {
+    #     inherit pkgs;
+    #     extraSpecialArgs = {inherit inputs user system catppuccin;};
+    #     modules = [./hosts/framework/home.nix];
+    #   };
+    #   "${user}@workstation" = home-manager.lib.homeManagerConfiguration {
+    #     inherit pkgs;
+    #     extraSpecialArgs = {inherit inputs user system catppuccin;};
+    #     modules = [./hosts/workstation/home.nix];
+    #   };
+    # };
   };
 }

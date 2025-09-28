@@ -14,6 +14,10 @@
     groups.${user} = {};
   };
 
+  hardware.graphics = {
+    enable = true;
+  };
+
   programs.zsh.enable = true;
 
   nix = {
@@ -58,7 +62,6 @@
     curl
     git
     vim
-    greetd.tuigreet
     p7zip
   ];
 

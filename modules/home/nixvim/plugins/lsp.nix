@@ -2,7 +2,7 @@
   programs.nixvim = {
     extraPackages = with pkgs; [
       alejandra
-      dotnetCorePackages.dotnet_8.sdk
+      dotnetCorePackages.dotnet_9.sdk
       black
       isort
       rustfmt
@@ -104,9 +104,15 @@
           }
           {
             key = "<A-d>";
-            action = "<cmd>Trouble diagnostics toggle<cr>";
+            action = "<cmd>lua Snacks.picker.diagnostics()<cr>";
             mode = "n";
             options.desc = "Toggle diagnostics";
+          }
+          {
+            key = "<leader>ca";
+            action = "<cmd>vim.lsp.buf.code_action<cr>";
+            mode = ["n" "v"];
+            options.desc = "LSP code action";
           }
         ];
       };
@@ -189,19 +195,19 @@
 
         # Web dev
         denols = {
-          enable = true;
+          enable = false;
+          autostart = false;
           rootMarkers = ["deno.json" "deno.jsonc"];
         };
 
         ts_ls = {
-          enable = false;
+          enable = true;
           rootMarkers = ["package.json"];
         };
 
         eslint = {
           enable = true;
-          cmd = ["vscode-eslint-language-server --stdio"];
-          rootMarkers = ["package.json" "deno.json" "deno.jsonc"];
+          # rootMarkers = ["package.json" "deno.json" "deno.jsonc"];
         };
 
         jinja_lsp = {
@@ -219,12 +225,16 @@
         superhtml.enable = true;
         cssls.enable = true;
         jsonls.enable = true;
-        htmx.enable = true;
+        htmx = {
+          enable = true;
+          autostart = false;
+        };
         tailwindcss.enable = true;
 
         # Misc
         dockerls.enable = true;
         terraformls.enable = true;
+        verible.enable = true;
       };
     };
   };

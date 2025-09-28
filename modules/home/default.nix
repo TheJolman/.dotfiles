@@ -13,6 +13,8 @@
     ./packages.nix
     ./theming.nix
     ./btop.nix
-    ./nix-ld.nix
+    # ./nix-ld.nix
+    ./gemini.nix
+    # inputs.agenix.nixosModules.default
   ];
 }
