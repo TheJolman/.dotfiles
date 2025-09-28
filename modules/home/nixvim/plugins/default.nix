@@ -4,7 +4,6 @@
     ./rainbow-delimiters.nix
     ./lsp.nix
     ./lsp-lines.nix
-    # ./cmp.nix
     ./blink.nix
     ./treesitter.nix
     ./todo-comments.nix
