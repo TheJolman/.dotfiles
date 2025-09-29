@@ -1,6 +1,8 @@
 {
   config,
   lib,
+  user,
+  hostname,
   ...
 }: {
   imports = [
@@ -50,6 +52,7 @@
       ns = "nom shell";
       nr = "nix run";
       switch = "nh os switch";
+      hms = "nix run nixpkgs#home-manager -- switch --flake ~/.dotfiles#${user}${hostname}";
       kssh = "kitten ssh";
     };
 

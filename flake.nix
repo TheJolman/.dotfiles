@@ -79,7 +79,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = {inherit inputs user system;};
+              extraSpecialArgs = {inherit inputs user hostname system;};
               users = {${user} = import ./hosts/${hostname}/home.nix;};
             };
 
@@ -93,7 +93,7 @@
     mkHome = user: hostname:
       home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit inputs user system;};
+        extraSpecialArgs = {inherit inputs user hostname system;};
         modules = [./hosts/${hostname}/home.nix];
       };
   in {
