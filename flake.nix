@@ -44,11 +44,11 @@
     nixpkgs,
     nixpkgs-stable,
     determinate,
+    home-manager,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
-    user = "josh";
 
     # allows stable packages to be reached with pkgs.stable.<pkg>
     stableOverlay = final: prev: {
@@ -66,7 +66,7 @@
       ];
     };
 
-    mkHost = hostname:
+    mkHost = user: hostname:
       lib.nixosSystem {
         inherit system;
         # makes available in rest of config
@@ -88,26 +88,25 @@
           }
         ];
       };
+
+    # nix run nixpkgs#home-manager -- switch --flake .#josh@framework
+    mkHome = user: hostname:
+      home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs user system;};
+        modules = [./hosts/${hostname}/home.nix];
+      };
   in {
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
 
     nixosConfigurations = {
-      framework = mkHost "framework";
-      workstation = mkHost "workstation";
+      framework = mkHost "josh" "framework";
+      workstation = mkHost "josh" "workstation";
     };
 
-    # Example usage: home-manager switch --flake .#josh@framework
-    # homeConfigurations = {
-    #   "${user}@framework" = home-manager.lib.homeManagerConfiguration {
-    #     inherit pkgs;
-    #     extraSpecialArgs = {inherit inputs user system catppuccin;};
-    #     modules = [./hosts/framework/home.nix];
-    #   };
-    #   "${user}@workstation" = home-manager.lib.homeManagerConfiguration {
-    #     inherit pkgs;
-    #     extraSpecialArgs = {inherit inputs user system catppuccin;};
-    #     modules = [./hosts/workstation/home.nix];
-    #   };
-    # };
+    homeConfigurations = {
+      "josh@framework" = mkHome "josh" "framework";
+      "josh@workstation" = mkHome "josh" "workstation";
+    };
   };
 }
