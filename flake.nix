@@ -6,6 +6,8 @@
 
     nixpkgs-stable.url = "nixpkgs/nixos-25.05";
 
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     home-manager = {
@@ -41,6 +43,7 @@
     self,
     nixpkgs,
     nixpkgs-stable,
+    determinate,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -69,6 +72,7 @@
         # makes available in rest of config
         specialArgs = {inherit inputs user;};
         modules = [
+          determinate.nixosModules.default
           ./hosts/${hostname}/configuration.nix
           {
             home-manager = {
