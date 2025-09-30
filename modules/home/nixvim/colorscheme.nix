@@ -9,7 +9,6 @@
       dim_inactive.enabled = true;
 
       integrations = {
-        cmp = true;
         gitsigns = true;
         indent_blankline = {
           enabled = true;
