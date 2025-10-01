@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     # font.name = "CaskaydiaCove Nerd Font";
-    font.name = "ZedMono Nerd Font";
+    font.name = "Iosevka Nerd Font";
     font.size = 13;
     shellIntegration.enableZshIntegration = true;
     themeFile = "cherry-midnight";
@@ -23,6 +23,7 @@
       term = "xterm-kitty"; # this is xterm-256color when I checked for some reason?
     };
     extraConfig = ''
+      disable_ligatures always
       map super+shift+enter new_os_window_with_cwd
 
       map super+shift+j scroll_page_down
