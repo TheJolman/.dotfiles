@@ -52,7 +52,7 @@
       ns = "nom shell";
       nr = "nix run";
       switch = "nh os switch";
-      hms = "nix run nixpkgs#home-manager -- switch --flake ~/.dotfiles#${user}${hostname}";
+      hms = "nix run home-manager -- switch --flake ~/.dotfiles#${user}@${hostname} -b backup";
       kssh = "kitten ssh";
     };
 

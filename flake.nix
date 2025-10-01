@@ -89,7 +89,7 @@
         ];
       };
 
-    # nix run nixpkgs#home-manager -- switch --flake .#josh@framework
+    # nix run home-manager -- switch --flake .#josh@framework
     mkHome = user: hostname:
       home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
