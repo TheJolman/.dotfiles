@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     # ---- CLI Apps ---- #
     xdragon
+    file
     curl
     fzf
     fd
@@ -78,6 +79,7 @@
     papers # gnome document viewer
     eog # gnome image viwer
     firefox
+    chromium
     # inputs.agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
@@ -125,4 +127,15 @@
     "$HOME/go/bin"
     "$HOME/.cargo/bin"
   ];
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/about" = "firefox.desktop";
+      "x-scheme-handler/unknown" = "firefox.desktop";
+    };
+  };
 }
