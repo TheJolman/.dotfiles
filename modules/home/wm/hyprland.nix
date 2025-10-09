@@ -27,6 +27,7 @@ in {
     alsa-utils
     pavucontrol
     acpi
+    wl-mirror
   ];
   wayland.windowManager.hyprland = {
     enable = true;
