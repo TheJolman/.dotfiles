@@ -51,6 +51,8 @@
     stable.unityhub
     stable.jetbrains.idea-ultimate
     stable.jetbrains.rider
+    bruno
+    bruno-cli
 
     # ---- Networking ---- #
     dhcpm
