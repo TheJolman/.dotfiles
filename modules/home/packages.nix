@@ -6,7 +6,7 @@
 }: {
   home.packages = with pkgs; [
     # ---- CLI Apps ---- #
-    xdragon
+    dragon-drop
     file
     curl
     fzf
