@@ -1,10 +1,9 @@
 {...}: {
   programs.git = {
     enable = true;
-    userEmail = "git@jolman.me";
-    userName = "Josh Holman";
-    delta.enable = true;
-    extraConfig = {
+    settings = {
+      user.name = "Josh Holman";
+      user.email = "git@jolman.me";
       init = {
         defaultBranch = "main";
       };
@@ -22,8 +21,11 @@
     ignores = [
       ".nvim/"
       ".direnv/"
+      ".claude/"
     ];
   };
+
+  # programs.delta.enable = true;
 
   programs.gh = {
     enable = true;
