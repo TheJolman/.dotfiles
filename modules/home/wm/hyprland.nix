@@ -111,11 +111,9 @@ in {
         preserve_split = true; # you probably want this
       };
 
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_distance = 300;
-      };
+      gesture = [
+        "3, horizontal, workspace"
+      ];
 
       windowrule = [
         "idleinhibit fullscreen,class:(firefox)"
