@@ -1,4 +1,8 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    lighttpd # for `git instaweb`
+  ];
+
   programs.git = {
     enable = true;
     settings = {
@@ -17,6 +21,9 @@
       gpg.format = "ssh";
       user.signingkey = "~/.ssh/id_ed25519.pub";
       commit.gpgsign = true;
+      merge.tool = "nvimdiff";
+      # git config --global mergetool.nvimdiff.cmd 'nvim -d "$LOCAL" "$REMOTE" "$MERGED" -c "wincmd w" -c "wincmd J"'
+      mergetool.nvimdiff.cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c \"wincmd w\" -c \"wincmd J\"";
     };
     ignores = [
       ".nvim/"
@@ -24,8 +31,6 @@
       ".claude/"
     ];
   };
-
-  # programs.delta.enable = true;
 
   programs.gh = {
     enable = true;
