@@ -115,6 +115,7 @@ in {
         "3, horizontal, workspace"
       ];
 
+      # Use `hyprctl clients` for window class/title info
       windowrule = [
         "idleinhibit fullscreen,class:(firefox)"
         "idleinhibit focus,title:(.*)(- Youtube)$"
