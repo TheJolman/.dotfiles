@@ -14,7 +14,7 @@
     ./theming.nix
     ./btop.nix
     # ./nix-ld.nix
-    ./gemini.nix
+    # ./gemini.nix
     # inputs.agenix.nixosModules.default
   ];
 }

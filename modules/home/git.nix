@@ -1,10 +1,13 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    lighttpd # for `git instaweb`
+  ];
+
   programs.git = {
     enable = true;
-    userEmail = "git@jolman.me";
-    userName = "Josh Holman";
-    delta.enable = true;
-    extraConfig = {
+    settings = {
+      user.name = "Josh Holman";
+      user.email = "git@jolman.me";
       init = {
         defaultBranch = "main";
       };
@@ -18,10 +21,12 @@
       gpg.format = "ssh";
       user.signingkey = "~/.ssh/id_ed25519.pub";
       commit.gpgsign = true;
+      merge.tool = "vimdiff";
     };
     ignores = [
       ".nvim/"
       ".direnv/"
+      ".claude/"
     ];
   };
 
