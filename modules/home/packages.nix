@@ -35,6 +35,7 @@
     powertop
     inputs.tetrigo.packages.${system}.default
     tt # typing test
+    mcrcon
 
     # ---- Dev Tools ---- #
     deno
