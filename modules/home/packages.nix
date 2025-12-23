@@ -41,6 +41,7 @@
     deno
     nodejs
     pnpm
+    bun
     gh-dash
     awscli2
     terraform
@@ -95,9 +96,10 @@
     atlauncher # minecraft
     seahorse # for GnomeKeyring
     rnote
-    filezilla
-    warpinator
+    # filezilla
+    # warpinator # LAN file sharing
     newsflash # rss reader
+    obsidian
 
     # ---- Fonts ---- #
     noto-fonts
@@ -141,6 +143,7 @@
       "x-scheme-handler/about" = "firefox.desktop";
       "x-scheme-handler/unknown" = "firefox.desktop";
       "x-scheme-handler/discord" = "vesktop.desktop";
+      "image/jpeg" = "org.gnome.eog.desktop";
     };
   };
 }
