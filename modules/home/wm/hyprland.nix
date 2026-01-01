@@ -18,15 +18,15 @@ in {
     libnotify
     hyprcursor
     wl-clipboard
-    grim
-    slurp
+    # grim
+    # slurp
     hyprshot
     networkmanagerapplet
     polkit_gnome
     brightnessctl
     alsa-utils
-    pavucontrol
-    acpi
+    pavucontrol # Audio Control
+    acpi # Battery status
     wl-mirror
   ];
   wayland.windowManager.hyprland = {
@@ -172,11 +172,14 @@ in {
           "ALT, TAB, bringactivetotop,"
 
           # screenshot a region
-          ", PRINT, exec, hyprshot -m region -o ~/Pictures/Screenshots"
-          # screenshot a window
-          "$mod, PRINT, exec, hyprshot -m window -o ~/Pictures/Screenshots"
-          # screenshot a monitor
-          "$mod SHIFT, PRINT, exec, hyprshot -m output -o ~/Pictures/Screenshots"
+          "     , PRINT, exec, hyprshot -m region -o ~/Pictures/Screenshots"
+          "SHIFT, PRINT, exec, hyprshot -m region --clipboard-only"
+          # screenshot active window
+          "ALT      , PRINT, exec, hyprshot -m active -m window -o ~/Pictures/Screenshots"
+          "ALT SHIFT, PRINT, exec, hyprshot -m active -m window --clipboard-only"
+          # screenshot active monitor
+          "$mod      , PRINT, exec, hyprshot -m active -m output -o ~/Pictures/Screenshots"
+          "$mod SHIFT, PRINT, exec, hyprshot -m active -m output --clipboard-only"
 
           # window navigation
           "$mod, h, movefocus, l"

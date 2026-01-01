@@ -35,7 +35,7 @@
     powertop
     inputs.tetrigo.packages.${system}.default
     tt # typing test
-    mcrcon
+    mcrcon # minecraft
 
     # ---- Dev Tools ---- #
     deno
@@ -66,8 +66,9 @@
     dnslookup
 
     # ---- GUI Apps ---- #
+    file-roller # archive manager
     gimp
-    aseprite
+    # aseprite
     tiled
     mozillavpn
     kitty
@@ -88,7 +89,10 @@
     gnome-font-viewer
     thunderbird-latest
     gnome-system-monitor
-    transmission_4-gtk # torrent client
+    (transmission_4.override
+      {
+        enableGTK3 = true;
+      }) # torrent client
     celluloid # video player (showtime is another gnome option)
     kdePackages.kdenlive
     gnome-calculator
@@ -133,17 +137,50 @@
     "$HOME/.cargo/bin"
   ];
 
-  xdg.mimeApps = {
+  xdg.configFile."mimeapps.list" = {
     enable = true;
-    defaultApplications = {
-      "application/pdf" = "firefox.desktop";
-      "text/html" = "firefox.desktop";
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
-      "x-scheme-handler/about" = "firefox.desktop";
-      "x-scheme-handler/unknown" = "firefox.desktop";
-      "x-scheme-handler/discord" = "vesktop.desktop";
-      "image/jpeg" = "org.gnome.eog.desktop";
-    };
+    text = ''
+      [Default Applications]
+      # Web & HTML
+      application/pdf=firefox.desktop;
+      text/html=firefox.desktop;
+      application/xhtml+xml=firefox.desktop;
+      x-scheme-handler/http=firefox.desktop;
+      x-scheme-handler/https=firefox.desktop;
+      x-scheme-handler/about=firefox.desktop;
+      x-scheme-handler/unknown=firefox.desktop;
+      x-scheme-handler/discord=vesktop.desktop;
+
+      # Images
+      image/jpeg=org.gnome.eog.desktop;
+      image/png=org.gnome.eog.desktop;
+      image/gif=org.gnome.eog.desktop;
+      image/webp=org.gnome.eog.desktop;
+      image/svg+xml=org.gnome.eog.desktop;
+      image/bmp=org.gnome.eog.desktop;
+      image/tiff=org.gnome.eog.desktop;
+
+      # Documents
+      application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
+      application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
+      application/vnd.oasis.opendocument.presentation=libreoffice-impress.desktop;
+      application/msword=libreoffice-writer.desktop;
+      application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+      application/vnd.ms-excel=libreoffice-calc.desktop;
+      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
+      application/vnd.ms-powerpoint=libreoffice-impress.desktop;
+      application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
+
+      # Torrents
+      application/x-bittorrent=transmission-gtk.desktop;
+      x-scheme-handler/magnet=transmission-gtk.desktop;
+
+      # Email
+      x-scheme-handler/mailto=thunderbird.desktop;
+
+      # File manager
+      inode/directory=org.gnome.Nautilus.desktop;
+    '';
+    force = true;
   };
 }
