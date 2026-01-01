@@ -6,7 +6,7 @@
     ./shell/default.nix
     # ./zed/default.nix
     # ./vscode/default.nix
-    ./jupyter.nix
+    # ./jupyter.nix
     ./direnv.nix
     ./kitty.nix
     ./git.nix
