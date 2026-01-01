@@ -7,16 +7,16 @@
         layer = "top";
         position = "top";
         height = 30;
-        modules-left = ["custom/logo" "hyprland/workspaces"];
-        modules-center = ["clock"];
+        modules-left = ["clock" "hyprland/workspaces"];
+        modules-center = ["hyprland/window"];
         modules-right = [
           "tray"
+          "idle_inhibitor"
           "network"
           "wireplumber"
-          "battery"
           "cpu"
-          "temperature"
           "memory"
+          "battery"
           "custom/notification"
         ];
 
@@ -33,6 +33,19 @@
           active-only = false;
         };
 
+        "hyprland/window" = {
+          max-length = 100;
+          separate-outputs = true;
+        };
+
+        idle_inhibitor = {
+          format = "{icon}";
+          format-icons = {
+            activated = " ";
+            deactivated = " ";
+          };
+        };
+
         tray = {
           icon-size = 21;
           spacing = 10;
@@ -42,7 +55,7 @@
           format-muted = " ";
           format-icons = [" " " " " "];
           format = "{icon} {volume}%";
-          on-click = "pavucontrol";
+          on-click = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
           on-click-right = "pavucontrol";
           escape = true;
         };
@@ -64,8 +77,8 @@
 
         memory = {
           interval = 30;
-          tooltip = "{avail} GiB available";
-          format = "  {used} GiB";
+          tooltip = "{used} GiB used / {avail} GiB total ";
+          format = "  {percentage}%";
         };
 
         temperature = {
