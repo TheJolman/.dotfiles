@@ -1,6 +1,5 @@
 {pkgs, ...}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    pgrep -x waybar >/dev/null || waybar &
     swaync &
     nm-applet --indicator &
     blueman-applet &
@@ -13,13 +12,10 @@
 in {
   home.packages = with pkgs; [
     upower
-    waybar
     swww
     libnotify
     hyprcursor
     wl-clipboard
-    # grim
-    # slurp
     hyprshot
     networkmanagerapplet
     polkit_gnome
