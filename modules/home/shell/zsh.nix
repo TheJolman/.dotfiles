@@ -52,7 +52,7 @@
       ns = "nom shell";
       nr = "nix run";
       switch = "nh os switch";
-      hms = "nix run home-manager -- switch --flake ~/.dotfiles#${user}@${hostname} -b backup";
+      hms = "nix run home-manager -- switch --flake '/home/${user}/.dotfiles#${user}@${hostname}' -b backup";
       kssh = "kitten ssh";
     };
 
@@ -62,9 +62,9 @@
       # OPENAI_API_KEY = "$(cat ${config.age.secrets.openai-api-key.path})";
     };
 
-    initContent = ''
-      eval "$(pixi completion --shell zsh)"
-    '';
+    # initContent = ''
+    #   eval "$(pixi completion --shell zsh)"
+    # '';
   };
 
   programs.carapace = {
