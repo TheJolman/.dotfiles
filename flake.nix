@@ -107,6 +107,7 @@
     homeConfigurations = {
       "josh@framework" = mkHome "josh" "framework";
       "josh@workstation" = mkHome "josh" "workstation";
+      "josh@imac" = mkHome "josh" "imac";
     };
   };
 }

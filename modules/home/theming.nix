@@ -1,20 +1,7 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
-    inputs.catppuccin.homeModules.catppuccin
+    ./catppuccin.nix
   ];
-
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    cursors.enable = false;
-    gtk.icon.enable = true;
-    kvantum.enable = false;
-    kitty.enable = false;
-  };
 
   xdg.enable = true;
 
