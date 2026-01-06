@@ -36,13 +36,14 @@
     inputs.tetrigo.packages.${system}.default
     tt # typing test
     mcrcon # minecraft
+    usbutils
+    wirelesstools
 
     # ---- Dev Tools ---- #
     deno
     nodejs
     pnpm
     bun
-    gh-dash
     awscli2
     terraform
     stylua
