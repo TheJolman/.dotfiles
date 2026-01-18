@@ -24,5 +24,6 @@
     ./virtualisation.nix
     ./wireshark.nix
     ./mozillavpn.nix
+    ./localsend.nix
   ];
 }
