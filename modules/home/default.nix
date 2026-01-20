@@ -16,5 +16,6 @@
     # ./nix-ld.nix
     # ./gemini.nix
     # inputs.agenix.nixosModules.default
+    ./uv.nix
   ];
 }

@@ -47,7 +47,6 @@
     awscli2
     terraform
     stylua
-    uv
     pixi
     pre-commit
     lazygit
