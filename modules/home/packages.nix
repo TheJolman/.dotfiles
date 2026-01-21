@@ -46,9 +46,9 @@
     pixi
     pre-commit
     lazygit
-    stable.unityhub
-    stable.jetbrains.idea
-    stable.jetbrains.rider
+    # stable.unityhub
+    # stable.jetbrains.idea
+    # stable.jetbrains.rider
     bruno
     bruno-cli
 
