@@ -63,7 +63,6 @@
     };
 
     # initContent = ''
-    #   eval "$(pixi completion --shell zsh)"
     # '';
   };
 
