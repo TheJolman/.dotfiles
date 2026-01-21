@@ -6,7 +6,6 @@
     ./shell/default.nix
     # ./zed/default.nix
     # ./vscode/default.nix
-    # ./jupyter.nix
     ./direnv.nix
     ./kitty.nix
     ./git.nix
@@ -14,7 +13,6 @@
     ./theming.nix
     ./btop.nix
     # ./nix-ld.nix
-    # ./gemini.nix
     # inputs.agenix.nixosModules.default
     ./uv.nix
   ];
