@@ -40,10 +40,6 @@
     wirelesstools
 
     # ---- Dev Tools ---- #
-    deno
-    nodejs
-    pnpm
-    bun
     awscli2
     terraform
     stylua
@@ -132,9 +128,7 @@
   };
 
   home.sessionPath = [
-    "$HOME/.deno/bin"
     "$HOME/.pnpm"
-    "$HOME/.cache/.bun/bin"
     "$HOME/go/bin"
     "$HOME/.cargo/bin"
   ];

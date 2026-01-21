@@ -4,6 +4,7 @@
     ./nixvim/default.nix
     ./scripts/default.nix
     ./shell/default.nix
+    ./devtools
     # ./zed/default.nix
     # ./vscode/default.nix
     ./direnv.nix
@@ -14,6 +15,5 @@
     ./btop.nix
     # ./nix-ld.nix
     # inputs.agenix.nixosModules.default
-    ./uv.nix
   ];
 }
