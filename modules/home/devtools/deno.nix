@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     deno
   ];
-  home.sesstionPath = [
+  home.sessionPath = [
     "$HOME/.deno/bin"
   ];
 }
