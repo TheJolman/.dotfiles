@@ -43,7 +43,6 @@
     awscli2
     terraform
     stylua
-    pixi
     pre-commit
     lazygit
     # stable.unityhub
