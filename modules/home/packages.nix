@@ -97,7 +97,6 @@
     seahorse # for GnomeKeyring
     rnote
     # filezilla
-    # warpinator # LAN file sharing
     newsflash # rss reader
     obsidian
     baobab # gnome dsik use analyzer
