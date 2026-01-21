@@ -21,7 +21,7 @@
         };
       };
     };
-    folding = true;
+    folding.enable = true;
     nixvimInjections = true;
 
     nixGrammars = true; # this installs the below grammars
@@ -66,7 +66,6 @@
       bash
       json
       json5
-      jsonc
       make
       cmake
       matlab

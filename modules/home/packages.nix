@@ -47,7 +47,7 @@
     pre-commit
     lazygit
     stable.unityhub
-    stable.jetbrains.idea-ultimate
+    stable.jetbrains.idea
     stable.jetbrains.rider
     bruno
     bruno-cli
