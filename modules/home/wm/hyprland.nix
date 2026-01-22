@@ -54,7 +54,7 @@ in {
         resize_on_border = true;
 
         "col.inactive_border" = "$surface0";
-        "col.active_border" = "$pink";
+        "col.active_border" = "$mauve";
       };
 
       # pink with increased opacity -> rgba(f5c2e7A0)
@@ -84,7 +84,7 @@ in {
 
       misc = {
         font_family = "CaskaydiaCove Nerd Font Propo, Light";
-        new_window_takes_over_fullscreen = true;
+        # new_window_takes_over_fullscreen = true;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
       };
@@ -114,10 +114,13 @@ in {
 
       # Use `hyprctl clients` for window class/title info
       windowrule = [
-        "idleinhibit fullscreen,class:(firefox)"
-        "idleinhibit focus,title:(.*)(- Youtube)$"
-        "bordercolor $red,fullscreen:1"
-        "float,class:(org.gnome.Nautilus)"
+        "match:class firefox, idle_inhibit fullscreen"
+        "match:title (.*)(- Youtube), idle_inhibit focus"
+        # "bordercolor $red,fullscreen:1"
+        "match:fullscreen true, border_color $red"
+        "match:group true, border_color $mauve"
+        "match:class org.gnome.Nautilus, float on"
+        "match:class org.pulseaudio.pavucontrol, float on"
       ];
 
       # e -> repeat, will repeat when held
