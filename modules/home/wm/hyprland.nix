@@ -54,16 +54,16 @@ in {
         resize_on_border = true;
 
         "col.inactive_border" = "$surface0";
-        "col.active_border" = "$mauve";
+        "col.active_border" = "$pink";
       };
 
       # pink with increased opacity -> rgba(f5c2e7A0)
       group = {
-        "col.border_active" = "$pink";
+        "col.border_active" = "$mauve";
         "col.border_inactive" = "$surface0";
         auto_group = false;
         groupbar = {
-          "col.active" = "$pink";
+          "col.active" = "$mauve";
           "col.inactive" = "$surface0";
           height = "18";
           text_color = "$text";

@@ -77,8 +77,8 @@
 
         memory = {
           interval = 30;
-          tooltip = "{used} GiB used / {avail} GiB total ";
-          format = "  {percentage}%";
+          tooltip = "{used} GiB / {total} GiB, {percentage}%";
+          format = "  {used} GiB";
         };
 
         temperature = {
