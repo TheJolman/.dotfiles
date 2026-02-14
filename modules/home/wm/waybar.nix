@@ -7,8 +7,8 @@
         layer = "top";
         position = "top";
         height = 30;
-        modules-left = ["clock" "hyprland/workspaces"];
-        modules-center = ["hyprland/window"];
+        modules-left = ["hyprland/workspaces" "hyprland/window"];
+        modules-center = ["clock"];
         modules-right = [
           "tray"
           "idle_inhibitor"
