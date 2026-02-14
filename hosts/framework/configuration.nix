@@ -6,6 +6,7 @@
     ./hardware-configuration.nix
     ../../modules/nixos/default.nix
     ../../modules/nixos/laptop.nix
+    ../../modules/nixos/framework.nix
   ];
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
