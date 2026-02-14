@@ -12,21 +12,20 @@
   cfg = config.laptop;
 in {
   imports = [
-    ./tlp.nix
     ./fprintd.nix
   ];
 
   options.laptop = {
     enable = mkOption {
       type = types.bool;
-      default = true;
+      default = false;
       description = ''
-        Enables laptop specific settings, like TLP power profiles and lid switch behavior.
+        Enables laptop specific settings, like power profiles and lid switch behavior.
       '';
     };
     enableFingerprintReader = mkOption {
       type = types.bool;
-      default = true;
+      default = false;
       description = ''
         Enables fprintd.
       '';
@@ -34,5 +33,21 @@ in {
   };
 
   config = {
+    # services.power-profiles-daemon = mkIf cfg.enable {
+    #   enable = true;
+    # };
+    services.auto-cpufreq = mkIf cfg.enable {
+      enable = true;
+    };
+
+    services.fprintd = mkIf cfg.enableFingerprintReader {
+      enable = true;
+      # tod.enable = true;
+    };
+    # this might speed it up by starting driver at system start
+    systemd.services.fprintd = mkIf cfg.enableFingerprintReader {
+      wantedBy = ["multi-user.target"];
+      serviceConfig.Type = "simple";
+    };
   };
 }
