@@ -10,16 +10,16 @@
 
       listener = [
         {
-          timeout = 300; # 5 mins
+          timeout = 200; #
           on-timeout = "brightnessctl -s set 10";
           on-resume = "brightnessctl -r";
         }
         {
-          timeout = 330; # 5.5 mins
+          timeout = 300; # 5 mins
           on-timeout = "loginctl lock-session";
         }
         {
-          timeout = 1800; # 30 mins
+          timeout = 600; # 10 mins
           on-timeout = "systemctl suspend";
         }
       ];
