@@ -1,19 +1,18 @@
 {...}: {
   imports = [
-    ./wm/default.nix
-    ./nixvim/default.nix
-    ./scripts/default.nix
-    ./shell/default.nix
+    ./wm
+    ./nixvim
+    ./scripts
+    ./shell
     ./devtools
-    # ./zed/default.nix
-    # ./vscode/default.nix
+    # ./zed
+    # ./vscode
     ./direnv.nix
     ./kitty.nix
     ./git.nix
     ./packages.nix
     ./theming.nix
     ./btop.nix
-    # ./nix-ld.nix
     # inputs.agenix.nixosModules.default
   ];
 }
