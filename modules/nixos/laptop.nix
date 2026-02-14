@@ -46,9 +46,9 @@ in {
       # tod.enable = true;
     };
     # this might speed it up by starting driver at system start
-    systemd.services.fprintd = mkIf cfg.enableFingerprintReader {
-      wantedBy = ["multi-user.target"];
-      serviceConfig.Type = "simple";
-    };
+    # systemd.services.fprintd = mkIf cfg.enableFingerprintReader {
+    #   wantedBy = ["multi-user.target"];
+    #   serviceConfig.Type = "simple";
+    # };
   };
 }
