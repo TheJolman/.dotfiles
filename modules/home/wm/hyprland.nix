@@ -121,6 +121,7 @@ in {
         "match:group true, border_color $mauve"
         "match:class org.gnome.Nautilus, float on"
         "match:class org.pulseaudio.pavucontrol, float on"
+        "match:class .blueman-manager-wrapped, float on"
       ];
 
       # e -> repeat, will repeat when held
