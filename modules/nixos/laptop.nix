@@ -29,9 +29,8 @@ in {
   };
 
   config = {
-    services.power-profiles-daemon = mkIf cfg.enable {
-      enable = false;
-    };
+    services.power-profiles-daemon.enable = mkIf cfg.enable false;
+    services.tlp.enable = mkIf cfg.enable false;
     services.auto-cpufreq = mkIf cfg.enable {
       enable = true;
     };
