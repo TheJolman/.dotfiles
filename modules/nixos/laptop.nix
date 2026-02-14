@@ -5,6 +5,7 @@
 }: let
   inherit
     (lib)
+    mkForce
     mkIf
     mkOption
     types
@@ -41,10 +42,7 @@ in {
       HandlePowerKey = "poweroff";
     };
 
-    services.fprintd = mkIf cfg.enableFingerprintReader {
-      enable = true;
-      # tod.enable = true;
-    };
+    services.fprintd.enable = mkForce cfg.enableFingerprintReader;
     # this might speed it up by starting driver at system start
     # systemd.services.fprintd = mkIf cfg.enableFingerprintReader {
     #   wantedBy = ["multi-user.target"];
