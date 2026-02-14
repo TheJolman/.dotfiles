@@ -11,10 +11,6 @@
     ;
   cfg = config.laptop;
 in {
-  imports = [
-    ./fprintd.nix
-  ];
-
   options.laptop = {
     enable = mkOption {
       type = types.bool;
@@ -33,11 +29,17 @@ in {
   };
 
   config = {
-    # services.power-profiles-daemon = mkIf cfg.enable {
-    #   enable = true;
-    # };
+    services.power-profiles-daemon = mkIf cfg.enable {
+      enable = false;
+    };
     services.auto-cpufreq = mkIf cfg.enable {
       enable = true;
+    };
+
+    services.logind.settings.Login = mkIf cfg.enable {
+      HandleLidSwitch = "suspend";
+      HandleLidSwitchDocked = "ignore";
+      HandlePowerKey = "poweroff";
     };
 
     services.fprintd = mkIf cfg.enableFingerprintReader {
