@@ -20,7 +20,6 @@
     ./services.nix
     ./common.nix
     ./gaming.nix
-    ./logind.nix
     ./virtualisation.nix
     ./wireshark.nix
     ./mozillavpn.nix

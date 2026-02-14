@@ -1,7 +1,52 @@
-{...}: {
-  imports = [
-    ./tlp.nix
-    ./framework.nix
-    ./fprintd.nix
-  ];
+{
+  config,
+  lib,
+  ...
+}: let
+  inherit
+    (lib)
+    mkForce
+    mkIf
+    mkOption
+    types
+    ;
+  cfg = config.laptop;
+in {
+  options.laptop = {
+    enable = mkOption {
+      type = types.bool;
+      default = false;
+      description = ''
+        Enables laptop specific settings, like power profiles and lid switch behavior.
+      '';
+    };
+    enableFingerprintReader = mkOption {
+      type = types.bool;
+      default = false;
+      description = ''
+        Enables fprintd.
+      '';
+    };
+  };
+
+  config = {
+    services.power-profiles-daemon.enable = mkIf cfg.enable false;
+    services.tlp.enable = mkIf cfg.enable false;
+    services.auto-cpufreq = mkIf cfg.enable {
+      enable = true;
+    };
+
+    services.logind.settings.Login = mkIf cfg.enable {
+      HandleLidSwitch = "suspend";
+      HandleLidSwitchDocked = "ignore";
+      HandlePowerKey = "poweroff";
+    };
+
+    services.fprintd.enable = mkForce cfg.enableFingerprintReader;
+    # this might speed it up by starting driver at system start
+    # systemd.services.fprintd = mkIf cfg.enableFingerprintReader {
+    #   wantedBy = ["multi-user.target"];
+    #   serviceConfig.Type = "simple";
+    # };
+  };
 }
