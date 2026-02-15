@@ -25,6 +25,19 @@
     hypridle &
   '';
 in {
+  imports = [
+    ## Notifs Daemon
+    ./swaync.nix
+    ## Screen Locker
+    ./hyprlock.nix
+    ## Picker
+    ./fuzzel.nix
+    ## Bar
+    ./waybar
+    # ./hyprpanel.nix
+    # ./ashell.nix
+  ];
+
   options.wm.hypr = {
     enable = mkOption {
       type = types.bool;

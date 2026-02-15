@@ -5,7 +5,6 @@
 
   imports = [
     ../../modules/home/default.nix
-    ../../modules/home/laptop.nix
   ];
 
   wm.hypr.computerType = "laptop";

@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./wm
+    ./wm/hyprland.nix
     ./nixvim
     ./scripts
     ./shell
