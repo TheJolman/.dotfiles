@@ -38,6 +38,7 @@
     mcrcon # minecraft
     usbutils
     wirelesstools
+    ncdu # disk usage analyzer
 
     # ---- Dev Tools ---- #
     awscli2

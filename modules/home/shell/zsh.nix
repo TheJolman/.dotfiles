@@ -54,6 +54,7 @@
       switch = "nh os switch";
       hms = "nix run home-manager -- switch --flake '/home/${user}/.dotfiles#${user}@${hostname}' -b backup";
       kssh = "kitten ssh";
+      duh = "du -h --max-depth=1 | sort -h";
     };
 
     sessionVariables = {
