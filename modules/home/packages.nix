@@ -100,6 +100,7 @@
     newsflash # rss reader
     obsidian
     baobab # gnome dsik use analyzer
+    pdfarranger
 
     # ---- Fonts ---- #
     noto-fonts
