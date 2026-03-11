@@ -255,8 +255,8 @@ in {
 
             # groups
             "$mod, G, togglegroup"
-            "$mod, right, changegroupactive, f"
-            "$mod, left, changegroupactive, b"
+            "$mod, bracketright, changegroupactive, f"
+            "$mod, bracketleft, changegroupactive, b"
             "$mod SHIFT, left, moveintogroup, l"
             "$mod SHIFT, right, moveintogroup, r"
             "$mod SHIFT, up, moveintogroup, u"
