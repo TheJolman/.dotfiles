@@ -24,6 +24,7 @@
     folding.enable = true;
     nixvimInjections = true;
 
+    # https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md
     nixGrammars = true; # this installs the below grammars
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       c
@@ -64,9 +65,11 @@
       gomod
       gosum
       bash
+      zsh
       json
       json5
       make
+      just
       cmake
       matlab
       ocaml
@@ -98,6 +101,7 @@
       editorconfig
       csv
       hcl
+      vala
     ];
   };
 }
