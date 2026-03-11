@@ -26,5 +26,6 @@
     ./localsend.nix
     ./nix-ld.nix
     ./flatpak.nix
+    # ./postgres.nix
   ];
 }
