@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./dropbar.nix
     ./autopairs.nix
     ./rainbow-delimiters.nix
     ./lsp.nix
