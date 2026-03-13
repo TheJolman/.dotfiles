@@ -21,7 +21,7 @@
       };
       animate.enable = true;
     };
-    luaConfig.post = ''
+    luaConfig.content = ''
       vim.api.nvim_create_autocmd("User", {
         pattern = "MiniFilesActionRename",
         callback = function(event)
