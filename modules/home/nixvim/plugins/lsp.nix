@@ -172,7 +172,7 @@
         csharp_ls = {
           enable = true;
           package = pkgs.csharp-ls;
-          rootMarkers = ["*.sln" "*.csproj" "*.git"];
+          rootMarkers = ["*.sln" "*.csproj" ".git"];
         };
 
         # Rust
