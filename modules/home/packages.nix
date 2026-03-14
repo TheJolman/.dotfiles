@@ -46,7 +46,7 @@
     stylua
     pre-commit
     lazygit
-    # stable.unityhub
+    stable.unityhub
     # stable.jetbrains.idea
     # stable.jetbrains.rider
     bruno
