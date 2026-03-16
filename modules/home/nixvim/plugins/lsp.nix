@@ -52,12 +52,12 @@
           "<leader>fm" = "format";
         };
         extra = [
-          {
-            key = "grl";
-            action = "<cmd>lua show_codelens()<CR>";
-            mode = "n";
-            options.desc = "Show codelens";
-          }
+          # {
+          #   key = "grl";
+          #   action = "<cmd>lua show_codelens()<CR>";
+          #   mode = "n";
+          #   options.desc = "Show codelens";
+          # }
           {
             key = "grr";
             action = "<cmd>lua Snacks.picker.lsp_references()<CR>";
