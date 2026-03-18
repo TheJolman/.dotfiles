@@ -11,6 +11,6 @@
     vimAlias = true;
     nixpkgs.config.allowUnfree = true;
 
-    extraConfigLua = builtins.readFile ./lua-config.lua;
+    extraConfigLua = builtins.readFile ./config.lua;
   };
 }
