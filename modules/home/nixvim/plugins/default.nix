@@ -10,14 +10,14 @@
     ./treesitter.nix
     ./todo-comments.nix
     ./diffview.nix
-    ./luasnip.nix
+    ./luasnip
     ./flash.nix
     ./indent-blankline.nix
     ./ts-autotag.nix
     ./css-color.nix
     ./markdown.nix
     ./lint.nix
-    ./mini.nix
+    ./mini
     ./guess-indent.nix
     ./snacks.nix
   ];

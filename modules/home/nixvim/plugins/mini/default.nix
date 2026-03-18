@@ -25,34 +25,7 @@
         statusline = {};
         tabline = {};
         bracketed = {};
-        clue = {
-          triggers = [
-            {
-              mode = "n";
-              keys = "<Leader>";
-            }
-            {
-              mode = "v";
-              keys = "<Leader>";
-            }
-            {
-              mode = "n";
-              keys = "g";
-            }
-            {
-              mode = "v";
-              keys = "g";
-            }
-            {
-              mode = "n";
-              keys = "[";
-            }
-            {
-              mode = "n";
-              keys = "]";
-            }
-          ];
-        };
+        clue = {};
 
         surround = {
           mappings = {
@@ -109,23 +82,7 @@
           };
         };
       }; # modules
-      luaConfig.post = ''
-        local sessions = require("mini.sessions")
-
-        local function save_session(name)
-          name = name or vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
-          sessions.write(name)
-          vim.notify("Session '" .. name .. "' written, vim.log.levels.INFO")
-        end
-
-        vim.api.nvim_create_user_command("SSave", function(opts)
-          save_session(opts.args ~= "" and opts.args or nil)
-        end, { nargs = "?", complete = "file"})
-
-        vim.api.nvim_create_user_command("SPick", function()
-          sessions.select()
-        end, {})
-      '';
+      luaConfig.content = builtins.readFile ./config.lua;
     };
   };
 }
