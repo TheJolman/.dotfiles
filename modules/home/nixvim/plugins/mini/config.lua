@@ -12,7 +12,7 @@ local yank_path = function()
   if path == nil then
     return vim.notify('Cursor is not on valid entry')
   end
-  vim.fn.setret(vim.v.register, path)
+  vim.fn.setreg(vim.v.register, path)
 end
 
 vim.api.nvim_create_autocmd('User', {
@@ -39,6 +39,7 @@ require('mini.clue').setup({
     { mode = 'i', keys = '<C-x>' },
     -- `g` key
     { mode = { 'n', 'x' }, keys = 'g' },
+    { mode = { 'n', 'x' }, keys = 'gc' },
     -- Marks
     { mode = { 'n', 'x' }, keys = "'" },
     { mode = { 'n', 'x' }, keys = '`' },
@@ -66,7 +67,7 @@ local sessions = require('mini.sessions')
 local function save_session(name)
   name = name or vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
   sessions.write(name)
-  vim.notify("Session '" .. name .. "' written, vim.log.levels.INFO")
+  vim.notify("Session '" .. name .. "' written", vim.log.levels.INFO)
 end
 
 vim.api.nvim_create_user_command('SSave', function(opts)
