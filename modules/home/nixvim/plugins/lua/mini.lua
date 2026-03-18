@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd('User', {
 })
 
 local rhs = '<CMD>lua MiniGit.show_at_cursor()<CR>'
-vim.keymap.set({ 'n', 'x' }, '<Leader>gs', rhs, { desc = 'Show at cursor' })
+vim.keymap.set({ 'n', 'x' }, '<leader>gs', rhs, { desc = 'Show at cursor' })
 
 local miniclue = require('mini.clue')
 require('mini.clue').setup({

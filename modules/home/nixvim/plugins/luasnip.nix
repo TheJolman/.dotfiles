@@ -8,8 +8,8 @@
           enable_autosnippets = true;
         };
       };
+      luaConfig.content = builtins.readFile ./lua/luasnip.lua;
     };
-    extraConfigLua = builtins.readFile ./lua/luasnip.lua;
     extraPackages = [pkgs.lua51Packages.jsregexp];
   };
 }

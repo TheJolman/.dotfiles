@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: let
+  helpers = config.lib.nixvim;
+in {
   programs.nixvim = {
     extraPackages = with pkgs; [
       alejandra
@@ -14,50 +20,15 @@
 
     plugins.lsp = {
       enable = true;
-
-      # luaConfig.content = ''
-      #   -- vim.diagnostic.config({ virtual_text = true })
-      #
-      #   vim.api.nvim_create_autocmd(
-      #     {"BufEnter", "CursorHold", "InsertLeave"},
-      #     {
-      #       buffer = 0,
-      #       desc = "Refresh codelens on buffer events",
-      #       callback = function()
-      #         vim.lsp.codelens.refresh({ bufnr = 0 })
-      #       end,
-      #     }
-      #   )
-      #   show_codelens = function()
-      #     local current_bufnr = vim.api.nvim_get_current_buf()
-      #     local clients = vim.lsp.get_clients({ bufnr = current_bufnr })
-      #     if #clients > 0 then
-      #       local client_id = clients[1].id
-      #       local all_lenses = vim.lsp.codelens.get({ bufnr = current_bufnr })
-      #       if all_lenses and #all_lenses > 0 then
-      #         vim.lsp.codelens.display(all_lenses, current_bufnr, client_id)
-      #         print("Displayed " .. #all_lenses .. " lenses for client " .. client_id)
-      #       else
-      #         print("No codelens found for buffer " .. current_bufnr)
-      #       end
-      #     else
-      #       print("No active LSP client found for buffer " .. current_bufnr)
-      #     end
-      #   end
-      # '';
-
       keymaps = {
         lspBuf = {
           K = "hover";
           "<leader>fm" = "format";
+          "<leader>ca" = "code_action";
         };
         extra = [
-          # {
-          #   key = "grl";
-          #   action = "<cmd>lua show_codelens()<CR>";
-          #   mode = "n";
-          #   options.desc = "Show codelens";
-          # }
+          # These could usually go within the `lspBuf` section like `grr = "references";`
+          # but I'm using the snacks custom versions.
           {
             key = "grr";
             action = "<cmd>lua Snacks.picker.lsp_references()<CR>";
@@ -106,12 +77,12 @@
             mode = "n";
             options.desc = "Toggle diagnostics";
           }
-          {
-            key = "<leader>ca";
-            action = "<cmd>vim.lsp.buf.code_action<cr>";
-            mode = ["n" "v"];
-            options.desc = "LSP code action";
-          }
+          # {
+          #   key = "<leader>ca";
+          #   action = "<cmd>vim.lsp.buf.code_action<cr>";
+          #   mode = ["n" "v"];
+          #   options.desc = "LSP code action";
+          # }
         ];
       };
 
@@ -154,12 +125,11 @@
           };
           rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
         };
+        # ty.enable = true;
 
         pylsp = {
           enable = true;
-          pythonPackage = pkgs.python313;
-          package = pkgs.python313Packages.python-lsp-server;
-          rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
+          # rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
         };
 
         # Java
