@@ -20,6 +20,5 @@
     ./mini
     ./guess-indent.nix
     ./snacks.nix
-    ./nvim-unity.nix
   ];
 }
