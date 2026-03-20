@@ -48,7 +48,7 @@
     lazygit
     stable.unityhub
     # stable.jetbrains.idea
-    # stable.jetbrains.rider
+    stable.jetbrains.rider
     bruno
     bruno-cli
 

@@ -8,7 +8,7 @@ in {
   programs.nixvim = {
     extraPackages = with pkgs; [
       alejandra
-      dotnetCorePackages.dotnet_9.sdk
+      dotnetCorePackages.dotnet_10.sdk
       black
       isort
       rustfmt
@@ -139,9 +139,8 @@ in {
         };
 
         # C#
-        csharp_ls = {
+        omnisharp = {
           enable = true;
-          package = pkgs.csharp-ls;
           rootMarkers = ["*.sln" "*.csproj" ".git"];
         };
 

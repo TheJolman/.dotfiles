@@ -3,10 +3,10 @@
     extraPlugins = [
       pkgs.vimPlugins.nvim-unity
     ];
-    # extraConfigLua = ''
-    #   require('nvim-unity').setup({
-    #     -- config goes here...
-    #   })
-    # '';
+    extraConfigLua = ''
+      require('nvim-unity').setup({
+        -- config goes here...
+      })
+    '';
   };
 }
