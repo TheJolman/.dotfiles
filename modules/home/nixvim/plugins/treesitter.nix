@@ -99,7 +99,6 @@
       ebnf
       dockerfile
       editorconfig
-      csv
       hcl
       vala
     ];
