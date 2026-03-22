@@ -99,28 +99,33 @@ in {
         "$browser" = "firefox";
 
         general = {
-          gaps_in = 5;
-          gaps_out = 10;
+          gaps_in = 4;
+          gaps_out = 8;
           border_size = 3;
           layout = "dwindle";
           resize_on_border = true;
 
           "col.inactive_border" = "$surface0";
-          "col.active_border" = "$pink";
+          "col.active_border" = "$overlay2";
         };
 
-        # pink with increased opacity -> rgba(f5c2e7A0)
         group = {
-          "col.border_active" = "$mauve";
+          "col.border_active" = "$overlay2";
           "col.border_inactive" = "$surface0";
           auto_group = false;
           groupbar = {
-            "col.active" = "$mauve";
+            "col.active" = "$overlay2";
+            text_color = "$crust";
             "col.inactive" = "$surface0";
-            height = "18";
-            text_color = "$text";
-            font_size = 17;
+            text_color_inactive = "$text";
+            height = "17";
+            indicator_height = 0;
+            font_size = 16;
             font_family = "CaskaydiaCove Nerd Font Propo";
+            gradients = true;
+            gradient_rounding = 8;
+            gradient_round_only_edges = false;
+            gaps_in = 5;
           };
         };
 
@@ -168,9 +173,7 @@ in {
         windowrule = [
           "match:class firefox, idle_inhibit fullscreen"
           "match:title (.*)(- Youtube), idle_inhibit focus"
-          # "bordercolor $red,fullscreen:1"
-          "match:fullscreen true, border_color $red"
-          "match:group true, border_color $mauve"
+          "match:fullscreen true, border_color $blue"
           "match:class org.gnome.Nautilus, float on"
           "match:class org.pulseaudio.pavucontrol, float on"
           "match:class .blueman-manager-wrapped, float on"
