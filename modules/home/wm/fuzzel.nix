@@ -1,1 +1,4 @@
-{...}: {programs.fuzzel.enable = true;}
+{pkgs, ...}: {
+  home.packages = [pkgs.bemoji];
+  programs.fuzzel.enable = true;
+}

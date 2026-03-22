@@ -217,11 +217,12 @@ in {
             "$mod, B,       exec, $browser"
             "$mod, Return,  exec, $terminal"
             "$mod, D,       exec, $menu"
+            "$mod SHIFT, E, exec, bemoji"
             "$mod, E,       exec, $fileManager"
             "$mod, Q,       killactive"
-            "$mod CTRL, M, exit"
-            "$mod CTRL, A, exec, hyprlock"
-            "$mod CTRL, S, exec, systemctl hibernate"
+            "$mod CTRL, M,  exit"
+            "$mod CTRL, A,  exec, hyprlock"
+            "$mod CTRL, S,  exec, systemctl hibernate"
 
             # alt tab
             "ALT, Tab, cyclenext,"
