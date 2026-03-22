@@ -20,9 +20,9 @@
           "custom/notification"
         ];
 
-        "custom/logo" = {
-          format = "";
-        };
+        # "custom/logo" = {
+        #   format = "";
+        # };
 
         clock = {
           format = "{:%a, %d. %b  %H:%M:%S}";

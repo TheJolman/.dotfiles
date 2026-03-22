@@ -118,10 +118,10 @@ in {
             text_color = "$crust";
             "col.inactive" = "$surface0";
             text_color_inactive = "$text";
-            height = "17";
+            height = "18";
             indicator_height = 0;
             font_size = 16;
-            font_family = "CaskaydiaCove Nerd Font Propo";
+            font_family = "Iosevka Nerd Font";
             gradients = true;
             gradient_rounding = 8;
             gradient_round_only_edges = false;

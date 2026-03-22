@@ -1,8 +1,9 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: CaskaydiaCove Nerd Font;
-  font-size: 14px;
+  font-family: "Iosevka Nerd Font", monospace;
+  font-style: oblique;
+  font-size: 15px;
   min-height: 24px;
 }
 
@@ -15,28 +16,29 @@ window#waybar.hidden {
 }
 
 #window {
-  margin-top: 8px;
-  padding-left: 16px;
-  padding-right: 16px;
+  /* margin-top: 6px; */
+  /* margin-bottom: 0px; */
+  /* padding-left: 8px; */
+  /* padding-right: 8px; */
   border-radius: 26px;
   transition: none;
   color: transparent;
   background: transparent;
 }
 
-#custom-logo {
-  margin-top: 8px;
-  margin-left: 12px;
-  margin-bottom: 0;
-  padding: 0 16px;
-  border-radius: 26px;
-  background: @teal;
-  color: @base;
-  font-size: 20px;
-  font-weight: bold;
-  min-width: 30px;
-  border: 2px solid shade(@base, 0.9);
-}
+/* #custom-logo { */
+/*   margin-top: 8px; */
+/*   margin-left: 12px; */
+/*   margin-bottom: 0; */
+/*   padding: 0 16px; */
+/*   border-radius: 26px; */
+/*   background: @teal; */
+/*   color: @base; */
+/*   font-size: 20px; */
+/*   font-weight: bold; */
+/*   min-width: 30px; */
+/*   border: 2px solid shade(@base, 0.9); */
+/* } */
 
 #workspaces {
   margin-top: 8px;
