@@ -125,12 +125,7 @@ in {
           };
           rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
         };
-        # ty.enable = true;
-
-        pylsp = {
-          enable = true;
-          # rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
-        };
+        pylsp.enable = true;
 
         # Java
         jdtls = {
@@ -164,7 +159,6 @@ in {
         denols = {
           enable = false;
           autostart = false;
-          rootMarkers = ["deno.json" "deno.jsonc"];
         };
 
         ts_ls = {
@@ -173,8 +167,9 @@ in {
         };
 
         eslint = {
-          enable = true;
-          # rootMarkers = ["package.json" "deno.json" "deno.jsonc"];
+          enable = false;
+          autostart = false;
+          rootMarkers = ["package.json"];
         };
 
         jinja_lsp = {
