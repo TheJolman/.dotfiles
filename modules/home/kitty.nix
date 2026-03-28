@@ -21,6 +21,7 @@
       tab_powerline_style = "round";
       notify_on_cmd_finish = "unfocused";
       term = "xterm-kitty"; # this is xterm-256color when I checked for some reason?
+      cursor_trail = 3;
     };
     extraConfig = ''
       disable_ligatures always
