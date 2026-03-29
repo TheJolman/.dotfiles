@@ -20,7 +20,7 @@
 
   programs.zsh = {
     enable = true;
-    dotDir = config.xdg.configHome + "/zsh_hm";
+    dotDir = config.xdg.configHome + "/zsh";
     autocd = true;
     enableCompletion = true;
     defaultKeymap = "emacs";
