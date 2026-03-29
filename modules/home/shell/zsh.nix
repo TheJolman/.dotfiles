@@ -1,10 +1,13 @@
 {
+  pkgs,
   config,
-  lib,
   user,
   hostname,
   ...
 }: {
+  home.packages = with pkgs; [
+    pure-prompt
+  ];
   imports = [
     # agenix.homeManagerModules.default
   ];
@@ -63,8 +66,10 @@
       # OPENAI_API_KEY = "$(cat ${config.age.secrets.openai-api-key.path})";
     };
 
-    # initContent = ''
-    # '';
+    initContent = ''
+      autoload -U promptinit; promptinit
+      prompt pure
+    '';
   };
 
   programs.carapace = {
@@ -78,34 +83,34 @@
   #   useTheme = "catppuccin";
   # };
 
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      format = lib.concatStrings [
-        "$directory"
-        "$git_branch"
-        "$git_status"
-        "$docker_context"
-        "$golang"
-        "$java"
-        "$lua"
-        "$cmake"
-        "$meson"
-        "$deno"
-        "$nodejs"
-        "$ocaml"
-        "$gleam"
-        "$c"
-        "$dotnet"
-        "$nix_shell"
-        "$line_break"
-        "$character"
-      ];
-      character = {
-        success_symbol = "[❯](bold green)";
-        error_symbol = "[❯](bold red)";
-      };
-    };
-  };
+  # programs.starship = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  #   settings = {
+  #     format = lib.concatStrings [
+  #       "$directory"
+  #       "$git_branch"
+  #       "$git_status"
+  #       "$docker_context"
+  #       "$golang"
+  #       "$java"
+  #       "$lua"
+  #       "$cmake"
+  #       "$meson"
+  #       "$deno"
+  #       "$nodejs"
+  #       "$ocaml"
+  #       "$gleam"
+  #       "$c"
+  #       "$dotnet"
+  #       "$nix_shell"
+  #       "$line_break"
+  #       "$character"
+  #     ];
+  #     character = {
+  #       success_symbol = "[❯](bold green)";
+  #       error_symbol = "[❯](bold red)";
+  #     };
+  #   };
+  # };
 }
