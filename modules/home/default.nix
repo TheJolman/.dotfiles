@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./rider.nix
-    ./wm/hyprland.nix
+    ./hyprland
     ./nixvim
     ./scripts
     ./shell

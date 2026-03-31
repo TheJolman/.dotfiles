@@ -7,7 +7,7 @@
     ../../modules/home/default.nix
   ];
 
-  wm.hypr.computerType = "laptop";
+  thejolman.home.hyprland.computerType = "laptop";
 
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in

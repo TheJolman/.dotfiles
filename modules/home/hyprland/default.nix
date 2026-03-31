@@ -11,7 +11,7 @@
     types
     optionals
     ;
-  cfg = config.wm.hypr;
+  cfg = config.thejolman.home.hyprland;
 
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     waybar &
@@ -38,7 +38,7 @@ in {
     # ./ashell.nix
   ];
 
-  options.wm.hypr = {
+  options.thejolman.home.hyprland = {
     enable = mkOption {
       type = types.bool;
       default = true;
@@ -301,7 +301,7 @@ in {
       };
     };
 
-    services.hypridle = {
+    services.hypridle = lib.mkIf (cfg.computerType == "laptop") {
       enable = true;
       settings = {
         general = {
