@@ -4,7 +4,7 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   imports = [
-    ../../modules/home/default.nix
+    ../../modules/home
   ];
 
   thejolman.home.hyprland.computerType = "laptop";
