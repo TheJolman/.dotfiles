@@ -1,10 +1,13 @@
 * {
   border: none;
-  border-radius: 0;
   font-family: "Iosevka Nerd Font", monospace;
   font-style: oblique;
   font-size: 15px;
   min-height: 24px;
+}
+
+.module {
+  border-radius: 26px;
 }
 
 window#waybar {
@@ -16,35 +19,15 @@ window#waybar.hidden {
 }
 
 #window {
-  /* margin-top: 6px; */
-  /* margin-bottom: 0px; */
-  /* padding-left: 8px; */
-  /* padding-right: 8px; */
-  border-radius: 26px;
   transition: none;
   color: transparent;
   background: transparent;
 }
 
-/* #custom-logo { */
-/*   margin-top: 8px; */
-/*   margin-left: 12px; */
-/*   margin-bottom: 0; */
-/*   padding: 0 16px; */
-/*   border-radius: 26px; */
-/*   background: @teal; */
-/*   color: @base; */
-/*   font-size: 20px; */
-/*   font-weight: bold; */
-/*   min-width: 30px; */
-/*   border: 2px solid shade(@base, 0.9); */
-/* } */
-
 #workspaces {
   margin-top: 8px;
   margin-left: 12px;
   margin-bottom: 0;
-  border-radius: 26px;
   background: @base;
   transition: none;
   border: 2px solid shade(@overlay0, 0.9);
@@ -85,7 +68,6 @@ window#waybar.hidden {
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 0;
-  border-radius: 26px;
   border: 2px solid shade(@base, 0.9);
   transition: none;
 }
