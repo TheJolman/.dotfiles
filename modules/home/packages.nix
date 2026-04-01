@@ -49,8 +49,8 @@
     stable.unityhub
     # stable.jetbrains.idea
     # stable.jetbrains.rider
-    bruno
-    bruno-cli
+    # bruno
+    # bruno-cli
 
     # ---- Networking ---- #
     dhcpm
@@ -85,10 +85,7 @@
     gnome-font-viewer
     thunderbird-latest
     gnome-system-monitor
-    (transmission_4.override
-      {
-        enableGTK3 = true;
-      }) # torrent client
+    transmission_4-gtk # torrent client
     celluloid # video player (showtime is another gnome option)
     kdePackages.kdenlive
     gnome-calculator
@@ -97,7 +94,7 @@
     seahorse # for GnomeKeyring
     rnote
     # filezilla
-    newsflash # rss reader
+    # newsflash # rss reader
     obsidian
     baobab # gnome dsik use analyzer
     pdfarranger
