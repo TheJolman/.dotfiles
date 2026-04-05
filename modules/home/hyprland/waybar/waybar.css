@@ -73,14 +73,10 @@ window#waybar.hidden {
 }
 
 #clock,
-#window {
-  color: @text;
-  background: @base;
-  border: 2px solid shade(@overlay0, 0.9);
-}
-
+#window,
 #tray,
 #idle_inhibitor {
+  color: @text;
   background: @base;
   border: 2px solid shade(@overlay0, 0.9);
 }
