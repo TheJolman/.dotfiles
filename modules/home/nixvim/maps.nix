@@ -202,7 +202,12 @@
       # =================== File explorer (Mini) ===================
       {
         key = "-";
-        action = "<CMD>lua MiniFiles.open()<CR>";
+        action = "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>";
+        mode = "n";
+      }
+      {
+        key = "<leader>-";
+        action = "<CMD>lua MiniFiles.open(nil, false)<CR>";
         mode = "n";
       }
 
