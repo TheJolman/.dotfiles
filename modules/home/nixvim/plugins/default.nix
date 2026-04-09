@@ -14,7 +14,7 @@
     ./flash.nix
     ./indent-blankline.nix
     ./ts-autotag.nix
-    ./css-color.nix
+    ./colorizer.nix
     ./markdown.nix
     ./lint.nix
     ./mini
