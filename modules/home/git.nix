@@ -27,6 +27,7 @@
       ".nvim/"
       ".direnv/"
       ".claude/"
+      ".codex"
     ];
   };
 
