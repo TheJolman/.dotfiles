@@ -74,7 +74,7 @@
     nautilus-open-any-terminal
     zoom-us # unfree
     # vesktop
-    discord-canary
+    discord
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
