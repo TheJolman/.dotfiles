@@ -81,7 +81,7 @@
     papers # gnome document viewer
     eog # gnome image viwer
     firefox
-    chromium
+    google-chrome
     # inputs.agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
