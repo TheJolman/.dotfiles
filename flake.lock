@@ -225,11 +225,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761173251,
-        "narHash": "sha256-7BVxMB6wlnGqOH8JEtIQkQtYswBSpyuzDMGVkQHbjhc=",
+        "lastModified": 1774303744,
+        "narHash": "sha256-EldmhoMf4bSDX0MaCLDnk+9R11k9xbNI2zrApfR3YHw=",
         "owner": "thejolman",
         "repo": "terminder",
-        "rev": "21429043239ebd0c4fe33c905c5080c184deb23d",
+        "rev": "3f8dfcebfcc6163fe1890ce7009a0625838096e6",
         "type": "github"
       },
       "original": {

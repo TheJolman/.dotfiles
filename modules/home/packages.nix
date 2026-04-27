@@ -13,7 +13,7 @@
     fd
     fastfetch
     lsd
-    xorg.xhost
+    # xorg.xhost
     parted
     polkit
     bat
@@ -66,7 +66,7 @@
     gimp
     # aseprite
     tiled
-    mozillavpn
+    stable.mozillavpn
     kitty
     impression # creates bootable drives
     gparted
