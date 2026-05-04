@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   system,
   inputs,
   ...
@@ -115,19 +116,22 @@
     nerd-fonts.iosevka
   ];
 
-  home.sessionVariables = {
+  home.sessionVariables = let
+    homeDir = config.home.homeDirectory;
+  in {
     EDITOR = "nvim";
     BROWSER = "firefox";
     TERMINAL = "kitty";
-    PAGER = "bat";
+    PAGER = "nvim -R";
     MANPAGER = "nvim +Man!";
     NIXPKGS_ALLOW_UNFREE = 1;
-    PNPM_HOME = "$HOME/.pnpm";
+    PNPM_HOME = "${homeDir}/.pnpm";
+    GOPATH = "${homeDir}/.local/share/go";
   };
 
   home.sessionPath = [
-    "$HOME/.pnpm"
-    "$HOME/go/bin"
+    "$PNPM_HOME"
+    "$GOPATH/bin"
     "$HOME/.cargo/bin"
   ];
 
