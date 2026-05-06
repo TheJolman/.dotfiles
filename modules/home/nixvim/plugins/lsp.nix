@@ -1,9 +1,9 @@
 {
   pkgs,
-  config,
+  # config,
   ...
 }: let
-  helpers = config.lib.nixvim;
+  # helpers = config.lib.nixvim;
 in {
   programs.nixvim = {
     extraPackages = with pkgs; [
@@ -184,14 +184,11 @@ in {
           settings.svelte.format.enable = true;
         };
 
-        # html.enable = true;
-        superhtml.enable = true;
+        html.enable = true;
+        # superhtml.enable = true;
         cssls.enable = true;
         jsonls.enable = true;
-        htmx = {
-          enable = true;
-          autostart = false;
-        };
+        # htmx.enable = true;
         tailwindcss.enable = true;
 
         # Misc
