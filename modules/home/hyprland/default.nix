@@ -18,8 +18,8 @@
     swaync &
     nm-applet --indicator &
     blueman-applet &
-    swww-daemon &  # wallaper daemon
-    swww img ~/.dotfiles/images/cherry-6.png &
+    awww-daemon &  # wallaper daemon
+    awww img ~/.dotfiles/images/cherry-6.png &
     upower-notify &
     ${pkgs.batsignal}/bin/batsignal &
     hypridle &
@@ -56,7 +56,7 @@ in {
   config = mkIf cfg.enable {
     home.packages = with pkgs;
       [
-        swww
+        awww
         libnotify
         hyprcursor
         wl-clipboard
