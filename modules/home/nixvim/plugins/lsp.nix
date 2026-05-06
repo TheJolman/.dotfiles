@@ -166,6 +166,7 @@ in {
           enable = true;
           rootMarkers = ["package.json"];
         };
+        oxlint.enable = true;
         oxfmt.enable = true;
 
         jinja_lsp = {
