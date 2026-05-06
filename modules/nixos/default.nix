@@ -22,7 +22,7 @@
     ./gaming.nix
     ./virtualisation.nix
     ./wireshark.nix
-    ./mozillavpn.nix
+    # ./mozillavpn.nix
     ./localsend.nix
     ./nix-ld.nix
     ./flatpak.nix

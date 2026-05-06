@@ -15,11 +15,6 @@
     };
     coredump = {
       enable = true;
-      extraConfig = ''
-        Storage=none
-        Compress=yes
-        ProcessSizeMax=2g
-      '';
     };
   };
 }
