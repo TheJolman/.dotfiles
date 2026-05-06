@@ -166,12 +166,7 @@ in {
           enable = true;
           rootMarkers = ["package.json"];
         };
-
-        eslint = {
-          enable = false;
-          autostart = false;
-          rootMarkers = ["package.json"];
-        };
+        oxfmt.enable = true;
 
         jinja_lsp = {
           enable = true;
