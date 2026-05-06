@@ -67,13 +67,12 @@
     gimp
     # aseprite
     tiled
-    stable.mozillavpn
     kitty
     impression # creates bootable drives
     gparted
     nautilus
     nautilus-open-any-terminal
-    zoom-us # unfree
+    # zoom-us # unfree
     # vesktop
     discord
     libreoffice-fresh
