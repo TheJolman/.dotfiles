@@ -52,6 +52,7 @@
     # stable.jetbrains.rider
     # bruno
     # bruno-cli
+    bubblewrap # for codex
 
     # ---- Networking ---- #
     dhcpm
@@ -121,7 +122,7 @@
     EDITOR = "nvim";
     BROWSER = "firefox";
     TERMINAL = "kitty";
-    PAGER = "nvim -R";
+    PAGER = "bat";
     MANPAGER = "nvim +Man!";
     NIXPKGS_ALLOW_UNFREE = 1;
     PNPM_HOME = "${homeDir}/.pnpm";
