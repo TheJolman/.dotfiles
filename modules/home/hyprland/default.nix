@@ -15,14 +15,12 @@
 
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     waybar &
-    swaync &
     nm-applet --indicator &
     blueman-applet &
     awww-daemon &  # wallaper daemon
     awww img ~/.dotfiles/images/cherry-6.png &
     upower-notify &
     ${pkgs.batsignal}/bin/batsignal &
-    hypridle &
   '';
 in {
   imports = [
