@@ -40,6 +40,7 @@
     usbutils
     wirelesstools
     ncdu # disk usage analyzer
+    hwinfo
 
     # ---- Dev Tools ---- #
     awscli2
