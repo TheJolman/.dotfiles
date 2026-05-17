@@ -94,6 +94,7 @@
     gnome-calculator
     obs-studio
     atlauncher # minecraft
+    stable.prismlauncher
     seahorse # for GnomeKeyring
     rnote
     # filezilla
