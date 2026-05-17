@@ -20,5 +20,6 @@
     ./mini
     ./guess-indent.nix
     ./snacks.nix
+    ./leetcode.nix
   ];
 }
