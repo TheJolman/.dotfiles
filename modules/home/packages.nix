@@ -134,6 +134,7 @@
     "$PNPM_HOME"
     "$GOPATH/bin"
     "$HOME/.cargo/bin"
+    "$HOME/.local/bin"
   ];
 
   xdg.configFile."mimeapps.list" = {
