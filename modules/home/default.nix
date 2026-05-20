@@ -15,5 +15,6 @@
     ./theming.nix
     ./btop.nix
     # inputs.agenix.nixosModules.default
+    ./fastfetch.nix
   ];
 }

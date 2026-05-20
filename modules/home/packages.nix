@@ -12,9 +12,7 @@
     curl
     fzf
     fd
-    fastfetch
     lsd
-    # xorg.xhost
     parted
     polkit
     bat
@@ -54,6 +52,7 @@
     # bruno
     # bruno-cli
     bubblewrap # for codex
+    lima # Linux vm runner
 
     # ---- Networking ---- #
     dhcpm
