@@ -101,6 +101,7 @@
     obsidian
     baobab # gnome dsik use analyzer
     pdfarranger
+    cheese
 
     # ---- Fonts ---- #
     noto-fonts
