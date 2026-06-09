@@ -7,7 +7,7 @@
       quickfile.enable = true;
       bigfile.enable = true;
       picker.enable = true;
-      image.enable = true;
+      image.enable = false;
       rename.enable = true;
       bufdelete.enable = true;
       words.enable = true;
