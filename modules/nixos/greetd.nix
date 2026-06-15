@@ -1,7 +1,10 @@
 {pkgs, ...}: let
   tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
 in {
-  environment.systemPackages = [pkgs.tuigreet];
+  environment.systemPackages = [
+    pkgs.tuigreet
+    pkgs.brightnessctl
+  ];
 
   services.greetd = {
     enable = true;
