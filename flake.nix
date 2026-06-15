@@ -2,7 +2,7 @@
   description = "NixOS config flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-26.05";
 
     nixpkgs-stable.url = "nixpkgs/nixos-25.11";
 
@@ -17,7 +17,7 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim.url = "github:nix-community/nixvim/nixos-26.05";
 
     # agenix = {
     #   url = "github:ryantm/agenix";
