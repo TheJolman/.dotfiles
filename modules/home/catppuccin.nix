@@ -5,6 +5,7 @@
 
   catppuccin = {
     enable = true;
+    autoEnable = true;
     flavor = "mocha";
     cursors.enable = false;
     gtk.icon.enable = false;
