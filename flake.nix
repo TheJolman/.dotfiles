@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
 
-    nixpkgs-stable.url = "nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
     # determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 
@@ -39,7 +39,7 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-stable,
+    nixpkgs-unstable,
     # determinate,
     home-manager,
     ...
@@ -47,9 +47,9 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
 
-    # allows stable packages to be reached with pkgs.stable.<pkg>
-    stableOverlay = final: prev: {
-      stable = import nixpkgs-stable {
+    # allows unstable packages to be reached with pkgs.unstable.<pkg>
+    unstableOverlay = final: prev: {
+      unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
       };
@@ -59,7 +59,7 @@
       inherit system;
       config.allowUnfree = true;
       overlays = [
-        stableOverlay
+        unstableOverlay
       ];
     };
 
