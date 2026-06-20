@@ -254,8 +254,8 @@ in {
             "$mod SHIFT, F, fullscreen, 0"
 
             "$mod, V, togglefloating"
-            "$mod, i, togglesplit"
-            "$mod, o, swapsplit"
+            # "$mod, i, togglesplit"
+            # "$mod, o, swapsplit"
 
             # dwindle
 
