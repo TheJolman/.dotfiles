@@ -80,11 +80,19 @@ bind_opener(mod .. ' + B', browser)
 bind_opener(mod .. ' + D', menu)
 bind_opener(mod .. ' + E', files)
 
+-- Windows
 -- Move focus with mod + arrow keys
 hl.bind(mod .. ' + H', hl.dsp.focus({ direction = 'left' }))
 hl.bind(mod .. ' + L', hl.dsp.focus({ direction = 'right' }))
 hl.bind(mod .. ' + K', hl.dsp.focus({ direction = 'up' }))
 hl.bind(mod .. ' + J', hl.dsp.focus({ direction = 'down' }))
+
+hl.bind(mod .. ' + Q', hl.dsp.window.close())
+hl.bind(mod .. '+ SHIFT + Q', hl.dsp.window.kill())
+hl.bind(mod .. '+ F', hl.dsp.window.fullscreen({ mode = 'fullscreen', action = 'toggle' }))
+hl.bind(mod .. '+ SHIFT + F', hl.dsp.window.fullscreen({ mode = 'maximized', action = 'toggle' }))
+hl.bind(mod .. '+ O', hl.dsp.layout('swapsplit'))
+hl.bind(mod .. '+ I', hl.dsp.layout('togglesplit'))
 
 -- Workspaces
 for i = 1, 10 do
