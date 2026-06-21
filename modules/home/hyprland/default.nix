@@ -296,9 +296,9 @@ in {
           ]
           ++ optionals (cfg.computerType == "laptop") [
             # turn laptop display off when lid is closed
-            ", switch:on:Lid Switch, exec, hyprctl keyword monitor eDP-1, disable"
+            # ", switch:on:Lid Switch, exec, hyprctl keyword monitor eDP-1, disable"
             # turn laptop display on when lid is opened
-            ", switch:off:Lid Switch, exec, hyprctl keyword monitor eDP-1, enable"
+            # ", switch:off:Lid Switch, exec, hyprctl keyword monitor eDP-1, enable"
           ];
       };
     };
