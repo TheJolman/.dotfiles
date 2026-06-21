@@ -79,6 +79,14 @@ in {
       systemd.enable = true;
       systemd.enableXdgAutostart = true;
       configType = "lua";
+      settings = {
+        config = {
+          input.accel_profile =
+            if cfg.computerType == "laptop"
+            then "adaptive"
+            else "flat";
+        };
+      };
       extraConfig = builtins.readFile ./config.lua;
     };
 
