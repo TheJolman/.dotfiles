@@ -45,7 +45,7 @@ hl.config({
   },
 
   input = {
-    accel_profile = 'flat',
+    accel_profile = 'adaptive',
     kb_layout = 'us',
     follow_mouse = 1,
     -- drag_3fg = 3
