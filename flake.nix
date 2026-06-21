@@ -2,25 +2,22 @@
   description = "NixOS config flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-26.05";
 
-    nixpkgs-stable.url = "nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
     # determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin.url = "github:catppuccin/nix/release-26.05";
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixvim.url = "github:nix-community/nixvim/nixos-26.05";
 
     # agenix = {
     #   url = "github:ryantm/agenix";
@@ -42,7 +39,7 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-stable,
+    nixpkgs-unstable,
     # determinate,
     home-manager,
     ...
@@ -50,9 +47,9 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
 
-    # allows stable packages to be reached with pkgs.stable.<pkg>
-    stableOverlay = final: prev: {
-      stable = import nixpkgs-stable {
+    # allows unstable packages to be reached with pkgs.unstable.<pkg>
+    unstableOverlay = final: prev: {
+      unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
       };
@@ -62,7 +59,7 @@
       inherit system;
       config.allowUnfree = true;
       overlays = [
-        stableOverlay
+        unstableOverlay
       ];
     };
 

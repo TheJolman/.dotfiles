@@ -46,9 +46,9 @@
     stylua
     pre-commit
     lazygit
-    stable.unityhub
-    # stable.jetbrains.idea
-    # stable.jetbrains.rider
+    unityhub
+    # jetbrains.idea
+    # jetbrains.rider
     # bruno
     # bruno-cli
     bubblewrap # for codex
@@ -75,14 +75,14 @@
     nautilus-open-any-terminal
     # zoom-us # unfree
     # vesktop
-    discord
+    unstable.discord
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
     papers # gnome document viewer
     eog # gnome image viwer
-    firefox
-    google-chrome
+    unstable.firefox
+    unstable.google-chrome
     # inputs.agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
@@ -92,8 +92,8 @@
     kdePackages.kdenlive
     gnome-calculator
     obs-studio
-    atlauncher # minecraft
-    stable.prismlauncher
+    # atlauncher # minecraft
+    prismlauncher
     seahorse # for GnomeKeyring
     rnote
     # filezilla
