@@ -23,7 +23,7 @@ end)
 
 hl.monitor({
   output = '',
-  mode = 'preferred',
+  mode = 'highres@highrr',
   position = 'auto',
   scale = 1,
 })
@@ -32,7 +32,7 @@ hl.config({
   general = {
     gaps_in = 4,
     gaps_out = 8,
-    border_szie = 3,
+    -- border_szie = 3,
     resize_on_border = true,
     layout = 'dwindle',
   },
@@ -75,12 +75,12 @@ local function bind_opener(keys, program)
   hl.bind(keys, hl.dsp.exec_cmd(program))
 end
 
-bind_opener(mod .. ' + ENTER', terminal)
+bind_opener(mod .. ' + RETURN', terminal)
 bind_opener(mod .. ' + B', browser)
 bind_opener(mod .. ' + D', menu)
 bind_opener(mod .. ' + E', files)
 
--- Move focus with mainMod + arrow keys
+-- Move focus with mod + arrow keys
 hl.bind(mod .. ' + H', hl.dsp.focus({ direction = 'left' }))
 hl.bind(mod .. ' + L', hl.dsp.focus({ direction = 'right' }))
 hl.bind(mod .. ' + K', hl.dsp.focus({ direction = 'up' }))
@@ -89,12 +89,12 @@ hl.bind(mod .. ' + J', hl.dsp.focus({ direction = 'down' }))
 -- Workspaces
 for i = 1, 10 do
   local key = i % 10 -- 10 maps to key 0
-  hl.bind(mainMod .. ' + ' .. key, hl.dsp.focus({ workspace = i }))
-  hl.bind(mainMod .. ' + SHIFT + ' .. key, hl.dsp.window.move({ workspace = i }))
+  hl.bind(mod .. ' + ' .. key, hl.dsp.focus({ workspace = i }))
+  hl.bind(mod .. ' + SHIFT + ' .. key, hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind(mainMod .. ' + S', hl.dsp.workspace.toggle_special('magic'))
-hl.bind(mainMod .. ' + SHIFT + S', hl.dsp.window.move({ workspace = 'special:magic' }))
+hl.bind(mod .. ' + S', hl.dsp.workspace.toggle_special('magic'))
+hl.bind(mod .. ' + SHIFT + S', hl.dsp.window.move({ workspace = 'special:magic' }))
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
