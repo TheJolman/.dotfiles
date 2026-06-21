@@ -12,16 +12,6 @@
     optionals
     ;
   cfg = config.thejolman.home.hyprland;
-
-  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    waybar &
-    nm-applet --indicator &
-    blueman-applet &
-    awww-daemon &  # wallaper daemon
-    awww img ~/.dotfiles/images/cherry-6.png &
-    upower-notify &
-    ${pkgs.batsignal}/bin/batsignal &
-  '';
 in {
   imports = [
     ## Notifs Daemon
