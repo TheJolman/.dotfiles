@@ -32,7 +32,7 @@ hl.config({
   general = {
     gaps_in = 4,
     gaps_out = 8,
-    -- border_szie = 3,
+    border_size = 2,
     resize_on_border = true,
     layout = 'dwindle',
   },
@@ -89,8 +89,8 @@ hl.bind(mod .. ' + J', hl.dsp.focus({ direction = 'down' }))
 
 hl.bind(mod .. ' + Q', hl.dsp.window.close())
 hl.bind(mod .. '+ SHIFT + Q', hl.dsp.window.kill())
-hl.bind(mod .. '+ F', hl.dsp.window.fullscreen({ mode = 'fullscreen', action = 'toggle' }))
-hl.bind(mod .. '+ SHIFT + F', hl.dsp.window.fullscreen({ mode = 'maximized', action = 'toggle' }))
+hl.bind(mod .. '+ F', hl.dsp.window.fullscreen({ mode = 'maximized', action = 'toggle' }))
+hl.bind(mod .. '+ SHIFT + F', hl.dsp.window.fullscreen({ mode = 'fullscreen', action = 'toggle' }))
 hl.bind(mod .. '+ O', hl.dsp.layout('swapsplit'))
 hl.bind(mod .. '+ I', hl.dsp.layout('togglesplit'))
 
