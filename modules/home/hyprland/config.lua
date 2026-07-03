@@ -94,6 +94,11 @@ hl.bind(mod .. '+ SHIFT + F', hl.dsp.window.fullscreen({ mode = 'fullscreen', ac
 hl.bind(mod .. '+ O', hl.dsp.layout('swapsplit'))
 hl.bind(mod .. '+ I', hl.dsp.layout('togglesplit'))
 
+hl.window_rule({
+  match = { fullscreen = true },
+  border_color = 'rgb(f5bde6)',
+})
+
 -- Workspaces
 for i = 1, 10 do
   local key = i % 10 -- 10 maps to key 0
