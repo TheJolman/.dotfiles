@@ -70,6 +70,7 @@
     p7zip
     libimobiledevice
     ifuse
+    exfatprogs
   ];
 
   time.timeZone = "America/Los_Angeles";
