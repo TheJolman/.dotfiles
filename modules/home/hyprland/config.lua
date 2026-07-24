@@ -109,6 +109,9 @@ end
 hl.bind(mod .. ' + S', hl.dsp.workspace.toggle_special('magic'))
 hl.bind(mod .. ' + SHIFT + S', hl.dsp.window.move({ workspace = 'special:magic' }))
 
+hl.bind(mod .. ' + N', hl.dsp.focus({ workspace = 'next' }))
+hl.bind(mod .. ' + P', hl.dsp.focus({ workspace = 'previous' }))
+
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
   'XF86AudioRaiseVolume',
