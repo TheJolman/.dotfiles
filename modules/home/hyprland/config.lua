@@ -75,9 +75,17 @@ local function bind_opener(keys, program)
   hl.bind(keys, hl.dsp.exec_cmd(program))
 end
 
+local function bind_opener_toggle(keys, program)
+  hl.bind(
+    keys,
+    hl.dsp.exec_cmd(string.format('pkill %s || %s', program, program)),
+    { release = true }
+  )
+end
+
 bind_opener(mod .. ' + RETURN', terminal)
 bind_opener(mod .. ' + B', browser)
-bind_opener(mod .. ' + D', menu)
+bind_opener_toggle(mod .. ' + D', menu)
 bind_opener(mod .. ' + E', files)
 
 -- Windows
@@ -99,6 +107,9 @@ hl.window_rule({
   border_color = 'rgb(f5bde6)',
 })
 
+hl.bind(mod .. ' + mouse:272', hl.dsp.window.drag(), { mouse = true }) -- ALT + LMB: Move a window by dragging more than 10px.
+hl.bind(mod .. '+ V', hl.dsp.window.float())
+
 -- Workspaces
 for i = 1, 10 do
   local key = i % 10 -- 10 maps to key 0
@@ -111,6 +122,9 @@ hl.bind(mod .. ' + SHIFT + S', hl.dsp.window.move({ workspace = 'special:magic' 
 
 hl.bind(mod .. ' + N', hl.dsp.focus({ workspace = 'next' }))
 hl.bind(mod .. ' + P', hl.dsp.focus({ workspace = 'previous' }))
+
+-- System
+hl.bind(mod .. ' + SHIFT + M', hl.dsp.exec_cmd('systemctl hibernate'))
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
