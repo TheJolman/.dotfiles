@@ -30,13 +30,13 @@
       map super+shift+j scroll_page_down
       map super+shift+k scroll_page_up
 
-      map super+shift+n next_tab
-      map super+shift+p previous_tab
+      map alt+] next_tab
+      map alt+[ previous_tab
       map super+' new_tab
       map super+shift+' new_tab_with_cwd
-      map super+shift+. move_tab_forward
-      map super+shift+, move_tab_backward
-      map super+shift+q close_tab
+      map alt+shift+] move_tab_forward
+      map alt+shift+[ move_tab_backward
+      map alt+q close_tab
       map alt+1 goto_tab 1
       map alt+2 goto_tab 2
       map alt+3 goto_tab 3
