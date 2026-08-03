@@ -124,7 +124,7 @@ hl.bind(mod .. ' + N', hl.dsp.focus({ workspace = 'next' }))
 hl.bind(mod .. ' + P', hl.dsp.focus({ workspace = 'previous' }))
 
 -- System
-hl.bind(mod .. ' + SHIFT + M', hl.dsp.exec_cmd('systemctl hibernate'))
+hl.bind(mod .. ' + CTRL + S', hl.dsp.exec_cmd('systemctl hibernate'))
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
