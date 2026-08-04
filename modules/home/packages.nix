@@ -64,6 +64,7 @@
     dnslookup
 
     # ---- GUI Apps ---- #
+    gnome-network-displays
     file-roller # archive manager
     gimp
     # aseprite
