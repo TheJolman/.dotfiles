@@ -71,7 +71,6 @@
     tiled
     kitty
     impression # creates bootable drives
-    gparted
     nautilus
     nautilus-open-any-terminal
     # zoom-us # unfree

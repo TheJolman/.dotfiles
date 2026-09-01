@@ -71,6 +71,7 @@
     libimobiledevice
     ifuse
     exfatprogs
+    gparted
   ];
 
   time.timeZone = "America/Los_Angeles";
