@@ -2,13 +2,9 @@
   boot.plymouth.enable = false; # For silent boot
 
   boot.loader = {
-    efi = {canTouchEfiVariables = true;};
-    grub = {
+    systemd-boot = {
       enable = true;
-      efiSupport = true;
-      useOSProber = true;
-
-      devices = ["nodev"];
+      editor = false;
     };
   };
 }
