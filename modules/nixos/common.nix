@@ -72,6 +72,7 @@
     ifuse
     exfatprogs
     gparted
+    efibootmgr
   ];
 
   time.timeZone = "America/Los_Angeles";
