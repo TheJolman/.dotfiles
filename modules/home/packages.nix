@@ -73,9 +73,6 @@
     impression # creates bootable drives
     nautilus
     nautilus-open-any-terminal
-    # zoom-us # unfree
-    # vesktop
-    unstable.discord
     libreoffice-fresh
     hunspell # for spellcheck
     hunspellDicts.en_US
