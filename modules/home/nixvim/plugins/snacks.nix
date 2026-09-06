@@ -1,4 +1,7 @@
-{...}: {
+{pkgs, ...}: {
+  programs.nixvim.extraPackages = with pkgs; [
+    sqlite # for snacks picker
+  ];
   programs.nixvim.plugins.snacks = {
     enable = true;
     settings = {
