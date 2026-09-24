@@ -10,5 +10,6 @@
     gtk.icon.enable = false;
     kvantum.enable = false;
     kitty.enable = false;
+    foot.enable = false;
   };
 }

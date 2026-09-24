@@ -101,7 +101,6 @@
     baobab # gnome dsik use analyzer
     pdfarranger
     cheese
-    zellij
 
     # ---- Fonts ---- #
     noto-fonts

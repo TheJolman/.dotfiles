@@ -12,7 +12,7 @@
       copy_on_select = "clipboard";
       scrollback_lines = 10000;
       window_margin_width = 0;
-      window_padding_width = 5;
+      window_padding_width = 0;
       background_opacity = "0.9";
       background_blur = 32;
       adjust_line_height = "120%";

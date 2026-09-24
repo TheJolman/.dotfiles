@@ -1,6 +1,6 @@
 local bar = 'waybar'
 local wallpaper = '~/.dotfiles/images/cherry-6.png'
-local terminal = 'kitty'
+local terminal = 'foot zellij'
 local files = 'nautilus'
 local menu = 'fuzzel'
 local browser = 'firefox'
