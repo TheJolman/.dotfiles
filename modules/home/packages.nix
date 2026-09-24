@@ -39,6 +39,8 @@
     wirelesstools
     ncdu # disk usage analyzer
     hwinfo
+    dig
+    whois
 
     # ---- Dev Tools ---- #
     awscli2
@@ -99,6 +101,7 @@
     baobab # gnome dsik use analyzer
     pdfarranger
     cheese
+    zellij
 
     # ---- Fonts ---- #
     noto-fonts
