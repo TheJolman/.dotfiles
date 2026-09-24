@@ -88,7 +88,6 @@ bind_opener(mod .. ' + RETURN', terminal)
 bind_opener(mod .. ' + B', browser)
 bind_opener(mod .. ' + D', menu)
 bind_opener(mod .. ' + E', files)
-bind_opener(mod .. ' + M', mail)
 
 -- screenshot a region
 hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot -m region -o ~/Pictures/Screenshots'))
@@ -135,8 +134,12 @@ for i = 1, 10 do
   hl.bind(mod .. ' + SHIFT + ' .. key, hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind(mod .. ' + S', hl.dsp.workspace.toggle_special('magic'))
-hl.bind(mod .. ' + SHIFT + S', hl.dsp.window.move({ workspace = 'special:magic' }))
+hl.bind(mod .. ' + M', hl.dsp.workspace.toggle_special('mail'))
+hl.workspace_rule({ workspace = 'special:mail', on_created_empty = mail })
+
+hl.bind(mod .. ' + S', hl.dsp.workspace.toggle_special('scratchpad'))
+hl.bind(mod .. ' + SHIFT + S', hl.dsp.window.move({ workspace = 'special:scratchpad' }))
+hl.workspace_rule({ workspace = 'special:scratchpad', on_created_empty = terminal })
 
 hl.bind(mod .. ' + N', hl.dsp.focus({ workspace = 'next' }))
 hl.bind(mod .. ' + P', hl.dsp.focus({ workspace = 'previous' }))
