@@ -4,6 +4,7 @@ local terminal = 'kitty'
 local files = 'nautilus'
 local menu = 'fuzzel'
 local browser = 'firefox'
+local mail = 'thunderbird'
 
 hl.on('hyprland.start', function()
   hl.exec_cmd(string.format(
@@ -85,8 +86,9 @@ end
 
 bind_opener(mod .. ' + RETURN', terminal)
 bind_opener(mod .. ' + B', browser)
-bind_opener_toggle(mod .. ' + D', menu)
+bind_opener(mod .. ' + D', menu)
 bind_opener(mod .. ' + E', files)
+bind_opener(mod .. ' + M', mail)
 
 -- Windows
 -- Move focus with mod + arrow keys
