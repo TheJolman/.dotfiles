@@ -90,6 +90,22 @@ bind_opener(mod .. ' + D', menu)
 bind_opener(mod .. ' + E', files)
 bind_opener(mod .. ' + M', mail)
 
+-- screenshot a region
+hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot -m region -o ~/Pictures/Screenshots'))
+hl.bind('SHIFT + PRINT', hl.dsp.exec_cmd('hyprshot -m region --clipboard-only'))
+-- screenshot active window
+hl.bind('ALT + PRINT', hl.dsp.exec_cmd('hyprshot -m window -o ~/Pictures/Screenshots'))
+hl.bind('ALT + SHIFT + PRINT', hl.dsp.exec_cmd('hyprshot -m window --clipboard-only'))
+-- screenshot active monitor
+hl.bind(
+  mod .. ' + PRINT',
+  hl.dsp.exec_cmd('hyprshot -m region -m output -o ~/Pictures/Screenshots')
+)
+hl.bind(
+  mod .. ' + SHIFT + PRINT',
+  hl.dsp.exec_cmd('hyprshot -m region -m output -o --clipboard-only')
+)
+
 -- Windows
 -- Move focus with mod + arrow keys
 hl.bind(mod .. ' + H', hl.dsp.focus({ direction = 'left' }))
