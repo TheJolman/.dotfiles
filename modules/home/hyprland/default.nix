@@ -53,6 +53,7 @@ in {
         alsa-utils
         pavucontrol # Audio Control
         wl-mirror
+        playerctl
       ]
       ++ optionals (cfg.computerType == "laptop") [
         acpi # Battery status
@@ -89,12 +90,12 @@ in {
 
         listener = [
           {
-            timeout = 200; #
+            timeout = 240; # 4 mins
             on-timeout = "brightnessctl -s set 10";
             on-resume = "brightnessctl -r";
           }
           {
-            timeout = 300; # 5 mins
+            timeout = 540; # 9 mins
             on-timeout = "loginctl lock-session";
           }
           {
