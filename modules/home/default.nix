@@ -6,6 +6,7 @@
     ./scripts
     ./shell
     ./devtools
+    ./zellij
     # ./zed
     # ./vscode
     ./direnv.nix
@@ -17,6 +18,5 @@
     ./btop.nix
     # inputs.agenix.nixosModules.default
     ./fastfetch.nix
-    ./zellij.nix
   ];
 }

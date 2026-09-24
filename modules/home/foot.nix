@@ -15,35 +15,30 @@
 
       colors-dark = {
         alpha = 0.8;
-        background = "080808";
-        foreground = "bdbdbd";
+        background = "191724";
+        foreground = "e0def4";
 
-        cursor = "080808 9e9e9e";
+        regular0 = "26233a"; # black (Overlay)
+        regular1 = "eb6f92"; # red (Love)
+        regular2 = "9ccfd8"; # green (Foam)
+        regular3 = "f6c177"; # yellow (Gold)
+        regular4 = "31748f"; # blue (Pine)
+        regular5 = "c4a7e7"; # magenta (Iris)
+        regular6 = "ebbcba"; # cyan (Rose)
+        regular7 = "e0def4"; # white (Text)
 
-        # Normal/regular colors (color palette 0-7)
-        regular0 = "323437";
-        regular1 = "ff5d5d";
-        regular2 = "8cc85f";
-        regular3 = "e3c78a";
-        regular4 = "80a0ff";
-        regular5 = "cf87e8";
-        regular6 = "79dac8";
-        regular7 = "c6c6c6";
+        bright0 = "47435d"; # bright black (lighter Overlay)
+        bright1 = "ff98ba"; # bright red (lighter Love)
+        bright2 = "c5f9ff"; # bright green (lighter Foam)
+        bright3 = "ffeb9e"; # bright yellow (lighter Gold)
+        bright4 = "5b9ab7"; # bright blue (lighter Pine)
+        bright5 = "eed0ff"; # bright magenta (lighter Iris)
+        bright6 = "ffe5e3"; # bright cyan (lighter Rose)
+        bright7 = "fefcff"; # bright white (lighter Text)
 
-        # Bright colors (color palette 8-15)
-        bright0 = "949494";
-        bright1 = "ff5189";
-        bright2 = "36c692";
-        bright3 = "c6c684";
-        bright4 = "74b2ff";
-        bright5 = "ae81ff";
-        bright6 = "85dc85";
-        bright7 = "e4e4e4";
+        flash = "f6c177"; # yellow (Gold)
 
-        selection-foreground = "080808";
-        selection-background = "b2ceee";
-
-        urls = "79dac8";
+        cursor = "191724 e0def4";
       };
     };
   };

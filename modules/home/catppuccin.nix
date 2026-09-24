@@ -9,7 +9,7 @@
     cursors.enable = false;
     gtk.icon.enable = false;
     kvantum.enable = false;
-    kitty.enable = false;
     foot.enable = false;
+    zellij.enable = false;
   };
 }
