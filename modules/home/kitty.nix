@@ -48,6 +48,9 @@
       map alt+9 goto_tab 9
 
       map super+shift+x open_url_with_hints
+
+      map f3 goto_session ~/.local/share/kitty/sessions
+      map f2 save_as_session --save-only --base-dir ~/.local/share/kitty/sessions
     '';
   };
 }
