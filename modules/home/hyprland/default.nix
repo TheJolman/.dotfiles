@@ -22,8 +22,6 @@ in {
     ./fuzzel.nix
     ## Bar
     ./waybar
-    # ./hyprpanel.nix
-    # ./ashell.nix
   ];
 
   options.thejolman.home.hyprland = {
