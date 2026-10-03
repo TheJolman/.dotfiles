@@ -30,6 +30,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    md-pdf = {
+      url = "github:thejolman/md-pdf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     tetrigo = {
       url = "github:Broderick-Westrope/tetrigo";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -26,6 +26,7 @@
     jq
     traceroute
     inputs.terminder.packages.${system}.default
+    inputs.md-pdf.packages.${system}.default
     lsof
     nfs-utils
     lftp
