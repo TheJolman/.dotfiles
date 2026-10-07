@@ -3,7 +3,7 @@ pane_frames false
 theme "dracula"
 copy_on_select true
 copy_clipboard "system"
-copy_command ""
+copy_command "wl-copy"
 set_title true
 
 keybinds clear-defaults=true {
