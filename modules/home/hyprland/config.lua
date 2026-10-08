@@ -5,6 +5,7 @@ local files = 'nautilus'
 local menu = 'fuzzel'
 local browser = 'firefox'
 local mail = 'thunderbird'
+local emojis = 'bemoji'
 
 hl.on('hyprland.start', function()
   hl.exec_cmd(string.format(
@@ -88,6 +89,7 @@ bind_opener(mod .. ' + RETURN', terminal)
 bind_opener(mod .. ' + B', browser)
 bind_opener(mod .. ' + D', menu)
 bind_opener(mod .. ' + E', files)
+bind_opener(mod .. ' + period', emojis)
 
 -- screenshot a region
 hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot -m region -o ~/Pictures/Screenshots'))
