@@ -51,11 +51,6 @@
     ];
   };
 
-  services.usbmuxd = {
-    enable = true;
-    package = pkgs.usbmuxd2;
-  };
-
   environment.sessionVariables = {
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_DESKTOP = "Hyprland";
@@ -68,8 +63,6 @@
     git
     vim
     p7zip
-    libimobiledevice
-    ifuse
     exfatprogs
     gparted
     efibootmgr

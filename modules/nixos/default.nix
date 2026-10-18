@@ -3,6 +3,7 @@
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.default
     inputs.home-manager.nixosModules.home-manager
+    ./ios.nix
     ./networking.nix
     ./amdgpu.nix
     # ./mysql.nix
