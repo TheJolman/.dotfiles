@@ -4,8 +4,6 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
 
-    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
-
     # determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
@@ -30,11 +28,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    md-pdf = {
-      url = "github:thejolman/md-pdf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     tetrigo = {
       url = "github:Broderick-Westrope/tetrigo";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,7 +37,6 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-unstable,
     # determinate,
     home-manager,
     ...
@@ -52,20 +44,9 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
 
-    # allows unstable packages to be reached with pkgs.unstable.<pkg>
-    unstableOverlay = final: prev: {
-      unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
-    };
-
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
-      overlays = [
-        unstableOverlay
-      ];
     };
 
     mkHost = user: hostname:

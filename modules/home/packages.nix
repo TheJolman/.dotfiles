@@ -26,7 +26,7 @@
     jq
     traceroute
     inputs.terminder.packages.${system}.default
-    inputs.md-pdf.packages.${system}.default
+    md2pdf
     lsof
     nfs-utils
     lftp
@@ -81,8 +81,8 @@
     hunspellDicts.en_US
     papers # gnome document viewer
     eog # gnome image viwer
-    unstable.firefox
-    unstable.google-chrome
+    firefox
+    google-chrome
     # inputs.agenix.packages.${system}.default
     gnome-font-viewer
     thunderbird-latest
