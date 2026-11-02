@@ -5,7 +5,7 @@
     ./autopairs.nix
     ./rainbow-delimiters.nix
     ./lsp.nix
-    ./lsp-lines.nix
+    # ./lsp-lines.nix
     ./blink.nix
     ./treesitter.nix
     ./todo-comments.nix
