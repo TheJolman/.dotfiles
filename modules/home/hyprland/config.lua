@@ -1,7 +1,7 @@
 local bar = 'waybar'
 local wallpaper = '~/.dotfiles/images/cherry-6.png'
 local terminal = 'foot zellij'
-local files = 'nautilus'
+local files = 'nautilus -w'
 local menu = 'fuzzel'
 local browser = 'firefox'
 local mail = 'thunderbird'
