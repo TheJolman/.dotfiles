@@ -130,8 +130,8 @@ in {
           };
           rootMarkers = ["pyproject.toml" "pixi.toml" "requirements.txt" ".git"];
         };
-        # pylsp.enable = true;
-        ty.enable = true;
+        basedpyright.enable = true;
+        # ty.enable = true;
 
         # Java
         jdtls = {
