@@ -18,6 +18,11 @@ in {
       prettierd
     ];
 
+    diagnostic.settings = {
+      virtual_text = true;
+      virtual_lines = false;
+    };
+
     plugins.lsp = {
       enable = true;
       keymaps = {
